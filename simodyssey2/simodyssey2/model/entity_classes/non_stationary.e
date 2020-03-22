@@ -92,6 +92,7 @@ is_planet:BOOLEAN
 	end
 
 feature -- function
+
 	set_location(r:INTEGER;c:INTEGER;q:INTEGER)
 		do
 			create current_pos.make
@@ -143,6 +144,15 @@ feature -- function
 	end
 
 feature -- quires
+	out_turns_left : STRING
+
+		do
+			if turns_left < 0  then
+			Result := "N/A"
+			else
+			Result := turns_left.out
+			end
+		end
 
 	location_equals:BOOLEAN
 	do
@@ -167,7 +177,10 @@ feature{GALAXY} -- GALAXY ONLY
 	behave
 	local
 		num : INTEGER
-		num_turn : INTEGER
+		num_turn_a : INTEGER
+		num_turn_b : INTEGER
+		num_turn_j : INTEGER
+		num_turn_m : INTEGER
 		num_turn_p : INTEGER
 	do
 		if
@@ -180,9 +193,10 @@ feature{GALAXY} -- GALAXY ONLY
 					ebmj.dies -- explorer?
 				end
 			end
-			num_turn := gen.rchoose (0, 2)
-			current.set_turns_left (num_turn)
-			io.put_string ("(A->"+ num_turn.out + ":[0,2])"+ "%N")
+			num_turn_a := gen.rchoose (0, 2)
+			current.set_turns_left (num_turn_a)
+			io.put_string ("(A->"+ num_turn_a.out + ":[0,2])"+ "%N")
+
 		elseif current.is_janitaur then
 			if attached{JANITAUR}current as jan then
 				across
@@ -204,9 +218,9 @@ feature{GALAXY} -- GALAXY ONLY
 					jan.set_load (0)
 				end
 
-			num_turn := gen.rchoose (0, 2)
-				jan.set_turns_left (num_turn)
-				io.put_string ("(J->"+ num_turn.out + ":[0,2])"+ "%N")
+			num_turn_j := gen.rchoose (0, 2)
+				jan.set_turns_left (num_turn_j)
+				io.put_string ("(J->"+ num_turn_j.out + ":[0,2])"+ "%N")
 			end
 
 		elseif current.is_benign then
@@ -222,9 +236,9 @@ feature{GALAXY} -- GALAXY ONLY
 						end
 					end
 				end
-				num_turn := gen.rchoose (0, 2)
-				ben.set_turns_left (num_turn)
-				io.put_string ("(B->"+ num_turn.out + ":[0,2])"+ "%N")
+				num_turn_b := gen.rchoose (0, 2)
+				ben.set_turns_left (num_turn_b)
+				io.put_string ("(B->"+ num_turn_b.out + ":[0,2])"+ "%N")
 			end
 
 		elseif current.is_malevolent then
@@ -233,22 +247,24 @@ feature{GALAXY} -- GALAXY ONLY
 			then
 				shared_info.og_exp.dec_life
 			end
-			num_turn := gen.rchoose (0, 2)
-			current.set_turns_left (num_turn)
-			io.put_string ("(M->"+ num_turn.out + ":[0,2])"+ "%N")
+			num_turn_m := gen.rchoose (0, 2)
+			current.set_turns_left (num_turn_m)
+			io.put_string ("(M->"+ num_turn_m.out + ":[0,2])"+ "%N")
 
 		elseif attached{PLANET}current as planet then
 			if
 				planet.get_sector.has_star
 			then
 				planet.set_true_is_attached
+				planet.set_turns_left (0-1)
 				if
-					planet.get_sector.has_yellow_dwarf
+					planet.get_sector.has_yellow_dwarf and not planet.check_supp_life_already
 				then
 					num:= gen.rchoose (1,2)
 					io.put_string ("(P->"+ num.out + ":[1,2])"+ "%N")
 					if num = 2 then
 						planet.set_true_is_support_life
+						planet.set_true_check_supp_life_already
 					end
 				end
 			else

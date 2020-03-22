@@ -276,12 +276,13 @@ feature --action
 							if
 								not movable.dead
 							then
+
 								reproduce(movable)
 								movable.behave
 							end
 						end --
 					else -- turns_left
-
+						movable.dec_turns_left
 					end
 			end --loop
 		end
@@ -337,7 +338,7 @@ feature --action
 	DO
 		io.put_string ("reproduction was reached")
 		if
-			attached {BENIGN} ent as bmj
+			attached {EBMJ_COMMON} ent as bmj
 		then
 			io.put_string ("(actions_left" + bmj.en.out + "->:"+ bmj.actions_left_until_reproduction.out + "%N")
 			if
@@ -345,7 +346,7 @@ feature --action
 			then
 				create_bmj (bmj)
 			elseif
-					(bmj.actions_left_until_reproduction > 0)
+					(bmj.actions_left_until_reproduction /~ 0)
 				then
 					bmj.dec_actions_left_until_reproduction
 				else
@@ -354,47 +355,6 @@ feature --action
 				end
 			end--notfull
 		end --attached_
-
-		if
-			attached {MALEVOLENT} ent as bmj
-		then
-			io.put_string ("(actions_left" + bmj.en.out + "->:"+ bmj.actions_left_until_reproduction.out + "%N")
-			if
-				not bmj.get_sector.is_full and bmj.actions_left_until_reproduction = 0
-			then
-				create_bmj (bmj)
-			else--else
-				if
-					(bmj.actions_left_until_reproduction > 0)
-				then
-					bmj.dec_actions_left_until_reproduction
-				elseif ent.get_sector.is_full then
-					-- will try to reproduce next time the entity acts
-				end
-			end--notfull
-		end --attached_
-
-		if
-			attached {JANITAUR} ent as bmj
-		then
-			io.put_string ("(actions_left" + bmj.en.out + "->:"+ bmj.actions_left_until_reproduction.out + "%N")
-			if
-				not bmj.get_sector.is_full and bmj.actions_left_until_reproduction = 0
-			then
-				create_bmj (bmj)
-			elseif
-					(bmj.actions_left_until_reproduction > 0)
-				then
-					bmj.dec_actions_left_until_reproduction
-				else
-					if ent.get_sector.is_full then
-					-- will try to reproduce next time the entity acts
-				end
-			end--notfull
-		end --attached_
-
-
-
 	end -- do
 
 --	behave (ent: NON_STATIONARY) in non_stationary
@@ -710,9 +670,12 @@ feature --test_information
 			---------------printout movable entities list--------------------------
 			across movable_sorted is move_ent loop
 
-				Result.append ("ID: " + move_ent.id_out + ",EN:" + move_ent.en.out+",turns_left:" + move_ent.turns_left.out )
+				Result.append ("ID: " + move_ent.id_out + ",EN:" + move_ent.en.out+",turns_left:" + move_ent.turns_left.out)
+				if attached {PLANET} move_ent as planet then
+					result.append(", attached?:"+ planet.out_is_attached + "turns_left_planet:" + planet.out_turns_left)
+				end
 				if attached {EBMJ_COMMON} move_ent as EBMJ then
-					Result.append (", actions_intervals:" + EBMJ.actions_left_until_reproduction.out+ ", fuel:" + EBMJ.fuel.out)
+					Result.append (", actions_intervals:" + EBMJ.actions_left_until_reproduction.out+ ", fuel:" + EBMJ.fuel.out + ", dead_BOOLEAN" + EBMJ.dead.out)
 				end
 				Result.append ("%N")
 			end
@@ -732,9 +695,8 @@ feature --test_information
 --				i := i - 1
 			--end
 			--explorer
-
-
 			--movable, for planet
+
 			across
 				movable_sorted as movable
 			loop

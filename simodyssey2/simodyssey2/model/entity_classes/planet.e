@@ -38,11 +38,15 @@ feature  -- Initialization
 			set_location (row, col, get_sector.return_quad (current))
 			use_wormhole := false
 			devoured := false
+			check_supp_life_already := false
+
 --			set_location(0,0,0)
+
 
 		end
 
 feature -- queries
+	check_supp_life_already : BOOLEAN
 	landed_on : BOOLEAN
 	is_attached :BOOLEAN
 	is_support_life : BOOLEAN
@@ -51,6 +55,11 @@ feature -- queries
 --	dead : BOOLEAN
 
 feature --modifiers
+	set_true_check_supp_life_already
+		do
+			check_supp_life_already := true
+		end
+
 	set_true_is_attached
 		do
 			is_attached := true
@@ -66,10 +75,7 @@ feature --modifiers
 			landed_on := true
 		end
 feature -- Access
-	set_turn(i : INTEGER)
-		do
-			turns_left := i
-		end
+
 	out_is_attached :STRING
 		do
 			if is_attached then
@@ -94,17 +100,4 @@ feature -- Access
 				Result := "F"
 			end
 		end
-	out_turns_left : STRING
-
-		do
-			if turns_left < 0  then
-			Result := "N/A"
-			else
-			Result := turns_left.out
-			end
-		end
-
-
-
-
 end
