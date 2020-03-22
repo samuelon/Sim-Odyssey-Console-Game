@@ -163,7 +163,6 @@ feature -- queries
 	out : STRING
 		do
 			create Result.make_from_string ("  ")
-		
 			if
 				in_game and not face_error
 			then

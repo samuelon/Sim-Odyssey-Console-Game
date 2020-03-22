@@ -99,7 +99,7 @@ feature -- commands
 				if threshold < shared_info.asteroid_threshold then
 					create asteroid.make(shared_info.movable_id,a_row,a_col)
 					shared_info.movable_id_plus_one
-					if attached asteroid as entity then
+					if attached asteroid as entity then -- this causes you not allowed o be EBMJ
 						put (entity) -- add new entity to the contents list
 						turns_left := gen.rchoose (0, 2) -- for this planet
 						entity.set_turns_left (turns_left)
@@ -116,6 +116,7 @@ feature -- commands
 						put (entity) -- add new entity to the contents list
 						turns_left := gen.rchoose (0, 2) -- for this planet
 						entity.set_turns_left (turns_left)
+						entity.set_actions_left_until_reproduction (2) --added this
 						io.put_string ("(J->"+ turns_left.out + ":[0,2])"+ "%N")
 							-------------------------------copy the planets into the correctplace-----------------------
 						movable_list.extend (entity)
@@ -130,6 +131,7 @@ feature -- commands
 							put (entity) -- add new entity to the contents list
 							turns_left := gen.rchoose (0, 2) -- for this planet
 							entity.set_turns_left (turns_left)
+							entity.set_actions_left_until_reproduction (1)
 							io.put_string ("(M->"+ turns_left.out + ":[0,2])"+ "%N")
 								-------------------------------copy the planets into the correctplace-----------------------
 							movable_list.extend (entity)
@@ -144,6 +146,7 @@ feature -- commands
 								put (entity) -- add new entity to the contents list
 								turns_left := gen.rchoose (0, 2) -- for this planet
 								entity.set_turns_left (turns_left)
+								entity.set_actions_left_until_reproduction (1) -- added this
 								io.put_string ("(B->"+ turns_left.out + ":[0,2])"+ "%N")
 									-------------------------------copy the planets into the correctplace-----------------------
 								movable_list.extend (entity)

@@ -335,25 +335,67 @@ feature --action
 
 	reproduce(ent: NON_STATIONARY)
 	DO
+		io.put_string ("reproduction was reached")
 		if
-			attached {EBMJ_COMMON}ent as bmj
+			attached {BENIGN} ent as bmj
 		then
+			io.put_string ("(actions_left" + bmj.en.out + "->:"+ bmj.actions_left_until_reproduction.out + "%N")
 			if
 				not bmj.get_sector.is_full and bmj.actions_left_until_reproduction = 0
 			then
 				create_bmj (bmj)
-			else
+			elseif
+					(bmj.actions_left_until_reproduction > 0)
+				then
+					bmj.dec_actions_left_until_reproduction
+				else
+					if ent.get_sector.is_full then
+					-- will try to reproduce next time the entity acts
+				end
+			end--notfull
+		end --attached_
+
+		if
+			attached {MALEVOLENT} ent as bmj
+		then
+			io.put_string ("(actions_left" + bmj.en.out + "->:"+ bmj.actions_left_until_reproduction.out + "%N")
+			if
+				not bmj.get_sector.is_full and bmj.actions_left_until_reproduction = 0
+			then
+				create_bmj (bmj)
+			else--else
 				if
-					bmj.actions_left_until_reproduction /~ 0
+					(bmj.actions_left_until_reproduction > 0)
 				then
 					bmj.dec_actions_left_until_reproduction
 				elseif ent.get_sector.is_full then
 					-- will try to reproduce next time the entity acts
-
 				end
-			end
-		end
-	end
+			end--notfull
+		end --attached_
+
+		if
+			attached {JANITAUR} ent as bmj
+		then
+			io.put_string ("(actions_left" + bmj.en.out + "->:"+ bmj.actions_left_until_reproduction.out + "%N")
+			if
+				not bmj.get_sector.is_full and bmj.actions_left_until_reproduction = 0
+			then
+				create_bmj (bmj)
+			elseif
+					(bmj.actions_left_until_reproduction > 0)
+				then
+					bmj.dec_actions_left_until_reproduction
+				else
+					if ent.get_sector.is_full then
+					-- will try to reproduce next time the entity acts
+				end
+			end--notfull
+		end --attached_
+
+
+
+	end -- do
 
 --	behave (ent: NON_STATIONARY) in non_stationary
 --		local
@@ -529,12 +571,13 @@ feature -- helper
 		num_col: INTEGER
 		num_turns : INTEGER
 	do
+		num_row := gen.rchoose (1, 5)
+		num_col := gen.rchoose (1, 5)
 		if
 			ent.is_benign
 		then
-			num_row := gen.rchoose (1, 5)
-			num_col := gen.rchoose (1, 5)
 			ent.get_sector.put (create{BENIGN}.make (shared_info.movable_id, num_row,num_col))
+			ent.set_actions_left_until_reproduction (1)
 			io.put_string ("(B_row->"+ num_row.out + ":[1,5])"+ "%N")
 			io.put_string ("(B_col->"+ num_col.out + ":[1,5])"+ "%N")
 		end
@@ -542,18 +585,19 @@ feature -- helper
 			ent.is_malevolent
 		then
 			ent.get_sector.put (create{MALEVOLENT}.make (shared_info.movable_id, ent.row,ent.col))
+			ent.set_actions_left_until_reproduction (1)
+			io.put_string ("(B_row->"+ num_row.out + ":[1,5])"+ "%N")
+			io.put_string ("(B_col->"+ num_col.out + ":[1,5])"+ "%N")
 		end
 		if
 			ent.is_janitaur
 		then
 			ent.get_sector.put (create{JANITAUR}.make (shared_info.movable_id, ent.row,ent.col))
 			ent.set_actions_left_until_reproduction (2)
-		else
-			ent.set_actions_left_until_reproduction (1)
 		end
 		num_turns := gen.rchoose (0,2)
 		ent.set_turns_left (num_turns)
-		io.put_string ("(B_row->"+ num_turns.out + ":[1,5])"+ "%N")
+		io.put_string ("("+ent.en.out+ "->"+ num_turns.out + ":[0,2])"+ "%N")
 		shared_info.movable_id_plus_one
 	end
 
@@ -663,6 +707,16 @@ feature --test_information
 			end
 
 				-------------------END SECTORS -------------------------
+			---------------printout movable entities list--------------------------
+			across movable_sorted is move_ent loop
+
+				Result.append ("ID: " + move_ent.id_out + ",EN:" + move_ent.en.out+",turns_left:" + move_ent.turns_left.out )
+				if attached {EBMJ_COMMON} move_ent as EBMJ then
+					Result.append (", actions_intervals:" + EBMJ.actions_left_until_reproduction.out+ ", fuel:" + EBMJ.fuel.out)
+				end
+				Result.append ("%N")
+			end
+
 				-------------------OUTPUT STATIONARY STARS -----------------------
 --			Result.append ("  Descriptions:%N")
 --			from
