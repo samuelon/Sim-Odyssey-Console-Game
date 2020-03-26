@@ -13,14 +13,15 @@ inherit
 feature
 	fuel : INTEGER
 	max_fuel : INTEGER
+
 	actions_left_until_reproduction: INTEGER
 	reproduction_interval : INTEGER
 feature -- function
 	lose_fuel
 	do
 		fuel := fuel -1 -- need to check?
-		ensure
-			fuel_vaild : fuel >= 0
+--		ensure
+--			fuel_vaild : fuel >= 0
 		--
 	end
 
@@ -56,6 +57,32 @@ feature -- function
 		ensure
 			act_left_until_reproduction_valid : actions_left_until_reproduction >= 0
 	end
+
+feature -- death msg common
+	dmsg_asteroid(ent : EBMJ_COMMON) : STRING
+	local
+		ide : INTEGER
+	do
+		across
+			ent.get_sector.entity_quad is entity
+		loop
+			if
+				entity.is_asteroid
+			then
+				ide := entity.id
+			end
+		end
+		Result := ent.name + " got destroyed by asteroid " + "(" + ide.out +")" + " at " + "Sector:" + ent.get_sector.print_sector
+
+	end
+
+	--dmsg out of fuel
+	dmsg_out_of_fuel(ent : EBMJ_COMMON) :STRING
+		do
+			Result := ent.name + " got lost in space - out of fuel at Sector:"+ current.get_sector.print_sector
+		end
+
+
 
 
 end

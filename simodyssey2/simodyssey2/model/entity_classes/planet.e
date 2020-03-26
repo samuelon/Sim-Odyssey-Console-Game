@@ -23,19 +23,21 @@ feature  -- Initialization
 			is_attached := FALSE
 			is_support_life := FALSE
 			is_visited := FALSE
+			name := "Planet"
 			create en.make ('P') --letter
 		--	sector := a_sector
 			row := a_row
 			col := a_col
 			turns_left := 0
 			create old_pos.make
-			set_old_location (-1, -1, -1)
 			create current_pos.make
 			dead := false
 --			create death_message.make_empty
 			create quad.default_create
 			landed_on := false
 			set_location (row, col, get_sector.return_quad (current))
+			old_pos := current_pos.deep_twin
+--			set_location (row, col,current.get_sector.return_quad (current))
 			use_wormhole := false
 			devoured := false
 			check_supp_life_already := false
@@ -74,6 +76,11 @@ feature --modifiers
 		do
 			landed_on := true
 		end
+
+	set_visited_true
+		do
+			is_visited := true
+		end
 feature -- Access
 
 	out_is_attached :STRING
@@ -99,5 +106,11 @@ feature -- Access
 			else
 				Result := "F"
 			end
+		end
+
+feature -- death msg
+	dmsg_death_to_blackhole:STRING
+		do
+			Result := ("Planet got devourded by blackhole (id: -1) at Sector:3:3"+ "%N")
 		end
 end

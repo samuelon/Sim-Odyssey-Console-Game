@@ -1,3 +1,5 @@
 play
-move(E)
-move(S)
+pass
+pass
+pass
+pass

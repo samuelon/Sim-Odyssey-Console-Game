@@ -4,11 +4,21 @@ note
 	date: "$Date$"
 	revision: "$Revision$"
 
-expanded class
+class
 	ACT_WORMHOLE
 
 inherit
 	ACTION
+
+create
+	make
+
+feature{NONE} -- constructor
+	make
+	do
+		create act_name.make ("wormhole")
+		invalid := false
+	end
 
 feature
 	wormhole(ent : NON_STATIONARY)
@@ -18,26 +28,34 @@ feature
 		temp_row : INTEGER
 		temp_col : INTEGER
 		g : GALAXY
+		name : ACTION_NAME
 	do
+
 		g := shared_info.galaxy
+		--check wormhole
 		if
-			ent.is_explorer or ent.is_benign or ent.is_malevolent
+			ent.get_sector.has_wormhole
 		then
-			from
-				added := false
-			until
-				added
-			loop
-				temp_row := gen.rchoose (1,5)
-				temp_col := gen.rchoose (1,5)
-				if (not g.get_sector ([temp_row,temp_col]).is_full) then
-					g.place_ent ([ent.row,ent.col],[temp_row,temp_col], ent)
-					shared_info.add_move_this_turn (ent)
-					added := true
-					ent.set_use_wormhole
+				if
+				ent.is_explorer or ent.is_benign or ent.is_malevolent
+			then
+				from
+					added := false
+				until
+					added
+				loop
+					temp_row := gen.rchoose (1,5)
+					temp_col := gen.rchoose (1,5)
+					if (not g.get_sector ([temp_row,temp_col]).is_full) then
+						g.place_ent ([ent.row,ent.col],[temp_row,temp_col], ent)
+						shared_info.add_move_this_turn (ent)
+						added := true
+						ent.set_use_wormhole
+					end
 				end
 			end
 		end
+
 	end
 
 end

@@ -13,6 +13,7 @@ inherit
 
 feature
 --	death_message : STRING
+	name : STRING
 	current_pos : LINKED_LIST[INTEGER]
 	old_pos : LINKED_LIST[INTEGER]
 	turns_left : INTEGER
@@ -27,69 +28,7 @@ feature
 	gen: RANDOM_GENERATOR_ACCESS
 
 
-feature --boolean
-is_planet:BOOLEAN
-	local
 
-		P : ENTITY_ALPHABET
-	do
-		create P.make ('P')
-		if en.is_equal (P) then
-					Result := TRUE
-		end
-
-	end
-
-	is_explorer :BOOLEAN
-	local
-		E : ENTITY_ALPHABET
-	DO
-		create E.make ('E')
-		if en.is_equal (E) then
-				Result := TRUE
-		end
-
-	end
-
- is_malevolent :BOOLEAN
-	local
-		E : ENTITY_ALPHABET
-	DO
-		create E.make ('M')
-		if en.is_equal (E) then
-				Result := TRUE
-		end
-	end
-
-  is_benign :BOOLEAN
-	local
-		E : ENTITY_ALPHABET
-	DO
-		create E.make ('B')
-		if en.is_equal (E) then
-				Result := TRUE
-		end
-	end
-
-	  is_janitaur :BOOLEAN
-	local
-		E : ENTITY_ALPHABET
-	DO
-		create E.make ('J')
-		if en.is_equal (E) then
-				Result := TRUE
-		end
-	end
-
-	is_asteroid :BOOLEAN
-	local
-		E : ENTITY_ALPHABET
-	DO
-		create E.make ('A')
-		if en.is_equal (E) then
-				Result := TRUE
-		end
-	end
 
 feature -- function
 
@@ -136,11 +75,11 @@ feature -- function
 		dead := true
 		shared_info.dead_this_turn.extend (current)
 		current.get_sector.remove(current)
-		if
-			current.is_explorer
-		then
-			model.set_in_game_false
-		end
+--		if
+--			current.is_explorer
+--		then
+--			model.set_in_game_false
+--		end
 	end
 
 feature -- quires
@@ -173,6 +112,16 @@ feature -- quires
 		Result := "[" + old_pos[1].out + "," + old_pos[2].out+"," + old_pos[3].out+ "]"
 	end
 
+feature -- msg common
+	dmsg_to_blackhole(ent : NON_STATIONARY):STRING
+		do
+			--blackhole isnt allowed to be wrong
+			Result := ent.name +  "got devoured by blackhole (id: -1) at Sector:3:3"
+		end
+
+	current_status : STRING
+		deferred end
+
 feature{GALAXY} -- GALAXY ONLY
 	behave
 	local
@@ -190,6 +139,13 @@ feature{GALAXY} -- GALAXY ONLY
 				current.get_sector.return_sorted_ent is item
 			loop
 				if attached{EBMJ_COMMON}item as ebmj then
+					if ebmj.is_explorer then
+						if attached{EXPLORER}ebmj as exp then
+							if not exp.landed then
+								exp.dies
+							end
+						end
+					end
 					ebmj.dies -- explorer?
 				end
 			end
@@ -228,11 +184,9 @@ feature{GALAXY} -- GALAXY ONLY
 				across
 					current.get_sector.return_sorted_ent is item
 				loop
-					if attached{NON_STATIONARY}item as mov then
-						if
-							mov.is_malevolent
-						then
-							mov.dies
+					if item.is_malevolent then
+						if attached{MALEVOLENT}item as m then
+							m.dies
 						end
 					end
 				end

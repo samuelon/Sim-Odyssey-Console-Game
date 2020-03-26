@@ -4,13 +4,21 @@ note
 	date: "$Date$"
 	revision: "$Revision$"
 
-expanded class
+class
 	MOVE
 
 inherit
 	ACTION
 
+create
+	make
 
+feature{NONE} -- constructor
+	make
+	do
+		create act_name.make ("move")
+		invalid := false
+	end
 
 feature-- function
 	move_routine(dir : INTEGER ; ent : NON_STATIONARY)

@@ -103,6 +103,7 @@ feature --compare
 
 	end
 
+
 	is_star:BOOLEAN
 
 	DO
@@ -112,9 +113,72 @@ feature --compare
 
 	end
 
+	is_planet:BOOLEAN
+	local
+
+		P : ENTITY_ALPHABET
+	do
+		create P.make ('P')
+		if en.is_equal (P) then
+					Result := TRUE
+		end
+	end
+
+feature --check
+
+	is_explorer :BOOLEAN
+	local
+		E : ENTITY_ALPHABET
+	DO
+		create E.make ('E')
+		if en.is_equal (E) then
+				Result := TRUE
+		end
+
+	end
+
+ is_malevolent :BOOLEAN
+	local
+		E : ENTITY_ALPHABET
+	DO
+		create E.make ('M')
+		if en.is_equal (E) then
+				Result := TRUE
+		end
+	end
+
+  is_benign :BOOLEAN
+	local
+		E : ENTITY_ALPHABET
+	DO
+		create E.make ('B')
+		if en.is_equal (E) then
+				Result := TRUE
+		end
+	end
+
+	  is_janitaur :BOOLEAN
+	local
+		E : ENTITY_ALPHABET
+	DO
+		create E.make ('J')
+		if en.is_equal (E) then
+				Result := TRUE
+		end
+	end
+
+	is_asteroid :BOOLEAN
+	local
+		E : ENTITY_ALPHABET
+	DO
+		create E.make ('A')
+		if en.is_equal (E) then
+				Result := TRUE
+		end
+	end
 
 
-feature
+feature --helper
 	sector_out : STRING
 	DO
 		create Result.make_empty
@@ -130,6 +194,8 @@ feature
 	do
 		Result := shared_info.galaxy.get_sector ([row,col])
 	end
+
+	
 
 
 end

@@ -19,14 +19,9 @@ feature -- welcom
 
 welcome : STRING
 	DO
-		Result := "state 0.0,ok %N  Welcome! Try test(30)"
+		Result := "  state:0.0, ok %N  Welcome! Try test(3,5,7,15,30)"
 	end
 
-feature --extra
-	game_end_start_new : STRING
-		do
-			Result := ("The game has ended. You can start a new game.")
-		end
 
 feature --command_msgs
 --first line stuff
@@ -34,54 +29,40 @@ feature --command_msgs
 		--tracks explorer
 		do
 			create Result.make_empty
-			Result.append ("Explorer status report : Travelling at cruise speed at" + state_memory.og_exp.cur_location_out + "%N")
-			Result.append ("Life units left:"+ state_memory.og_exp.get_life_out + ", Fuel units left:" + state_memory.og_exp.get_fuel_out + "%N")
+			Result.append ("Explorer status report : Travelling at cruise speed at" + state_memory.og_exp.cur_location_out)
+			Result.append ("Life units left:"+ state_memory.og_exp.get_life_out + ", Fuel units left:" + state_memory.og_exp.get_fuel_out )
 		end
 	status_landed : STRING
 		do
 			create Result.make_empty
 			Result.append("Explorer status report : Stationary on planet surface at " + state_memory.og_exp.cur_location_out)
-			Result.append ("Life units left:"+ state_memory.og_exp.get_life_out + ", Fuel units left:" + state_memory.og_exp.get_fuel_out+ "%N")
+			Result.append ("Life units left:"+ state_memory.og_exp.get_life_out + ", Fuel units left:" + state_memory.og_exp.get_fuel_out)
 		end
 
 	land_life_found : STRING
 		do
-			Result := ("Tranquility base here - we've got a life!"+ "%N")
+			Result := ("Tranquility base here - we've got a life!")
 		end
 	land_no_life_found : STRING
 		do
-			Result := ("Explorer found no life as we know it at Sector:"+state_memory.og_exp.row.out + ":" + state_memory.og_exp.col.out+ "%N")
+			Result := ("Explorer found no life as we know it at Sector:"+state_memory.og_exp.get_sector.print_sector)
 		end
+
 	lift_off : STRING
 		do
-			Result := ("Explorer has lifted off from planet at Sector:"+state_memory.og_exp.row.out + ":" + state_memory.og_exp.col.out+ "%N")
+			Result := ("Explorer has lifted off from planet at Sector:"+state_memory.og_exp.get_sector.print_sector)
 		end
 
 	abort_in_game : STRING
 		do
-			Result := ("Mission aborted. Try test(30)"+ "%N")
+			Result := ("Mission aborted. Try test(30)" )
 		end
-	abort_out_of_game : STRING
+	game_is_over : STRING
 		do
-			Result := ("The game has ended. You can start a new game."+ "%N")
+			Result := ("The game has ended. You can start a new game.")
 		end
 
-feature -- Death Messages
---exp deaths
 
-	exp_out_of_fuel :STRING
-		do
-			Result := ("Explorer got lost in space - out of fuel at Sector:"+state_memory.og_exp.row.out + ":" + state_memory.og_exp.col.out+ "%N")
-		end
-	exp_death_to_blackhole:STRING
-		do
-			--blackhole isnt allowed to be wrong
-			Result := ("Explorer got devoured by blackhole (id: -1) at Sector:3:3"+ "%N")
-		end
-	planet_death_to_blackhole:STRING
-		do
-			Result := ("Planet got devourded by blackhole (id: -1) at Sector:3:3"+ "%N")
-		end
 feature -- Error Messages
 
 	error_not_in_mission :STRING
@@ -89,75 +70,54 @@ feature -- Error Messages
 			Result := ("  Negative on that request:no mission in progress.")
 		end
 
-	error_abort_1 : STRING
-		do
-			--create Result.make_from_string( error_not_in_mission)
-			Result := error_not_in_mission
-		end
-	error_land_1: STRING
-		do
-			Result := error_not_in_mission
-		end
 
-	error_land_wormhole: STRING --land wormhole
+	error_land_already_land: STRING --land wormhole
 		do
-		 Result := ("Negative on that request:already landed on a planet at Sector:"+state_memory.og_exp.row.out + ":" + state_memory.og_exp.col.out+ "%N")
+		 Result := ("Negative on that request:already landed on a planet at Sector:"+state_memory.og_exp.get_sector.print_sector)
 		end
 
 	error_land_no_yellow_dwarf:STRING
-		do Result := ("Negative on that request:no yellow dwarf at Sector:"+state_memory.og_exp.row.out + ":" + state_memory.og_exp.col.out+ "%N") end
+		do Result := ("Negative on that request:no yellow dwarf at Sector:"+state_memory.og_exp.get_sector.print_sector) end
 
 	error_land_no_planet: STRING
-		do Result:= ("Negative on that request:no planet at Sector:"+state_memory.og_exp.row.out + ":" + state_memory.og_exp.col.out+ "%N") end
+		do Result:= ("Negative on that request:no planet at Sector:"+state_memory.og_exp.get_sector.print_sector) end
 
 	error_land_no_visited_planet:STRING
-		 do Result := ("Negative on that request:no visited planet at Sector:"+state_memory.og_exp.row.out + ":" + state_memory.og_exp.col.out+ "%N") end
+		 do Result := ("Negative on that request:no visited planet at Sector:"+state_memory.og_exp.get_sector.print_sector) end
 
-	error_liftoff_1 : STRING
-		do
-			Result := error_not_in_mission
-		end
+
 	error_liftoff_not_on_a_planet : STRING
 		do
-			Result := ("Negative on that request:you are not on a planet at Sector:"+state_memory.og_exp.row.out + ":" + state_memory.og_exp.col.out+ "%N")
+			Result := ("Negative on that request:you are not on a planet at Sector:"+state_memory.og_exp.get_sector.print_sector)
 		end
-	error_move_1 : STRING
-		do
-			Result := error_not_in_mission
-		end
+
 	error_move_landed : STRING
 		do
-			Result := ("Negative on that request: you are currently landed at Sector:" +state_memory.og_exp.row.out + ":" + state_memory.og_exp.col.out+ "%N")
+			Result := ("Negative on that request: you are currently landed at Sector:" +state_memory.og_exp.get_sector.print_sector)
 		end
 	error_move_full : STRING
 		do
-			Result := ("Cannot transfer new location as it is full." + "%N")
+			Result := ("Cannot transfer new location as it is full." )
 		end
-	error_pass_1 : STRING
+	error_mode_in_game : STRING --play -test
 		do
-			Result := error_not_in_mission
+			Result := ("To start a new mission, please abort the current one first.")
 		end
 
-	error_status_no_mission : STRING
-		do
-			Result := ("Negative on that request: no mission in progress."+ "%N")
+	error_test : STRING
+		DO
+			RESULT := "Thresholds should be non-decreasing order.%N"
 		end
-	error_mode_in_game : STRING
-		do
-			Result := ("To start a new mission, please abort the current one first."+ "%N")
-		end
-	error_wormhole_1 : STRING
-		do
-			Result := error_not_in_mission
-		end
+
 	error_wormhole_landed : STRING
 		do
-			Result := ("Negative on that request: you are currently landed at Sector:" +state_memory.og_exp.row.out + ":" + state_memory.og_exp.col.out+ "%N")
+			Result := ("Negative on that request: you are currently landed at Sector:" +state_memory.og_exp.get_sector.print_sector)
 		end
+
 	error_wormhole_not_find : STRING
 		--call wormhole when not wormhole
 		do
-			Result := ("Explorer couldn't find wormhole at Sector:"+state_memory.og_exp.row.out + ":" + state_memory.og_exp.col.out+ "%N")
+			Result := ("Explorer couldn't find wormhole at Sector:"+state_memory.og_exp.get_sector.print_sector)
 		end
 
 

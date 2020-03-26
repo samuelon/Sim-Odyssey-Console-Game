@@ -18,6 +18,7 @@ feature  -- Initialization
 		life : INTEGER
 		landed : BOOLEAN
 		face_error : BOOLEAN
+		wins : BOOLEAN --land_on_planet_support_life
 
 	make(idv :INTEGER;a_row : INTEGER ; a_col : INTEGER) --how do we make the sector while referring to itself.
 			-- Initialization for `Current'.
@@ -26,6 +27,7 @@ feature  -- Initialization
 			fuel := 3
 			life := 3
 			landed := FALSE
+			wins := FALSE
 			create en.make ('E') --letter
 			row := a_row
 			col := a_col
@@ -35,14 +37,18 @@ feature  -- Initialization
 			face_error := false
 			--take from the created message file
 			create old_pos.make
-			set_old_location (-1, -1, -1)
 			create current_pos.make
 			set_location (1,1,1)
+			old_pos :=  current_pos.deep_twin
 			use_wormhole := false
 			devoured := false
-
+			name := "Explorer"
 		end
 feature -- modifiers
+	set_wins
+	do
+		wins := true
+	end
 
 	set_life( i : INTEGER)
 		do
@@ -86,8 +92,12 @@ feature
 
 	end
 
+feature --death message
 
-
+	dmsg_death_malevolent : STRING
+	do
+		result := "Explorer got lost in space - out of life support at Sector:" +  current.get_sector.print_sector
+	end
 
 
 end

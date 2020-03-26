@@ -21,11 +21,14 @@ feature -- attributes
 
 	gen: RANDOM_GENERATOR_ACCESS
 
-	contents: ARRAYED_LIST [detachable ENTITY_ALPHABET] --holds 4 quadrants
-
-	entity_quad: ARRAYED_LIST [detachable ENTITY]
+--	contents: ARRAYED_LIST [detachable ENTITY_ALPHABET] --holds 4 quadrants
+	contents: ARRAYED_LIST [ENTITY_ALPHABET]
+--	entity_quad: ARRAYED_LIST [detachable ENTITY]
+	entity_quad: ARRAYED_LIST [ENTITY]
 
 	movable_list: ARRAYED_LIST [NON_STATIONARY]
+
+--	planet_only : ARRAYED_LIST[PLANET]
 
 	row: INTEGER
 
@@ -53,6 +56,7 @@ feature -- constructor
 				if (row = 1) and (column = 1) then
 						--create og_exp.make (0,current)
 					put (shared_info.og_exp) -- If this is the top left corner sector, place the explorer there
+					movable_list.extend (shared_info.og_exp)
 				end
 				populate (row, column) -- Run the populate command to complete setup
 			end -- if
@@ -98,149 +102,59 @@ feature -- commands
 				threshold := gen.rchoose (1, 100)
 				if threshold < shared_info.asteroid_threshold then
 					create asteroid.make(shared_info.movable_id,a_row,a_col)
-					shared_info.movable_id_plus_one
-					if attached asteroid as entity then -- this causes you not allowed o be EBMJ
-						put (entity) -- add new entity to the contents list
-						turns_left := gen.rchoose (0, 2) -- for this planet
-						entity.set_turns_left (turns_left)
-						io.put_string ("(A->"+ turns_left.out + ":[0,2])"+ "%N")
-							-------------------------------copy the planets into the correctplace-----------------------
-						movable_list.extend (entity)
-						planet_holder := void -- only difference from sector now
-						end
+					populate_routine (a_row,a_col,asteroid)
 				else
 					if threshold < shared_info.janitaur_threshold then
 						create janitaur.make(shared_info.movable_id,a_row,a_col)
-						shared_info.movable_id_plus_one
-						if attached janitaur as entity then
-						put (entity) -- add new entity to the contents list
-						turns_left := gen.rchoose (0, 2) -- for this planet
-						entity.set_turns_left (turns_left)
-						entity.set_actions_left_until_reproduction (2) --added this
-						io.put_string ("(J->"+ turns_left.out + ":[0,2])"+ "%N")
-							-------------------------------copy the planets into the correctplace-----------------------
-						movable_list.extend (entity)
-						planet_holder := void -- only difference from sector now
-						end
+						populate_routine (a_row,a_col,janitaur)
 
 					else
 						if (threshold < shared_info.malevolent_threshold) then
 							create malevolent.make(shared_info.movable_id,a_row,a_col)
-							shared_info.movable_id_plus_one
-							if attached malevolent as entity then
-							put (entity) -- add new entity to the contents list
-							turns_left := gen.rchoose (0, 2) -- for this planet
-							entity.set_turns_left (turns_left)
-							entity.set_actions_left_until_reproduction (1)
-							io.put_string ("(M->"+ turns_left.out + ":[0,2])"+ "%N")
-								-------------------------------copy the planets into the correctplace-----------------------
-							movable_list.extend (entity)
-							planet_holder := void -- only difference from sector now
-							end
+							populate_routine (a_row,a_col,malevolent)
 						else
 							if (threshold < shared_info.benign_threshold) then
 								create benign.make(shared_info.movable_id,a_row,a_col)
-
-								shared_info.movable_id_plus_one
-								if attached benign as entity then
-								put (entity) -- add new entity to the contents list
-								turns_left := gen.rchoose (0, 2) -- for this planet
-								entity.set_turns_left (turns_left)
-								entity.set_actions_left_until_reproduction (1) -- added this
-								io.put_string ("(B->"+ turns_left.out + ":[0,2])"+ "%N")
-									-------------------------------copy the planets into the correctplace-----------------------
-								movable_list.extend (entity)
-								planet_holder := void -- only difference from sector now
-								end
+								populate_routine (a_row,a_col,benign)
 							else
 								if threshold < shared_info.planet_threshold then
 									create planet.make(shared_info.movable_id,a_row,a_col)
-									shared_info.movable_id_plus_one
-									if attached planet as entity then
-									put (entity) -- add new entity to the contents list
-									turns_left := gen.rchoose (0, 2) -- for this planet
-									entity.set_turns_left (turns_left)
-									io.put_string ("(P->"+ turns_left.out + ":[0,2])"+ "%N")
-										-------------------------------copy the planets into the correctplace-----------------------
-									movable_list.extend (entity)
-									planet_holder := void -- only difference from sector now
-									end
+									populate_routine (a_row,a_col,planet)
 								end
 							end
 						end
 					end
 				end
---			
-			-------from sector
-
-						---------------------end sector
 				loop_counter := loop_counter + 1
 			end
 		end
 
 
 feature --function
-	return_sorted_ent : ARRAYED_LIST[detachable ENTITY]
+
+	populate_routine(a_row: INTEGER ; a_col : INTEGER ; ent : NON_STATIONARY)
 	local
-
-		i : INTEGER
-		j : INTEGER
-		temp : ARRAYED_LIST[detachable ENTITY]
-		temp_ent : ENTITY
+		turns_left : INTEGER
+		planet_holder: ENTITY_ALPHABET
 	do
-		create result.make (shared_info.max_capacity)
-		create temp.make (shared_info.max_capacity)
-		temp := entity_quad.deep_twin
-
-			from
-			i := temp.lower
-			until
-				i>temp.upper
-			loop
-				from
-					j := temp.lower
-				until
-					j > (temp.upper-i)
-				loop
-					if
-						attached temp[j] as t1 and attached temp[j+1]as t2
-					then
-						if
-							t1.id > t2.id
-						then
-							temp_ent := t1
-							temp[j]:=t2
-							temp[j+1]:=temp_ent
-						end
-					end
-					j:=j+1
-				end
-			i := i+1
-			end
-
---		for (int i = 0; i < array.length-1; i++) {
---        for (int j = 0; j < array.length - 1-i; j++) {
---            if (array[j] > array[j + 1]) {
---                temp = array[j];
---                array[j] = array[j + 1];
---                array[j + 1] = temp;
---            }
---        }
---    }
-	--debug
-		across
-			1 |..| temp.upper is in
-		loop
-			if
-				attached temp[in] as ent
-			then
-				io.put_string ("sorted quad"+ent.id.out + ent.en.out + "%N")
-			end
-		end
-	---	
-		result := temp
+		put(ent)
+		ent.set_location (a_row,a_col,return_quad (ent))
+		ent.set_old_location (a_row,a_col,return_quad (ent))
+		shared_info.movable_id_plus_one
+		turns_left := gen.rchoose (0, 2) -- for this planet
+		ent.set_turns_left (turns_left)
+		io.put_string (ent.id_out + ent.cur_location_out + "turns_left" + turns_left.out + ":[0,2])"+ "%N")
+		movable_list.extend (ent)
+		planet_holder := void -- only difference from sector now
 	end
 
+	return_sorted_ent : ARRAY[ENTITY] --ok
+	local
+		sort : SORTED_ENTITY
+	do
+		create sort.make (entity_quad)
+		result := sort.sorted_entities
+	end
 
 	put (new_component: ENTITY)
 			-- put `new_component' in contents array
@@ -266,14 +180,17 @@ feature --function
 			until
 				loop_counter > contents.count or filled
 			loop
-				if not attached contents [loop_counter] then -- not void if is it void
+--				if not attached contents [loop_counter] then -- not void if is it void
+				if contents[loop_counter].is_empty then
 					contents [loop_counter] := new_component.en
 					filled := TRUE
 					io.put_string ("putting in entity in void spot: " + new_component.id.out+ "%N")
 						------------------------------------CREATING THE ENTITY_QUADRANT ---------------------------------------
 					entity_quad [loop_counter] := new_component
-						-------------------------------------END ENTITY QUADRANT --------------------------------------------
-				end --if
+						-------------------------------------END ENTITY QUADRANT ---------
+				end
+					-----------------------------------
+
 				loop_counter := loop_counter + 1
 			end -- loop
 
@@ -294,6 +211,8 @@ feature --function
 			loop_counter: INTEGER
 			removed: BOOLEAN
 			dummy_entity: ENTITY
+			empty_en_alp : ENTITY_ALPHABET
+			empty_en : ENTITY
 			--			empty_ent_alph : ENTITY_ALPHABET
 		do
 			from
@@ -305,16 +224,18 @@ feature --function
 						--					io.put_string ("fx")
 					if ent.id ~ new_component.id and ent.en ~ new_component.en then
 						--
-						entity_quad [loop_counter] := void
-						contents [loop_counter] := void
+						create{ENTITY_ALPHABET}empty_en_alp.make ('-')
+						create{EMPTY}empty_en.make
+						entity_quad [loop_counter] := empty_en--void
+						contents [loop_counter] := empty_en_alp--void
 						io.put_string("removing this id, planet" +new_component.id.out+ "%N")
 						removed := true
 					end
 				end
 				loop_counter := loop_counter + 1
 			end -- loop
---		ensure
---			already_removed :
+		ensure
+			others_unchanged : across old contents.deep_twin is en  all en.item /~ new_component.en end
 		end
 
 feature -- Queries
@@ -346,9 +267,17 @@ feature -- Queries
 				quad_counter > current.entity_quad.count
 			loop
 				temp_component := current.entity_quad [quad_counter]
-				if attached temp_component as character then
-					Result.append (character.id_out)
-				end -- if
+--				if attached temp_component as character then
+--					Result.append (character.id_out)
+--				end -- if
+				if
+					temp_component.en.is_empty
+				then
+					Result.append ("-")
+				else
+					Result.append (temp_component.id_out)
+				end
+
 				if ( quad_counter ~ 4) then
 				else
 					Result.append(",")
@@ -356,6 +285,8 @@ feature -- Queries
 				printed_symbols_counter := printed_symbols_counter + 1
 				quad_counter := quad_counter + 1
 			end
+
+			-- print -
 			from
 			until
 				(shared_info.max_capacity - printed_symbols_counter) = 0
@@ -546,6 +477,16 @@ feature -- check
 			end
 		end
 feature --others
+	out_sorted_entity : STRING
+	do
+		create result.make_empty
+		across
+			return_sorted_ent is m
+		loop
+			result.append("sorted_ent:"+ m.id_out + ",")
+		end
+	end
+
 
 	max_luminosity : INTEGER
 
@@ -586,14 +527,8 @@ feature --others
 		across
 			1 |..| contents.count is i
 		loop
-			if
-				attached contents[i] as ent_alp
-			then
-				if
-					ent_alp.is_equal (ent.en)
-				then
-					Result := i
-				end
+			if contents[i].is_equal (ent.en) then
+				Result := i
 			end
 
 		end

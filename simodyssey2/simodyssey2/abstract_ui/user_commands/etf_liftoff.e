@@ -15,7 +15,9 @@ feature -- command
     	do
 			-- perform some update on the model state
 			model.default_update
+			-- IF NO ERRORS RUN THIS
 			model.liftoff
+
 			etf_cmd_container.on_change.notify ([Current])
     	end
 

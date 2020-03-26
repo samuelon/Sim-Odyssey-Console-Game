@@ -17,7 +17,7 @@ feature -- command
 			model.abort
 
 
-			model.default_status_update
+			model.default_update
 
 			etf_cmd_container.on_change.notify ([Current])
     	end

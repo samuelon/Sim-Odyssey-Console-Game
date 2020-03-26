@@ -29,6 +29,7 @@ feature {NONE} -- Initialization
 			i := 0
 			status_num:=0
 			create main_msg.make
+			io.put_string (all_msg.welcome)
 
 		end
 
@@ -37,6 +38,7 @@ feature -- model attributes
 	status_num : INTEGER
 	p : detachable MODE
 	main_msg:MAIN_MESSAGE
+	all_msg : ALL_MSG
 	shared_info_access: SHARED_INFORMATION_ACCESS
 
 	shared_info: SHARED_INFORMATION
@@ -58,64 +60,74 @@ feature -- model operations
 			-- Perform update to the model state.
 			-- main msg number + 1
 		do
+			-- if no error
 			i := i + 1
+			-- othewise, increment the .x
 		end
-
-	default_status_update
-			-- Perform update to the model state.
-			-- main msg number + 1
-		do
-			status_num := status_num + 1
-		end
-
 
 	reset
 			-- Reset model state.
 		do
 			make
 		end
+
 	move(dir : INTEGER)
 	local
 		m : MOVE
 	DO
+		create m.make
 		if
 			attached p as p1
 		then
-			m.move_routine(dir,shared_info.og_exp)
---			p1.g.turn("move")
-			p1.shared_info.galaxy.movable_entity_move
-
+			-- put in the act afterwards
+--			create m.make
+			move_dir := dir
+			p1.g.turn (m)
 		end
 
 	end
 
 	land
+		local
+			l : LAND
 		do
+			create l.make
 			if	attached p as p1 then
 --				p1.g.turn ("land")
+
+				p1.g.turn (l)
+--				p1.shared_info.galaxy.movable_entity_move
 			end
 		end
+
 	liftoff
+		local
+			li : LIFTOFF
 		do
+			create li.make
 			if	attached p as p1 then
 --				p1.g.turn ("liftoff")
+				p1.g.turn (li)
 			end
 
 		end
 	pass
+		local
+			pa : PASS
 		do
+			create pa.make
 			if	attached p as p1 then
---				p1.g.turn ("pass")
+				p1.g.turn (pa)
 				end
-
 		end
 	wormhole
 		local
 			w : ACT_WORMHOLE
 		do
+			create w.make
 			if	attached p as p1 then
---				p1.g.turn ("wormhole")
-				w.wormhole(shared_info.og_exp)
+				p1.g.turn (w)
+
 				end
 		end
 	abort
@@ -166,8 +178,12 @@ feature -- queries
 			if
 				in_game and not face_error
 			then
+				Result.append (main_msg.fourth)
+				Result.append (main_msg.fifth)
 				Result.append (main_msg.pic)
 			end
+			Result.append (shared_info.og_exp.id_out + "," + "landed:"+ shared_info.og_exp.landed.out + ",fuel"+ shared_info.og_exp.fuel.out)
+
 
 		end
 

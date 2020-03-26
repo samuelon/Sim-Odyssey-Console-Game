@@ -15,8 +15,8 @@ feature -- command
     	do
 			-- perform some update on the model state
 			model.status
-			model.default_status_update
-
+--			model.default_status_update
+			model.default_update
 			etf_cmd_container.on_change.notify ([Current])
     	end
 
