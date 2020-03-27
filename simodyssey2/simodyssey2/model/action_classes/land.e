@@ -60,7 +60,7 @@ feature -- action
 									shared_info.og_exp.set_wins
 									model.set_command_specific_on
 									model.main_msg.set_second (model.all_msg.land_life_found)
---									model.set_in_game_false
+									model.set_in_game_false
 --								else
 									--model.command_specefic_on
 --									model.main_msg.set_second (model.all_msg.land_no_life_found)

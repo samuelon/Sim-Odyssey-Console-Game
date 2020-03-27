@@ -194,6 +194,7 @@ feature{GALAXY} -- GALAXY ONLY
 					if item.is_malevolent then
 						if attached{MALEVOLENT}item as m then
 							m.dies
+							-- store destry info
 						end
 					end
 				end

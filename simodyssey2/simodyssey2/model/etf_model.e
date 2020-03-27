@@ -78,9 +78,11 @@ feature -- model operations
 	move(dir : INTEGER) --defensive programming
 	local
 		m : MOVE
+		temp : TUPLE[row:INTEGER ; col : INTEGER]
 	DO
 		create m.make
 		reset_action_routine
+		temp := m.calculate_next_sector (dir, shared_info.og_exp)
 		if not in_game then
 			main_msg.set_second (all_msg.error_mode_in_game)
 			face_error := true
@@ -88,9 +90,12 @@ feature -- model operations
 			main_msg.set_second (all_msg.error_move_landed)
 			face_error := true
 		else
-			-- sector is full inside m
 			if attached p as p1
 			then
+				if p1.g.get_sector (temp).is_full then
+					main_msg.set_second (all_msg.error_move_full)
+					face_error := true
+				end
 				move_dir := dir
 				p1.g.turn (m)
 			end
@@ -183,15 +188,13 @@ feature -- model operations
 		end
 	abort
 		do
-			abort_on := TRUE
 			reset_action_routine
 			if in_game = false then
-				main_msg.abort_only("error")
 				main_msg.set_second (all_msg.error_not_in_mission)
-			else
-				main_msg.abort_only("ok")
-				main_msg.set_second (all_msg.abort_in_game)
 				face_error := true
+			else
+				main_msg.set_second (all_msg.abort_in_game)
+				command_specific := true
 				in_game := False
 				play_on := false
 				test_on := false

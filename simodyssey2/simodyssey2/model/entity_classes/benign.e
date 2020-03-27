@@ -12,6 +12,7 @@ inherit
 
 create
 	make
+	
 
 feature
 	make(idv : INTEGER; a_row : INTEGER ; a_col : INTEGER )

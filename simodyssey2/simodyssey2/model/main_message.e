@@ -40,24 +40,20 @@ feature -- lines
 --	eighth :
 	abort : STRING
 
-feature
-	abort_only(str : STRING)
-		do
-			abort := str
-		end
 
 feature --quires
 	first : STRING
 	do
 		create result.make_empty
 		result.append ("  state:" + model.i.out + "." + model.e.out + ", ")
-		if not model.in_game and not model.abort_on then
+		---others
+		if not model.in_game and model.face_error then
 			result.append("error")
+		elseif (not model.in_game) then
+
+			result.append("ok")
 		end
 
-		if model.abort_on then
-			result.append(abort)
-		end
 
 		if model.in_game then
 			if model.play_on then
@@ -72,7 +68,6 @@ feature --quires
 				result.append("error")
 			end
 		end
-
 		result.append ("%N")
 
 	end
@@ -104,7 +99,8 @@ feature --quires
 						Result.append ("    " + ent.id_out+":"+ ent.cur_location_out )
 					else
 						Result.append ("    " + ent.id_out+":"+ent.old_location_out+"->"+ ent.cur_location_out )
-
+						--- if destory
+						--- across  desrory_this_turn
 					end
 
 					if

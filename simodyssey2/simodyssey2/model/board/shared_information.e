@@ -23,7 +23,7 @@ feature{GALAXY,ENTITY}
 		create move_this_turn.make
 		create dead_this_turn.make
 		create galaxy.make_empty
-
+		--create 2 linkedlist
 		end
 
 feature
@@ -82,6 +82,10 @@ feature
 	move_this_turn : LINKED_LIST[NON_STATIONARY]
 
 	dead_this_turn : LINKED_LIST[NON_STATIONARY]
+
+	--map
+--	destory_this_ : map[ent,linked_list[non_stationary]]
+--	reproduce : [ent, reproduced ent]
 
 	galaxy : GALAXY
 feature
