@@ -58,9 +58,9 @@ feature -- action
 --										---game ends movables will not act
 									has_life := true
 									shared_info.og_exp.set_wins
---									model.command_specefic_on
---									model.main_msg.set_second (model.all_msg.land_life_found)
-									model.set_in_game_false
+									model.set_command_specific_on
+									model.main_msg.set_second (model.all_msg.land_life_found)
+--									model.set_in_game_false
 --								else
 									--model.command_specefic_on
 --									model.main_msg.set_second (model.all_msg.land_no_life_found)
@@ -82,7 +82,7 @@ feature -- action
 
 		if not has_life then
 			model.main_msg.set_second (model.all_msg.land_no_life_found)
-			--model.command_specefic_on
+			model.set_command_specific_on
 		end
 
 	end--do

@@ -351,6 +351,7 @@ feature --action
 			if
 				not bmj.get_sector.is_full and bmj.actions_left_until_reproduction = 0
 			then
+				bmj.set_reproduce_others
 				create_bmj (bmj)
 			elseif
 					(bmj.actions_left_until_reproduction /~ 0)

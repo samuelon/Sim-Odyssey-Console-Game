@@ -13,6 +13,8 @@ inherit
 feature
 	fuel : INTEGER
 	max_fuel : INTEGER
+	reproduce_others : BOOLEAN
+	is_reproduced : BOOLEAN
 
 	actions_left_until_reproduction: INTEGER
 	reproduction_interval : INTEGER
@@ -24,6 +26,16 @@ feature -- function
 --			fuel_vaild : fuel >= 0
 		--
 	end
+
+	set_reproduce_others
+		do
+			reproduce_others := true
+		end
+
+	set_is_reproduced
+		do
+			is_reproduced := true
+		end
 
 	set_fuel(i : INTEGER)
 		do

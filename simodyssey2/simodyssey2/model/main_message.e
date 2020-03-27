@@ -50,8 +50,8 @@ feature --quires
 	first : STRING
 	do
 		create result.make_empty
-		result.append ("state:" + model.i.out + "." + model.e.out + ", ")
-		if not model.in_game  and not model.abort_on then
+		result.append ("  state:" + model.i.out + "." + model.e.out + ", ")
+		if not model.in_game and not model.abort_on then
 			result.append("error")
 		end
 
@@ -72,8 +72,6 @@ feature --quires
 				result.append("error")
 			end
 		end
-
-
 
 		result.append ("%N")
 
@@ -106,6 +104,7 @@ feature --quires
 						Result.append ("    " + ent.id_out+":"+ ent.cur_location_out )
 					else
 						Result.append ("    " + ent.id_out+":"+ent.old_location_out+"->"+ ent.cur_location_out )
+
 					end
 
 					if
@@ -114,7 +113,7 @@ feature --quires
 						Result.append("%N")
 					end
 				end
-				Result.append ("%N")
+--				Result.append ("%N")
 			end
 		end
 

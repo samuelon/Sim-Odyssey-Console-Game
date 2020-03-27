@@ -51,6 +51,7 @@ feature -- boolean
 	play_on:BOOLEAN
 	face_error:BOOLEAN
 	abort_on : BOOLEAN
+	command_specific : BOOLEAN
 	--g : detachable GALAXY
 
 feature -- model operations
@@ -79,11 +80,7 @@ feature -- model operations
 		m : MOVE
 	DO
 		create m.make
-
-		if attached p as p1 then
-			move_dir := dir
-			p1.g.turn (m)
-		end
+		reset_action_routine
 		if not in_game then
 			main_msg.set_second (all_msg.error_mode_in_game)
 			face_error := true
@@ -107,6 +104,7 @@ feature -- model operations
 		do
 			create l.make
 			--control error
+			reset_action_routine
 			if not in_game then
 				main_msg.set_second (all_msg.error_not_in_mission)
 				face_error := true
@@ -133,6 +131,7 @@ feature -- model operations
 			li : LIFTOFF
 		do
 			create li.make
+			reset_action_routine
 			if not in_game then
 				main_msg.set_second (all_msg.error_not_in_mission)
 				face_error := true
@@ -151,6 +150,7 @@ feature -- model operations
 			pa : PASS
 		do
 			create pa.make
+			reset_action_routine
 			if not in_game then
 				main_msg.set_second (all_msg.error_not_in_mission)
 				face_error := true
@@ -164,15 +164,27 @@ feature -- model operations
 		local
 			w : ACT_WORMHOLE
 		do
-			create w.make
-			if	attached p as p1 then
-				p1.g.turn (w)
-
-				end
+			reset_action_routine
+			if not in_game then
+				main_msg.set_second (all_msg.error_not_in_mission)
+				face_error := true
+			elseif shared_info.og_exp.landed then
+				main_msg.set_second (all_msg.error_wormhole_landed)
+				face_error := true
+			elseif not shared_info.og_exp.get_sector.has_wormhole then
+				main_msg.set_second (all_msg.error_wormhole_not_find)
+				face_error := true
+			else
+				create w.make
+				if	attached p as p1 then
+					p1.g.turn (w)
+					end
+			end
 		end
 	abort
 		do
 			abort_on := TRUE
+			reset_action_routine
 			if in_game = false then
 				main_msg.abort_only("error")
 				main_msg.set_second (all_msg.error_not_in_mission)
@@ -190,43 +202,67 @@ feature -- model operations
 		do
 --			create t.make
 	-- need test sth wrong with generator
-			create p.make_test (a_threshold, j_threshold, m_threshold, b_threshold, p_threshold)
-			test_on:= True
-			in_game := true
-			reset_routine
+			if in_game then
+				main_msg.set_second (all_msg.error_mode_in_game)
+				face_error := true
+			elseif not (0 < a_threshold and a_threshold <= j_threshold and j_threshold <= m_threshold
+				and m_threshold <= b_threshold and b_threshold <= p_threshold and p_threshold <= 101 ) then
+				main_msg.set_second (all_msg.error_test)
+				face_error:=true
+			else
+				create p.make_test (a_threshold, j_threshold, m_threshold, b_threshold, p_threshold)
+				test_on:= True
+				in_game := true
+				reset_routine
+			end
 		end
 
 	play
 	DO
---		if in_game then
---			main_msg.set_second (all_msg.error_mode_in_game)
---			face_error := true
---		else
+		if in_game then
+			main_msg.set_second (all_msg.error_mode_in_game)
+			face_error := true
+		else
 			create p.make
 			play_on := True
 			in_game := true
 			reset_routine
---		end
+		end
 
 	end
 
 	status
 		do
-			if in_game then
-				main_msg.set_second (all_msg.error_mode_in_game)
+			if not in_game then
+				main_msg.set_second (all_msg.error_not_in_mission)
 				face_error := true
 			else
 				status_on := true
+				if not shared_info.og_exp.landed then
+					main_msg.set_second (all_msg.status_not_landed)
+					command_specific := true
+				else
+					main_msg.set_second (all_msg.status_landed)
+					command_specific := true
+				end
 				--print/set status
 			end
 		end
 
 feature -- helper
+	reset_action_routine
+		do
+			command_specific := false
+			status_on := false
+			face_error := false
+		end
+
 	reset_routine
 		do
 			face_error:=false
 			abort_on := false
 			status_on := FALSE
+			command_specific := false
 			i := 0
 			e := 0
 		end
@@ -240,6 +276,11 @@ feature -- helper
 	do
 		in_game := false
 	end
+
+	set_command_specific_on
+		do
+			command_specific := true
+		end
 
 	set_face_error_t
 		do
@@ -262,12 +303,12 @@ feature -- queries
 			if i > 0 or e > 0 then
 				Result.append (main_msg.first)
 			end
-			if face_error then -- command-specific or exp death msg
+			if face_error or command_specific then -- command-specific or exp death msg
 				Result.append (main_msg.second)
 			end
 
 			if
-				in_game and not face_error
+				in_game and not face_error and not status_on and not shared_info.og_exp.wins
 			then
 				result.append (main_msg.third)
 				if test_on then
