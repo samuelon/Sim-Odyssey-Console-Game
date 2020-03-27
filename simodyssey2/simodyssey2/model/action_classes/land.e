@@ -20,6 +20,7 @@ feature{NONE} -- constructor
 		invalid := false
 	end
 
+
 feature -- action
 	land
 	local
@@ -27,9 +28,12 @@ feature -- action
 		i : INTEGER
 		found : BOOLEAN
 		temp : ARRAY[ENTITY]
+		has_life : BOOLEAN
 	do
 		sec := shared_info.og_exp.get_sector
 		temp := sec.return_sorted_ent.deep_twin
+		found := false
+		has_life := false
 		if
 			sec.has_planet and sec.has_yellow_dwarf
 		then
@@ -52,8 +56,14 @@ feature -- action
 								if p.is_support_life then
 									---??????
 --										---game ends movables will not act
+									has_life := true
 									shared_info.og_exp.set_wins
+--									model.command_specefic_on
+--									model.main_msg.set_second (model.all_msg.land_life_found)
 									model.set_in_game_false
+--								else
+									--model.command_specefic_on
+--									model.main_msg.set_second (model.all_msg.land_no_life_found)
 								end
 							end
 						end
@@ -62,6 +72,18 @@ feature -- action
 				i := i+1
 			end
 --		
+		end -- if sec
+
+---msg
+		if not found then
+			model.main_msg.set_second (model.all_msg.error_land_no_visited_planet)
+			model.set_face_error_t
+		end
+
+		if not has_life then
+
+			model.main_msg.set_second (model.all_msg.land_no_life_found)
+			--model.command_specefic_on
 		end
 
 	end--do

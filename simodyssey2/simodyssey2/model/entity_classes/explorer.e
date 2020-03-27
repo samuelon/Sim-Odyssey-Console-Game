@@ -92,12 +92,17 @@ feature
 
 	end
 
-feature --death message
+feature --message
 
 	dmsg_death_malevolent : STRING
 	do
 		result := "Explorer got lost in space - out of life support at Sector:" +  current.get_sector.print_sector
 	end
+
+	current_status : STRING
+		DO
+			result := fuel_str + life.out+"/3, " +"landed?:" + return_landed
+		end
 
 
 end

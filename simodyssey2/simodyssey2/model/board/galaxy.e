@@ -221,32 +221,24 @@ feature --commands
 feature --action
 	turn(action : ACTION)
 	do
-		if model.face_error then -- if action causes an error than a turn does not occur because of an invalid action
-
-		else
-			shared_info.reset_move_this_turn
-			shared_info.reset_dead_this_turn
-			act(action)
-			check_alive (shared_info.og_exp)
-			movable_entity_move
-			if
-				shared_info.og_exp.dead
-			then
-				shared_info.og_exp.set_life (0)
-				model.set_in_game_false
-			end
+		shared_info.reset_move_this_turn
+		shared_info.reset_dead_this_turn
+		act(action)
+		check_alive (shared_info.og_exp)
+		movable_entity_move
+		if
+			shared_info.og_exp.dead
+		then
+			shared_info.og_exp.set_life (0)
+			model.set_in_game_false
 		end
+
 	end
 
 	movable_entity_move -- for turn
 		local
 			num: INTEGER
 			num2: INTEGER
-			planet_dir: INTEGER
-			dir_u: DIRECTION_UTILITY
-			dir_coord: TUPLE [row: INTEGER; col: INTEGER]
-			suppose_coord: TUPLE [row: INTEGER; col: INTEGER]
-			next_quad: INTEGER
 			row : INTEGER
 			col : INTEGER
 			m : MOVE
@@ -254,18 +246,20 @@ feature --action
 			en : ENTITY_ALPHABET
 			id : INTEGER
 			move_gen:INTEGER
+			temp : ARRAY[NON_STATIONARY]
 		do
 			create m.make
 			create w.make
+			temp := movable_sorted
 			across
-				movable_sorted is movable
+				2 |..| temp.count is i
 			loop
-				row := movable.row
-				col := movable.col
-				id := movable.id
-				en := movable.en
-					if movable.turns_left = 0 then
-						if attached{PLANET}movable as planet and get_sector([row,col]).has_star then
+				row := temp[i].row
+				col := temp[i].col
+				id := temp[i].id
+				en := temp[i].en
+					if temp[i].turns_left = 0 then
+						if attached{PLANET}temp[i] as planet and get_sector([row,col]).has_star then
 							planet.set_true_is_attached
 							if
 								get_sector([row,col]).has_yellow_dwarf
@@ -278,24 +272,24 @@ feature --action
 							end
 						else-- not planet
 							if
-								get_sector([row,col]).has_wormhole and (movable.is_malevolent or movable.is_benign)
+								temp[i].get_sector.has_wormhole and (temp[i].is_malevolent or temp[i].is_benign)
 							then
-								w.wormhole(movable) -- comment out when finish wormhole
+								w.wormhole(temp[i]) -- comment out when finish wormhole
 							else
 								move_gen := gen.rchoose (1,8)
-								m.move_routine (move_gen, movable)
+								m.move_routine (move_gen, temp[i])
 								io.put_string ("(P->"+ move_gen.out + ":[1,8])"+ "%N")
 							end
-							check_alive(movable)
+							check_alive(temp[i])
 							if
-								not movable.dead
+								not temp[i].dead
 							then
-								reproduce(movable)
-								movable.behave
+								reproduce(temp[i])
+								temp[i].behave
 							end
 						end --
 					else -- turns_left
-						movable.dec_turns_left
+						temp[i].dec_turns_left
 					end
 			end --loop
 		end
@@ -388,96 +382,6 @@ feature --action
 		end
 	end
 
---	turn (action: STRING)
---		DO
---			if shared_info.og_exp.face_error then
---			else
---				shared_info.reset_move_this_turn
---				shared_info.reset_dead_this_turn
---				act (action)
---				check_alive (shared_info.og_exp)
---				current.movable_entity_move
---					--				current.move (model.move_dir)
---			end
---		end
-
---
-
---	land
---	local
---		exp : EXPLORER
---		curr_sec: SECTOR
---		temp_id : INTEGER
---		i: INTEGER
---		quad_num : INTEGER
---		-- what happens when the planet supports life and i land on it.
---		do
---			temp_id := 10000
---			exp := shared_info.og_exp
---			curr_sec := grid[exp.row,exp.col]
---			if(model.in_game and (not shared_info.og_exp.landed)) then
---				if curr_sec.has_planet and curr_sec.has_yellow_dwarf then
---			---------------------------------go through entities ---------------------------------------------------		
---					from i := 1
---					until i > curr_sec.entity_quad.count
---					loop
---						if attached {PLANET} curr_sec.entity_quad[i] as planet then
---							if not planet.landed_on and temp_id > planet.id then
---							temp_id := planet.id
---							quad_num := i
---							end
---						end
---						if attached {PLANET} curr_sec.entity_quad[quad_num] as planet then
---							if(planet.is_support_life) then
---								--output you have found life and win!!
---								planet.set_landed_on_true
---								shared_info.og_exp.set_true_landed
---							else
-
---								planet.set_landed_on_true
---								shared_info.og_exp.set_true_landed
---							end
---						end
---					end--loop
---				end--if
---			end
---		end--do
-
---		liftoff
---		--lift explorer off planet
---		local
---			exp : EXPLORER
---			i : INTEGER
---			quad_num : INTEGER
---			curr_sec: SECTOR
---			temp_id : INTEGER
-
---			do
---				exp := shared_info.og_exp
---				curr_sec := shared_info.og_exp.get_sector
---				if(model.in_game and exp.landed) then
-
---					from i := 1
---					until i > curr_sec.entity_quad.count
---					loop
---						if attached {PLANET} curr_sec.entity_quad[i] as planet then -- check if the current planet
---							if planet.landed_on and temp_id > planet.id then
---							temp_id := planet.id
---							quad_num := i
---							end
---						end
---						if attached {PLANET} curr_sec.entity_quad[quad_num] as planet then
---							if( not planet.is_support_life) then
---								exp.set_false_landed
---							else
---								--turn passes
---							end
---						end
---					end--loop
---				end --if
-
---			end--do
-
 feature -- helper
 	movable_sorted_out : STRING
 	DO
@@ -508,9 +412,9 @@ feature -- helper
 		if
 			a > b
 		then
-			result := a
-		else
 			result := b
+		else
+			result := a
 		end
 	end
 
@@ -529,7 +433,7 @@ feature -- helper
 			ent.is_benign
 		then
 			create {BENIGN} b.make (shared_info.movable_id, ent.row,ent.col)
-			ent.get_sector.put (b)
+			ent.get_sector.populate_routine (ent.row, ent.col, b)
 			ent.set_actions_left_until_reproduction (1)
 			io.put_string ("B->"+ b.cur_location_out)
 		end
@@ -537,7 +441,7 @@ feature -- helper
 			ent.is_malevolent
 		then
 			create{MALEVOLENT}m.make (shared_info.movable_id, ent.row,ent.col)
-			ent.get_sector.put (m)
+			ent.get_sector.populate_routine (ent.row, ent.col, m)
 			ent.set_actions_left_until_reproduction (1)
 			io.put_string ("m->"+ m.cur_location_out)
 		end
@@ -545,95 +449,13 @@ feature -- helper
 			ent.is_janitaur
 		then
 			create{JANITAUR}j.make (shared_info.movable_id, ent.row,ent.col)
-			ent.get_sector.put (j)
+			ent.get_sector.populate_routine (ent.row, ent.col, j)
 			ent.set_actions_left_until_reproduction (2)
 			io.put_string ("j->"+ j.cur_location_out)
 		end
-		num_turns := gen.rchoose (0,2)
-		ent.set_turns_left (num_turns)
 		io.put_string ("("+ent.en.out+ "->"+ num_turns.out + ":[0,2])"+ "%N")
-		shared_info.movable_id_plus_one
 	end
 
-
-feature --test_information
-
-	death_string : STRING
-	local
-		ent : NON_STATIONARY
-	do
-		create Result.make_empty
-		if
-			shared_info.dead_this_turn.is_empty
-		then
-			Result.append("  Deaths This Turn:none")
-		else
-			Result.append("  Deaths This Turn:%N")
-			across
-				1 |..| shared_info.dead_this_turn.count is i
-			loop
-				ent := shared_info.dead_this_turn[i]
-				if attached{EXPLORER}ent as exp then
-					Result.append ("    "+exp.id_out + "->" + "fuel:"+ exp.fuel.out +"/3" + ", "+"life:" + exp.life.out + "/3, landed?:"+ exp.return_landed )
-				end
-
-				if attached{PLANET}ent as planet then
-					Result.append ("    "+planet.id_out + "->" +"attached?"+planet.out_is_attached+", support_life?:"+planet.out_is_support_life+", visited?:"+planet.out_is_visited+", turns_left:"+planet.out_turns_left)
-				end
-
-				if
-					i < shared_info.move_this_turn.count
-				then
-					Result.append("%N")
-				end
-			end
-		end
-
-	end
-
-	abstract_test_string: STRING
-		local
-			B: ENTITY_ALPHABET
-			Y: ENTITY_ALPHABET
-			i: INTEGER
-			row: INTEGER
-			column: INTEGER
-		do
-			create B.make ('*')
-			create Y.make ('Y')
-			create result.make_empty
-
-				-------------------END SECTORS -------------------------
-			---------------printout movable entities list--------------------------
-			across movable_sorted is move_ent loop
-
-				Result.append ("ID: " + move_ent.id_out + ",EN:" + move_ent.en.out+",turns_left:" + move_ent.turns_left.out)
-				if attached {PLANET} move_ent as planet then
-					result.append(", attached?:"+ planet.out_is_attached + "turns_left_planet:" + planet.out_turns_left)
-				end
-				if attached {EBMJ_COMMON} move_ent as EBMJ then
-					Result.append (", actions_intervals:" + EBMJ.actions_left_until_reproduction.out+ ", fuel:" + EBMJ.fuel.out + ", dead_BOOLEAN" + EBMJ.dead.out)
-				end
-				Result.append ("%N")
-			end
-
-				-------------------OUTPUT STATIONARY STARS -----------------------
-			
-			--explorer
-			--movable, for planet
-
-			across
-				movable_sorted as movable
-			loop
-				if attached{PLANET}movable as planet then
-					Result.append ("    [" + planet.id.out + "," + planet.en.out + "]->attached?:" + planet.out_is_attached)
-					Result.append (", support_life?:" + planet.out_is_support_life + ", visited?:" + planet.out_is_visited + ", turns_left:" + planet.out_turns_left)
-					Result.append ("%N")
-				end
-
-			end
-				-------------------END PLANETS----------------------------
-		end
 
 feature -- query
 

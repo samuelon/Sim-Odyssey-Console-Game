@@ -24,6 +24,7 @@ make(idv : INTEGER; a_row : INTEGER ; a_col : INTEGER )
 		turns_left := 0
 		name := "Malevolent"
 		dead := false
+		reproduction_interval := 1
 		create old_pos.make
 		create current_pos.make
 		set_location (row, col, get_sector.return_quad (current))
@@ -51,6 +52,11 @@ feature -- death msg
 		end
 		Result :="Malevolent got destroyed by benign" + "(" + ide.out +")" + " at " + "Sector:" + current.get_sector.print_sector
 
+	end
+
+	current_status : STRING
+	do
+		Result := fuel_str+ actions_left_until_reproduction_str +", " + turns_left_str
 	end
 
 end

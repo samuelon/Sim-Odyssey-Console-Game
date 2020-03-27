@@ -14,8 +14,9 @@ feature -- command
 	wormhole
     	do
 			-- perform some update on the model state
-			model.default_update
+
 			model.wormhole
+			model.default_update
 			etf_cmd_container.on_change.notify ([Current])
     	end
 

@@ -23,6 +23,7 @@ feature
 		name := "Benign"
 		turns_left := 0
 		dead := false
+		reproduction_interval := 1
 		create old_pos.make
 		create current_pos.make
 		set_location (row, col, get_sector.return_quad (current))
@@ -32,6 +33,11 @@ feature
 		use_wormhole := false
 		devoured := false
 
+	end
+
+	current_status : STRING
+	do
+		Result := fuel_str + actions_left_until_reproduction_str +", " + turns_left_str
 	end
 
 

@@ -27,6 +27,7 @@ feature
 		name:="Janitaur"
 		turns_left := 0
 		dead := false
+		reproduction_interval := 2
 		create old_pos.make
 		create current_pos.make
 		set_location (row, col, get_sector.return_quad (current))
@@ -51,6 +52,12 @@ feature
 	set_load(i : INTEGER)
 	do
 		load := i
+	end
+
+feature --str
+	current_status : STRING
+	do
+		Result := fuel_str+"load:"+ load.out + "/" + max_load.out +", " + actions_left_until_reproduction_str +", " + turns_left_str
 	end
 
 end

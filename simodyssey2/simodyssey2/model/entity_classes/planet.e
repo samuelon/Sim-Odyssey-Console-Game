@@ -113,4 +113,8 @@ feature -- death msg
 		do
 			Result := ("Planet got devourded by blackhole (id: -1) at Sector:3:3"+ "%N")
 		end
+	current_status : STRING
+		DO
+			result := "attached?:"+ out_is_attached + ", " + "support_life?:"+ out_is_support_life+", " + "visited?:" + out_is_visited + ", " + turns_left_str
+		end
 end

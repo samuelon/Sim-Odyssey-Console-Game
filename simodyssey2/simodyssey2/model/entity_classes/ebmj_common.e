@@ -82,6 +82,15 @@ feature -- death msg common
 			Result := ent.name + " got lost in space - out of fuel at Sector:"+ current.get_sector.print_sector
 		end
 
+feature -- helper
+	fuel_str : STRING
+		DO
+			result := "fuel:" + fuel.out + "/" + max_fuel.out+", "
+		end
+	actions_left_until_reproduction_str : STRING
+		DO
+			result := "actions_left_until_reproduction:" + actions_left_until_reproduction.out + "/" + reproduction_interval.out
+		end
 
 
 

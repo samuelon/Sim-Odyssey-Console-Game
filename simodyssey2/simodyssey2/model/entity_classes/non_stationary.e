@@ -122,6 +122,13 @@ feature -- msg common
 	current_status : STRING
 		deferred end
 
+feature -- helper
+	turns_left_str : STRING
+	do
+		create Result.make_empty
+		Result := "turns_left:" + turns_left.out
+	end
+
 feature{GALAXY} -- GALAXY ONLY
 	behave
 	local

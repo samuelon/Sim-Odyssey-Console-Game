@@ -22,19 +22,10 @@ feature{NONE} -- constructor
 
 feature
 	liftoff
+	require
+		already_landed : shared_info.og_exp.landed
 	do
-		across
-			 shared_info.og_exp.get_sector.return_sorted_ent is e
-		loop
-			if e.is_planet then
-				if attached{PLANET}e as p then
-					if p.is_visited then
-						shared_info.og_exp.set_false_landed
-					end
-				end
-			end
-		end
---		
+		shared_info.og_exp.set_false_landed
 	end
 
 end

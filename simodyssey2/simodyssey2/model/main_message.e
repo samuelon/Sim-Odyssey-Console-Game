@@ -15,6 +15,7 @@ feature{NONE} --constructor
 		do
 			create error_ste.make_from_string ("")
 			create second.make_empty
+			create abort.make_empty
 		end
 
 feature -- attributes
@@ -36,11 +37,46 @@ feature -- attributes
 
 feature -- lines
 	second : STRING
+--	eighth :
+	abort : STRING
+
+feature
+	abort_only(str : STRING)
+		do
+			abort := str
+		end
 
 feature --quires
 	first : STRING
 	do
 		create result.make_empty
+		result.append ("state:" + model.i.out + "." + model.e.out + ", ")
+		if not model.in_game  and not model.abort_on then
+			result.append("error")
+		end
+
+		if model.abort_on then
+			result.append(abort)
+		end
+
+		if model.in_game then
+			if model.play_on then
+				result.append("model:play, ")
+			end
+			if model.test_on then
+				result.append("model:test, ")
+			end
+			if not model.face_error then
+				result.append("ok")
+			else
+				result.append("error")
+			end
+		end
+
+
+
+		result.append ("%N")
+
 	end
 
 	set_second (str : STRING)
@@ -57,7 +93,7 @@ feature --quires
 			if
 				shared_info.move_this_turn.is_empty
 			then
-				Result.append("  Movement:none%N")
+				Result.append("  Movement:none")
 			else
 				Result.append("  Movement:%N")
 				across
@@ -116,6 +152,7 @@ feature --quires
 			B: ENTITY_ALPHABET
 			Y: ENTITY_ALPHABET
 			temp : LINKED_LIST[STATIONARY]
+			temp2 : ARRAY[NON_STATIONARY]
 		do
 			create B.make ('*')
 			create Y.make ('Y')
@@ -136,12 +173,78 @@ feature --quires
 					i := i - 1
 				end
 				--- movable list
-				
+				temp2 := g_a.movable_sorted.deep_twin
+				across
+					1 |..| temp2.count is s
+				loop
+					result.append("    " + temp2[s].id_out+"->")
+					if attached{EXPLORER}temp2[s] as e then
+						result.append(e.current_status)
+					elseif attached{BENIGN}temp2[s]as be then
+						result.append (be.current_status)
+					elseif attached{MALEVOLENT}temp2[s] as ma then
+						result.append (ma.current_status)
+					elseif attached{JANITAUR}temp2[s]as j then
+						result.append (j.current_status)
+					elseif attached{ASTEROID}temp2[s] as a then
+						result.append(a.current_status)
+					elseif attached{PLANET}temp2[s] as p then
+						result.append(p.current_status)
+					end
+					if
+						i < temp2.count
+					then
+						Result.append("%N")
+					end
+				end
 			end
-
 		end
 
-	pic : STRING
+	sixth : STRING --DEATH
+		local
+			temp : LINKED_LIST[NON_STATIONARY]
+		do
+			create Result.make_empty
+			temp := shared_info.dead_this_turn.deep_twin
+			if
+				temp.is_empty
+			then
+				Result.append("  Deaths This Turn:none ")
+			else
+				Result.append("  Deaths This Turn:%N")
+				across
+					1 |..| temp.count is i
+				loop
+					Result.append(temp[i].id_out+"->")
+					if attached{EXPLORER}temp[i]as e then
+						result.append(e.current_status+",")
+						--add reason
+					elseif attached{BENIGN}temp[i] as be then
+						result.append (be.current_status+",")
+						--add reason
+					elseif attached{MALEVOLENT}temp[i] as ma then
+						result.append (ma.current_status+",")
+						--add reason
+					elseif attached{JANITAUR}temp[i] as j then
+						result.append (j.current_status+",")
+						--add reason
+					elseif attached{ASTEROID}temp[i] as a then
+						result.append(a.current_status+",")
+						--add reason
+					elseif attached{PLANET}temp[i] as p then
+						result.append(p.current_status+",")
+						--add reason
+					end
+					if
+						i < temp.count
+					then
+						result.append("%N")
+					end
+				end
+			end
+		end
+
+	seventh : STRING --pic
 	do
 		create Result.make_empty
 		if attached shared_info.galaxy as g_a then
@@ -149,6 +252,13 @@ feature --quires
 		end
 	end
 
+	eighth : STRING -- ONLY TEST MODE --ONLY WHEN EXP DIES
+	do
+		create result.make_empty
+		--same as second
+		result.append(second)
+		result.append(all_msg.game_is_over)
+	end
 
 
 end

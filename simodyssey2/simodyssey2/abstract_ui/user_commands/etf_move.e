@@ -18,7 +18,6 @@ feature -- command
 			-- perform some update on the model state
 			model.move(dir)
 			model.default_update
-
 			etf_cmd_container.on_change.notify ([Current])
     	end
 

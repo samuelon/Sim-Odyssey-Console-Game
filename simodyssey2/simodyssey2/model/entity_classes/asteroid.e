@@ -31,7 +31,7 @@ feature
 		devoured := false
 	end
 
-feature --dmsg
+feature --msg
 	dmsg_janitaur:STRING
 		local
 		ide : INTEGER
@@ -40,13 +40,17 @@ feature --dmsg
 			current.get_sector.entity_quad is entity
 		loop
 			if
-				entity.is_benign
+				entity.is_janitaur
 			then
 				ide := entity.id
 			end
 		end
 		Result :="Asteroid got imploded by janitaur" + "(" + ide.out +")" + " at " + "Sector:" + current.get_sector.print_sector
-
 	end
+
+	current_status:STRING
+		do
+			result := turns_left_str
+		end
 
 end
