@@ -81,7 +81,6 @@ feature -- action
 		end
 
 		if not has_life then
-
 			model.main_msg.set_second (model.all_msg.land_no_life_found)
 			--model.command_specefic_on
 		end

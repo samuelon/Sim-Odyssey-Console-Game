@@ -220,6 +220,8 @@ feature --commands
 
 feature --action
 	turn(action : ACTION)
+	require
+		vaild : not model.face_error
 	do
 		shared_info.reset_move_this_turn
 		shared_info.reset_dead_this_turn
@@ -246,20 +248,18 @@ feature --action
 			en : ENTITY_ALPHABET
 			id : INTEGER
 			move_gen:INTEGER
-			temp : ARRAY[NON_STATIONARY]
 		do
 			create m.make
 			create w.make
-			temp := movable_sorted
 			across
-				2 |..| temp.count is i
+				2 |..| movable_sorted.count is i
 			loop
-				row := temp[i].row
-				col := temp[i].col
-				id := temp[i].id
-				en := temp[i].en
-					if temp[i].turns_left = 0 then
-						if attached{PLANET}temp[i] as planet and get_sector([row,col]).has_star then
+				row := movable_sorted[i].row
+				col := movable_sorted[i].col
+				id := movable_sorted[i].id
+				en := movable_sorted[i].en
+					if movable_sorted[i].turns_left = 0 then
+						if attached{PLANET}movable_sorted[i] as planet and get_sector([row,col]).has_star then
 							planet.set_true_is_attached
 							if
 								get_sector([row,col]).has_yellow_dwarf
@@ -272,24 +272,24 @@ feature --action
 							end
 						else-- not planet
 							if
-								temp[i].get_sector.has_wormhole and (temp[i].is_malevolent or temp[i].is_benign)
+								movable_sorted[i].get_sector.has_wormhole and (movable_sorted[i].is_malevolent or movable_sorted[i].is_benign)
 							then
-								w.wormhole(temp[i]) -- comment out when finish wormhole
+								w.wormhole(movable_sorted[i]) -- comment out when finish wormhole
 							else
 								move_gen := gen.rchoose (1,8)
-								m.move_routine (move_gen, temp[i])
-								io.put_string ("(P->"+ move_gen.out + ":[1,8])"+ "%N")
+								m.move_routine (move_gen, movable_sorted[i])
+								io.put_string (movable_sorted[i].en.out + "->" + move_gen.out + ":[1,8])"+ "%N")
 							end
-							check_alive(temp[i])
+							check_alive(movable_sorted[i])
 							if
-								not temp[i].dead
+								not movable_sorted[i].dead
 							then
-								reproduce(temp[i])
-								temp[i].behave
+								reproduce(movable_sorted[i])
+								movable_sorted[i].behave
 							end
 						end --
 					else -- turns_left
-						temp[i].dec_turns_left
+						movable_sorted[i].dec_turns_left
 					end
 			end --loop
 		end

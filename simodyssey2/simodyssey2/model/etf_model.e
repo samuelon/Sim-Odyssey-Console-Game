@@ -22,12 +22,9 @@ feature {NONE} -- Initialization
 			-- Initialization for `Current'.
 		do
 			in_game := false
-			status_on := FALSE
 			test_on:=false
 			play_on:=false
-			face_error:=false
-			i := 0
-			e:=0
+			reset_routine
 			create main_msg.make
 			io.put_string (all_msg.welcome)
 
@@ -87,20 +84,20 @@ feature -- model operations
 			move_dir := dir
 			p1.g.turn (m)
 		end
---		if not in_game then
---			main_msg.set_second (all_msg.error_mode_in_game)
---			face_error := true
---		elseif shared_info.og_exp.landed then
---			main_msg.set_second (all_msg.error_move_landed)
---			face_error := true
---		else
---			-- sector is full inside m
---			move_dir := dir
---			if attached p as p1
---			then
---				p1.g.turn (m)
---			end
---		end -- if
+		if not in_game then
+			main_msg.set_second (all_msg.error_mode_in_game)
+			face_error := true
+		elseif shared_info.og_exp.landed then
+			main_msg.set_second (all_msg.error_move_landed)
+			face_error := true
+		else
+			-- sector is full inside m
+			if attached p as p1
+			then
+				move_dir := dir
+				p1.g.turn (m)
+			end
+		end -- if
 
 	end --do
 
@@ -196,11 +193,7 @@ feature -- model operations
 			create p.make_test (a_threshold, j_threshold, m_threshold, b_threshold, p_threshold)
 			test_on:= True
 			in_game := true
-			face_error:=false
-			abort_on := false
-			status_on := FALSE
-			i := 0
-			e := 0
+			reset_routine
 		end
 
 	play
@@ -212,12 +205,7 @@ feature -- model operations
 			create p.make
 			play_on := True
 			in_game := true
-			face_error:=false
-			abort_on := false
-			status_on := FALSE
-			i := 0
-			e := 0
-
+			reset_routine
 --		end
 
 	end
@@ -234,10 +222,6 @@ feature -- model operations
 		end
 
 feature -- helper
-	check_land : BOOLEAN
-		do
-
-		end
 	reset_routine
 		do
 			face_error:=false

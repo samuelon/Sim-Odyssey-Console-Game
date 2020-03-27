@@ -24,6 +24,7 @@ feature
 		turns_left := 0
 		dead := false
 		reproduction_interval := 1
+		actions_left_until_reproduction:=1
 		create old_pos.make
 		create current_pos.make
 		set_location (row, col, get_sector.return_quad (current))
