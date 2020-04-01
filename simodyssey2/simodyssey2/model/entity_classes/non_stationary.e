@@ -62,6 +62,8 @@ feature -- function
 		do
 			if turns_left > 0 then
 			turns_left := turns_left - 1
+			else
+				turns_left := -1
 			end
 		end
 
@@ -70,26 +72,30 @@ feature -- function
 		use_wormhole := true
 	end
 
-	dies --
+	off_use_wormhole
+	do
+		use_wormhole := false
+	end
+
+	dies -- check_death
 	do
 		dead := true
 		shared_info.dead_this_turn.extend (current)
 		current.get_sector.remove(current)
---		if
---			current.is_explorer
---		then
---			model.set_in_game_false
---		end
+		shared_info.galaxy.movable_sorted.prune_all (current)
+--		shared_info.galaxy.movable_sorted.p
+--		shared_info.galaxy.sort_movable_list
+
 	end
 
 feature -- quires
 	out_turns_left : STRING
 
 		do
-			if turns_left < 0  then
-			Result := "N/A"
+			if turns_left = -1  then
+				Result := "N/A"
 			else
-			Result := turns_left.out
+				Result := turns_left.out
 			end
 		end
 
@@ -126,7 +132,7 @@ feature -- helper
 	turns_left_str : STRING
 	do
 		create Result.make_empty
-		Result := "turns_left:" + turns_left.out
+		Result := "turns_left:" + out_turns_left
 	end
 
 feature{GALAXY} -- GALAXY ONLY
@@ -152,8 +158,11 @@ feature{GALAXY} -- GALAXY ONLY
 								exp.dies
 							end
 						end
+					else
+						ebmj.dies -- explorer?
+						ebmj.set_d_asteroid
 					end
-					ebmj.dies -- explorer?
+
 				end
 			end
 			num_turn_a := gen.rchoose (0, 2)
@@ -167,9 +176,10 @@ feature{GALAXY} -- GALAXY ONLY
 				loop
 					if attached{NON_STATIONARY}item as mov then
 						if
-							mov.is_asteroid
+							attached{ASTEROID}mov as a and jan.load < 2
 						then
-								mov.dies
+								a.dies
+								a.set_d_janitaur
 								jan.add_load
 						end
 					end
@@ -194,6 +204,7 @@ feature{GALAXY} -- GALAXY ONLY
 					if item.is_malevolent then
 						if attached{MALEVOLENT}item as m then
 							m.dies
+							m.set_d_benign
 							-- store destry info
 						end
 					end

@@ -138,17 +138,17 @@ feature --function
 		planet_holder: ENTITY_ALPHABET
 	do
 		put(ent)
-		ent.set_location (a_row,a_col,return_quad (ent))
-		ent.set_old_location (a_row,a_col,return_quad (ent))
+--		ent.set_location (a_row,a_col,return_quad (ent))
+--		ent.set_old_location (a_row,a_col,return_quad (ent))
 		shared_info.movable_id_plus_one
 		turns_left := gen.rchoose (0, 2) -- for this planet
 		ent.set_turns_left (turns_left)
 		io.put_string (ent.id_out + ent.cur_location_out + "turns_left" + turns_left.out + ":[0,2])"+ "%N")
-		movable_list.extend (ent)
+--		movable_list.extend (ent)
 		planet_holder := void -- only difference from sector now
 	end
 
-	return_sorted_ent : ARRAY[ENTITY] --ok
+	return_sorted_ent : LINKED_LIST[ENTITY] --ok
 	local
 		sort : SORTED_ENTITY
 	do
@@ -198,7 +198,10 @@ feature --function
 				contents.extend (new_component.en)
 					------------------------------------CREATING THE ENTITY_QUADRANT ---------------------------------------
 				entity_quad.extend (new_component)
-			io.put_string ("putting in entity in rightmost empty spot: " + new_component.id.out + "%N")
+				if attached{NON_STATIONARY}new_component as mov then
+					movable_list.extend (mov)
+				end
+				io.put_string ("putting in entity in rightmost empty spot: " + new_component.id.out + "%N")
 					-------------------------------------END ENTITY QUADRANT --------------------------------------------
 			end
 		ensure
@@ -230,12 +233,16 @@ feature --function
 						contents [loop_counter] := empty_en_alp--void
 						io.put_string("removing this id, planet" +new_component.id.out+ "%N")
 						removed := true
+						if attached{NON_STATIONARY}ent as mov then
+							movable_list.prune_all (mov)
+						end
 					end
 				end
 				loop_counter := loop_counter + 1
 			end -- loop
 		ensure
 			others_unchanged : across old contents.deep_twin is en  all en.item /~ new_component.en end
+			already_moved : not entity_quad.has (new_component)
 		end
 
 feature -- Queries
@@ -245,7 +252,7 @@ feature -- Queries
 		do
 			Result := ""
 			Result.append (row.out)
-			Result.append (",")
+			Result.append (":")
 			Result.append (column.out)
 		end
 
@@ -486,6 +493,16 @@ feature --others
 			result.append("sorted_ent:"+ m.id_out + ",")
 		end
 	end
+
+	out_movable_list : STRING
+		do
+			create result.make_empty
+			across
+				movable_list is m
+			loop
+				result.append("movable_list"+m.id_out+",")
+			end
+		end
 
 
 	max_luminosity : INTEGER

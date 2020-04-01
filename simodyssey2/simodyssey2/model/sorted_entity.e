@@ -16,27 +16,27 @@ feature--constructor
 	DO
 		-- DO BUBLLE SORT
 		-- PUBLIC ATTRIBUTE
-		create to_sort.make_empty
+		create to_sort.make
 		across arr is entity
 		loop
-		 	to_sort.force(entity, sorted_entities.count + 1)
+		 	to_sort.extend (entity)
 		end
 	end
 
 feature
 
-	sorted_entities: ARRAY[ENTITY]
+	sorted_entities: LINKED_LIST[ENTITY]
 		do
 			result := sorted_entities_hidden
 		end
 
 
 feature
-	to_sort : ARRAY[ENTITY]
+	to_sort : LINKED_LIST[ENTITY]
 
 feature {NONE}
 
-	sorted_entities_hidden: ARRAY[ENTITY]
+	sorted_entities_hidden: LINKED_LIST[ENTITY]
 	local
 		i : INTEGER
 		j : INTEGER
@@ -45,12 +45,12 @@ feature {NONE}
 		from
 			 i := to_sort.lower
 		until
-			i > to_sort.upper
+			i > to_sort.count
 		loop
 			from
 				j := to_sort.lower
 			until
-				j > (to_sort.upper-i)
+				j > (to_sort.count-i)
 			loop
 				if to_sort[j].id > to_sort[j+1].id then
 					t := to_sort[j]

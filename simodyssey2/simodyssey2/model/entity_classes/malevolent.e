@@ -37,6 +37,15 @@ make(idv : INTEGER; a_row : INTEGER ; a_col : INTEGER )
 
 	end
 
+feature -- death reason
+	d_benign : BOOLEAN
+
+feature -- helper
+	set_d_benign
+		do
+			d_benign := true
+		end
+
 feature -- death msg
 	dmsg_benign:STRING
 		local

@@ -18,6 +18,17 @@ feature
 
 	actions_left_until_reproduction: INTEGER
 	reproduction_interval : INTEGER
+
+feature -- death common
+	d_asteroid : BOOLEAN
+
+
+feature --set death
+	set_d_asteroid
+		do
+			d_asteroid := true
+		end
+
 feature -- function
 	lose_fuel
 	do
@@ -104,6 +115,8 @@ feature -- helper
 			result := "actions_left_until_reproduction:" + actions_left_until_reproduction.out + "/" + reproduction_interval.out
 		end
 
-
+feature --death
+--	check_death
+--		deferred end
 
 end

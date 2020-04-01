@@ -52,7 +52,7 @@ feature -- boolean
 	face_error:BOOLEAN
 	abort_on : BOOLEAN
 	command_specific : BOOLEAN
-	--g : detachable GALAXY
+
 
 feature -- model operations
 	default_update
@@ -147,6 +147,8 @@ feature -- model operations
 				if	attached p as p1 then
 					p1.g.turn (li)
 				end
+				main_msg.set_second (all_msg.lift_off)
+				command_specific := true
 			end
 
 		end
@@ -321,8 +323,11 @@ feature -- queries
 				end
 				Result.append (main_msg.seventh)
 			end
+			if test_on and shared_info.og_exp.dead then
+				Result.append(main_msg.eight)
+			end
 			Result.append ("%N"+shared_info.og_exp.id_out + "," + shared_info.og_exp.get_sector.print_sector+ "landed:"+ shared_info.og_exp.landed.out + ",fuel"+ shared_info.og_exp.fuel.out)
-
+			result.append (shared_info.galaxy.movable_sorted_out)
 		end
 
 end

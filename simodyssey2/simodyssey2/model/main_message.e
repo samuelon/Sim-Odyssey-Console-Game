@@ -15,6 +15,7 @@ feature{NONE} --constructor
 		do
 			create error_ste.make_from_string ("")
 			create second.make_empty
+			create eight.make_empty
 			create abort.make_empty
 		end
 
@@ -37,6 +38,7 @@ feature -- attributes
 
 feature -- lines
 	second : STRING
+	eight : STRING
 --	eighth :
 	abort : STRING
 
@@ -46,7 +48,7 @@ feature --quires
 	do
 		create result.make_empty
 		result.append ("  state:" + model.i.out + "." + model.e.out + ", ")
-		---others
+
 		if not model.in_game and model.face_error then
 			result.append("error")
 		elseif (not model.in_game) then
@@ -133,7 +135,7 @@ feature --quires
 					col> shared_info.number_columns
 				loop
 					temp := shared_info.galaxy.get_sector ([row,col])
-					Result.append ("    [" + temp.print_sector + "]->" + temp.print_quadrant + temp.out_sorted_entity)
+					Result.append ("    [" + temp.print_sector + "]->" + temp.print_quadrant + temp.out_sorted_entity+temp.out_movable_list)
 					Result.append ("%N")
 					col:= col+ 1;
 				end
@@ -147,7 +149,7 @@ feature --quires
 			B: ENTITY_ALPHABET
 			Y: ENTITY_ALPHABET
 			temp : LINKED_LIST[STATIONARY]
-			temp2 : ARRAY[NON_STATIONARY]
+			temp2 : LINKED_LIST[NON_STATIONARY]
 		do
 			create B.make ('*')
 			create Y.make ('Y')
@@ -168,7 +170,7 @@ feature --quires
 					i := i - 1
 				end
 				--- movable list
-				temp2 := g_a.movable_sorted.deep_twin
+				temp2 := g_a.movable_sorted
 				across
 					1 |..| temp2.count is s
 				loop
@@ -196,6 +198,8 @@ feature --quires
 		end
 
 	sixth : STRING --DEATH
+		require
+			all_dead : across shared_info.dead_this_turn.deep_twin is ent all ent.dead end
 		local
 			temp : LINKED_LIST[NON_STATIONARY]
 		do
@@ -211,25 +215,32 @@ feature --quires
 					1 |..| temp.count is i
 				loop
 					Result.append(temp[i].id_out+"->")
-					if attached{EXPLORER}temp[i]as e then
-						result.append(e.current_status+",")
-						--add reason
-					elseif attached{BENIGN}temp[i] as be then
-						result.append (be.current_status+",")
-						--add reason
-					elseif attached{MALEVOLENT}temp[i] as ma then
-						result.append (ma.current_status+",")
-						--add reason
-					elseif attached{JANITAUR}temp[i] as j then
-						result.append (j.current_status+",")
-						--add reason
-					elseif attached{ASTEROID}temp[i] as a then
-						result.append(a.current_status+",")
-						--add reason
-					elseif attached{PLANET}temp[i] as p then
-						result.append(p.current_status+",")
-						--add reason
+					result.append (temp[i].current_status+","+"%N")
+					result.append (black_hole_common (temp[i]))
+					if attached{EBMJ_COMMON}temp[i] as ebmj then
+						if ebmj.fuel = 0 then
+							result.append ("    " + ebmj.dmsg_out_of_fuel (ebmj))
+						end
+						if ebmj.d_asteroid then
+							result.append ("    " + ebmj.dmsg_asteroid (ebmj))
+						end
+						if attached{EXPLORER}ebmj as e then
+							if e.life = 0 then
+								result.append ("    " + e.dmsg_death_malevolent)
+							end
+						end
+						if attached{MALEVOLENT}ebmj as m then
+							if m.d_benign then
+								result.append ("    " + m.dmsg_benign)
+							end
+						end
 					end
+					if attached{ASTEROID}temp[i] as a then
+						if a.d_janitaur then
+							result.append ("    " + a.dmsg_janitaur)
+						end
+					end
+
 					if
 						i < temp.count
 					then
@@ -247,13 +258,20 @@ feature --quires
 		end
 	end
 
-	eighth : STRING -- ONLY TEST MODE --ONLY WHEN EXP DIES
+	set_eight  -- ONLY TEST MODE --ONLY WHEN EXP DIES
 	do
-		create result.make_empty
-		--same as second
-		result.append(second)
-		result.append(all_msg.game_is_over)
+		eight := second
 	end
+
+feature -- death msg helper
+	black_hole_common(ent : NON_STATIONARY) : STRING
+		do
+			create result.make_empty
+			if ent.devoured then
+				result.append ("    " + ent.dmsg_to_blackhole (ent))
+			end
+		end
+
 
 
 end

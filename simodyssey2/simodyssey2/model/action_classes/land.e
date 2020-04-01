@@ -27,7 +27,7 @@ feature -- action
 		sec : SECTOR
 		i : INTEGER
 		found : BOOLEAN
-		temp : ARRAY[ENTITY]
+		temp : LINKED_LIST[ENTITY]
 		has_life : BOOLEAN
 	do
 		sec := shared_info.og_exp.get_sector

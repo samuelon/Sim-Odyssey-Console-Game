@@ -16,7 +16,7 @@ create
 feature
 	make(idv : INTEGER; a_row : INTEGER ; a_col : INTEGER )
 	do
-		create en.make('B')
+		create en.make('A')
 		id := idv
 		row := a_row
 		col := a_col
@@ -29,7 +29,16 @@ feature
 		old_pos := current_pos.deep_twin
 		use_wormhole := false
 		devoured := false
+		d_janitaur := false
 	end
+
+FEATURE
+	d_janitaur : BOOLEAN
+
+	set_d_janitaur
+		do
+			d_janitaur := true
+		end
 
 feature --msg
 	dmsg_janitaur:STRING
