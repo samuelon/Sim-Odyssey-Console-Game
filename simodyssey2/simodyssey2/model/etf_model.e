@@ -255,6 +255,7 @@ feature -- model operations
 		end
 
 feature -- helper
+
 	reset_action_routine
 		do
 			command_specific := false
@@ -326,8 +327,9 @@ feature -- queries
 			if test_on and shared_info.og_exp.dead then
 				Result.append(main_msg.eight)
 			end
-			Result.append ("%N"+shared_info.og_exp.id_out + "," + shared_info.og_exp.get_sector.print_sector+ "landed:"+ shared_info.og_exp.landed.out + ",fuel"+ shared_info.og_exp.fuel.out)
-			result.append (shared_info.galaxy.movable_sorted_out)
+			Result.append ("%N"+shared_info.og_exp.id_out + "," + shared_info.og_exp.get_sector.print_sector+ "landed:"+ shared_info.og_exp.landed.out + ",fuel"+ shared_info.og_exp.fuel.out+"%N")
+			result.append (shared_info.galaxy.movable_sorted_out+"%N")
+			result.append (shared_info.out_removed_this_turn)
 		end
 
 end

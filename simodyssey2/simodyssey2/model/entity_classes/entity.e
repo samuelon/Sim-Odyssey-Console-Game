@@ -9,6 +9,24 @@ deferred class
 
 inherit
 	ANY
+		redefine
+			is_equal
+		end
+	HASHABLE
+		redefine
+			is_equal
+		end
+
+feature -- hashtable
+	hash_code : INTEGER
+	do
+		result := id
+	end
+
+	is_equal (other: like Current): BOOLEAN
+		do
+			Result := id ~ other.id
+		end
 
 
 feature --attributes
@@ -195,7 +213,7 @@ feature --helper
 		Result := shared_info.galaxy.get_sector ([row,col])
 	end
 
-	
+
 
 
 end

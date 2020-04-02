@@ -10,6 +10,7 @@ deferred class
 inherit
 	NON_STATIONARY
 
+
 feature
 	fuel : INTEGER
 	max_fuel : INTEGER
@@ -93,6 +94,7 @@ feature -- death msg common
 				entity.is_asteroid
 			then
 				ide := entity.id
+
 			end
 		end
 		Result := ent.name + " got destroyed by asteroid " + "(" + ide.out +")" + " at " + "Sector:" + ent.get_sector.print_sector

@@ -122,7 +122,7 @@ feature --quires
 			temp : SECTOR
 		DO
 			create Result.make_empty
-			Result.append ("  Sectors:%N")
+			Result.append ("%N  Sectors:%N")
 				-------------------OUTPUT SECTORS ---------------------
 			from
 				row := 1

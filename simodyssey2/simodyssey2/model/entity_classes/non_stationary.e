@@ -83,8 +83,6 @@ feature -- function
 		shared_info.dead_this_turn.extend (current)
 		current.get_sector.remove(current)
 		shared_info.galaxy.movable_sorted.prune_all (current)
---		shared_info.galaxy.movable_sorted.p
---		shared_info.galaxy.sort_movable_list
 
 	end
 

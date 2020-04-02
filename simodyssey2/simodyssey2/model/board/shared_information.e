@@ -22,6 +22,8 @@ feature{GALAXY,ENTITY}
 		movable_id := 1
 		create move_this_turn.make
 		create dead_this_turn.make
+		create reproduce_this_turn.make (100)
+		reproduce_this_turn.compare_objects
 		create galaxy.make_empty
 		--create 2 linkedlist
 		end
@@ -79,9 +81,13 @@ feature
 
 	black_hole : BLACKHOLE
 
+feature -- helper
+
 	move_this_turn : LINKED_LIST[NON_STATIONARY]
 
 	dead_this_turn : LINKED_LIST[NON_STATIONARY]
+
+	reproduce_this_turn : HASH_TABLE[EBMJ_COMMON,EBMJ_COMMON]
 
 	--map
 --	destory_this_ : map[ent,linked_list[non_stationary]]
@@ -176,6 +182,22 @@ feature --commands
 	set_benign_threshold(threshhold:INTEGER)
 		do
 			benign_threshold:=threshhold
+		end
+
+feature -- out helper
+	out_removed_this_turn : STRING -- ok
+		local
+			i : INTEGER
+		do
+			create result.make_empty
+			across
+			    reproduce_this_turn.current_keys is k
+			loop
+				if attached reproduce_this_turn[k] as p then
+					result.append("[keys:"+ k.id_out +  ",result:" + p.id_out)
+				end
+
+			end
 		end
 
 end

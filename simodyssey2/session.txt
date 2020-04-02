@@ -1,4 +1,4 @@
-test(3,5,7,15,30)
+play
 pass
 pass
 pass

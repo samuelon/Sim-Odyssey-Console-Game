@@ -56,7 +56,7 @@ feature -- constructor
 				if (row = 1) and (column = 1) then
 						--create og_exp.make (0,current)
 					put (shared_info.og_exp) -- If this is the top left corner sector, place the explorer there
-					movable_list.extend (shared_info.og_exp)
+--					movable_list.extend (shared_info.og_exp)
 				end
 				populate (row, column) -- Run the populate command to complete setup
 			end -- if
@@ -138,8 +138,8 @@ feature --function
 		planet_holder: ENTITY_ALPHABET
 	do
 		put(ent)
---		ent.set_location (a_row,a_col,return_quad (ent))
---		ent.set_old_location (a_row,a_col,return_quad (ent))
+		ent.set_location (a_row,a_col,return_quad (ent))
+		ent.set_old_location (a_row,a_col,return_quad (ent))
 		shared_info.movable_id_plus_one
 		turns_left := gen.rchoose (0, 2) -- for this planet
 		ent.set_turns_left (turns_left)
@@ -184,7 +184,7 @@ feature --function
 				if contents[loop_counter].is_empty then
 					contents [loop_counter] := new_component.en
 					filled := TRUE
-					io.put_string ("putting in entity in void spot: " + new_component.id.out+ "%N")
+--					io.put_string ("putting in entity in void spot: " + new_component.id.out+ "%N")
 						------------------------------------CREATING THE ENTITY_QUADRANT ---------------------------------------
 					entity_quad [loop_counter] := new_component
 						-------------------------------------END ENTITY QUADRANT ---------
@@ -201,7 +201,7 @@ feature --function
 				if attached{NON_STATIONARY}new_component as mov then
 					movable_list.extend (mov)
 				end
-				io.put_string ("putting in entity in rightmost empty spot: " + new_component.id.out + "%N")
+--				io.put_string ("putting in entity in rightmost empty spot: " + new_component.id.out + "%N")
 					-------------------------------------END ENTITY QUADRANT --------------------------------------------
 			end
 		ensure
@@ -231,7 +231,7 @@ feature --function
 						create{EMPTY}empty_en.make
 						entity_quad [loop_counter] := empty_en--void
 						contents [loop_counter] := empty_en_alp--void
-						io.put_string("removing this id, planet" +new_component.id.out+ "%N")
+--						io.put_string("removing this id, planet" +new_component.id.out+ "%N")
 						removed := true
 						if attached{NON_STATIONARY}ent as mov then
 							movable_list.prune_all (mov)
