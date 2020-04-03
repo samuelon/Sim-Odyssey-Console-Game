@@ -45,12 +45,12 @@ feature --command_msgs
 		end
 	land_no_life_found : STRING
 		do
-			Result := ("  Explorer found no life as we know it at Sector:"+state_memory.og_exp.get_sector.print_sector)
+			Result := ("  Explorer found no life as we know it at Sector:"+state_memory.og_exp.get_sector.print_sector_spec)
 		end
 
 	lift_off : STRING
 		do
-			Result := ("  Explorer has lifted off from planet at Sector:"+state_memory.og_exp.get_sector.print_sector)
+			Result := ("  Explorer has lifted off from planet at Sector:"+state_memory.og_exp.get_sector.print_sector_spec)
 		end
 
 	abort_in_game : STRING
@@ -73,27 +73,27 @@ feature -- Error Messages
 
 	error_land_already_land: STRING --land wormhole
 		do
-		 Result := ("  Negative on that request:already landed on a planet at Sector:"+state_memory.og_exp.get_sector.print_sector)
+		 Result := ("  Negative on that request:already landed on a planet at Sector:"+state_memory.og_exp.get_sector.print_sector_spec)
 		end
 
 	error_land_no_yellow_dwarf:STRING
-		do Result := ("  Negative on that request:no yellow dwarf at Sector:"+state_memory.og_exp.get_sector.print_sector) end
+		do Result := ("  Negative on that request:no yellow dwarf at Sector:"+state_memory.og_exp.get_sector.print_sector_spec) end
 
 	error_land_no_planet: STRING
-		do Result:= ("  Negative on that request:no planet at Sector:"+state_memory.og_exp.get_sector.print_sector) end
+		do Result:= ("  Negative on that request:no planet at Sector:"+state_memory.og_exp.get_sector.print_sector_spec) end
 
 	error_land_no_visited_planet:STRING
-		 do Result := ("  Negative on that request:no visited planet at Sector:"+state_memory.og_exp.get_sector.print_sector) end
+		 do Result := ("  Negative on that request:no visited planet at Sector:"+state_memory.og_exp.get_sector.print_sector_spec) end
 
 
 	error_liftoff_not_on_a_planet : STRING
 		do
-			Result := ("  Negative on that request:you are not on a planet at Sector:"+state_memory.og_exp.get_sector.print_sector)
+			Result := ("  Negative on that request:you are not on a planet at Sector:"+state_memory.og_exp.get_sector.print_sector_spec)
 		end
 
 	error_move_landed : STRING
 		do
-			Result := ("  Negative on that request: you are currently landed at Sector:" +state_memory.og_exp.get_sector.print_sector)
+			Result := ("  Negative on that request: you are currently landed at Sector:" +state_memory.og_exp.get_sector.print_sector_spec)
 		end
 	error_move_full : STRING
 		do
@@ -111,13 +111,13 @@ feature -- Error Messages
 
 	error_wormhole_landed : STRING
 		do
-			Result := ("  Negative on that request: you are currently landed at Sector:" +state_memory.og_exp.get_sector.print_sector)
+			Result := ("  Negative on that request: you are currently landed at Sector:" +state_memory.og_exp.get_sector.print_sector_spec)
 		end
 
 	error_wormhole_not_find : STRING
 		--call wormhole when not wormhole
 		do
-			Result := ("  Explorer couldn't find wormhole at Sector:"+state_memory.og_exp.get_sector.print_sector)
+			Result := ("  Explorer couldn't find wormhole at Sector:"+state_memory.og_exp.get_sector.print_sector_spec)
 		end
 
 

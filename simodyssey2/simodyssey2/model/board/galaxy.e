@@ -25,7 +25,7 @@ feature -- collection
 	movable_sorted: LINKED_LIST[NON_STATIONARY]
 	stationary_stars_sorted: LINKED_LIST [STATIONARY]
 
-feature -- 	attributes
+feature --attributes
 	all_msgs: ALL_MSG
 	planet_threshold: INTEGER
 	asteroid_threshold: INTEGER
@@ -34,8 +34,7 @@ feature -- 	attributes
 	benign_threshold: INTEGER
 
 	explorer: EXPLORER
-
-
+	temp_reproduced : LINKED_LIST[EBMJ_COMMON]
 
 
 feature -- boolean
@@ -65,7 +64,8 @@ feature --constructor
 		create explorer.make (0,1,1)
 		create stationary_stars_sorted.make
 		create  movable_sorted.make
---		create temp_for_produce.make_empty
+		create temp_reproduced.make
+
 
 	end
 
@@ -86,6 +86,8 @@ feature --constructor
 			benign_threshold := shared_info.benign_threshold
 			janitaur_threshold := shared_info.janitaur_threshold
 			asteroid_threshold := shared_info.asteroid_threshold
+			create temp_reproduced.make
+			temp_reproduced.compare_objects
 
 			create grid.make_filled (create {SECTOR}.make_dummy(shared_info.max_capacity), shared_info.number_rows, shared_info.number_columns)
 			from
@@ -220,6 +222,8 @@ feature --action
 	do
 		shared_info.reset_move_this_turn
 		shared_info.reset_dead_this_turn
+		shared_info.reset_reproduce_this_turn
+		temp_reproduced.wipe_out
 		act(action)
 		check_alive (shared_info.og_exp)
 		-- reset
@@ -230,6 +234,15 @@ feature --action
 			-- set reproduced others?
 		end
 		movable_entity_move
+		if temp_reproduced.is_empty then
+		else
+			across
+				temp_reproduced is mov
+			loop
+				movable_sorted.extend (mov)
+			end
+			sort_movable_list
+		end
 		if
 			shared_info.og_exp.dead
 		then
@@ -251,13 +264,16 @@ feature --action
 			id : INTEGER
 			i : INTEGER
 			move_gen:INTEGER
+			old_count : INTEGER
+			mov_count : INTEGER
 		do
 			create m.make
 			create w.make
+        	old_count := movable_sorted.count
 			from
 				i := 2
 			until
-				i > movable_sorted.count
+				i >  old_count
 			loop
 				row := movable_sorted[i].row
 				col := movable_sorted[i].col
@@ -291,13 +307,20 @@ feature --action
 							not movable_sorted[i].dead
 						then
 							reproduce(movable_sorted[i])
+							mov_count := movable_sorted.count
 							movable_sorted[i].behave
+							-- if less i - 1
+							if mov_count - movable_sorted.count >0 then
+								i := i -(mov_count - movable_sorted.count)
+							end
+
 						end
 					end --
 				else -- turns_left
 					movable_sorted[i].dec_turns_left
 				end
 				i := i+1
+				old_count := movable_sorted.count
 			end
 --		
 		end
@@ -422,6 +445,7 @@ feature -- helper
 		end
 	end
 
+
 	create_bmj(ent : EBMJ_COMMON)
 	local
 		num_turns : INTEGER
@@ -438,6 +462,7 @@ feature -- helper
 --			io.put_string ("B->"+ b.cur_location_out)
 			-- STORE B
 --			movable_sorted.extend (b)
+			temp_reproduced.extend (b)
 			shared_info.reproduce_this_turn.put (b, ent)
 		end
 		if
@@ -448,6 +473,7 @@ feature -- helper
 			ent.set_actions_left_until_reproduction (1)
 --			movable_sorted.extend (m)
 --			sort_movable_list
+			temp_reproduced.extend (m)
 			shared_info.reproduce_this_turn.put (m, ent)
 		end
 		if
@@ -458,6 +484,7 @@ feature -- helper
 			ent.set_actions_left_until_reproduction (2)
 --			movable_sorted.extend (j)
 --			sort_movable_list
+			temp_reproduced.extend (j)
 			shared_info.reproduce_this_turn.put (j, ent)
 		end
 		io.put_string ("("+ent.en.out+ "->"+ num_turns.out + ":[0,2])"+ "%N")

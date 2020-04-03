@@ -330,6 +330,7 @@ feature -- queries
 			Result.append ("%N"+shared_info.og_exp.id_out + "," + shared_info.og_exp.get_sector.print_sector+ "landed:"+ shared_info.og_exp.landed.out + ",fuel"+ shared_info.og_exp.fuel.out+"%N")
 			result.append (shared_info.galaxy.movable_sorted_out+"%N")
 			result.append (shared_info.out_removed_this_turn)
+			result.append (shared_info.destory_this_turn.out_destory_book)
 		end
 
 end

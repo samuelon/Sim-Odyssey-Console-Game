@@ -58,7 +58,7 @@ feature
 feature --str
 	current_status : STRING
 	do
-		Result := fuel_str+"load:"+ load.out + "/" + max_load.out +", " + actions_left_until_reproduction_str +", " + turns_left_str
+		Result := fuel_str+"load:"+ load.out + "/" + max_load.out +", " + actions_left_until_reproduction_str +", " +  out_turns_left
 	end
 
 end

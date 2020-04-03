@@ -96,7 +96,7 @@ feature --message
 
 	dmsg_death_malevolent : STRING
 	do
-		result := "Explorer got lost in space - out of life support at Sector:" +  current.get_sector.print_sector
+		result := "Explorer got lost in space - out of life support at Sector:" +  current.get_sector.print_sector_spec
 	end
 
 	current_status : STRING

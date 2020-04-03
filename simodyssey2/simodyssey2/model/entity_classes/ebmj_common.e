@@ -97,14 +97,14 @@ feature -- death msg common
 
 			end
 		end
-		Result := ent.name + " got destroyed by asteroid " + "(" + ide.out +")" + " at " + "Sector:" + ent.get_sector.print_sector
+		Result := ent.name + " got destroyed by asteroid " + "(" + ide.out +")" + " at " + "Sector:" + ent.get_sector.print_sector_spec
 
 	end
 
 	--dmsg out of fuel
 	dmsg_out_of_fuel(ent : EBMJ_COMMON) :STRING
 		do
-			Result := ent.name + " got lost in space - out of fuel at Sector:"+ current.get_sector.print_sector
+			Result := ent.name + " got lost in space - out of fuel at Sector:"+ current.get_sector.print_sector_spec
 		end
 
 feature -- helper

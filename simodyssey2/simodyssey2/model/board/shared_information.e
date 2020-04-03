@@ -25,6 +25,7 @@ feature{GALAXY,ENTITY}
 		create reproduce_this_turn.make (100)
 		reproduce_this_turn.compare_objects
 		create galaxy.make_empty
+		create destory_this_turn.make
 		--create 2 linkedlist
 		end
 
@@ -89,6 +90,8 @@ feature -- helper
 
 	reproduce_this_turn : HASH_TABLE[EBMJ_COMMON,EBMJ_COMMON]
 
+	destory_this_turn : DESTORY_BOOK
+
 	--map
 --	destory_this_ : map[ent,linked_list[non_stationary]]
 --	reproduce : [ent, reproduced ent]
@@ -145,6 +148,11 @@ feature
 		create dead_this_turn.make
 	end
 
+	reset_reproduce_this_turn
+	do
+		create reproduce_this_turn.make (100)
+	end
+
 feature --commands
 	test(a_threshold: INTEGER; j_threshold: INTEGER; m_threshold: INTEGER; b_threshold: INTEGER; p_threshold: INTEGER)
 		--sets threshold values
@@ -194,10 +202,11 @@ feature -- out helper
 			    reproduce_this_turn.current_keys is k
 			loop
 				if attached reproduce_this_turn[k] as p then
-					result.append("[keys:"+ k.id_out +  ",result:" + p.id_out)
+					result.append("[keys:"+ k.id_out +  ",result:" + p.id_out )
 				end
 
 			end
 		end
+		
 
 end

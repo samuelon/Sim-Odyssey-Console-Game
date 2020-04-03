@@ -101,8 +101,15 @@ feature --quires
 						Result.append ("    " + ent.id_out+":"+ ent.cur_location_out )
 					else
 						Result.append ("    " + ent.id_out+":"+ent.old_location_out+"->"+ ent.cur_location_out )
-						--- if destory
+						--- if destory -- if reproduce
 						--- across  desrory_this_turn
+						if attached{EBMJ_COMMON}ent as ebmj then
+							if shared_info.reproduce_this_turn.has (ebmj) then
+								if attached shared_info.reproduce_this_turn[ebmj]as r then
+									result.append("%N      reproduced"+ r.id_out + " at " + r.cur_location_out )
+								end
+							end
+						end
 					end
 
 					if
@@ -214,30 +221,30 @@ feature --quires
 				across
 					1 |..| temp.count is i
 				loop
-					Result.append(temp[i].id_out+"->")
+					Result.append("    " + temp[i].id_out+"->")
 					result.append (temp[i].current_status+","+"%N")
 					result.append (black_hole_common (temp[i]))
 					if attached{EBMJ_COMMON}temp[i] as ebmj then
 						if ebmj.fuel = 0 then
-							result.append ("    " + ebmj.dmsg_out_of_fuel (ebmj))
+							result.append ("     " + ebmj.dmsg_out_of_fuel (ebmj))
 						end
 						if ebmj.d_asteroid then
-							result.append ("    " + ebmj.dmsg_asteroid (ebmj))
+							result.append ("     " + ebmj.dmsg_asteroid (ebmj))
 						end
 						if attached{EXPLORER}ebmj as e then
 							if e.life = 0 then
-								result.append ("    " + e.dmsg_death_malevolent)
+								result.append ("     " + e.dmsg_death_malevolent)
 							end
 						end
 						if attached{MALEVOLENT}ebmj as m then
 							if m.d_benign then
-								result.append ("    " + m.dmsg_benign)
+								result.append ("     " + m.dmsg_benign)
 							end
 						end
 					end
 					if attached{ASTEROID}temp[i] as a then
 						if a.d_janitaur then
-							result.append ("    " + a.dmsg_janitaur)
+							result.append ("     " + a.dmsg_janitaur)
 						end
 					end
 

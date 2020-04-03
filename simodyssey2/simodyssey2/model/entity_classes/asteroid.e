@@ -41,7 +41,7 @@ FEATURE
 		end
 
 feature --msg
-	dmsg_janitaur:STRING
+	dmsg_janitaur:STRING -- need change
 		local
 		ide : INTEGER
 	do
@@ -54,7 +54,7 @@ feature --msg
 				ide := entity.id
 			end
 		end
-		Result :="Asteroid got imploded by janitaur" + "(" + ide.out +")" + " at " + "Sector:" + current.get_sector.print_sector
+		Result :="Asteroid got imploded by janitaur" + "(id:" + ide.out +")" + " at " + "Sector:" + current.get_sector.print_sector_spec
 	end
 
 	current_status:STRING

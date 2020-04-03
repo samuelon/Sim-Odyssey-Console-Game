@@ -22,7 +22,7 @@ feature -- attributes
 	gen: RANDOM_GENERATOR_ACCESS
 
 --	contents: ARRAYED_LIST [detachable ENTITY_ALPHABET] --holds 4 quadrants
-	contents: ARRAYED_LIST [ENTITY_ALPHABET]
+	contents: ARRAYED_LIST [detachable ENTITY_ALPHABET]
 --	entity_quad: ARRAYED_LIST [detachable ENTITY]
 	entity_quad: ARRAYED_LIST [ENTITY]
 
@@ -180,8 +180,8 @@ feature --function
 			until
 				loop_counter > contents.count or filled
 			loop
---				if not attached contents [loop_counter] then -- not void if is it void
-				if contents[loop_counter].is_empty then
+		    	if not attached contents [loop_counter] then -- not void if is it void
+--				if contents[loop_counter].is_empty then
 					contents [loop_counter] := new_component.en
 					filled := TRUE
 --					io.put_string ("putting in entity in void spot: " + new_component.id.out+ "%N")
@@ -230,7 +230,7 @@ feature --function
 						create{ENTITY_ALPHABET}empty_en_alp.make ('-')
 						create{EMPTY}empty_en.make
 						entity_quad [loop_counter] := empty_en--void
-						contents [loop_counter] := empty_en_alp--void
+						contents [loop_counter] := void --void
 --						io.put_string("removing this id, planet" +new_component.id.out+ "%N")
 						removed := true
 						if attached{NON_STATIONARY}ent as mov then
@@ -241,13 +241,22 @@ feature --function
 				loop_counter := loop_counter + 1
 			end -- loop
 		ensure
-			others_unchanged : across old contents.deep_twin is en  all en.item /~ new_component.en end
+--			others_unchanged : across old contents.deep_twin is en  all en.item /~ new_component.en end
 			already_moved : not entity_quad.has (new_component)
 		end
 
 feature -- Queries
 
 	print_sector: STRING
+			-- Printable version of location's coordinates with different formatting
+		do
+			Result := ""
+			Result.append (row.out)
+			Result.append (",")
+			Result.append (column.out)
+		end
+
+	print_sector_spec: STRING
 			-- Printable version of location's coordinates with different formatting
 		do
 			Result := ""
@@ -542,9 +551,9 @@ feature --others
 	return_quad(ent:ENTITY):INTEGER
 	do
 		across
-			1 |..| contents.count is i
+			1 |..| entity_quad.count is i
 		loop
-			if contents[i].is_equal (ent.en) then
+			if entity_quad[i].en.is_equal (ent.en)then
 				Result := i
 			end
 

@@ -80,6 +80,7 @@ feature -- function
 	dies -- check_death
 	do
 		dead := true
+		current.set_turns_left (-1)
 		shared_info.dead_this_turn.extend (current)
 		current.get_sector.remove(current)
 		shared_info.galaxy.movable_sorted.prune_all (current)
@@ -157,8 +158,10 @@ feature{GALAXY} -- GALAXY ONLY
 							end
 						end
 					else
-						ebmj.dies -- explorer?
+						ebmj.dies
 						ebmj.set_d_asteroid
+						shared_info.destory_this_turn.put (ebmj,current)
+						-- d : destoryed r :destructor
 					end
 
 				end
@@ -179,6 +182,8 @@ feature{GALAXY} -- GALAXY ONLY
 								a.dies
 								a.set_d_janitaur
 								jan.add_load
+								shared_info.destory_this_turn.put (a,current)
+								-- d : destoryed r :destructor
 						end
 					end
 				end
@@ -203,6 +208,8 @@ feature{GALAXY} -- GALAXY ONLY
 						if attached{MALEVOLENT}item as m then
 							m.dies
 							m.set_d_benign
+							shared_info.destory_this_turn.put (m,current)
+							-- d : destoryed r :destructor
 							-- store destry info
 						end
 					end
