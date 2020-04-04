@@ -200,6 +200,7 @@ feature -- model operations
 				in_game := False
 				play_on := false
 				test_on := false
+				shared_info.reset
 			end
 		end
 
@@ -269,7 +270,6 @@ feature -- helper
 			abort_on := false
 			status_on := FALSE
 			command_specific := false
-			i := 0
 			e := 0
 		end
 

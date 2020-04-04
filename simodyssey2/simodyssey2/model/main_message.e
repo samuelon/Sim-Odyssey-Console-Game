@@ -59,10 +59,10 @@ feature --quires
 
 		if model.in_game then
 			if model.play_on then
-				result.append("model:play, ")
+				result.append("mode:play, ")
 			end
 			if model.test_on then
-				result.append("model:test, ")
+				result.append("mode:test, ")
 			end
 			if not model.face_error then
 				result.append("ok")

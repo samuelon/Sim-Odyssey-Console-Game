@@ -117,6 +117,11 @@ do
 	create galaxy.make
 end
 
+feature
+	reset
+	do
+		make
+	end
 
 
 feature
