@@ -181,28 +181,19 @@ feature --function
 				loop_counter > contents.count or filled
 			loop
 		    	if not attached contents [loop_counter] then -- not void if is it void
---				if contents[loop_counter].is_empty then
 					contents [loop_counter] := new_component.en
 					filled := TRUE
---					io.put_string ("putting in entity in void spot: " + new_component.id.out+ "%N")
-						------------------------------------CREATING THE ENTITY_QUADRANT ---------------------------------------
 					entity_quad [loop_counter] := new_component
-						-------------------------------------END ENTITY QUADRANT ---------
 				end
-					-----------------------------------
-
 				loop_counter := loop_counter + 1
 			end -- loop
 
 			if  not filled and not found and not is_full then --if no dup and not full.
 				contents.extend (new_component.en)
-					------------------------------------CREATING THE ENTITY_QUADRANT ---------------------------------------
 				entity_quad.extend (new_component)
 				if attached{NON_STATIONARY}new_component as mov then
 					movable_list.extend (mov)
 				end
---				io.put_string ("putting in entity in rightmost empty spot: " + new_component.id.out + "%N")
-					-------------------------------------END ENTITY QUADRANT --------------------------------------------
 			end
 		ensure
 			component_put: not is_full implies contents.has (new_component.en)

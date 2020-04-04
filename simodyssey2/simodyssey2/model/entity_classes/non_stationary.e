@@ -127,6 +127,24 @@ feature -- msg common
 	current_status : STRING
 		deferred end
 
+	dmsg_reason(d : NON_STATIONARY ):STRING
+	-- d destoryed r destructor
+		local
+			ide : INTEGER
+			r : ARRAY[NON_STATIONARY]
+			r1 : NON_STATIONARY
+		do
+			create result.make_empty
+			create r.make_empty
+			r := shared_info.destory_this_turn.check_destructor (d)
+			if not r.is_empty then
+				r1 := r[1]
+				ide := r[1].id
+				result := d.name + " got destoryed by " + r1.name + " (id: " + ide.out +")" + " at " + "Sector:" + current.get_sector.print_sector_spec
+			end
+
+		end
+
 feature -- helper
 	turns_left_str : STRING
 	do
@@ -168,7 +186,7 @@ feature{GALAXY} -- GALAXY ONLY
 			end
 			num_turn_a := gen.rchoose (0, 2)
 			current.set_turns_left (num_turn_a)
-			io.put_string ("(A->"+ num_turn_a.out + ":[0,2])"+ "%N")
+			io.put_string ("(A->"+ current.id_out +num_turn_a.out + ":[0,2])"+ "%N")
 
 		elseif current.is_janitaur then
 			if attached{JANITAUR}current as jan then
@@ -196,7 +214,7 @@ feature{GALAXY} -- GALAXY ONLY
 
 			num_turn_j := gen.rchoose (0, 2)
 				jan.set_turns_left (num_turn_j)
-				io.put_string ("(J->"+ num_turn_j.out + ":[0,2])"+ "%N")
+				io.put_string ("(J->"+  current.id_out +num_turn_j.out + ":[0,2])"+ "%N")
 			end
 
 		elseif current.is_benign then
@@ -216,7 +234,7 @@ feature{GALAXY} -- GALAXY ONLY
 				end
 				num_turn_b := gen.rchoose (0, 2)
 				ben.set_turns_left (num_turn_b)
-				io.put_string ("(B->"+ num_turn_b.out + ":[0,2])"+ "%N")
+				io.put_string ("(B->"+  current.id_out +num_turn_b.out + ":[0,2])"+ "%N")
 			end
 
 		elseif current.is_malevolent then
@@ -227,7 +245,7 @@ feature{GALAXY} -- GALAXY ONLY
 			end
 			num_turn_m := gen.rchoose (0, 2)
 			current.set_turns_left (num_turn_m)
-			io.put_string ("(M->"+ num_turn_m.out + ":[0,2])"+ "%N")
+			io.put_string ("(M->"+  current.id_out +num_turn_m.out + ":[0,2])"+ "%N")
 
 		elseif attached{PLANET}current as planet then
 			if
@@ -248,7 +266,7 @@ feature{GALAXY} -- GALAXY ONLY
 			else
 				num_turn_p := gen.rchoose (0,2)
 				planet.set_turns_left (num_turn_p)
-				io.put_string ("(P->"+ num_turn_p.out + ":[0,2])"+ "%N")
+				io.put_string ("(P->"+  current.id_out +num_turn_p.out + ":[0,2])"+ "%N")
 
 			end
 		end

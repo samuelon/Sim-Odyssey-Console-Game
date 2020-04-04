@@ -101,7 +101,7 @@ feature --message
 
 	current_status : STRING
 		DO
-			result := fuel_str + life.out+"/3, " +"landed?:" + return_landed
+			result := fuel_str + "life:"+life.out+"/3, " +"landed?:" + return_landed
 		end
 
 

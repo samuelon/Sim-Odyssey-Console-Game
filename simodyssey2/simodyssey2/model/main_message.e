@@ -82,9 +82,11 @@ feature --quires
 	third : STRING -- MOVEMENT
 		local
 			ent : NON_STATIONARY
+			temp_des : ARRAY[NON_STATIONARY]
 		DO
 			--exp
 			create Result.make_empty
+			create temp_des.make_empty
 			if
 				shared_info.move_this_turn.is_empty
 			then
@@ -106,8 +108,17 @@ feature --quires
 						if attached{EBMJ_COMMON}ent as ebmj then
 							if shared_info.reproduce_this_turn.has (ebmj) then
 								if attached shared_info.reproduce_this_turn[ebmj]as r then
-									result.append("%N      reproduced"+ r.id_out + " at " + r.cur_location_out )
+									result.append("%N      reproduced "+ r.id_out + " at " + r.cur_location_out )
 								end
+							end
+						end
+						 --if destory
+						if shared_info.destory_this_turn.has_destructor (ent)then
+							temp_des := shared_info.destory_this_turn.return_destoryed (ent)
+							across
+								temp_des is destoryed
+							loop
+								result.append("%N      destroyed " + destoryed.id_out +  " at " + destoryed.cur_location_out )
 							end
 						end
 					end
@@ -183,17 +194,17 @@ feature --quires
 				loop
 					result.append("    " + temp2[s].id_out+"->")
 					if attached{EXPLORER}temp2[s] as e then
-						result.append(e.current_status)
+						result.append(e.current_status + "old_pos:"+e.old_location_out + "cur_pos:"+e.cur_location_out)
 					elseif attached{BENIGN}temp2[s]as be then
-						result.append (be.current_status)
+						result.append (be.current_status+ "old_pos:"+be.old_location_out + "cur_pos:"+be.cur_location_out)
 					elseif attached{MALEVOLENT}temp2[s] as ma then
-						result.append (ma.current_status)
+						result.append (ma.current_status+ "old_pos:"+ma.old_location_out + "cur_pos:"+ma.cur_location_out)
 					elseif attached{JANITAUR}temp2[s]as j then
-						result.append (j.current_status)
+						result.append (j.current_status+ "old_pos:"+j.old_location_out + "cur_pos:"+j.cur_location_out)
 					elseif attached{ASTEROID}temp2[s] as a then
-						result.append(a.current_status)
+						result.append(a.current_status+ "old_pos:"+a.old_location_out + "cur_pos:"+a.cur_location_out)
 					elseif attached{PLANET}temp2[s] as p then
-						result.append(p.current_status)
+						result.append(p.current_status+ "old_pos:"+p.old_location_out + "cur_pos:"+p.cur_location_out)
 					end
 					if
 						i < temp2.count
@@ -224,36 +235,29 @@ feature --quires
 					Result.append("    " + temp[i].id_out+"->")
 					result.append (temp[i].current_status+","+"%N")
 					result.append (black_hole_common (temp[i]))
+--					result.append ("     " + temp[i].dmsg_reason (temp[i]))
 					if attached{EBMJ_COMMON}temp[i] as ebmj then
 						if ebmj.fuel = 0 then
 							result.append ("     " + ebmj.dmsg_out_of_fuel (ebmj))
-						end
-						if ebmj.d_asteroid then
-							result.append ("     " + ebmj.dmsg_asteroid (ebmj))
-						end
-						if attached{EXPLORER}ebmj as e then
+						elseif attached{EXPLORER}ebmj as e then
 							if e.life = 0 then
 								result.append ("     " + e.dmsg_death_malevolent)
 							end
+						else
+							result.append ("     " + temp[i].dmsg_reason (temp[i]))
 						end
-						if attached{MALEVOLENT}ebmj as m then
-							if m.d_benign then
-								result.append ("     " + m.dmsg_benign)
-							end
-						end
+					else
+						result.append ("     " + temp[i].dmsg_reason (temp[i]))
+
 					end
-					if attached{ASTEROID}temp[i] as a then
-						if a.d_janitaur then
-							result.append ("     " + a.dmsg_janitaur)
-						end
-					end
+--	
 
 					if
 						i < temp.count
 					then
 						result.append("%N")
 					end
-				end
+				end -- loop
 			end
 		end
 

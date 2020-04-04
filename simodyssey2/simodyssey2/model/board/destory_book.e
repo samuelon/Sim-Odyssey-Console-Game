@@ -77,6 +77,20 @@ feature -- Iterable
 
 
 feature
+--????
+	check_destructor(g : NON_STATIONARY): ARRAY[NON_STATIONARY]
+	local
+		temp_fun : ARRAY[NON_STATIONARY]
+	do
+		create temp_fun.make_empty
+		temp_fun := model.domain_restricted_by (g).range.as_array -- g : destoryed
+		result := temp_fun
+	end
+
+	has_destructor(k:NON_STATIONARY):BOOLEAN
+		do
+			result := destructor.has (k)
+		end
 
 	put (d: NON_STATIONARY; r: NON_STATIONARY)
 	-- d : destoryed r :destructor
@@ -122,7 +136,7 @@ feature
 				if
 					destructor[i]~destr
 				then
-					Result.force(destoryed[i],destoryed.count+1)
+					Result.force(destoryed[i],result.count+1)
 				end
 			end
 

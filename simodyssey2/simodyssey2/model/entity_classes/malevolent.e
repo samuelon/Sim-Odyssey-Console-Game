@@ -47,24 +47,7 @@ feature -- helper
 		end
 
 feature -- death msg
-	dmsg_benign:STRING
-		local
-		ide : INTEGER
-	do
-		-- check 10 then check 12 so 12 is assigned -- need change
-		-- shared_info.destroy_this_turn
-		across
-			current.get_sector.entity_quad is entity
-		loop
-			if
-				entity.is_benign
-			then
-				ide := entity.id
-			end
-		end
-		Result :="Malevolent got destroyed by benign" + "(id:" + ide.out +")" + " at " + "Sector:" + current.get_sector.print_sector_spec
 
-	end
 
 	current_status : STRING
 	do

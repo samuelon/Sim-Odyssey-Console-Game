@@ -223,6 +223,7 @@ feature --action
 		shared_info.reset_move_this_turn
 		shared_info.reset_dead_this_turn
 		shared_info.reset_reproduce_this_turn
+		shared_info.reset_destory_this_turn
 		temp_reproduced.wipe_out
 		act(action)
 		check_alive (shared_info.og_exp)
@@ -266,10 +267,12 @@ feature --action
 			move_gen:INTEGER
 			old_count : INTEGER
 			mov_count : INTEGER
+
 		do
 			create m.make
 			create w.make
         	old_count := movable_sorted.count
+
 			from
 				i := 2
 			until
@@ -300,7 +303,7 @@ feature --action
 						else
 							move_gen := gen.rchoose (1,8)
 							m.move_routine (move_gen, movable_sorted[i])
-							io.put_string (movable_sorted[i].en.out + "->" + move_gen.out + ":[1,8])"+ "%N")
+							io.put_string (movable_sorted[i].id_out + "->" + move_gen.out + ":[1,8])"+ "%N")
 						end
 						check_alive(movable_sorted[i])
 						if
@@ -309,7 +312,7 @@ feature --action
 							reproduce(movable_sorted[i])
 							mov_count := movable_sorted.count
 							movable_sorted[i].behave
-							-- if less i - 1
+						-- if less i - 1
 							if mov_count - movable_sorted.count >0 then
 								i := i -(mov_count - movable_sorted.count)
 							end
@@ -368,28 +371,33 @@ feature --action
 	end
 
 	reproduce(ent: NON_STATIONARY)
+	local
+		done : BOOLEAN
 	DO
+		done := false
 		io.put_string ("reproduction was reached")
 		if
 			attached {EBMJ_COMMON} ent as bmj
 		then
-			io.put_string ("(actions_left" + bmj.en.out + "->:"+ bmj.actions_left_until_reproduction.out + "%N")
+			io.put_string ("(actions_left_before_reproduced" + bmj.id_out + "->:"+ bmj.actions_left_until_reproduction.out + "%N")
 			if
 				not bmj.get_sector.is_full and bmj.actions_left_until_reproduction = 0
 			then
 				bmj.set_reproduce_others
 				create_bmj (bmj)
-			elseif
-					(bmj.actions_left_until_reproduction /~ 0)
-				then
-					bmj.dec_actions_left_until_reproduction
-				else
-					if ent.get_sector.is_full then
-					-- will try to reproduce next time the entity acts
+			else
+				if bmj.get_sector.is_full then
+					done := true
 				end
+				if bmj.actions_left_until_reproduction /~ 0 and not done then
+					bmj.dec_actions_left_until_reproduction
+				end
+
 			end--notfull
+			io.put_string ("action_left_after_reproduced:"+bmj.id_out + "->:"+bmj.actions_left_until_reproduction.out+"%N")
 		end --attached_
-	end -- do
+
+	end-- do
 
 	act(action:ACTION)
 
@@ -427,6 +435,7 @@ feature -- helper
 
 	place_ent(now:TUPLE[row:INTEGER;col:INTEGER]; suppose :TUPLE[row:INTEGER;col:INTEGER];ent : NON_STATIONARY )
 	DO
+		ent.set_old_location (ent.row,ent.col, ent.current_pos.at (3))
 		get_sector (now).remove (ent)
 		get_sector (suppose).put (ent)
 		ent.set_row (suppose.row)
@@ -459,9 +468,6 @@ feature -- helper
 			create {BENIGN}b.make (shared_info.movable_id, ent.row,ent.col)
 			ent.get_sector.populate_routine (ent.row, ent.col, b)
 			ent.set_actions_left_until_reproduction (1)
---			io.put_string ("B->"+ b.cur_location_out)
-			-- STORE B
---			movable_sorted.extend (b)
 			temp_reproduced.extend (b)
 			shared_info.reproduce_this_turn.put (b, ent)
 		end
@@ -487,7 +493,7 @@ feature -- helper
 			temp_reproduced.extend (j)
 			shared_info.reproduce_this_turn.put (j, ent)
 		end
-		io.put_string ("("+ent.en.out+ "->"+ num_turns.out + ":[0,2])"+ "%N")
+--		io.put_string ("("+ent.en.out+ "->"+ num_turns.out + ":[0,2])"+ "%N")
 	end
 
 
@@ -526,7 +532,7 @@ feature -- query
 				loop
 					temp_sector := grid [row_counter, column_counter]
 					string1.append ("(")
-					string1.append (temp_sector.print_sector)
+					string1.append (temp_sector.print_sector_spec)
 					string1.append (")")
 					string1.append ("  ")
 					from

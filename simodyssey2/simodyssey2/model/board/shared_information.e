@@ -153,6 +153,11 @@ feature
 		create reproduce_this_turn.make (100)
 	end
 
+	reset_destory_this_turn
+	do
+		create destory_this_turn.make
+	end
+
 feature --commands
 	test(a_threshold: INTEGER; j_threshold: INTEGER; m_threshold: INTEGER; b_threshold: INTEGER; p_threshold: INTEGER)
 		--sets threshold values
@@ -207,6 +212,6 @@ feature -- out helper
 
 			end
 		end
-		
+
 
 end
