@@ -14,6 +14,7 @@ inherit
 feature
 --	death_message : STRING
 	name : STRING
+	s_name : STRING
 	current_pos : LINKED_LIST[INTEGER]
 	old_pos : LINKED_LIST[INTEGER]
 	turns_left : INTEGER
@@ -83,7 +84,9 @@ feature -- function
 		current.set_turns_left (-1)
 		shared_info.dead_this_turn.extend (current)
 		current.get_sector.remove(current)
-		shared_info.galaxy.movable_sorted.prune_all (current)
+--		shared_info.galaxy.movable_sorted.prune_all (current)
+-- store it
+		shared_info.galaxy.temp_dies.extend (current)
 
 	end
 
@@ -121,7 +124,7 @@ feature -- msg common
 	dmsg_to_blackhole(ent : NON_STATIONARY):STRING
 		do
 			--blackhole isnt allowed to be wrong
-			Result := ent.name +  "got devoured by blackhole (id: -1) at Sector:3:3"
+			Result := ent.name +  " got devoured by blackhole (id: -1) at Sector:3:3"
 		end
 
 	current_status : STRING
@@ -140,7 +143,13 @@ feature -- msg common
 			if not r.is_empty then
 				r1 := r[1]
 				ide := r[1].id
-				result := d.name + " got destoryed by " + r1.name + " (id: " + ide.out +")" + " at " + "Sector:" + current.get_sector.print_sector_spec
+				if r1.is_janitaur then
+					result := d.name + " got imploded by " + r1.s_name + " (id: " + ide.out +")" + " at " + "Sector:" + current.get_sector.print_sector_spec
+
+				else
+					result := d.name + " got destroyed by " + r1.s_name + " (id: " + ide.out +")" + " at " + "Sector:" + current.get_sector.print_sector_spec
+				end
+
 			end
 
 		end
@@ -242,6 +251,12 @@ feature{GALAXY} -- GALAXY ONLY
 				current.get_sector.has_explorer and (not current.get_sector.has_benign) and not shared_info.og_exp.landed
 			then
 				shared_info.og_exp.dec_life
+				if shared_info.og_exp.life = 0 then
+					shared_info.og_exp.dies
+
+				end
+				shared_info.destory_this_turn.put (shared_info.og_exp, current) -- put it in check_alive???
+
 			end
 			num_turn_m := gen.rchoose (0, 2)
 			current.set_turns_left (num_turn_m)

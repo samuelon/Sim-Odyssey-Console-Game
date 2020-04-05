@@ -21,7 +21,9 @@ feature {NONE}
 			Precursor(an_etf_cmd_name, etf_cmd_args, an_etf_cmd_container)
 			-- may set your own model state here ...
 			model := model_access.m
+			
 		end
+
 
 feature -- Attributes
 	-- may declare your own model state here

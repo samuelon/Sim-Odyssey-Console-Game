@@ -544,7 +544,7 @@ feature --others
 		across
 			1 |..| entity_quad.count is i
 		loop
-			if entity_quad[i].en.is_equal (ent.en)then
+			if entity_quad[i].id.is_equal (ent.id)then
 				Result := i
 			end
 

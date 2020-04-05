@@ -43,6 +43,7 @@ feature  -- Initialization
 			use_wormhole := false
 			devoured := false
 			name := "Explorer"
+			s_name := "explorer"
 		end
 feature -- modifiers
 	set_wins

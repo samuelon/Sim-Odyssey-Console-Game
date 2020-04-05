@@ -17,6 +17,7 @@ feature{NONE} --constructor
 			create second.make_empty
 			create eight.make_empty
 			create abort.make_empty
+			create exp_death_msg.make_empty
 		end
 
 feature -- attributes
@@ -36,6 +37,9 @@ feature -- attributes
 			Result := shared_info_access.shared_info
 		end
 
+feature -- helper
+	exp_death_msg : STRING
+
 feature -- lines
 	second : STRING
 	eight : STRING
@@ -44,18 +48,19 @@ feature -- lines
 
 
 feature --quires
+
 	first : STRING
 	do
 		create result.make_empty
 		result.append ("  state:" + model.i.out + "." + model.e.out + ", ")
 
+
 		if not model.in_game and model.face_error then
 			result.append("error")
 		elseif (not model.in_game) then
-
+			io.put_string ("lllllllll")
 			result.append("ok")
 		end
-
 
 		if model.in_game then
 			if model.play_on then
@@ -103,6 +108,7 @@ feature --quires
 						Result.append ("    " + ent.id_out+":"+ ent.cur_location_out )
 					else
 						Result.append ("    " + ent.id_out+":"+ent.old_location_out+"->"+ ent.cur_location_out )
+					end
 						--- if destory -- if reproduce
 						--- across  desrory_this_turn
 						if attached{EBMJ_COMMON}ent as ebmj then
@@ -115,13 +121,18 @@ feature --quires
 						 --if destory
 						if shared_info.destory_this_turn.has_destructor (ent)then
 							temp_des := shared_info.destory_this_turn.return_destoryed (ent)
-							across
-								temp_des is destoryed
-							loop
-								result.append("%N      destroyed " + destoryed.id_out +  " at " + destoryed.cur_location_out )
+							if ent.is_malevolent then
+								result.append("%N      attacked " + temp_des[1].id_out +  " at " + temp_des[1].cur_location_out)
+							else
+								across
+									temp_des is destoryed
+								loop
+									result.append("%N      destroyed " + destoryed.id_out +  " at " + destoryed.cur_location_out )
+								end
 							end
+
 						end
-					end
+
 
 					if
 						i < shared_info.move_this_turn.count
@@ -234,23 +245,30 @@ feature --quires
 				loop
 					Result.append("    " + temp[i].id_out+"->")
 					result.append (temp[i].current_status+","+"%N")
-					result.append (black_hole_common (temp[i]))
---					result.append ("     " + temp[i].dmsg_reason (temp[i]))
-					if attached{EBMJ_COMMON}temp[i] as ebmj then
-						if ebmj.fuel = 0 then
-							result.append ("     " + ebmj.dmsg_out_of_fuel (ebmj))
-						elseif attached{EXPLORER}ebmj as e then
-							if e.life = 0 then
-								result.append ("     " + e.dmsg_death_malevolent)
+					if temp[i].devoured then
+						result.append ("      " +black_hole_common (temp[i]))
+					else
+						if attached{EBMJ_COMMON}temp[i] as ebmj then
+							if ebmj.fuel = 0 then
+								result.append ("      " + ebmj.dmsg_out_of_fuel (ebmj))
+								if ebmj.is_explorer then
+									exp_death_msg:= ebmj.dmsg_out_of_fuel (ebmj)
+								end
+							elseif attached{EXPLORER}ebmj as e then
+								if e.life = 0 then
+									result.append ("      " + e.dmsg_death_malevolent)
+									exp_death_msg:=e.dmsg_death_malevolent
+								end
+							else
+								result.append ("      " + temp[i].dmsg_reason (temp[i]))
+								if ebmj.is_explorer then
+									exp_death_msg:=  temp[i].dmsg_reason (temp[i])
+								end
 							end
 						else
-							result.append ("     " + temp[i].dmsg_reason (temp[i]))
+							result.append ("      " + temp[i].dmsg_reason (temp[i]))
 						end
-					else
-						result.append ("     " + temp[i].dmsg_reason (temp[i]))
-
 					end
---	
 
 					if
 						i < temp.count
@@ -281,8 +299,9 @@ feature -- death msg helper
 			if ent.devoured then
 				result.append ("    " + ent.dmsg_to_blackhole (ent))
 			end
+			if ent.is_explorer and ent.devoured then
+				exp_death_msg := ent.dmsg_to_blackhole (ent)
+			end
 		end
-
-
 
 end

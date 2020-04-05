@@ -23,6 +23,7 @@ make(idv : INTEGER; a_row : INTEGER ; a_col : INTEGER )
 		col := a_col
 		turns_left := 0
 		name := "Malevolent"
+		s_name := "malevolent"
 		dead := false
 		reproduction_interval := 1
 		actions_left_until_reproduction:=1

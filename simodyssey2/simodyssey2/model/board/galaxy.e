@@ -24,6 +24,8 @@ feature -- collection
 --	gen_num_arr : ARRAYED_LIST[INTEGER]
 	movable_sorted: LINKED_LIST[NON_STATIONARY]
 	stationary_stars_sorted: LINKED_LIST [STATIONARY]
+	temp_reproduced : LINKED_LIST[EBMJ_COMMON]
+	temp_dies : LINKED_LIST[NON_STATIONARY]
 
 feature --attributes
 	all_msgs: ALL_MSG
@@ -34,11 +36,10 @@ feature --attributes
 	benign_threshold: INTEGER
 
 	explorer: EXPLORER
-	temp_reproduced : LINKED_LIST[EBMJ_COMMON]
-
 
 feature -- boolean
 	sector_is_full: BOOLEAN
+	end_game : BOOLEAN
 
 feature -- singleton pattern
 	model_access: ETF_MODEL_ACCESS
@@ -65,6 +66,7 @@ feature --constructor
 		create stationary_stars_sorted.make
 		create  movable_sorted.make
 		create temp_reproduced.make
+		create temp_dies.make
 
 
 	end
@@ -88,6 +90,8 @@ feature --constructor
 			asteroid_threshold := shared_info.asteroid_threshold
 			create temp_reproduced.make
 			temp_reproduced.compare_objects
+			create temp_dies.make
+			temp_dies.compare_objects
 
 			create grid.make_filled (create {SECTOR}.make_dummy(shared_info.max_capacity), shared_info.number_rows, shared_info.number_columns)
 			from
@@ -220,40 +224,57 @@ feature --action
 	require
 		vaild : not model.face_error
 	do
+
 		shared_info.reset_move_this_turn
 		shared_info.reset_dead_this_turn
 		shared_info.reset_reproduce_this_turn
 		shared_info.reset_destory_this_turn
 		temp_reproduced.wipe_out
+		temp_dies.wipe_out
 		act(action)
 		check_alive (shared_info.og_exp)
-		-- reset
-		across
-			movable_sorted is m
-		loop
-			m.off_use_wormhole
-			-- set reproduced others?
-		end
-		movable_entity_move
-		if temp_reproduced.is_empty then
-		else
-			across
-				temp_reproduced is mov
-			loop
-				movable_sorted.extend (mov)
-			end
-			sort_movable_list
-		end
-		if
-			shared_info.og_exp.dead
-		then
-			shared_info.og_exp.set_life (0)
-			model.set_in_game_false
-		end
+		if shared_info.og_exp.wins then -- support life planet found skip the loop
 
+		else
+			turn_movable_entity_helper
+		end
+	end
+
+	turn_movable_entity_helper
+	do
+		-- reset
+			across
+				movable_sorted is m
+			loop
+				m.off_use_wormhole
+				-- set reproduced others?
+			end
+		movable_entity_move
+			if temp_reproduced.is_empty then
+			else
+				across
+					temp_reproduced is mov
+				loop
+					movable_sorted.extend (mov)
+				end
+				sort_movable_list
+			end
+			-- delete destory in movable_sorted
+			if
+				temp_dies.is_empty then
+			else
+				across
+					temp_dies is die
+				loop
+					movable_sorted.prune_all (die)
+				end
+				sort_movable_list
+			end
 	end
 
 	movable_entity_move -- for turn
+		require
+			in_game : model.in_game
 		local
 			num: INTEGER
 			num2: INTEGER
@@ -265,18 +286,15 @@ feature --action
 			id : INTEGER
 			i : INTEGER
 			move_gen:INTEGER
-			old_count : INTEGER
-			mov_count : INTEGER
 
 		do
 			create m.make
 			create w.make
-        	old_count := movable_sorted.count
 
 			from
 				i := 2
 			until
-				i >  old_count
+				i > movable_sorted.count
 			loop
 				row := movable_sorted[i].row
 				col := movable_sorted[i].col
@@ -310,20 +328,13 @@ feature --action
 							not movable_sorted[i].dead
 						then
 							reproduce(movable_sorted[i])
-							mov_count := movable_sorted.count
 							movable_sorted[i].behave
-						-- if less i - 1
-							if mov_count - movable_sorted.count >0 then
-								i := i -(mov_count - movable_sorted.count)
-							end
-
 						end
 					end --
 				else -- turns_left
 					movable_sorted[i].dec_turns_left
 				end
 				i := i+1
-				old_count := movable_sorted.count
 			end
 --		
 		end
@@ -368,6 +379,11 @@ feature --action
 			ent.set_devoured
 			ent.dies
 		end
+
+		-- check wins
+--		if  then
+
+--		end
 	end
 
 	reproduce(ent: NON_STATIONARY)
@@ -386,11 +402,10 @@ feature --action
 				bmj.set_reproduce_others
 				create_bmj (bmj)
 			else
-				if bmj.get_sector.is_full then
-					done := true
-				end
-				if bmj.actions_left_until_reproduction /~ 0 and not done then
+				if bmj.actions_left_until_reproduction /~ 0 then
 					bmj.dec_actions_left_until_reproduction
+				elseif bmj.get_sector.is_full then
+
 				end
 
 			end--notfull
@@ -500,7 +515,31 @@ feature -- helper
 
 
 feature -- query
-
+	game_status: TUPLE[is_over:BOOLEAN; is_win:BOOLEAN]
+			-- report current game status
+		do
+			create Result.default_create
+			-- win if og land on the supported life planet
+			if shared_info.og_exp.wins then
+				Result.is_over := true
+				Result.is_win := true
+				end_game := true
+			-- exp not wins and not dead
+			elseif (not shared_info.og_exp.wins and not shared_info.og_exp.dead) then
+				Result.is_over := false
+				Result.is_win := false
+			-- exp is dead
+			elseif shared_info.og_exp.dead then
+				Result.is_over := true
+				Result.is_win := false
+				end_game := true
+			end
+		ensure
+			correct_status:
+				Result.is_win implies Result.is_over
+			correct_wining_condition:
+				Result.is_win implies shared_info.og_exp.wins
+		end
 
 	out: STRING
 			--Returns grid in string form

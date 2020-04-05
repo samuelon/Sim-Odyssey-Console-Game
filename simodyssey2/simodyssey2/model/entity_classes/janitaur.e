@@ -25,6 +25,7 @@ feature
 		row := a_row
 		col := a_col
 		name:="Janitaur"
+		s_name := "janitaur"
 		turns_left := 0
 		dead := false
 		reproduction_interval := 2
@@ -58,7 +59,7 @@ feature
 feature --str
 	current_status : STRING
 	do
-		Result := fuel_str+"load:"+ load.out + "/" + max_load.out +", " + actions_left_until_reproduction_str +", " +  out_turns_left
+		Result := fuel_str+"load:"+ load.out + "/" + max_load.out +", " + actions_left_until_reproduction_str +", " +  turns_left_str
 	end
 
 end

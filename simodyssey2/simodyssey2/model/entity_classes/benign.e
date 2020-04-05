@@ -22,6 +22,7 @@ feature
 		row := a_row
 		col := a_col
 		name := "Benign"
+		s_name := "benign"
 		turns_left := 0
 		dead := false
 		reproduction_interval := 1

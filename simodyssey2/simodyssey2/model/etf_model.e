@@ -24,6 +24,7 @@ feature {NONE} -- Initialization
 			in_game := false
 			test_on:=false
 			play_on:=false
+			end_game := false
 			reset_routine
 			create main_msg.make
 			io.put_string (all_msg.welcome)
@@ -52,6 +53,7 @@ feature -- boolean
 	face_error:BOOLEAN
 	abort_on : BOOLEAN
 	command_specific : BOOLEAN
+	end_game : BOOLEAN
 
 
 feature -- model operations
@@ -60,13 +62,54 @@ feature -- model operations
 			-- main msg number + 1
 		do
 			-- if no error
-			if not face_error and not status_on and in_game then
+			status_check
+--			if end_game then
+--				set_in_game_false
+--			end
+			if not face_error and not status_on and not abort_on then -- add in game? -- and not status_on and in_game
 				i := i+1
 				e := 0 --reset
 			else
 			-- othewise, increment the .x	
 				e := e + 1
 			end
+		end
+
+	status_check
+		local
+			ex : EXPLORER
+			str : STRING
+		do
+			ex := shared_info.og_exp
+			create str.make_empty
+--			if not in_game then
+--			-- win
+			if not in_game then
+
+			else
+				if shared_info.galaxy.game_status.is_win and then shared_info.galaxy.game_status.is_over then
+					io.put_string ("ffffffffffffffff")
+					set_command_specific_on
+					main_msg.set_second (all_msg.land_life_found)
+--					in_game:= false
+					end_game := true
+			-- lost
+				elseif not shared_info.galaxy.game_status.is_win and then shared_info.galaxy.game_status.is_over then
+				-- store expoloer death info
+				set_command_specific_on
+				str.append ("  ")
+				str.append (main_msg.exp_death_msg)
+				str.append ("%N"+ all_msg.game_is_over)
+				main_msg.set_second (str)
+				main_msg.set_eight
+--				in_game := false
+					end_game := true
+				end
+
+			end
+
+			ensure
+--				valid_game_status : (shared_info.og_exp.wins or shared_info.og_exp.dead) implies end_game
 		end
 
 	reset
@@ -200,6 +243,7 @@ feature -- model operations
 				in_game := False
 				play_on := false
 				test_on := false
+				abort_on := true
 				shared_info.reset
 			end
 		end
@@ -240,6 +284,7 @@ feature -- model operations
 	status
 		do
 			if not in_game then
+				io.put_string ("xxxxxxxxxxxxxxxxxxxxxxxxxxxx")
 				main_msg.set_second (all_msg.error_not_in_mission)
 				face_error := true
 			else
@@ -293,13 +338,6 @@ feature -- helper
 			face_error := true
 		end
 
-feature -- defensive
---	-- check_error(action : ACTION)
---		--  DO
---		      if action.is_move then
---		      	-- if shared_info.og_exp.landed then
---		      		   -- main_msg.set_second(str)
---		      end
 
 feature -- queries
 	out : STRING
@@ -309,8 +347,9 @@ feature -- queries
 			if i > 0 or e > 0 then
 				Result.append (main_msg.first)
 			end
-			if face_error or command_specific then -- command-specific or exp death msg
-				Result.append (main_msg.second)
+			if face_error or command_specific then -- command-specific (include exp death msg)
+				Result.append (main_msg.second+"%N")
+
 			end
 
 			if
@@ -325,11 +364,13 @@ feature -- queries
 				Result.append (main_msg.seventh)
 			end
 			if test_on and shared_info.og_exp.dead then
+				result.append ("%N")
 				Result.append(main_msg.eight)
 			end
 			Result.append ("%N"+shared_info.og_exp.id_out + "," + shared_info.og_exp.get_sector.print_sector+ "landed:"+ shared_info.og_exp.landed.out + ",fuel"+ shared_info.og_exp.fuel.out+"%N")
 			result.append (shared_info.galaxy.movable_sorted_out+"%N")
 			result.append (shared_info.out_removed_this_turn)
+			result.append (main_msg.exp_death_msg)
 --			result.append (shared_info.destory_this_turn.out_destory_book)
 		end
 

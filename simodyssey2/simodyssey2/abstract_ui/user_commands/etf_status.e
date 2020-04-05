@@ -17,6 +17,7 @@ feature -- command
 			model.status
 			model.default_update
 			etf_cmd_container.on_change.notify ([Current])
+			
     	end
 
 end

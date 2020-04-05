@@ -22,6 +22,7 @@ feature
 		col := a_col
 		turns_left := 0
 		name := "Asteroid"
+		s_name := "asteroid"
 		dead := false
 		create old_pos.make
 		create current_pos.make

@@ -1,0 +1,9 @@
+test(3,5,7,15,30)
+move(S)
+move(S)
+move(S)
+move(S)
+land
+move(S)
+status
+

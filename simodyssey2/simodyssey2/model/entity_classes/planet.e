@@ -24,6 +24,7 @@ feature  -- Initialization
 			is_support_life := FALSE
 			is_visited := FALSE
 			name := "Planet"
+			s_name := "planet"
 			create en.make ('P') --letter
 		--	sector := a_sector
 			row := a_row

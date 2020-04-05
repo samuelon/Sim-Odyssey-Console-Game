@@ -1,398 +1,335 @@
   state:0.0, ok 
-  Welcome! Try test(3,5,7,15,30)putting in entity in rightmost empty spot: 0
-putting in entity in rightmost empty spot: 1
-[1,P][1,3,1]turns_left2:[0,2])
-putting in entity in rightmost empty spot: 2
+  Welcome! Try test(3,5,7,15,30)[1,P][1,3,1]turns_left2:[0,2])
 [2,P][1,5,1]turns_left2:[0,2])
-putting in entity in rightmost empty spot: 3
 [3,P][1,5,2]turns_left0:[0,2])
-putting in entity in rightmost empty spot: 4
 [4,P][2,5,1]turns_left2:[0,2])
-putting in entity in rightmost empty spot: 5
 [5,M][3,1,1]turns_left1:[0,2])
-putting in entity in rightmost empty spot: -1
-putting in entity in rightmost empty spot: 6
 [6,P][3,4,1]turns_left2:[0,2])
-putting in entity in rightmost empty spot: 7
 [7,M][4,2,1]turns_left2:[0,2])
-putting in entity in rightmost empty spot: 8
 [8,P][4,3,1]turns_left0:[0,2])
-putting in entity in rightmost empty spot: 9
 [9,P][4,4,1]turns_left1:[0,2])
-putting in entity in rightmost empty spot: 10
 [10,B][5,1,1]turns_left1:[0,2])
-putting in entity in rightmost empty spot: 11
 [11,P][5,5,1]turns_left2:[0,2])
-putting in entity in rightmost empty spot: -2
-putting in entity in rightmost empty spot: -3
-putting in entity in rightmost empty spot: -4
-putting in entity in rightmost empty spot: -5
-putting in entity in rightmost empty spot: -6
-putting in entity in rightmost empty spot: -7
-putting in entity in rightmost empty spot: -8
-putting in entity in rightmost empty spot: -9
-putting in entity in rightmost empty spot: -10
-putting in entity in rightmost empty spot: -11
-removing this id, planet3
-putting in entity in rightmost empty spot: 3
-P->8:[1,8])
-reproduction was reached(P->2:[0,2])
-removing this id, planet8
-putting in entity in rightmost empty spot: 8
-P->8:[1,8])
-reproduction was reached(P->0:[0,2])
-removing this id, planet5
-putting in entity in rightmost empty spot: 5
-M->7:[1,8])
-reproduction was reached(actions_leftM->:1
-(M->2:[0,2])
-removing this id, planet8
-putting in entity in rightmost empty spot: 8
-P->8:[1,8])
-reproduction was reached(P->1:[0,2])
-removing this id, planet10
-putting in entity in rightmost empty spot: 10
-reproduction was reached(actions_leftB->:1
-(B->0:[0,2])
-removing this id, planet1
-putting in entity in rightmost empty spot: 1
-P->4:[1,8])
-reproduction was reached(P->1:[0,2])
-removing this id, planet2
-putting in entity in rightmost empty spot: 2
-P->5:[1,8])
-reproduction was reached(P->0:[0,2])
-removing this id, planet4
-putting in entity in rightmost empty spot: 4
-P->7:[1,8])
-reproduction was reached(P->2:[0,2])
-removing this id, planet6
-putting in entity in rightmost empty spot: 6
-P->8:[1,8])
-reproduction was reached(P->0:[0,2])
-removing this id, planet7
-putting in entity in void spot: 7
-M->6:[1,8])
-reproduction was reached(actions_leftM->:1
-(M->0:[0,2])
-removing this id, planet10
-putting in entity in rightmost empty spot: 10
-B->7:[1,8])
-reproduction was reached(actions_leftB->:0
-putting in entity in rightmost empty spot: 12
+[3,P]->8:[1,8])
+reproduction was reached(P->[3,P]2:[0,2])
+[8,P]->8:[1,8])
+reproduction was reached(P->[8,P]0:[0,2])
+[5,M]->7:[1,8])
+reproduction was reached(actions_left_before_reproduced[5,M]->:1
+action_left_after_reproduced:[5,M]->:0
+(M->[5,M]2:[0,2])
+[8,P]->8:[1,8])
+reproduction was reached(P->[8,P]1:[0,2])
+wormhole used[10,B](5,2)reproduction was reached(actions_left_before_reproduced[10,B]->:1
+action_left_after_reproduced:[10,B]->:0
+(B->[10,B]0:[0,2])
+[1,P]->4:[1,8])
+reproduction was reached(P->[1,P]1:[0,2])
+[2,P]->5:[1,8])
+reproduction was reached(P->[2,P]0:[0,2])
+[4,P]->7:[1,8])
+reproduction was reached(P->[4,P]2:[0,2])
+[6,P]->8:[1,8])
+reproduction was reached(P->[6,P]0:[0,2])
+[7,M]->6:[1,8])
+reproduction was reached(actions_left_before_reproduced[7,M]->:1
+action_left_after_reproduced:[7,M]->:0
+(M->[7,M]0:[0,2])
+[10,B]->7:[1,8])
+reproduction was reached(actions_left_before_reproduced[10,B]->:0
 [12,B][5,1,4]turns_left0:[0,2])
-B->[5,1,4](B->0:[0,2])
-removing this id, planet7
-(B->2:[0,2])
-removing this id, planet11
-putting in entity in rightmost empty spot: 11
-P->8:[1,8])
-reproduction was reachedremoving this id, planet2
-putting in entity in void spot: 2
-P->1:[1,8])
-reproduction was reached(P->1:[0,2])
-removing this id, planet3
-putting in entity in rightmost empty spot: 3
-P->5:[1,8])
-reproduction was reached(P->0:[0,2])
-removing this id, planet6
-putting in entity in void spot: 6
-P->6:[1,8])
-reproduction was reached(P->0:[0,2])
-putting in entity in void spot: 7
-removing this id, planet8
-putting in entity in rightmost empty spot: 8
-P->2:[1,8])
-reproduction was reachedremoving this id, planet1
-putting in entity in void spot: 1
-P->5:[1,8])
-reproduction was reached(P->2:[0,2])
-removing this id, planet3
-putting in entity in rightmost empty spot: 3
-P->8:[1,8])
-reproduction was reachedremoving this id, planet5
-putting in entity in void spot: 5
-M->1:[1,8])
-reproduction was reached(actions_leftM->:0
-putting in entity in void spot: 13
-[13,M][2,5,2]turns_left2:[0,2])
-m->[2,5,2](M->0:[0,2])
-(M->2:[0,2])
-removing this id, planet6
-putting in entity in void spot: 6
-P->2:[1,8])
-reproduction was reached(P->0:[0,2])
-removing this id, planet7
-putting in entity in rightmost empty spot: 7
-M->6:[1,8])
-removing this id, planet2
-putting in entity in void spot: 2
-P->8:[1,8])
-reproduction was reached(P->1:[0,2])
-removing this id, planet4
-putting in entity in rightmost empty spot: 4
-P->3:[1,8])
-reproduction was reached(P->0:[0,2])
-removing this id, planet6
-putting in entity in void spot: 6
-P->3:[1,8])
-reproduction was reached(P->2:[0,2])
-removing this id, planet7
-putting in entity in rightmost empty spot: 7
-M->3:[1,8])
-removing this id, planet10
-putting in entity in void spot: 10
-reproduction was reached(actions_leftB->:1
-(B->1:[0,2])
-removing this id, planet4
-putting in entity in void spot: 4
-P->7:[1,8])
-reproduction was reached(P->2:[0,2])
-removing this id, planet7
-putting in entity in void spot: 7
-removing this id, planet1
-putting in entity in void spot: 1
-P->8:[1,8])
-reproduction was reached(P->0:[0,2])
-removing this id, planet2
-putting in entity in rightmost empty spot: 2
-P->2:[1,8])
-reproduction was reached(P->2:[0,2])
-removing this id, planet5
-putting in entity in void spot: 5
-M->6:[1,8])
-removing this id, planet5
-removing this id, planet7
-putting in entity in rightmost empty spot: 7
-M->7:[1,8])
-removing this id, planet10
-putting in entity in void spot: 10
-reproduction was reached(actions_leftB->:0
-putting in entity in void spot: 14
-[14,B][1,5,2]turns_left2:[0,2])
-B->[1,5,2](B->0:[0,2])
-(B->1:[0,2])
-removing this id, planet1
-putting in entity in void spot: 1
-P->6:[1,8])
-reproduction was reached(P->1:[0,2])
-putting in entity in rightmost empty spot: 5
-removing this id, planet5
-removing this id, planet6
-putting in entity in void spot: 6
-P->4:[1,8])
-reproduction was reached(P->1:[0,2])
-removing this id, planet7
-putting in entity in void spot: 7
-M->3:[1,8])
-removing this id, planet4
-putting in entity in void spot: 4
-P->7:[1,8])
-reproduction was reached(P->2:[0,2])
-M->4:[1,8])
-M->7:[1,8])
-removing this id, planet10
-putting in entity in void spot: 10
-B->6:[1,8])
-reproduction was reached(actions_leftB->:1
-(B->0:[0,2])
-removing this id, planet1
-putting in entity in rightmost empty spot: 1
-P->1:[1,8])
-reproduction was reached(P->1:[0,2])
-removing this id, planet2
-putting in entity in rightmost empty spot: 2
-P->1:[1,8])
-reproduction was reached(P->0:[0,2])
-putting in entity in void spot: 5
-M->5:[1,8])
-removing this id, planet5
-removing this id, planet6
-putting in entity in void spot: 6
-P->1:[1,8])
-reproduction was reached(P->2:[0,2])
-removing this id, planet7
-putting in entity in void spot: 7
-M->6:[1,8])
-removing this id, planet10
-putting in entity in void spot: 10
-B->8:[1,8])
-reproduction was reached(actions_leftB->:0
-putting in entity in rightmost empty spot: 15
-[15,B][1,3,2]turns_left2:[0,2])
-B->[1,3,2](B->0:[0,2])
-(B->1:[0,2])
-removing this id, planet2
-putting in entity in void spot: 2
-P->4:[1,8])
-reproduction was reached(P->0:[0,2])
-M->3:[1,8])
-removing this id, planet7
-putting in entity in rightmost empty spot: 7
-M->7:[1,8])
-removing this id, planet1
-putting in entity in rightmost empty spot: 1
-P->1:[1,8])
-reproduction was reachedremoving this id, planet2
-putting in entity in void spot: 2
-P->8:[1,8])
-reproduction was reached(P->0:[0,2])
-removing this id, planet4
-putting in entity in void spot: 4
-P->2:[1,8])
-reproduction was reached(P->0:[0,2])
-putting in entity in void spot: 5
-M->4:[1,8])
-removing this id, planet5
-removing this id, planet7
-putting in entity in void spot: 7
-M->1:[1,8])
-removing this id, planet10
-putting in entity in void spot: 10
-B->1:[1,8])
-reproduction was reached(actions_leftB->:1
-(B->1:[0,2])
-removing this id, planet2
-putting in entity in void spot: 2
-P->7:[1,8])
-reproduction was reached(P->1:[0,2])
-removing this id, planet4
-putting in entity in void spot: 4
-P->1:[1,8])
-reproduction was reached(P->1:[0,2])
-putting in entity in rightmost empty spot: 5
-M->8:[1,8])
-removing this id, planet5
-removing this id, planet6
-putting in entity in rightmost empty spot: 6
-P->6:[1,8])
-reproduction was reached(P->1:[0,2])
-removing this id, planet7
-putting in entity in void spot: 7
-M->1:[1,8])
-removing this id, planet7
-putting in entity in rightmost empty spot: 5
-M->5:[1,8])
-putting in entity in rightmost empty spot: 7
-M->3:[1,8])
-removing this id, planet10
-putting in entity in void spot: 10
-B->7:[1,8])
-reproduction was reached(actions_leftB->:0
-putting in entity in rightmost empty spot: 16
-[16,B][5,2,2]turns_left1:[0,2])
-B->[5,2,2](B->0:[0,2])
-(B->0:[0,2])
-removing this id, planet2
-putting in entity in void spot: 2
-P->2:[1,8])
-reproduction was reached(P->1:[0,2])
-removing this id, planet4
-putting in entity in void spot: 4
-P->5:[1,8])
-reproduction was reached(P->1:[0,2])
-M->2:[1,8])
-removing this id, planet6
-putting in entity in void spot: 6
-P->2:[1,8])
-reproduction was reached(P->1:[0,2])
-removing this id, planet7
-putting in entity in rightmost empty spot: 7
-removing this id, planet10
-putting in entity in rightmost empty spot: 10
-B->6:[1,8])
-reproduction was reached(actions_leftB->:1
-removing this id, planet7
-(B->1:[0,2])
-removing this id, planet0
-putting in entity in void spot: 0
-removing this id, planet5
-putting in entity in void spot: 5
-M->1:[1,8])
-putting in entity in void spot: 7
-M->4:[1,8])
-removing this id, planet0
-putting in entity in void spot: 0
-removing this id, planet2
-putting in entity in void spot: 2
-P->2:[1,8])
-reproduction was reached(P->1:[0,2])
-removing this id, planet4
-putting in entity in void spot: 4
-P->1:[1,8])
-reproduction was reached(P->1:[0,2])
-M->5:[1,8])
-removing this id, planet6
-putting in entity in void spot: 6
-P->7:[1,8])
-reproduction was reached(P->1:[0,2])
-removing this id, planet7
-putting in entity in void spot: 7
-M->3:[1,8])
-removing this id, planet10
-putting in entity in void spot: 10
-B->4:[1,8])
-reproduction was reached(actions_leftB->:0
-putting in entity in rightmost empty spot: 17
-[17,B][2,2,2]turns_left1:[0,2])
-B->[2,2,2](B->0:[0,2])
-(B->0:[0,2])
-  ------------------
+action_left_after_reproduced:[10,B]->:1
+(B->[10,B]2:[0,2])
+[11,P]->8:[1,8])
+reproduction was reached[2,P]->1:[1,8])
+reproduction was reached(P->[2,P]1:[0,2])
+[3,P]->5:[1,8])
+reproduction was reached(P->[3,P]0:[0,2])
+[6,P]->6:[1,8])
+reproduction was reached(P->[6,P]0:[0,2])
+[8,P]->8:[1,8])
+reproduction was reached(P->[8,P]1:[0,2])
+wormhole used[12,B](5,3)reproduction was reached(actions_left_before_reproduced[12,B]->:1
+action_left_after_reproduced:[12,B]->:0
+(B->[12,B]2:[0,2])
+[1,P]->8:[1,8])
+reproduction was reached(P->[1,P]2:[0,2])
+[3,P]->7:[1,8])
+reproduction was reached(P->[3,P]2:[0,2])
+[5,M]->2:[1,8])
+reproduction was reached(actions_left_before_reproduced[5,M]->:0
+[13,M][2,1,2]turns_left0:[0,2])
+action_left_after_reproduced:[5,M]->:1
+(M->[5,M]1:[0,2])
+[6,P]->8:[1,8])
+reproduction was reached(P->[6,P]1:[0,2])
+[2,P]->3:[1,8])
+reproduction was reached(P->[2,P]0:[0,2])
+[4,P]->3:[1,8])
+reproduction was reached(P->[4,P]2:[0,2])
+[8,P]->3:[1,8])
+reproduction was reached(P->[8,P]2:[0,2])
+wormhole used[10,B](5,1)reproduction was reached(actions_left_before_reproduced[10,B]->:1
+action_left_after_reproduced:[10,B]->:0
+(B->[10,B]1:[0,2])
+[13,M]->2:[1,8])
+reproduction was reached(actions_left_before_reproduced[13,M]->:1
+action_left_after_reproduced:[13,M]->:0
+(M->[13,M]2:[0,2])
+[2,P]->8:[1,8])
+reproduction was reached(P->[2,P]2:[0,2])
+[5,M]->5:[1,8])
+reproduction was reached(actions_left_before_reproduced[5,M]->:1
+action_left_after_reproduced:[5,M]->:0
+(M->[5,M]0:[0,2])
+[6,P]->7:[1,8])
+reproduction was reached(P->[6,P]1:[0,2])
+[12,B]->7:[1,8])
+reproduction was reached(actions_left_before_reproduced[12,B]->:0
+[14,B][5,2,2]turns_left2:[0,2])
+action_left_after_reproduced:[12,B]->:1
+(B->[12,B]0:[0,2])
+[1,P]->1:[1,8])
+reproduction was reached[3,P]->4:[1,8])
+reproduction was reached(P->[3,P]2:[0,2])
+[5,M]->5:[1,8])
+reproduction was reached(actions_left_before_reproduced[5,M]->:0
+[15,M][4,1,3]turns_left2:[0,2])
+action_left_after_reproduced:[5,M]->:1
+(M->[5,M]1:[0,2])
+wormhole used[10,B](2,5)reproduction was reached(actions_left_before_reproduced[10,B]->:0
+[16,B][2,5,4]turns_left2:[0,2])
+action_left_after_reproduced:[10,B]->:1
+(B->[10,B]2:[0,2])
+[12,B]->6:[1,8])
+reproduction was reached(actions_left_before_reproduced[12,B]->:1
+action_left_after_reproduced:[12,B]->:0
+(B->[12,B]1:[0,2])
+[4,P]->7:[1,8])
+reproduction was reached(P->[4,P]0:[0,2])
+[6,P]->7:[1,8])
+reproduction was reached(P->[6,P]2:[0,2])
+[8,P]->8:[1,8])
+reproduction was reached(P->[8,P]0:[0,2])
+[13,M]->4:[1,8])
+reproduction was reached(actions_left_before_reproduced[13,M]->:0
+[17,M][2,3,3]turns_left1:[0,2])
+action_left_after_reproduced:[13,M]->:1
+(M->[13,M]1:[0,2])
+[2,P]->1:[1,8])
+reproduction was reached(P->[2,P]1:[0,2])
+[4,P]->8:[1,8])
+reproduction was reached(P->[4,P]2:[0,2])
+wormhole used[5,M](1,4)reproduction was reached(actions_left_before_reproduced[5,M]->:1
+action_left_after_reproduced:[5,M]->:0
+(M->[5,M]0:[0,2])
+[8,P]->3:[1,8])
+reproduction was reached(P->[8,P]2:[0,2])
+[12,B]->1:[1,8])
+[14,B]->8:[1,8])
+reproduction was reached(actions_left_before_reproduced[14,B]->:1
+action_left_after_reproduced:[14,B]->:0
+(B->[14,B]0:[0,2])
+[3,P]->2:[1,8])
+reproduction was reached(P->[3,P]0:[0,2])
+[5,M]->4:[1,8])
+[10,B]->1:[1,8])
+reproduction was reached(actions_left_before_reproduced[10,B]->:1
+action_left_after_reproduced:[10,B]->:0
+(B->[10,B]0:[0,2])
+wormhole used[13,M](4,2)reproduction was reached(actions_left_before_reproduced[13,M]->:1
+action_left_after_reproduced:[13,M]->:0
+(M->[13,M]1:[0,2])
+wormhole used[14,B](1,1)reproduction was reached(actions_left_before_reproduced[14,B]->:0
+[18,B][1,1,3]turns_left2:[0,2])
+action_left_after_reproduced:[14,B]->:1
+(B->[14,B]1:[0,2])
+[16,B]->2:[1,8])
+reproduction was reached(actions_left_before_reproduced[16,B]->:1
+action_left_after_reproduced:[16,B]->:0
+(B->[16,B]2:[0,2])
+wormhole used[17,M](4,5)reproduction was reached(actions_left_before_reproduced[17,M]->:1
+action_left_after_reproduced:[17,M]->:0
+(M->[17,M]0:[0,2])
+[2,P]->5:[1,8])
+reproduction was reached(P->[2,P]0:[0,2])
+[3,P]->2:[1,8])
+reproduction was reached(P->[3,P]1:[0,2])
+[6,P]->5:[1,8])
+reproduction was reached(P->[6,P]1:[0,2])
+[10,B]->2:[1,8])
+[17,M]->2:[1,8])
+reproduction was reached(actions_left_before_reproduced[17,M]->:0
+[19,M][3,1,3]turns_left1:[0,2])
+action_left_after_reproduced:[17,M]->:1
+(M->[17,M]0:[0,2])
+[2,P]->7:[1,8])
+reproduction was reached(P->[2,P]2:[0,2])
+[4,P]->6:[1,8])
+reproduction was reached(P->[4,P]1:[0,2])
+[8,P]->4:[1,8])
+reproduction was reached[13,M]->2:[1,8])
+[14,B]->8:[1,8])
+reproduction was reached(actions_left_before_reproduced[14,B]->:1
+action_left_after_reproduced:[14,B]->:0
+(B->[14,B]0:[0,2])
+[17,M]->6:[1,8])
+reproduction was reached(actions_left_before_reproduced[17,M]->:1
+action_left_after_reproduced:[17,M]->:0
+(M->[17,M]2:[0,2])
+[3,P]->7:[1,8])
+reproduction was reached(P->[3,P]1:[0,2])
+[6,P]->3:[1,8])
+reproduction was reached(P->[6,P]0:[0,2])
+wormhole used[14,B](3,1)reproduction was reached(actions_left_before_reproduced[14,B]->:0
+[20,B][3,1,4]turns_left0:[0,2])
+action_left_after_reproduced:[14,B]->:1
+(B->[14,B]0:[0,2])
+[16,B]->3:[1,8])
+reproduction was reached(actions_left_before_reproduced[16,B]->:0
+[21,B][1,2,4]turns_left1:[0,2])
+action_left_after_reproduced:[16,B]->:1
+(B->[16,B]0:[0,2])
+[18,B]->3:[1,8])
+reproduction was reached(actions_left_before_reproduced[18,B]->:1
+action_left_after_reproduced:[18,B]->:0
+(B->[18,B]0:[0,2])
+[4,P]->5:[1,8])
+reproduction was reached(P->[4,P]1:[0,2])
+[6,P]->3:[1,8])
+reproduction was reached(P->2:[1,2])
+[14,B]->2:[1,8])
+reproduction was reached(actions_left_before_reproduced[14,B]->:1
+action_left_after_reproduced:[14,B]->:0
+(B->[14,B]2:[0,2])
+[16,B]->4:[1,8])
+reproduction was reached(actions_left_before_reproduced[16,B]->:1
+action_left_after_reproduced:[16,B]->:0
+(B->[16,B]1:[0,2])
+[18,B]->1:[1,8])
+reproduction was reached(actions_left_before_reproduced[18,B]->:0
+[22,B][5,1,3]turns_left0:[0,2])
+action_left_after_reproduced:[18,B]->:1
+(B->[18,B]0:[0,2])
+[20,B]->2:[1,8])
+reproduction was reached(actions_left_before_reproduced[20,B]->:1
+action_left_after_reproduced:[20,B]->:0
+(B->[20,B]2:[0,2])
+[2,P]->1:[1,8])
+reproduction was reached[3,P]->7:[1,8])
+reproduction was reached(P->[3,P]1:[0,2])
+[17,M]->7:[1,8])
+reproduction was reached(actions_left_before_reproduced[17,M]->:0
+[23,M][4,5,2]turns_left0:[0,2])
+action_left_after_reproduced:[17,M]->:1
+(M->[17,M]0:[0,2])
+wormhole used[18,B](1,1)reproduction was reached(actions_left_before_reproduced[18,B]->:1
+action_left_after_reproduced:[18,B]->:0
+(B->[18,B]2:[0,2])
+[21,B]->7:[1,8])
+reproduction was reached(actions_left_before_reproduced[21,B]->:1
+action_left_after_reproduced:[21,B]->:0
+(B->[21,B]2:[0,2])
+wormhole used[22,B](2,3)reproduction was reached(actions_left_before_reproduced[22,B]->:1
+action_left_after_reproduced:[22,B]->:0
+(B->[22,B]0:[0,2])
+[4,P]->6:[1,8])
+reproduction was reached(P->[4,P]1:[0,2])
+wormhole used[16,B](5,1)reproduction was reached(actions_left_before_reproduced[16,B]->:0
+[24,B][5,1,3]turns_left0:[0,2])
+action_left_after_reproduced:[16,B]->:1
+(B->[16,B]2:[0,2])
+[17,M]->2:[1,8])
+reproduction was reached(actions_left_before_reproduced[17,M]->:1
+action_left_after_reproduced:[17,M]->:0
+(M->[17,M]2:[0,2])
+wormhole used[22,B](4,1)reproduction was reached(actions_left_before_reproduced[22,B]->:0
+[25,B][4,1,4]turns_left2:[0,2])
+action_left_after_reproduced:[22,B]->:1
+(B->[22,B]1:[0,2])
+[23,M]->4:[1,8])
+reproduction was reached(actions_left_before_reproduced[23,M]->:1
+action_left_after_reproduced:[23,M]->:0
+(M->[23,M]1:[0,2])
+[3,P]->4:[1,8])
+reproduction was reached(P->[3,P]1:[0,2])
+[14,B]->6:[1,8])
+reproduction was reached(actions_left_before_reproduced[14,B]->:0
+[26,B][2,2,3]turns_left1:[0,2])
+action_left_after_reproduced:[14,B]->:1
+(B->[14,B]0:[0,2])
+[20,B]->3:[1,8])
+reproduction was reached(actions_left_before_reproduced[20,B]->:0
+[27,B][2,3,3]turns_left2:[0,2])
+action_left_after_reproduced:[20,B]->:1
+(B->[20,B]0:[0,2])
+wormhole used[24,B](4,3)reproduction was reached(actions_left_before_reproduced[24,B]->:1
+action_left_after_reproduced:[24,B]->:0
+(B->[24,B]0:[0,2])
+is_planetcast planetp attachedp vsitedffffffffffffffff  ------------------
 
 [0,E],0,0landed:False,fuel3
+
+
 ->play
   ------------------
-  state:1.0, model:play, ok
+  state:1.0, mode:play, ok
   Movement:none
-    (1,1)  (1,2)  (1,3)  (1,4)  (1,5)  
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
     E---   *---   P---   ----   PP--   
-    (2,1)  (2,2)  (2,3)  (2,4)  (2,5)  
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
     ----   ----   W---   ----   P---   
-    (3,1)  (3,2)  (3,3)  (3,4)  (3,5)  
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
     MY--   ----   O---   PW--   ----   
-    (4,1)  (4,2)  (4,3)  (4,4)  (4,5)  
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
     W---   M*--   P---   P*--   ----   
-    (5,1)  (5,2)  (5,3)  (5,4)  (5,5)  
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
     BW--   ----   *---   ----   PW--   
 [0,E],1,1landed:False,fuel3
+[0,E][1,P][2,P][3,P][4,P][5,M][6,P][7,M][8,P][9,P][10,B][11,P]
+
 ->pass
   ------------------
-  state:2.0, model:play, ok
+  state:2.0, mode:play, ok
   Movement:
     [3,P]:[1,5,2]->[5,4,1]
     [8,P]:[4,3,1]->[3,2,1]
-    (1,1)  (1,2)  (1,3)  (1,4)  (1,5)  
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
     E---   *---   P---   ----   P---   
-    (2,1)  (2,2)  (2,3)  (2,4)  (2,5)  
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
     ----   ----   W---   ----   P---   
-    (3,1)  (3,2)  (3,3)  (3,4)  (3,5)  
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
     MY--   P---   O---   PW--   ----   
-    (4,1)  (4,2)  (4,3)  (4,4)  (4,5)  
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
     W---   M*--   ----   P*--   ----   
-    (5,1)  (5,2)  (5,3)  (5,4)  (5,5)  
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
     BW--   ----   *---   P---   PW--   
 [0,E],1,1landed:False,fuel3
+[0,E][1,P][2,P][3,P][4,P][5,M][6,P][7,M][8,P][9,P][10,B][11,P]
+
 ->pass
   ------------------
-  state:3.0, model:play, ok
+  state:3.0, mode:play, ok
   Movement:
     [5,M]:[3,1,1]->[3,5,1]
     [8,P]:[3,2,1]->[2,1,1]
     [10,B]:[5,1,1]->[5,2,1]
-    (1,1)  (1,2)  (1,3)  (1,4)  (1,5)  
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
     E---   *---   P---   ----   P---   
-    (2,1)  (2,2)  (2,3)  (2,4)  (2,5)  
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
     P---   ----   W---   ----   P---   
-    (3,1)  (3,2)  (3,3)  (3,4)  (3,5)  
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
     -Y--   ----   O---   PW--   M---   
-    (4,1)  (4,2)  (4,3)  (4,4)  (4,5)  
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
     W---   M*--   ----   P*--   ----   
-    (5,1)  (5,2)  (5,3)  (5,4)  (5,5)  
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
     -W--   B---   *---   P---   PW--   
 [0,E],1,1landed:False,fuel3
+[0,E][1,P][2,P][3,P][4,P][5,M][6,P][7,M][8,P][9,P][10,B][11,P]
+
 ->pass
   ------------------
-  state:4.0, model:play, ok
+  state:4.0, mode:play, ok
   Movement:
     [1,P]:[1,3,1]->[2,4,1]
     [2,P]:[1,5,1]->[2,5,2]
@@ -400,314 +337,378 @@ B->[2,2,2](B->0:[0,2])
     [6,P]:[3,4,1]->[2,3,2]
     [7,M]:[4,2,1]->[5,1,1]
     [10,B]:[5,2,1]->[5,1,3]
+      reproduced [12,B] at [5,1,4]
+      destroyed [7,M] at [5,1,1]
     [11,P]:[5,5,1]->[4,4,3]
-    (1,1)  (1,2)  (1,3)  (1,4)  (1,5)  
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
     E---   *---   ----   ----   ----   
-    (2,1)  (2,2)  (2,3)  (2,4)  (2,5)  
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
     P---   ----   WP--   PP--   -P--   
-    (3,1)  (3,2)  (3,3)  (3,4)  (3,5)  
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
     -Y--   ----   O---   -W--   M---   
-    (4,1)  (4,2)  (4,3)  (4,4)  (4,5)  
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
     W---   -*--   ----   P*P-   ----   
-    (5,1)  (5,2)  (5,3)  (5,4)  (5,5)  
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
     -WBB   ----   *---   P---   -W--   
 [0,E],1,1landed:False,fuel3
+[0,E][1,P][2,P][3,P][4,P][5,M][6,P][8,P][9,P][10,B][11,P][12,B]
+[keys:[10,B],result:[12,B]
 ->pass
   ------------------
-  state:5.0, model:play, ok
+  state:5.0, mode:play, ok
   Movement:
     [2,P]:[2,5,2]->[1,5,1]
     [3,P]:[5,4,1]->[1,4,1]
     [6,P]:[2,3,2]->[3,2,1]
-    [7,M]:[4,2,1]->[3,1,1]
-    [8,P]:[2,1,1]->[1,2,2]
-    (1,1)  (1,2)  (1,3)  (1,4)  (1,5)  
-    E---   *P--   ----   P---   P---   
-    (2,1)  (2,2)  (2,3)  (2,4)  (2,5)  
+    [8,P]:[2,1,1]->[1,5,2]
+    [12,B]:[5,1,4]->[5,3,2]
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    E---   *---   ----   P---   PP--   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
     ----   ----   W---   PP--   ----   
-    (3,1)  (3,2)  (3,3)  (3,4)  (3,5)  
-    MY--   P---   O---   -W--   M---   
-    (4,1)  (4,2)  (4,3)  (4,4)  (4,5)  
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    -Y--   P---   O---   -W--   M---   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
     W---   -*--   ----   P*P-   ----   
-    (5,1)  (5,2)  (5,3)  (5,4)  (5,5)  
-    -WBB   ----   *---   ----   -W--   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    -WB-   ----   *B--   ----   -W--   
 [0,E],1,1landed:False,fuel3
+[0,E][1,P][2,P][3,P][4,P][5,M][6,P][8,P][9,P][10,B][11,P][12,B]
+
 ->pass
   ------------------
-  state:6.0, model:play, ok
+  state:6.0, mode:play, ok
   Movement:
-    [1,P]:[2,4,1]->[3,4,1]
-    [3,P]:[1,4,1]->[5,3,2]
-    [5,M]:[3,5,1]->[2,5,1]
-    [6,P]:[3,2,1]->[2,3,2]
-    [7,M]:[3,1,1]->[4,5,1]
-    (1,1)  (1,2)  (1,3)  (1,4)  (1,5)  
-    E---   *P--   ----   ----   P---   
-    (2,1)  (2,2)  (2,3)  (2,4)  (2,5)  
-    ----   ----   WP--   -P--   MM--   
-    (3,1)  (3,2)  (3,3)  (3,4)  (3,5)  
-    -Y--   ----   O---   PW--   ----   
-    (4,1)  (4,2)  (4,3)  (4,4)  (4,5)  
+    [1,P]:[2,4,1]->[1,3,1]
+    [3,P]:[1,4,1]->[1,3,2]
+    [5,M]:[3,5,1]->[2,1,1]
+      reproduced [13,M] at [2,1,2]
+    [6,P]:[3,2,1]->[2,1,3]
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    E---   *---   PP--   ----   PP--   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    MMP-   ----   W---   -P--   ----   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    -Y--   ----   O---   -W--   ----   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    W---   -*--   ----   P*P-   ----   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    -WB-   ----   *B--   ----   -W--   
+[0,E],1,1landed:False,fuel3
+[0,E][1,P][2,P][3,P][4,P][5,M][6,P][8,P][9,P][10,B][11,P][12,B][13,M]
+[keys:[5,M],result:[13,M]
+->pass
+  ------------------
+  state:7.0, mode:play, ok
+  Movement:
+    [2,P]:[1,5,1]->[1,1,2]
+    [4,P]:[2,4,2]->[2,5,1]
+    [8,P]:[1,5,2]->[1,1,3]
+    [10,B]:[5,1,3]->[5,1,1]
+    [13,M]:[2,1,2]->[1,2,2]
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    EPP-   *M--   PP--   ----   ----   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    M-P-   ----   W---   ----   P---   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    -Y--   ----   O---   -W--   ----   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    W---   -*--   ----   P*P-   ----   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    BW--   ----   *B--   ----   -W--   
+[0,E],1,1landed:False,fuel3
+[0,E][1,P][2,P][3,P][4,P][5,M][6,P][8,P][9,P][10,B][11,P][12,B][13,M]
+
+->pass
+  ------------------
+  state:8.0, mode:play, ok
+  Movement:
+    [2,P]:[1,1,2]->[5,5,1]
+    [5,M]:[2,1,1]->[3,1,1]
+    [6,P]:[2,1,3]->[2,5,2]
+    [12,B]:[5,3,2]->[5,2,1]
+      reproduced [14,B] at [5,2,2]
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    E-P-   *M--   PP--   ----   ----   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    ----   ----   W---   ----   PP--   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    MY--   ----   O---   -W--   ----   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    W---   -*--   ----   P*P-   ----   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    BW--   BB--   *---   ----   PW--   
+[0,E],1,1landed:False,fuel3
+[0,E][1,P][2,P][3,P][4,P][5,M][6,P][8,P][9,P][10,B][11,P][12,B][13,M][14,B]
+[keys:[12,B],result:[14,B]
+->pass
+  ------------------
+  state:9.0, mode:play, ok
+  Movement:
+    [1,P]:[1,3,1]->[5,3,2]
+    [3,P]:[1,3,2]->[2,4,1]
+    [5,M]:[3,1,1]->[4,1,2]
+      reproduced [15,M] at [4,1,3]
+    [10,B]:[5,1,1]->[2,5,3]
+      reproduced [16,B] at [2,5,4]
+    [12,B]:[5,2,1]->[1,1,2]
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    EBP-   *M--   ----   ----   ----   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    ----   ----   W---   P---   PPBB   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    -Y--   ----   O---   -W--   ----   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    WMM-   -*--   ----   P*P-   ----   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    -W--   -B--   *P--   ----   PW--   
+[0,E],1,1landed:False,fuel3
+[0,E][1,P][2,P][3,P][4,P][5,M][6,P][8,P][9,P][10,B][11,P][12,B][13,M][14,B][15,M][16,B]
+[keys:[5,M],result:[15,M][keys:[10,B],result:[16,B]
+->pass
+  ------------------
+  state:10.0, mode:play, ok
+  Movement:
+    [4,P]:[2,5,1]->[2,4,2]
+    [6,P]:[2,5,2]->[2,4,3]
+    [8,P]:[1,1,3]->[5,5,3]
+    [13,M]:[1,2,2]->[2,3,2]
+      reproduced [17,M] at [2,3,3]
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    EB--   *---   ----   ----   ----   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    ----   ----   WMM-   PPP-   --BB   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    -Y--   ----   O---   -W--   ----   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    WMM-   -*--   ----   P*P-   ----   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    -W--   -B--   *P--   ----   PWP-   
+[0,E],1,1landed:False,fuel3
+[0,E][1,P][2,P][3,P][4,P][5,M][6,P][8,P][9,P][10,B][11,P][12,B][13,M][14,B][15,M][16,B][17,M]
+[keys:[13,M],result:[17,M]
+->pass
+  ------------------
+  state:11.0, mode:play, ok
+  Movement:
+    [2,P]:[5,5,1]->[4,5,1]
+    [4,P]:[2,4,2]->[1,3,1]
+    [5,M]:[4,1,2]->[1,4,1]
+    [8,P]:[5,5,3]->[5,1,1]
+    [12,B]:[1,1,2]->[5,1,3]
+    [14,B]:[5,2,2]->[4,1,2]
+      destroyed [15,M] at [4,1,3]
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    E---   *---   P---   M---   ----   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    ----   ----   WMM-   P-P-   --BB   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    -Y--   ----   O---   -W--   ----   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    WB--   -*--   ----   P*P-   P---   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    PW--   ----   *P--   ----   -W--   
+[0,E],1,1landed:False,fuel3
+[0,E][1,P][2,P][3,P][4,P][5,M][6,P][8,P][9,P][10,B][11,P][13,M][14,B][16,B][17,M]
+
+->pass
+  ------------------
+  state:12.0, mode:play, ok
+  Movement:
+    [3,P]:[2,4,1]->[1,5,1]
+    [5,M]:[1,4,1]->[2,5,1]
+    [10,B]:[2,5,3]->[1,5,2]
+    [13,M]:[2,3,2]->[4,2,1]
+    [14,B]:[4,1,2]->[1,1,2]
+      reproduced [18,B] at [1,1,3]
+    [16,B]:[2,5,4]->[1,1,4]
+    [17,M]:[2,3,3]->[4,5,2]
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    EBBB   *---   P---   ----   PB--   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    ----   ----   W---   --P-   ----   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    -Y--   ----   O---   -W--   ----   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    W---   M*--   ----   P*P-   PM--   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    PW--   ----   *P--   ----   -W--   
+[0,E],1,1landed:False,fuel3
+[0,E][1,P][2,P][3,P][4,P][6,P][8,P][9,P][10,B][11,P][13,M][14,B][16,B][17,M][18,B]
+[keys:[14,B],result:[18,B]
+->pass
+  ------------------
+  state:13.0, mode:play, ok
+  Movement:
+    [2,P]:[4,5,1]->[5,5,1]
+    [3,P]:[1,5,1]->[5,1,3]
+    [6,P]:[2,4,3]->[3,4,1]
+    [10,B]:[1,5,2]->[5,1,4]
+    [17,M]:[4,5,2]->[3,1,1]
+      reproduced [19,M] at [3,1,3]
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    EBBB   *---   P---   ----   ----   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    ----   ----   W---   ----   ----   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    MYM-   ----   O---   PW--   ----   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    W---   M*--   ----   P*P-   ----   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    PWP-   ----   *P--   ----   PW--   
+[0,E],1,1landed:False,fuel3
+[0,E][1,P][2,P][3,P][4,P][6,P][8,P][9,P][11,P][13,M][14,B][16,B][17,M][18,B][19,M]
+[keys:[17,M],result:[19,M]
+->pass
+  ------------------
+  state:14.0, mode:play, ok
+  Movement:
+    [2,P]:[5,5,1]->[5,4,1]
+    [4,P]:[1,3,1]->[2,2,1]
+    [8,P]:[5,1,1]->[1,2,2]
+    [13,M]:[4,2,1]->[3,3,2]
+    [14,B]:[1,1,2]->[5,5,1]
+    [17,M]:[3,1,1]->[4,5,1]
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    E-BB   *P--   ----   ----   ----   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    ----   P---   W---   ----   ----   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    -YM-   ----   O---   PW--   ----   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
     W---   -*--   ----   P*P-   M---   
-    (5,1)  (5,2)  (5,3)  (5,4)  (5,5)  
-    -WBB   ----   *P--   ----   -W--   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    -WP-   ----   *P--   P---   BW--   
 [0,E],1,1landed:False,fuel3
+[0,E][1,P][2,P][3,P][4,P][6,P][8,P][9,P][11,P][14,B][16,B][17,M][18,B][19,M]
+
 ->pass
   ------------------
-  state:7.0, model:play, ok
+  state:15.0, mode:play, ok
   Movement:
-    [2,P]:[1,5,1]->[5,4,1]
-    [4,P]:[2,4,2]->[2,5,3]
-    [6,P]:[2,3,2]->[2,4,1]
-    [7,M]:[4,5,1]->[4,1,2]
-    [10,B]:[5,2,1]->[5,5,1]
-    (1,1)  (1,2)  (1,3)  (1,4)  (1,5)  
-    E---   *P--   ----   ----   ----   
-    (2,1)  (2,2)  (2,3)  (2,4)  (2,5)  
-    ----   ----   W---   P---   MMP-   
-    (3,1)  (3,2)  (3,3)  (3,4)  (3,5)  
-    -Y--   ----   O---   PW--   ----   
-    (4,1)  (4,2)  (4,3)  (4,4)  (4,5)  
-    WM--   -*--   ----   P*P-   ----   
-    (5,1)  (5,2)  (5,3)  (5,4)  (5,5)  
-    -W-B   ----   *P--   P---   BW--   
-[0,E],1,1landed:False,fuel3
-->pass
-  ------------------
-  state:8.0, model:play, ok
-  Movement:
-    [4,P]:[2,5,3]->[2,4,2]
-    [7,M]:[4,5,1]
-    (1,1)  (1,2)  (1,3)  (1,4)  (1,5)  
-    E---   *P--   ----   ----   ----   
-    (2,1)  (2,2)  (2,3)  (2,4)  (2,5)  
-    ----   ----   W---   PP--   MM--   
-    (3,1)  (3,2)  (3,3)  (3,4)  (3,5)  
-    -Y--   ----   O---   PW--   ----   
-    (4,1)  (4,2)  (4,3)  (4,4)  (4,5)  
+    [3,P]:[5,1,3]->[5,5,3]
+    [6,P]:[3,4,1]->[3,5,1]
+    [14,B]:[5,5,1]->[3,1,1]
+      reproduced [20,B] at [3,1,4]
+      destroyed [19,M] at [3,1,3]
+    [16,B]:[1,1,4]->[1,2,3]
+      reproduced [21,B] at [1,2,4]
+    [18,B]:[1,1,3]
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    E-B-   *PBB   ----   ----   ----   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    ----   P---   W---   ----   ----   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    BY-B   ----   O---   -W--   P---   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
     W---   -*--   ----   P*P-   M---   
-    (5,1)  (5,2)  (5,3)  (5,4)  (5,5)  
-    -W-B   ----   *P--   P---   BW--   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    -W--   ----   *P--   P---   -WP-   
 [0,E],1,1landed:False,fuel3
+[0,E][1,P][2,P][3,P][4,P][6,P][8,P][9,P][11,P][14,B][16,B][17,M][18,B][20,B][21,B]
+[keys:[14,B],result:[20,B][keys:[16,B],result:[21,B]
 ->pass
   ------------------
-  state:9.0, model:play, ok
+  state:16.0, mode:play, ok
   Movement:
-    [1,P]:[3,4,1]->[2,3,2]
-    [2,P]:[5,4,1]->[4,5,2]
-    [5,M]:[2,5,1]->[3,4,1]
-    [7,M]:[4,5,1]->[4,4,4]
-    [10,B]:[5,2,1]->[1,5,1]
-    (1,1)  (1,2)  (1,3)  (1,4)  (1,5)  
-    E---   *P--   ----   ----   BB--   
-    (2,1)  (2,2)  (2,3)  (2,4)  (2,5)  
-    ----   ----   WP--   PP--   -M--   
-    (3,1)  (3,2)  (3,3)  (3,4)  (3,5)  
-    -Y--   ----   O---   -W--   ----   
-    (4,1)  (4,2)  (4,3)  (4,4)  (4,5)  
-    W---   -*--   ----   P*PM   -P--   
-    (5,1)  (5,2)  (5,3)  (5,4)  (5,5)  
-    -W-B   ----   *P--   ----   -W--   
+    [4,P]:[2,2,1]->[3,2,1]
+    [6,P]:[3,5,1]->[3,1,3]
+    [14,B]:[3,1,1]->[2,2,1]
+    [16,B]:[1,2,3]->[2,3,2]
+    [18,B]:[1,1,3]->[5,1,1]
+      reproduced [22,B] at [5,1,3]
+    [20,B]:[3,1,4]->[2,2,2]
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    E---   *P-B   ----   ----   ----   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    ----   BB--   WB--   ----   ----   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    -YP-   P---   O---   -W--   ----   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    W---   -*--   ----   P*P-   M---   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    BWB-   ----   *P--   P---   -WP-   
 [0,E],1,1landed:False,fuel3
+[0,E][1,P][2,P][3,P][4,P][6,P][8,P][9,P][11,P][14,B][16,B][17,M][18,B][20,B][21,B][22,B]
+[keys:[18,B],result:[22,B]
 ->pass
   ------------------
-  state:10.0, model:play, ok
+  state:17.0, mode:play, ok
   Movement:
-    [1,P]:[2,3,2]->[3,2,1]
-    [5,M]:[2,5,1]->[3,3,2]
-    [6,P]:[2,4,1]->[3,5,1]
-    [7,M]:[4,4,4]->[4,5,1]
-    (1,1)  (1,2)  (1,3)  (1,4)  (1,5)  
-    E---   *P--   ----   ----   BB--   
-    (2,1)  (2,2)  (2,3)  (2,4)  (2,5)  
-    ----   ----   W---   -P--   -M--   
-    (3,1)  (3,2)  (3,3)  (3,4)  (3,5)  
-    -Y--   P---   O---   -W--   P---   
-    (4,1)  (4,2)  (4,3)  (4,4)  (4,5)  
-    W---   -*--   ----   P*P-   MP--   
-    (5,1)  (5,2)  (5,3)  (5,4)  (5,5)  
-    -W-B   ----   *P--   ----   -W--   
+    [2,P]:[5,4,1]->[4,4,4]
+    [3,P]:[5,5,3]->[5,4,1]
+    [17,M]:[4,5,1]
+      reproduced [23,M] at [4,5,2]
+    [18,B]:[5,1,1]->[1,1,2]
+    [21,B]:[1,2,4]->[1,1,3]
+    [22,B]:[5,1,3]->[2,3,3]
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    EBB-   *P--   ----   ----   ----   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    ----   BB--   WBB-   ----   ----   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    -YP-   P---   O---   -W--   ----   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    W---   -*--   ----   P*PP   MM--   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    -W--   ----   *P--   P---   -W--   
 [0,E],1,1landed:False,fuel3
-->pass
-  ------------------
-  state:11.0, model:play, ok
-  Movement:
-    [4,P]:[2,4,2]->[2,3,2]
-    [5,M]:[3,3,2]
-    [7,M]:[4,5,1]
-    [10,B]:[1,5,1]->[2,4,1]
-    (1,1)  (1,2)  (1,3)  (1,4)  (1,5)  
-    E---   *P--   ----   ----   -B--   
-    (2,1)  (2,2)  (2,3)  (2,4)  (2,5)  
-    ----   ----   WP--   B---   -M--   
-    (3,1)  (3,2)  (3,3)  (3,4)  (3,5)  
-    -Y--   P---   O---   -W--   P---   
-    (4,1)  (4,2)  (4,3)  (4,4)  (4,5)  
-    W---   -*--   ----   P*P-   MP--   
-    (5,1)  (5,2)  (5,3)  (5,4)  (5,5)  
-    -W-B   ----   *P--   ----   -W--   
-[0,E],1,1landed:False,fuel3
-->pass
-  ------------------
-  state:12.0, model:play, ok
-  Movement:
-    [1,P]:[3,2,1]->[2,2,1]
-    [2,P]:[4,5,2]->[3,5,2]
-    [5,M]:[3,3,2]->[4,3,1]
-    [6,P]:[3,5,1]->[2,5,1]
-    [7,M]:[4,5,1]->[5,4,1]
-    [10,B]:[2,4,1]->[1,3,1]
-    (1,1)  (1,2)  (1,3)  (1,4)  (1,5)  
-    E---   *P--   BB--   ----   -B--   
-    (2,1)  (2,2)  (2,3)  (2,4)  (2,5)  
-    ----   P---   WP--   ----   PM--   
-    (3,1)  (3,2)  (3,3)  (3,4)  (3,5)  
-    -Y--   ----   O---   -W--   -P--   
-    (4,1)  (4,2)  (4,3)  (4,4)  (4,5)  
-    W---   -*--   ----   P*P-   ----   
-    (5,1)  (5,2)  (5,3)  (5,4)  (5,5)  
-    -W-B   ----   *P--   M---   -W--   
-[0,E],1,1landed:False,fuel3
-->pass
-  ------------------
-  state:13.0, model:play, ok
-  Movement:
-    [2,P]:[3,5,2]->[4,1,2]
-    [5,M]:[4,3,1]
-    [7,M]:[5,4,1]->[5,3,3]
-    (1,1)  (1,2)  (1,3)  (1,4)  (1,5)  
-    E---   *P--   BB--   ----   -B--   
-    (2,1)  (2,2)  (2,3)  (2,4)  (2,5)  
-    ----   P---   WP--   ----   PM--   
-    (3,1)  (3,2)  (3,3)  (3,4)  (3,5)  
-    -Y--   ----   O---   -W--   ----   
-    (4,1)  (4,2)  (4,3)  (4,4)  (4,5)  
-    WP--   -*--   ----   P*P-   ----   
-    (5,1)  (5,2)  (5,3)  (5,4)  (5,5)  
-    -W-B   ----   *PM-   ----   -W--   
-[0,E],1,1landed:False,fuel3
-->pass
-  ------------------
-  state:14.0, model:play, ok
-  Movement:
-    [1,P]:[2,2,1]->[1,2,3]
-    [2,P]:[4,1,2]->[3,5,1]
-    [4,P]:[2,3,2]->[1,4,1]
-    [5,M]:[4,3,1]->[5,4,1]
-    [7,M]:[5,3,3]->[4,3,1]
-    [10,B]:[1,3,1]->[5,3,3]
-    (1,1)  (1,2)  (1,3)  (1,4)  (1,5)  
-    E---   *PP-   -B--   P---   -B--   
-    (2,1)  (2,2)  (2,3)  (2,4)  (2,5)  
-    ----   ----   W---   ----   PM--   
-    (3,1)  (3,2)  (3,3)  (3,4)  (3,5)  
-    -Y--   ----   O---   -W--   P---   
-    (4,1)  (4,2)  (4,3)  (4,4)  (4,5)  
-    W---   -*--   M---   P*P-   ----   
-    (5,1)  (5,2)  (5,3)  (5,4)  (5,5)  
-    -W-B   ----   *PB-   ----   -W--   
-[0,E],1,1landed:False,fuel3
-->pass
-  ------------------
-  state:15.0, model:play, ok
-  Movement:
-    [2,P]:[3,5,1]->[3,4,1]
-    [4,P]:[1,4,1]->[5,4,1]
-    [5,M]:[5,4,1]->[4,3,2]
-    [6,P]:[2,5,1]->[3,4,3]
-    [7,M]:[4,3,1]->[3,3,2]
-    (1,1)  (1,2)  (1,3)  (1,4)  (1,5)  
-    E---   *PP-   -B--   ----   -B--   
-    (2,1)  (2,2)  (2,3)  (2,4)  (2,5)  
-    ----   ----   W---   ----   -M--   
-    (3,1)  (3,2)  (3,3)  (3,4)  (3,5)  
-    -Y--   ----   O---   PWP-   ----   
-    (4,1)  (4,2)  (4,3)  (4,4)  (4,5)  
-    W---   -*--   ----   P*P-   ----   
-    (5,1)  (5,2)  (5,3)  (5,4)  (5,5)  
-    -W-B   ----   *PB-   P---   -W--   
-[0,E],1,1landed:False,fuel3
-->pass
-  ------------------
-  state:16.0, model:play, ok
-  Movement:
-    [5,M]:[4,3,2]->[5,3,4]
-    [7,M]:[3,3,2]->[3,4,4]
-    [10,B]:[5,3,3]->[5,2,1]
-    (1,1)  (1,2)  (1,3)  (1,4)  (1,5)  
-    E---   *PP-   -B--   ----   -B--   
-    (2,1)  (2,2)  (2,3)  (2,4)  (2,5)  
-    ----   ----   W---   ----   -M--   
-    (3,1)  (3,2)  (3,3)  (3,4)  (3,5)  
-    -Y--   ----   O---   PWPM   ----   
-    (4,1)  (4,2)  (4,3)  (4,4)  (4,5)  
-    W---   -*--   ----   P*P-   ----   
-    (5,1)  (5,2)  (5,3)  (5,4)  (5,5)  
-    -W-B   BB--   *P-M   P---   -W--   
-[0,E],1,1landed:False,fuel3
-->pass
-  ------------------
-  state:17.0, model:play, ok
-  Movement:
-    [2,P]:[3,4,1]->[2,5,1]
-    [4,P]:[5,4,1]->[1,4,1]
-    [5,M]:[5,3,4]
-    [6,P]:[3,4,3]->[2,5,3]
-    [7,M]:[3,3,2]->[1,1,2]
-    [10,B]:[5,2,1]->[1,1,3]
-    (1,1)  (1,2)  (1,3)  (1,4)  (1,5)  
-    E-B-   *PP-   -B--   P---   -B--   
-    (2,1)  (2,2)  (2,3)  (2,4)  (2,5)  
-    ----   ----   W---   ----   PMP-   
-    (3,1)  (3,2)  (3,3)  (3,4)  (3,5)  
-    -Y--   ----   O---   -W--   ----   
-    (4,1)  (4,2)  (4,3)  (4,4)  (4,5)  
-    W---   -*--   ----   P*P-   ----   
-    (5,1)  (5,2)  (5,3)  (5,4)  (5,5)  
-    -W-B   -B--   *P-M   ----   -W--   
-[0,E],1,1landed:False,fuel3
+[0,E][1,P][2,P][3,P][4,P][6,P][8,P][9,P][11,P][14,B][16,B][17,M][18,B][20,B][21,B][22,B][23,M]
+[keys:[17,M],result:[23,M]
 ->move(S)
   ------------------
-  state:18.0, model:play, ok
+  state:18.0, mode:play, ok
   Movement:
     [0,E]:[1,1,1]->[2,1,1]
-    [5,M]:[5,3,4]->[4,3,1]
-    [7,M]:[1,1,2]->[2,2,1]
-    (1,1)  (1,2)  (1,3)  (1,4)  (1,5)  
-    --B-   *PP-   -B--   P---   -B--   
-    (2,1)  (2,2)  (2,3)  (2,4)  (2,5)  
-    E---   M---   W---   ----   PMP-   
-    (3,1)  (3,2)  (3,3)  (3,4)  (3,5)  
-    -Y--   ----   O---   -W--   ----   
-    (4,1)  (4,2)  (4,3)  (4,4)  (4,5)  
-    W---   -*--   M---   P*P-   ----   
-    (5,1)  (5,2)  (5,3)  (5,4)  (5,5)  
-    -W-B   -B--   *P--   ----   -W--   
+    [4,P]:[3,2,1]->[4,1,2]
+    [16,B]:[2,3,2]->[5,1,1]
+      reproduced [24,B] at [5,1,3]
+    [17,M]:[4,5,1]->[3,1,1]
+    [22,B]:[2,3,3]->[4,1,3]
+      reproduced [25,B] at [4,1,4]
+    [23,M]:[4,5,2]->[5,1,4]
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    -BB-   *P--   ----   ----   ----   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    E---   BB--   W---   ----   ----   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    MYP-   ----   O---   -W--   ----   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    WPBB   -*--   ----   P*PP   ----   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    BWBM   ----   *P--   P---   -W--   
 [0,E],2,1landed:False,fuel2
+[0,E][1,P][2,P][3,P][4,P][6,P][8,P][9,P][11,P][14,B][16,B][17,M][18,B][20,B][21,B][22,B][23,M][24,B][25,B]
+[keys:[16,B],result:[24,B][keys:[22,B],result:[25,B]
 ->move(S)
   ------------------
-  state:19.0, model:play, ok
+  state:19.0, mode:play, ok
   Movement:
-    [0,E]:[2,1,1]->[3,1,1]
-    [2,P]:[2,5,1]->[1,1,1]
-    [4,P]:[1,4,1]->[5,4,1]
-    [5,M]:[4,3,1]
-    [6,P]:[2,5,3]->[2,4,1]
-    [7,M]:[2,2,1]->[2,3,2]
-    [10,B]:[1,1,3]->[2,2,1]
-    (1,1)  (1,2)  (1,3)  (1,4)  (1,5)  
-    P---   *PP-   -B--   ----   -B--   
-    (2,1)  (2,2)  (2,3)  (2,4)  (2,5)  
-    ----   BB--   WM--   P---   -M--   
-    (3,1)  (3,2)  (3,3)  (3,4)  (3,5)  
-    EY--   ----   O---   -W--   ----   
-    (4,1)  (4,2)  (4,3)  (4,4)  (4,5)  
-    W---   -*--   M---   P*P-   ----   
-    (5,1)  (5,2)  (5,3)  (5,4)  (5,5)  
-    -W-B   -B--   *P--   P---   -W--   
+    [0,E]:[2,1,1]->[3,1,4]
+    [3,P]:[5,4,1]->[1,5,1]
+    [14,B]:[2,2,1]
+      reproduced [26,B] at [2,2,3]
+    [20,B]:[2,2,2]->[2,3,2]
+      reproduced [27,B] at [2,3,3]
+    [24,B]:[5,1,3]->[4,3,1]
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    -BB-   *P--   ----   ----   P---   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    ----   B-B-   WBB-   ----   ----   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    MYPE   ----   O---   -W--   ----   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    WPBB   -*--   B---   P*PP   ----   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    BW-M   ----   *P--   ----   -W--   
 [0,E],3,1landed:False,fuel3
+[0,E][1,P][2,P][3,P][4,P][6,P][8,P][9,P][11,P][14,B][16,B][17,M][18,B][20,B][21,B][22,B][23,M][24,B][25,B][26,B][27,B]
+[keys:[14,B],result:[26,B][keys:[20,B],result:[27,B]
 ->land
   ------------------
-  state:19.1, model:play, error
-  Negative on that request:no planet at Sector:3,1
-[0,E],3,1landed:False,fuel3
+  state:20.0, mode:play, ok
+  Tranquility base here - we've got a life!
+
+[0,E],3,1landed:True,fuel3
+[0,E][1,P][2,P][3,P][4,P][6,P][8,P][9,P][11,P][14,B][16,B][17,M][18,B][20,B][21,B][22,B][23,M][24,B][25,B][26,B][27,B]
+
