@@ -282,6 +282,11 @@ feature -- model operations
 		reset_routine
 		main_msg.set_second ("")
 		main_msg.set_eight
+		end_game := false
+--		if end_game then
+--			shared_info.reset_ent_id
+--		end
+
 	end
 
 	play
@@ -334,11 +339,9 @@ feature -- helper
 	reset_routine
 		do
 			reset_action_routine
-			shared_info.reset_key_info
-			end_game := false
+--			shared_info.reset_key_info
+--			end_game := false
 			e := 0
-
-
 		end
 
 	return_i : INTEGER

@@ -143,7 +143,7 @@ feature --function
 		shared_info.movable_id_plus_one
 		turns_left := gen.rchoose (0, 2) -- for this planet
 		ent.set_turns_left (turns_left)
---		io.put_string (ent.id_out + ent.cur_location_out + "turns_left" + turns_left.out + ":[0,2])"+ "%N")
+		io.put_string (ent.id_out + ent.cur_location_out + "turns_left" + turns_left.out + ":[0,2])"+ "%N")
 --		movable_list.extend (ent)
 		planet_holder := void -- only difference from sector now
 	end

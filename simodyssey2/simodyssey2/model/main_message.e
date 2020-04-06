@@ -215,11 +215,11 @@ feature --quires
 				loop
 					result.append("    " + temp2[s].id_out+"->")
 					if attached{EXPLORER}temp2[s] as e then
-						result.append(e.current_status + "old_pos:"+e.old_location_out + "cur_pos:"+e.cur_location_out)
+						result.append(e.current_status + "old_pos:"+e.old_location_out + "cur_pos:"+e.cur_location_out+"use_wormhole?"+e.use_wormhole.out)
 					elseif attached{BENIGN}temp2[s]as be then
-						result.append (be.current_status+ "old_pos:"+be.old_location_out + "cur_pos:"+be.cur_location_out)
+						result.append (be.current_status+ "old_pos:"+be.old_location_out + "cur_pos:"+be.cur_location_out+"use_wormhole?"+be.use_wormhole.out)
 					elseif attached{MALEVOLENT}temp2[s] as ma then
-						result.append (ma.current_status+ "old_pos:"+ma.old_location_out + "cur_pos:"+ma.cur_location_out)
+						result.append (ma.current_status+ "old_pos:"+ma.old_location_out + "cur_pos:"+ma.cur_location_out+"use_wormhole?"+ma.use_wormhole.out)
 					elseif attached{JANITAUR}temp2[s]as j then
 						result.append (j.current_status+ "old_pos:"+j.old_location_out + "cur_pos:"+j.cur_location_out)
 					elseif attached{ASTEROID}temp2[s] as a then
@@ -247,7 +247,7 @@ feature --quires
 			if
 				temp.is_empty
 			then
-				Result.append("  Deaths This Turn:none ")
+				Result.append("  Deaths This Turn:none")
 			else
 				Result.append("  Deaths This Turn:%N")
 				across

@@ -19,7 +19,7 @@ feature -- welcom
 
 welcome : STRING
 	DO
-		Result := "  state:0.0, ok %N  Welcome! Try test(3,5,7,15,30)"
+		Result := "  state:0.0, ok%N  Welcome! Try test(3,5,7,15,30)"
 	end
 
 

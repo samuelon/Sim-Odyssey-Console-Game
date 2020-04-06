@@ -30,6 +30,14 @@ feature{GALAXY,ENTITY}
 		--create 2 linkedlist
 		end
 
+feature -- singleleton pattern
+model_access: ETF_MODEL_ACCESS
+
+	model: ETF_MODEL
+		attribute
+			Result := model_access.m
+		end
+
 feature
 
 	number_rows: INTEGER = 5
@@ -118,6 +126,7 @@ feature -- set_galaxy
 set_galaxy
 do
 	create galaxy.make
+--	reset_ent_id
 end
 
 feature -- reset
@@ -132,7 +141,11 @@ feature -- reset
 		og_exp.make (0, 1, 1)
 	end
 
-
+	reset_ent_id
+	do
+		stationary_id := -2
+		movable_id := 1
+	end
 
 feature
 	add_move_this_turn(ent : NON_STATIONARY)
@@ -189,6 +202,9 @@ feature --commands
 				set_janitaur_threshold (j_threshold)
 				set_malevolent_threshold (m_threshold)
 				set_planet_threshold (p_threshold)
+				reset_ent_id
+				reset_key_info
+
 		end
 
 	set_exp_death_msg(str : STRING)

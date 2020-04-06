@@ -23,7 +23,6 @@ feature -- command
 				model.end_game
 			then
 				model.set_in_game_false
-				
 			end
     	end
 

@@ -221,8 +221,11 @@ feature --commands
 
 feature --action
 	turn(action : ACTION)
+
 	require
 		vaild : not model.face_error
+	local
+		idx : INTEGER
 	do
 
 		shared_info.reset_move_this_turn
@@ -243,16 +246,10 @@ feature --action
 	end
 
 	turn_movable_entity_helper
+	local
+		idx : INTEGER
 	do
-		-- reset
-			across
-				movable_sorted is m
-			loop
-				m.off_use_wormhole
-				m.off_move_success
-				-- set reproduced others?
-			end
-		movable_entity_move
+			movable_entity_move
 			if temp_reproduced.is_empty then
 			else
 				across
@@ -272,6 +269,15 @@ feature --action
 					movable_sorted.prune_all (die)
 				end
 				sort_movable_list
+			end
+			from
+				idx := 2
+			until
+				idx > movable_sorted.count
+			loop
+				movable_sorted[idx].off_move_success
+				movable_sorted[idx].off_use_wormhole
+				idx := idx + 1
 			end
 	end
 
@@ -352,9 +358,9 @@ feature --action
 			attached{EBMJ_COMMON}ent as ebmj and ent.move_sucess and not ent.use_wormhole
 		then
 			ebmj.lose_fuel
-			if ebmj.fuel = 0 then
-				ebmj.dies
-			end
+--			if ebmj.fuel = 0 then
+--				ebmj.dies
+--			end
 		end
 
 		if
@@ -370,6 +376,12 @@ feature --action
 			end
 		end
 
+		if attached{EBMJ_COMMON}ent as ebmj then
+			if ebmj.fuel=0 then
+				ebmj.dies
+			end
+
+		end
 
 		if
 			ent.get_sector.has_blackhole
@@ -490,8 +502,6 @@ feature -- helper
 			create{MALEVOLENT}m.make (shared_info.movable_id, ent.row,ent.col)
 			ent.get_sector.populate_routine (ent.row, ent.col, m)
 			ent.set_actions_left_until_reproduction (1)
---			movable_sorted.extend (m)
---			sort_movable_list
 			temp_reproduced.extend (m)
 			shared_info.reproduce_this_turn.put (m, ent)
 		end
@@ -506,7 +516,7 @@ feature -- helper
 			temp_reproduced.extend (j)
 			shared_info.reproduce_this_turn.put (j, ent)
 		end
-		io.put_string ("("+ent.id_out+ "->"+ num_turns.out + ":[0,2])"+ "%N")
+--		io.put_string ("("+ent.id_out+ "->"+ num_turns.out + ":[0,2])"+ "%N")
 	end
 
 

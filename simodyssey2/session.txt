@@ -1,5 +1,8 @@
-test(10, 59, 73, 75, 98)
-move(W)
-move(NW)
-move(SW)
+test(3,5,7,15,30)
+pass
+pass
+pass
+pass
+pass
+pass
 pass
