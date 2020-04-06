@@ -233,6 +233,8 @@ feature --action
 		temp_dies.wipe_out
 		act(action)
 		check_alive (shared_info.og_exp)
+		shared_info.og_exp.off_move_success
+		shared_info.og_exp.off_use_wormhole
 		if shared_info.og_exp.wins then -- support life planet found skip the loop
 
 		else
@@ -247,6 +249,7 @@ feature --action
 				movable_sorted is m
 			loop
 				m.off_use_wormhole
+				m.off_move_success
 				-- set reproduced others?
 			end
 		movable_entity_move
@@ -307,7 +310,7 @@ feature --action
 							get_sector([row,col]).has_yellow_dwarf
 						then
 							num := gen.rchoose (1, 2)
-							io.put_string ("(P->"+ num.out + ":[1,2])"+ "%N")
+							io.put_string ("(P->"+ planet.id_out+num.out + ":[1,2])"+ "%N")
 							if num = 2 then
 								planet.set_true_is_support_life
 							end
@@ -344,10 +347,14 @@ feature --action
 		sum_lum : INTEGER
 
 	do
+		--- pass
 		if
-			attached{EBMJ_COMMON}ent as ebmj and (not ent.location_equals and not ent.use_wormhole) --- ??????
+			attached{EBMJ_COMMON}ent as ebmj and ent.move_sucess and not ent.use_wormhole
 		then
 			ebmj.lose_fuel
+			if ebmj.fuel = 0 then
+				ebmj.dies
+			end
 		end
 
 		if
@@ -363,15 +370,6 @@ feature --action
 			end
 		end
 
-		if
-			attached{EBMJ_COMMON}ent as ebmj
-		then
-			if
-				ebmj.fuel = 0
-			then
-				ebmj.dies
-			end
-		end
 
 		if
 			ent.get_sector.has_blackhole
@@ -391,7 +389,7 @@ feature --action
 		done : BOOLEAN
 	DO
 		done := false
-		io.put_string ("reproduction was reached")
+--		io.put_string ("reproduction was reached")
 		if
 			attached {EBMJ_COMMON} ent as bmj
 		then
@@ -508,7 +506,7 @@ feature -- helper
 			temp_reproduced.extend (j)
 			shared_info.reproduce_this_turn.put (j, ent)
 		end
---		io.put_string ("("+ent.en.out+ "->"+ num_turns.out + ":[0,2])"+ "%N")
+		io.put_string ("("+ent.id_out+ "->"+ num_turns.out + ":[0,2])"+ "%N")
 	end
 
 

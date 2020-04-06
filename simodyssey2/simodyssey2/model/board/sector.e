@@ -143,7 +143,7 @@ feature --function
 		shared_info.movable_id_plus_one
 		turns_left := gen.rchoose (0, 2) -- for this planet
 		ent.set_turns_left (turns_left)
-		io.put_string (ent.id_out + ent.cur_location_out + "turns_left" + turns_left.out + ":[0,2])"+ "%N")
+--		io.put_string (ent.id_out + ent.cur_location_out + "turns_left" + turns_left.out + ":[0,2])"+ "%N")
 --		movable_list.extend (ent)
 		planet_holder := void -- only difference from sector now
 	end
@@ -180,7 +180,7 @@ feature --function
 			until
 				loop_counter > contents.count or filled
 			loop
-		    	if not attached contents [loop_counter] then -- not void if is it void
+		    	if not attached contents [loop_counter] or entity_quad[loop_counter].is_empty then -- not void if is it void
 					contents [loop_counter] := new_component.en
 					filled := TRUE
 					entity_quad [loop_counter] := new_component
@@ -233,7 +233,7 @@ feature --function
 			end -- loop
 		ensure
 --			others_unchanged : across old contents.deep_twin is en  all en.item /~ new_component.en end
-			already_moved : not entity_quad.has (new_component)
+--			already_moved : not entity_quad.has (new_component)
 		end
 
 feature -- Queries

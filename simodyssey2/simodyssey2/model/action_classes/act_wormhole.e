@@ -46,7 +46,7 @@ feature
 				loop
 					temp_row := gen.rchoose (1,5)
 					temp_col := gen.rchoose (1,5)
-					io.put_string ("wormhole used" + ent.id_out + "("+temp_row.out + "," + temp_col.out+")")
+--					io.put_string ("wormhole used" + ent.id_out + "("+temp_row.out + "," + temp_col.out+")")
 					if (not g.get_sector ([temp_row,temp_col]).is_full) then
 						g.place_ent ([ent.row,ent.col],[temp_row,temp_col], ent)
 						shared_info.add_move_this_turn (ent)

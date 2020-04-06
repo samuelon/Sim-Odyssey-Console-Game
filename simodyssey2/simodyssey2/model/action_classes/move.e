@@ -37,7 +37,9 @@ feature-- function
 			suppose_coord := calculate_next_sector(dir, ent )
 			if not  g.get_sector (suppose_coord).is_full then
 				g.place_ent ([ent.row,ent.col],[suppose_coord.row,suppose_coord.col], ent)
+				ent.set_move_success
 			end
+
 
 		end
 

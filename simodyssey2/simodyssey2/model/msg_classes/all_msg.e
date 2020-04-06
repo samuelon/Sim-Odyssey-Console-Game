@@ -29,13 +29,13 @@ feature --command_msgs
 		--tracks explorer
 		do
 			create Result.make_empty
-			Result.append ("  Explorer status report : Travelling at cruise speed at" + state_memory.og_exp.cur_location_out)
+			Result.append ("  Explorer status report:Travelling at cruise speed at" + state_memory.og_exp.cur_location_out+"%N")
 			Result.append ("  Life units left:"+ state_memory.og_exp.get_life_out + ", Fuel units left:" + state_memory.og_exp.get_fuel_out )
 		end
 	status_landed : STRING
 		do
 			create Result.make_empty
-			Result.append("  Explorer status report : Stationary on planet surface at " + state_memory.og_exp.cur_location_out)
+			Result.append("  Explorer status report:Stationary on planet surface at " + state_memory.og_exp.cur_location_out+"%N")
 			Result.append (" Life units left:"+ state_memory.og_exp.get_life_out + ", Fuel units left:" + state_memory.og_exp.get_fuel_out)
 		end
 
@@ -97,7 +97,7 @@ feature -- Error Messages
 		end
 	error_move_full : STRING
 		do
-			Result := ("  Cannot transfer new location as it is full." )
+			Result := ("  Cannot transfer to new location as it is full." )
 		end
 	error_mode_in_game : STRING --play -test
 		do

@@ -27,6 +27,7 @@ feature  -- Initialization
 			fuel := 3
 			life := 3
 			landed := FALSE
+			dead := false
 			wins := FALSE
 			create en.make ('E') --letter
 			row := a_row

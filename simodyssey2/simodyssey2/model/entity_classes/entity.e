@@ -195,6 +195,17 @@ feature --check
 		end
 	end
 
+	is_empty : BOOLEAN
+	local
+		E : ENTITY_ALPHABET
+	DO
+		create E.make ('-')
+		if en.is_equal (E) then
+				Result := TRUE
+		end
+	end
+
+
 
 feature --helper
 	sector_out : STRING

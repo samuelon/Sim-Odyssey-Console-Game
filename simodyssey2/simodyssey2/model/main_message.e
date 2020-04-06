@@ -46,6 +46,16 @@ feature -- lines
 --	eighth :
 	abort : STRING
 
+feature -- reset
+
+	reset_all
+		local
+			none : STRING
+		do
+			create none.make_empty
+			set_second (none)
+
+		end
 
 feature --quires
 
@@ -58,7 +68,7 @@ feature --quires
 		if not model.in_game and model.face_error then
 			result.append("error")
 		elseif (not model.in_game) then
-			io.put_string ("lllllllll")
+--			io.put_string ("lllllllll")
 			result.append("ok")
 		end
 
@@ -246,23 +256,26 @@ feature --quires
 					Result.append("    " + temp[i].id_out+"->")
 					result.append (temp[i].current_status+","+"%N")
 					if temp[i].devoured then
-						result.append ("      " +black_hole_common (temp[i]))
+						result.append (black_hole_common (temp[i]))
 					else
 						if attached{EBMJ_COMMON}temp[i] as ebmj then
 							if ebmj.fuel = 0 then
+								io.put_string (ebmj.id_out)
 								result.append ("      " + ebmj.dmsg_out_of_fuel (ebmj))
 								if ebmj.is_explorer then
-									exp_death_msg:= ebmj.dmsg_out_of_fuel (ebmj)
+									shared_info.set_exp_death_msg (ebmj.dmsg_out_of_fuel (ebmj))
+
 								end
 							elseif attached{EXPLORER}ebmj as e then
 								if e.life = 0 then
 									result.append ("      " + e.dmsg_death_malevolent)
-									exp_death_msg:=e.dmsg_death_malevolent
+									shared_info.set_exp_death_msg(e.dmsg_death_malevolent)
 								end
 							else
 								result.append ("      " + temp[i].dmsg_reason (temp[i]))
 								if ebmj.is_explorer then
-									exp_death_msg:=  temp[i].dmsg_reason (temp[i])
+
+									shared_info.set_exp_death_msg ( temp[i].dmsg_reason (temp[i]))
 								end
 							end
 						else
@@ -297,10 +310,10 @@ feature -- death msg helper
 		do
 			create result.make_empty
 			if ent.devoured then
-				result.append ("    " + ent.dmsg_to_blackhole (ent))
+				result.append ("      " + ent.dmsg_to_blackhole (ent))
 			end
 			if ent.is_explorer and ent.devoured then
-				exp_death_msg := ent.dmsg_to_blackhole (ent)
+				shared_info.set_exp_death_msg (ent.dmsg_to_blackhole (ent))
 			end
 		end
 

@@ -35,6 +35,7 @@ make(idv : INTEGER; a_row : INTEGER ; a_col : INTEGER )
 		fuel := max_fuel
 		use_wormhole := false
 		devoured := false
+		
 
 	end
 

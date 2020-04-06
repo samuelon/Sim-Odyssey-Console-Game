@@ -18,3 +18,6 @@ pass
 pass
 pass
 pass
+test(3,5,7,15,30)
+pass
+pass

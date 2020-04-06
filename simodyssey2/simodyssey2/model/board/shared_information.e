@@ -26,6 +26,7 @@ feature{GALAXY,ENTITY}
 		reproduce_this_turn.compare_objects
 		create galaxy.make_empty
 		create destory_this_turn.make
+		create exp_death_msg.make_empty
 		--create 2 linkedlist
 		end
 
@@ -82,6 +83,8 @@ feature
 
 	black_hole : BLACKHOLE
 
+	exp_death_msg : STRING
+
 feature -- helper
 
 	move_this_turn : LINKED_LIST[NON_STATIONARY]
@@ -110,18 +113,25 @@ feature
 
 		end
 
-feature -- Explorer Creation
+feature -- set_galaxy
 --	og_exp : EXPLORER
 set_galaxy
 do
 	create galaxy.make
 end
 
-feature
-	reset
+feature -- reset
+	reset_key_info
 	do
-		make
+--		stationary_id := -2
+--		movable_id := 1
+		reset_dead_this_turn
+		reset_destory_this_turn
+		reset_move_this_turn
+		reset_reproduce_this_turn
+		og_exp.make (0, 1, 1)
 	end
+
 
 
 feature
@@ -146,16 +156,19 @@ feature
 	reset_move_this_turn --clear
 	do
 		create move_this_turn.make
+
 	end
 
 	reset_dead_this_turn --clear
 	do
 		create dead_this_turn.make
+
 	end
 
 	reset_reproduce_this_turn
 	do
 		create reproduce_this_turn.make (100)
+		reproduce_this_turn.compare_objects
 	end
 
 	reset_destory_this_turn
@@ -176,6 +189,11 @@ feature --commands
 				set_janitaur_threshold (j_threshold)
 				set_malevolent_threshold (m_threshold)
 				set_planet_threshold (p_threshold)
+		end
+
+	set_exp_death_msg(str : STRING)
+		DO
+			exp_death_msg := str
 		end
 
 	set_malevolent_threshold(threshhold:INTEGER)

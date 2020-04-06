@@ -12,7 +12,6 @@ inherit
 
 
 feature
---	death_message : STRING
 	name : STRING
 	s_name : STRING
 	current_pos : LINKED_LIST[INTEGER]
@@ -20,6 +19,7 @@ feature
 	turns_left : INTEGER
 	dead : BOOLEAN
 	devoured : BOOLEAN
+	move_sucess : BOOLEAN
 	use_wormhole : BOOLEAN
 	model_access: ETF_MODEL_ACCESS
 	model: ETF_MODEL
@@ -32,6 +32,15 @@ feature
 
 
 feature -- function
+	set_move_success
+		do
+			move_sucess := true
+		end
+
+	off_move_success
+		do
+			move_sucess := false
+		end
 
 	set_location(r:INTEGER;c:INTEGER;q:INTEGER)
 		do

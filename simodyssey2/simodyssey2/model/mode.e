@@ -36,7 +36,7 @@ feature -- constructor
 			shared_info.test (3, 5, 7, 15, 30)
         	shared_info.set_galaxy
         	g := shared_info.galaxy
-
+--			shared_info.reset_key_info -- new
         end
 
 	make_test(a_threshold: INTEGER; j_threshold: INTEGER; m_threshold: INTEGER; b_threshold: INTEGER; p_threshold: INTEGER)
@@ -49,6 +49,8 @@ feature -- constructor
         	g := shared_info.galaxy
 --
         end
+
+
 
 
 
