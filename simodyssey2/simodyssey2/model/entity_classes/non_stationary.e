@@ -208,7 +208,7 @@ feature{GALAXY} -- GALAXY ONLY
 			end
 			num_turn_a := gen.rchoose (0, 2)
 			current.set_turns_left (num_turn_a)
-			io.put_string ("(A->"+ current.id_out +num_turn_a.out + ":[0,2])"+ "%N")
+			--io.put_string ("(A->"+ current.id_out +num_turn_a.out + ":[0,2])"+ "%N")
 
 		elseif current.is_janitaur then
 			if attached{JANITAUR}current as jan then
@@ -236,7 +236,7 @@ feature{GALAXY} -- GALAXY ONLY
 
 			num_turn_j := gen.rchoose (0, 2)
 				jan.set_turns_left (num_turn_j)
-				io.put_string ("(J->"+  current.id_out +num_turn_j.out + ":[0,2])"+ "%N")
+				--io.put_string ("(J->"+  current.id_out +num_turn_j.out + ":[0,2])"+ "%N")
 			end
 
 		elseif current.is_benign then
@@ -256,7 +256,7 @@ feature{GALAXY} -- GALAXY ONLY
 				end
 				num_turn_b := gen.rchoose (0, 2)
 				ben.set_turns_left (num_turn_b)
-				io.put_string ("(B->"+  current.id_out +num_turn_b.out + ":[0,2])"+ "%N")
+				--io.put_string ("(B->"+  current.id_out +num_turn_b.out + ":[0,2])"+ "%N")
 			end
 
 		elseif current.is_malevolent then
@@ -273,7 +273,7 @@ feature{GALAXY} -- GALAXY ONLY
 			end
 			num_turn_m := gen.rchoose (0, 2)
 			current.set_turns_left (num_turn_m)
-			io.put_string ("(M->"+  current.id_out +num_turn_m.out + ":[0,2])"+ "%N")
+			--io.put_string ("(M->"+  current.id_out +num_turn_m.out + ":[0,2])"+ "%N")
 
 		elseif attached{PLANET}current as planet then
 			if
@@ -285,7 +285,7 @@ feature{GALAXY} -- GALAXY ONLY
 					planet.get_sector.has_yellow_dwarf and not planet.check_supp_life_already
 				then
 					num:= gen.rchoose (1,2)
-					io.put_string ("(P->"+ num.out + ":[1,2])"+ "%N")
+					--io.put_string ("(P->"+ num.out + ":[1,2])"+ "%N")
 					if num = 2 then
 						planet.set_true_is_support_life
 						planet.set_true_check_supp_life_already
@@ -294,7 +294,7 @@ feature{GALAXY} -- GALAXY ONLY
 			else
 				num_turn_p := gen.rchoose (0,2)
 				planet.set_turns_left (num_turn_p)
-				io.put_string ("(P->"+  current.id_out +num_turn_p.out + ":[0,2])"+ "%N")
+				--io.put_string ("(P->"+  current.id_out +num_turn_p.out + ":[0,2])"+ "%N")
 
 			end
 		end

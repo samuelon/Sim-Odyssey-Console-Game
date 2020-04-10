@@ -252,5 +252,18 @@ feature -- out helper
 			end
 		end
 
+	out_dead_this_turn : STRING -- ok
+		local
+			i : INTEGER
+		do
+			create result.make_empty
+			across
+			    dead_this_turn is k
+			loop
+				result.append("dead-this-turn:"+k.id_out+",")
+
+			end
+		end
+
 
 end

@@ -316,7 +316,7 @@ feature --action
 							get_sector([row,col]).has_yellow_dwarf
 						then
 							num := gen.rchoose (1, 2)
-							io.put_string ("(P->"+ planet.id_out+num.out + ":[1,2])"+ "%N")
+							--io.put_string ("(P->"+ planet.id_out+num.out + ":[1,2])"+ "%N")
 							if num = 2 then
 								planet.set_true_is_support_life
 							end
@@ -330,7 +330,7 @@ feature --action
 						else
 							move_gen := gen.rchoose (1,8)
 							m.move_routine (move_gen, movable_sorted[i])
-							io.put_string (movable_sorted[i].id_out + "->" + move_gen.out + ":[1,8])"+ "%N")
+							--io.put_string (movable_sorted[i].id_out + "->" + move_gen.out + ":[1,8])"+ "%N")
 						end
 						check_alive(movable_sorted[i])
 						if
@@ -375,25 +375,25 @@ feature --action
 				ebmj.set_fuel (min(sum_lum,5))
 			end
 		end
-
+-- die twice
 		if attached{EBMJ_COMMON}ent as ebmj then
 			if ebmj.fuel=0 then
 				ebmj.dies
+			else
+				if ebmj.get_sector.has_blackhole then
+					ebmj.set_devoured
+					ebmj.dies
+				end
 			end
-
+		else
+			-- a p
+			if
+				ent.get_sector.has_blackhole
+			then
+				ent.set_devoured
+				ent.dies
+			end
 		end
-
-		if
-			ent.get_sector.has_blackhole
-		then
-			ent.set_devoured
-			ent.dies
-		end
-
-		-- check wins
---		if  then
-
---		end
 	end
 
 	reproduce(ent: NON_STATIONARY)
@@ -401,11 +401,11 @@ feature --action
 		done : BOOLEAN
 	DO
 		done := false
---		io.put_string ("reproduction was reached")
+--		--io.put_string ("reproduction was reached")
 		if
 			attached {EBMJ_COMMON} ent as bmj
 		then
-			io.put_string ("(actions_left_before_reproduced" + bmj.id_out + "->:"+ bmj.actions_left_until_reproduction.out + "%N")
+			--io.put_string ("(actions_left_before_reproduced" + bmj.id_out + "->:"+ bmj.actions_left_until_reproduction.out + "%N")
 			if
 				not bmj.get_sector.is_full and bmj.actions_left_until_reproduction = 0
 			then
@@ -419,7 +419,7 @@ feature --action
 				end
 
 			end--notfull
-			io.put_string ("action_left_after_reproduced:"+bmj.id_out + "->:"+bmj.actions_left_until_reproduction.out+"%N")
+			--io.put_string ("action_left_after_reproduced:"+bmj.id_out + "->:"+bmj.actions_left_until_reproduction.out+"%N")
 		end --attached_
 
 	end-- do
@@ -516,7 +516,7 @@ feature -- helper
 			temp_reproduced.extend (j)
 			shared_info.reproduce_this_turn.put (j, ent)
 		end
---		io.put_string ("("+ent.id_out+ "->"+ num_turns.out + ":[0,2])"+ "%N")
+--		--io.put_string ("("+ent.id_out+ "->"+ num_turns.out + ":[0,2])"+ "%N")
 	end
 
 

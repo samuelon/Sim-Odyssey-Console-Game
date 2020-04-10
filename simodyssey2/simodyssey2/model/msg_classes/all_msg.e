@@ -19,7 +19,7 @@ feature -- welcom
 
 welcome : STRING
 	DO
-		Result := "  state:0.0, ok%N  Welcome! Try test(3,5,7,15,30)"
+		Result := "state:0.0, ok%N  Welcome! Try test(3,5,7,15,30)"
 	end
 
 
@@ -36,7 +36,7 @@ feature --command_msgs
 		do
 			create Result.make_empty
 			Result.append("  Explorer status report:Stationary on planet surface at " + state_memory.og_exp.cur_location_out+"%N")
-			Result.append (" Life units left:"+ state_memory.og_exp.get_life_out + ", Fuel units left:" + state_memory.og_exp.get_fuel_out)
+			Result.append ("  Life units left:"+ state_memory.og_exp.get_life_out + ", Fuel units left:" + state_memory.og_exp.get_fuel_out)
 		end
 
 	land_life_found : STRING

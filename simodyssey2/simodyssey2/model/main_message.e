@@ -62,8 +62,7 @@ feature --quires
 	first : STRING
 	do
 		create result.make_empty
-		result.append ("  state:" + model.i.out + "." + model.e.out + ", ")
-
+		result.append ("state:" + model.i.out + "." + model.e.out + ", ")
 
 		if not model.in_game and model.face_error then
 			result.append("error")
@@ -102,6 +101,7 @@ feature --quires
 			--exp
 			create Result.make_empty
 			create temp_des.make_empty
+--			result.append ("%N")
 			if
 				shared_info.move_this_turn.is_empty
 			then
@@ -174,7 +174,7 @@ feature --quires
 					col> shared_info.number_columns
 				loop
 					temp := shared_info.galaxy.get_sector ([row,col])
-					Result.append ("    [" + temp.print_sector + "]->" + temp.print_quadrant + temp.out_sorted_entity+temp.out_movable_list)
+					Result.append ("    [" + temp.print_sector + "]->" + temp.print_quadrant ) --temp.out_sorted_entity+temp.out_movable_list)
 					Result.append ("%N")
 					col:= col+ 1;
 				end
@@ -215,17 +215,17 @@ feature --quires
 				loop
 					result.append("    " + temp2[s].id_out+"->")
 					if attached{EXPLORER}temp2[s] as e then
-						result.append(e.current_status + "old_pos:"+e.old_location_out + "cur_pos:"+e.cur_location_out+"use_wormhole?"+e.use_wormhole.out)
+						result.append(e.current_status )
 					elseif attached{BENIGN}temp2[s]as be then
-						result.append (be.current_status+ "old_pos:"+be.old_location_out + "cur_pos:"+be.cur_location_out+"use_wormhole?"+be.use_wormhole.out)
+						result.append (be.current_status )
 					elseif attached{MALEVOLENT}temp2[s] as ma then
-						result.append (ma.current_status+ "old_pos:"+ma.old_location_out + "cur_pos:"+ma.cur_location_out+"use_wormhole?"+ma.use_wormhole.out)
+						result.append (ma.current_status)
 					elseif attached{JANITAUR}temp2[s]as j then
-						result.append (j.current_status+ "old_pos:"+j.old_location_out + "cur_pos:"+j.cur_location_out)
+						result.append (j.current_status)
 					elseif attached{ASTEROID}temp2[s] as a then
-						result.append(a.current_status+ "old_pos:"+a.old_location_out + "cur_pos:"+a.cur_location_out)
+						result.append(a.current_status)
 					elseif attached{PLANET}temp2[s] as p then
-						result.append(p.current_status+ "old_pos:"+p.old_location_out + "cur_pos:"+p.cur_location_out)
+						result.append(p.current_status)
 					end
 					if
 						i < temp2.count
@@ -260,11 +260,10 @@ feature --quires
 					else
 						if attached{EBMJ_COMMON}temp[i] as ebmj then
 							if ebmj.fuel = 0 then -- all
-								io.put_string (ebmj.id_out)
+								--io.put_string ("sixth msg ebmj fuel:"+ebmj.id_out)
 								result.append ("      " + ebmj.dmsg_out_of_fuel (ebmj))
 								if ebmj.is_explorer then
 									shared_info.set_exp_death_msg (ebmj.dmsg_out_of_fuel (ebmj))
-
 								end
 							elseif attached{EXPLORER}ebmj as e then -- exp
 								if e.d_malevolent then
@@ -302,9 +301,9 @@ feature --quires
 		end
 	end
 
-	set_eight  -- ONLY TEST MODE --ONLY WHEN EXP DIES
+	set_eight(str : STRING)  -- ONLY TEST MODE --ONLY WHEN EXP DIES
 	do
-		eight := second
+		eight := str
 	end
 
 feature -- death msg helper

@@ -1,485 +1,34 @@
   state:0.0, ok
-  Welcome! Try test(3,5,7,15,30)[1,J][1,1,2]turns_left1:[0,2])
-[2,P][1,2,1]turns_left1:[0,2])
-[3,A][1,2,2]turns_left2:[0,2])
-[4,P][1,2,3]turns_left2:[0,2])
-[5,J][1,3,1]turns_left0:[0,2])
-[6,J][1,4,1]turns_left1:[0,2])
-[7,A][1,4,2]turns_left0:[0,2])
-[8,P][1,4,3]turns_left0:[0,2])
-[9,J][1,5,1]turns_left1:[0,2])
-[10,J][2,1,1]turns_left0:[0,2])
-[11,J][2,2,1]turns_left1:[0,2])
-[12,J][2,2,2]turns_left0:[0,2])
-[13,A][2,2,3]turns_left1:[0,2])
-[14,P][2,3,1]turns_left2:[0,2])
-[15,J][2,4,1]turns_left0:[0,2])
-[16,P][2,4,2]turns_left0:[0,2])
-[17,J][2,5,1]turns_left0:[0,2])
-[18,J][2,5,2]turns_left1:[0,2])
-[19,P][3,1,1]turns_left1:[0,2])
-[20,P][3,1,2]turns_left1:[0,2])
-[21,J][3,1,3]turns_left0:[0,2])
-[22,A][3,2,1]turns_left1:[0,2])
-[23,J][3,2,2]turns_left0:[0,2])
-[24,J][3,2,3]turns_left0:[0,2])
-[25,J][3,4,1]turns_left1:[0,2])
-[26,A][3,4,2]turns_left1:[0,2])
-[27,J][3,4,3]turns_left1:[0,2])
-[28,J][3,5,1]turns_left0:[0,2])
-[29,P][4,1,1]turns_left0:[0,2])
-[30,A][4,2,1]turns_left2:[0,2])
-[31,P][4,3,1]turns_left2:[0,2])
-[32,P][4,4,1]turns_left2:[0,2])
-[33,A][4,5,1]turns_left2:[0,2])
-[34,J][5,1,1]turns_left1:[0,2])
-[35,J][5,1,2]turns_left1:[0,2])
-[36,J][5,2,1]turns_left2:[0,2])
-[37,A][5,3,1]turns_left2:[0,2])
-[38,A][5,3,2]turns_left2:[0,2])
-[39,A][5,4,1]turns_left0:[0,2])
-[40,A][5,5,1]turns_left2:[0,2])
-[41,J][5,5,2]turns_left1:[0,2])
-[5,J]->8:[1,8])
-(actions_left_before_reproduced[5,J]->:2
-action_left_after_reproduced:[5,J]->:1
-(J->[5,J]2:[0,2])
-[7,A]->1:[1,8])
-(A->[7,A]2:[0,2])
-[8,P]->8:[1,8])
-(P->[8,P]0:[0,2])
-[10,J]->1:[1,8])
-(actions_left_before_reproduced[10,J]->:2
-action_left_after_reproduced:[10,J]->:1
-(J->[10,J]1:[0,2])
-[12,J]->8:[1,8])
-(actions_left_before_reproduced[12,J]->:2
-action_left_after_reproduced:[12,J]->:1
-(J->[12,J]1:[0,2])
-[15,J]->3:[1,8])
-(actions_left_before_reproduced[15,J]->:2
-action_left_after_reproduced:[15,J]->:1
-(J->[15,J]0:[0,2])
-[16,P]->3:[1,8])
-(P->[16,P]2:[0,2])
-[17,J]->3:[1,8])
-(actions_left_before_reproduced[17,J]->:2
-action_left_after_reproduced:[17,J]->:1
-(J->[17,J]2:[0,2])
-[21,J]->5:[1,8])
-(actions_left_before_reproduced[21,J]->:2
-action_left_after_reproduced:[21,J]->:1
-(J->[21,J]1:[0,2])
-[23,J]->7:[1,8])
-(actions_left_before_reproduced[23,J]->:2
-action_left_after_reproduced:[23,J]->:1
-(J->[23,J]2:[0,2])
-[24,J]->4:[1,8])
-(actions_left_before_reproduced[24,J]->:2
-action_left_after_reproduced:[24,J]->:1
-(J->[24,J]1:[0,2])
-[28,J]->8:[1,8])
-(actions_left_before_reproduced[28,J]->:2
-action_left_after_reproduced:[28,J]->:1
-(J->[28,J]0:[0,2])
-[29,P]->2:[1,8])
-(P->[29,P]2:[0,2])
-[39,A]->6:[1,8])
-(A->[39,A]2:[0,2])
-[1,J]->2:[1,8])
-(actions_left_before_reproduced[1,J]->:2
-action_left_after_reproduced:[1,J]->:1
-(J->[1,J]0:[0,2])
-(P->[2,P]1:[1,2])
-[6,J]->4:[1,8])
-(actions_left_before_reproduced[6,J]->:2
-action_left_after_reproduced:[6,J]->:1
-(J->[6,J]2:[0,2])
-[8,P]->5:[1,8])
-(P->[8,P]2:[0,2])
-[9,J]->7:[1,8])
-(actions_left_before_reproduced[9,J]->:2
-action_left_after_reproduced:[9,J]->:1
-(J->[9,J]1:[0,2])
-[11,J]->1:[1,8])
-(actions_left_before_reproduced[11,J]->:2
-action_left_after_reproduced:[11,J]->:1
-(J->[11,J]2:[0,2])
-[15,J]->7:[1,8])
-(actions_left_before_reproduced[15,J]->:1
-action_left_after_reproduced:[15,J]->:0
-(J->[15,J]2:[0,2])
-[18,J]->4:[1,8])
-(actions_left_before_reproduced[18,J]->:2
-action_left_after_reproduced:[18,J]->:1
-(J->[18,J]1:[0,2])
-[19,P]->6:[1,8])
-(P->[19,P]0:[0,2])
-[20,P]->1:[1,8])
-(P->[20,P]1:[0,2])
-[22,A]->1:[1,8])
-(A->[22,A]0:[0,2])
-[25,J]->5:[1,8])
-(actions_left_before_reproduced[25,J]->:2
-action_left_after_reproduced:[25,J]->:1
-(J->[25,J]1:[0,2])
-[26,A]->1:[1,8])
-(A->[26,A]1:[0,2])
-[27,J]->8:[1,8])
-(actions_left_before_reproduced[27,J]->:2
-action_left_after_reproduced:[27,J]->:1
-(J->[27,J]2:[0,2])
-[34,J]->5:[1,8])
-(actions_left_before_reproduced[34,J]->:2
-action_left_after_reproduced:[34,J]->:1
-(J->[34,J]2:[0,2])
-[35,J]->1:[1,8])
-(actions_left_before_reproduced[35,J]->:2
-action_left_after_reproduced:[35,J]->:1
-(J->[35,J]0:[0,2])
-[41,J]->7:[1,8])
-(actions_left_before_reproduced[41,J]->:2
-action_left_after_reproduced:[41,J]->:1
-(J->[41,J]1:[0,2])
-[1,J]->8:[1,8])
-(actions_left_before_reproduced[1,J]->:1
-action_left_after_reproduced:[1,J]->:0
-(J->[1,J]0:[0,2])
-[3,A]->2:[1,8])
-(A->[3,A]0:[0,2])
-(P->[4,P]2:[1,2])
-[10,J]->1:[1,8])
-(actions_left_before_reproduced[10,J]->:1
-action_left_after_reproduced:[10,J]->:0
-(J->[10,J]0:[0,2])
-[12,J]->1:[1,8])
-(actions_left_before_reproduced[12,J]->:1
-action_left_after_reproduced:[12,J]->:0
-(J->[12,J]1:[0,2])
-[14,P]->1:[1,8])
-(P->[14,P]0:[0,2])
-[19,P]->8:[1,8])
-(P->[19,P]2:[0,2])
-[21,J]->6:[1,8])
-(actions_left_before_reproduced[21,J]->:1
-action_left_after_reproduced:[21,J]->:0
-(J->[21,J]1:[0,2])
-[22,A]->1:[1,8])
-(A->[22,A]1:[0,2])
-[24,J]->3:[1,8])
-(actions_left_before_reproduced[24,J]->:1
-action_left_after_reproduced:[24,J]->:0
-(J->[24,J]0:[0,2])
-[30,A]->5:[1,8])
-(A->[30,A]0:[0,2])
-[31,P]->2:[1,8])
-(P->[31,P]1:[0,2])
-[32,P]->5:[1,8])
-(P->2:[1,2])
-[33,A]->2:[1,8])
-(A->[33,A]0:[0,2])
-[35,J]->6:[1,8])
-(actions_left_before_reproduced[35,J]->:1
-action_left_after_reproduced:[35,J]->:0
-(J->[35,J]0:[0,2])
-[37,A]->7:[1,8])
-(A->[37,A]2:[0,2])
-[38,A]->6:[1,8])
-(A->[38,A]1:[0,2])
-[1,J]->4:[1,8])
-(actions_left_before_reproduced[1,J]->:0
-action_left_after_reproduced:[1,J]->:0
-(J->[1,J]2:[0,2])
-[3,A]->8:[1,8])
-(A->[3,A]0:[0,2])
-[9,J]->6:[1,8])
-(actions_left_before_reproduced[9,J]->:1
-action_left_after_reproduced:[9,J]->:0
-(J->[9,J]2:[0,2])
-[10,J]->7:[1,8])
-(actions_left_before_reproduced[10,J]->:0
-[42,J][5,5,4]turns_left1:[0,2])
-action_left_after_reproduced:[10,J]->:2
-(J->[10,J]0:[0,2])
-[14,P]->4:[1,8])
-(P->[14,P]1:[0,2])
-[16,P]->1:[1,8])
-(P->[16,P]0:[0,2])
-[17,J]->1:[1,8])
-(actions_left_before_reproduced[17,J]->:1
-action_left_after_reproduced:[17,J]->:0
-(J->[17,J]0:[0,2])
-[20,P]->4:[1,8])
-(P->[20,P]0:[0,2])
-[24,J]->3:[1,8])
-(actions_left_before_reproduced[24,J]->:0
-[43,J][4,5,2]turns_left0:[0,2])
-action_left_after_reproduced:[24,J]->:2
-(J->[24,J]2:[0,2])
-[25,J]->1:[1,8])
-(actions_left_before_reproduced[25,J]->:1
-action_left_after_reproduced:[25,J]->:0
-(J->[25,J]1:[0,2])
-[26,A]->6:[1,8])
-[29,P]->2:[1,8])
-(P->[29,P]2:[0,2])
-[33,A]->4:[1,8])
-(A->[33,A]1:[0,2])
-[35,J]->1:[1,8])
-(actions_left_before_reproduced[35,J]->:0
-[44,J][4,5,4]turns_left0:[0,2])
-action_left_after_reproduced:[35,J]->:2
-(J->[35,J]0:[0,2])
-[39,A]->2:[1,8])
-(A->[39,A]2:[0,2])
-[3,A]->1:[1,8])
-(A->[3,A]1:[0,2])
-[6,J]->3:[1,8])
-(actions_left_before_reproduced[6,J]->:1
-action_left_after_reproduced:[6,J]->:0
-(J->[6,J]2:[0,2])
-[8,P]->4:[1,8])
-(P->[8,P]0:[0,2])
-[10,J]->2:[1,8])
-(actions_left_before_reproduced[10,J]->:2
-action_left_after_reproduced:[10,J]->:1
-(J->[10,J]1:[0,2])
-[12,J]->6:[1,8])
-(actions_left_before_reproduced[12,J]->:0
-[45,J][1,5,3]turns_left0:[0,2])
-action_left_after_reproduced:[12,J]->:2
-(J->[12,J]2:[0,2])
-[16,P]->5:[1,8])
-(P->[16,P]1:[0,2])
-[17,J]->4:[1,8])
-(actions_left_before_reproduced[17,J]->:0
-[46,J][2,2,2]turns_left1:[0,2])
-action_left_after_reproduced:[17,J]->:2
-(J->[17,J]1:[0,2])
-[20,P]->3:[1,8])
-[21,J]->5:[1,8])
-(actions_left_before_reproduced[21,J]->:0
-action_left_after_reproduced:[21,J]->:0
-(J->[21,J]0:[0,2])
-[22,A]->6:[1,8])
-(A->[22,A]0:[0,2])
-[27,J]->6:[1,8])
-(actions_left_before_reproduced[27,J]->:1
-action_left_after_reproduced:[27,J]->:0
-(J->[27,J]0:[0,2])
-[31,P]->7:[1,8])
-[34,J]->8:[1,8])
-(actions_left_before_reproduced[34,J]->:1
-action_left_after_reproduced:[34,J]->:0
-(J->[34,J]1:[0,2])
-[35,J]->4:[1,8])
-(actions_left_before_reproduced[35,J]->:2
-action_left_after_reproduced:[35,J]->:1
-(J->[35,J]1:[0,2])
-[38,A]->4:[1,8])
-(A->[38,A]1:[0,2])
-[43,J]->6:[1,8])
-(actions_left_before_reproduced[43,J]->:2
-action_left_after_reproduced:[43,J]->:1
-(J->[43,J]1:[0,2])
-[44,J]->3:[1,8])
-(actions_left_before_reproduced[44,J]->:2
-action_left_after_reproduced:[44,J]->:1
-(J->[44,J]1:[0,2])
-[8,P]->3:[1,8])
-[14,P]->5:[1,8])
-(P->[14,P]2:[0,2])
-[19,P]->6:[1,8])
-(P->[19,P]0:[0,2])
-[21,J]->3:[1,8])
-(actions_left_before_reproduced[21,J]->:0
-[47,J][1,1,2]turns_left1:[0,2])
-action_left_after_reproduced:[21,J]->:2
-(J->[21,J]0:[0,2])
-[22,A]->2:[1,8])
-(A->[22,A]1:[0,2])
-[25,J]->1:[1,8])
-(actions_left_before_reproduced[25,J]->:0
-[48,J][2,4,2]turns_left1:[0,2])
-action_left_after_reproduced:[25,J]->:2
-(J->[25,J]2:[0,2])
-[27,J]->5:[1,8])
-(actions_left_before_reproduced[27,J]->:0
-[49,J][4,2,3]turns_left0:[0,2])
-action_left_after_reproduced:[27,J]->:2
-(J->[27,J]1:[0,2])
-[42,J]->2:[1,8])
-(actions_left_before_reproduced[42,J]->:2
-action_left_after_reproduced:[42,J]->:1
-(J->[42,J]1:[0,2])
-[45,J]->1:[1,8])
-(actions_left_before_reproduced[45,J]->:2
-action_left_after_reproduced:[45,J]->:1
-(J->[45,J]2:[0,2])
-[1,J]->4:[1,8])
-(actions_left_before_reproduced[1,J]->:0
-[50,J][1,3,2]turns_left0:[0,2])
-action_left_after_reproduced:[1,J]->:2
-(J->[1,J]2:[0,2])
-[9,J]->7:[1,8])
-(actions_left_before_reproduced[9,J]->:0
-action_left_after_reproduced:[9,J]->:0
-(J->[9,J]0:[0,2])
-[10,J]->5:[1,8])
-[16,P]->2:[1,8])
-[17,J]->6:[1,8])
-(actions_left_before_reproduced[17,J]->:2
-action_left_after_reproduced:[17,J]->:1
-(J->[17,J]0:[0,2])
-[19,P]->5:[1,8])
-(P->[19,P]2:[0,2])
-[21,J]->4:[1,8])
-(actions_left_before_reproduced[21,J]->:2
-action_left_after_reproduced:[21,J]->:1
-(J->[21,J]2:[0,2])
-[24,J]->1:[1,8])
-(actions_left_before_reproduced[24,J]->:2
-action_left_after_reproduced:[24,J]->:1
-(J->[24,J]0:[0,2])
-[29,P]->5:[1,8])
-[34,J]->1:[1,8])
-(actions_left_before_reproduced[34,J]->:0
-[51,J][4,5,2]turns_left0:[0,2])
-action_left_after_reproduced:[34,J]->:2
-(J->[34,J]2:[0,2])
-[35,J]->5:[1,8])
-[38,A]->3:[1,8])
-(A->[38,A]0:[0,2])
-[43,J]->7:[1,8])
-(actions_left_before_reproduced[43,J]->:1
-action_left_after_reproduced:[43,J]->:0
-(J->[43,J]2:[0,2])
-[44,J]->3:[1,8])
-(actions_left_before_reproduced[44,J]->:1
-action_left_after_reproduced:[44,J]->:0
-(J->[44,J]0:[0,2])
-[46,J]->4:[1,8])
-[49,J]->6:[1,8])
-(actions_left_before_reproduced[49,J]->:2
-action_left_after_reproduced:[49,J]->:1
-(J->[49,J]1:[0,2])
-[10,J][35,J][9,J]->8:[1,8])
-(actions_left_before_reproduced[9,J]->:0
-[52,J][1,1,3]turns_left0:[0,2])
-action_left_after_reproduced:[9,J]->:2
-(J->[9,J]0:[0,2])
-[17,J]->2:[1,8])
-(actions_left_before_reproduced[17,J]->:1
-action_left_after_reproduced:[17,J]->:0
-(J->[17,J]2:[0,2])
-[22,A]->3:[1,8])
-(A->[22,A]1:[0,2])
-[24,J]->6:[1,8])
-[27,J]->3:[1,8])
-(actions_left_before_reproduced[27,J]->:2
-action_left_after_reproduced:[27,J]->:1
-(J->[27,J]1:[0,2])
-[38,A]->8:[1,8])
-(A->[38,A]2:[0,2])
-[42,J]->4:[1,8])
-(actions_left_before_reproduced[42,J]->:1
-action_left_after_reproduced:[42,J]->:0
-(J->[42,J]0:[0,2])
-[44,J]->3:[1,8])
-(actions_left_before_reproduced[44,J]->:0
-[53,J][4,3,3]turns_left0:[0,2])
-action_left_after_reproduced:[44,J]->:2
-(J->[44,J]0:[0,2])
-[47,J]->7:[1,8])
-(actions_left_before_reproduced[47,J]->:2
-action_left_after_reproduced:[47,J]->:1
-(J->[47,J]0:[0,2])
-[48,J]->8:[1,8])
-(actions_left_before_reproduced[48,J]->:2
-action_left_after_reproduced:[48,J]->:1
-(J->[48,J]0:[0,2])
-[51,J]->1:[1,8])
-(actions_left_before_reproduced[51,J]->:2
-action_left_after_reproduced:[51,J]->:1
-(J->[51,J]2:[0,2])
-[24,J][9,J]->1:[1,8])
-(actions_left_before_reproduced[9,J]->:2
-action_left_after_reproduced:[9,J]->:1
-(J->[9,J]1:[0,2])
-[14,P]->5:[1,8])
-(P->[14,P]2:[0,2])
-[25,J]->7:[1,8])
-(actions_left_before_reproduced[25,J]->:2
-action_left_after_reproduced:[25,J]->:1
-(J->[25,J]1:[0,2])
-[42,J]->7:[1,8])
-(actions_left_before_reproduced[42,J]->:0
-[54,J][5,1,4]turns_left2:[0,2])
-action_left_after_reproduced:[42,J]->:2
-(J->[42,J]0:[0,2])
-[44,J]->7:[1,8])
-(actions_left_before_reproduced[44,J]->:2
-action_left_after_reproduced:[44,J]->:1
-(J->[44,J]1:[0,2])
-[45,J]->3:[1,8])
-(actions_left_before_reproduced[45,J]->:1
-action_left_after_reproduced:[45,J]->:0
-(J->[45,J]1:[0,2])
-[47,J]->5:[1,8])
-(actions_left_before_reproduced[47,J]->:1
-action_left_after_reproduced:[47,J]->:0
-(J->[47,J]0:[0,2])
-[48,J]->5:[1,8])
-(actions_left_before_reproduced[48,J]->:1
-action_left_after_reproduced:[48,J]->:0
-(J->[48,J]1:[0,2])
-[49,J]->7:[1,8])
-(actions_left_before_reproduced[49,J]->:1
-action_left_after_reproduced:[49,J]->:0
-(J->[49,J]2:[0,2])
-[52,J]->5:[1,8])
-(actions_left_before_reproduced[52,J]->:2
-action_left_after_reproduced:[52,J]->:1
-(J->[52,J]0:[0,2])
-[53,J]->7:[1,8])
-(actions_left_before_reproduced[53,J]->:2
-action_left_after_reproduced:[53,J]->:1
-(J->[53,J]1:[0,2])
-  ------------------
-
-[0,E],0,0landed:False,fuel3
-
-
+  Welcome! Try test(3,5,7,15,30)
 ->test(30,70,71,72,90)
-  ------------------
   state:1.0, mode:test, ok
   Movement:none
   Sectors:
-    [1,1]->[0,E],[1,J],-,-sorted_ent:[0,E],sorted_ent:[1,J],movable_list[0,E],movable_list[1,J],
-    [1,2]->[2,P],[3,A],[4,P],[-8,Y]sorted_ent:[-8,Y],sorted_ent:[2,P],sorted_ent:[3,A],sorted_ent:[4,P],movable_list[2,P],movable_list[3,A],movable_list[4,P],
-    [1,3]->[5,J],-,-,-sorted_ent:[5,J],movable_list[5,J],
-    [1,4]->[6,J],[7,A],[8,P],-sorted_ent:[6,J],sorted_ent:[7,A],sorted_ent:[8,P],movable_list[6,J],movable_list[7,A],movable_list[8,P],
-    [1,5]->[9,J],[-11,*],-,-sorted_ent:[-11,*],sorted_ent:[9,J],movable_list[9,J],
-    [2,1]->[10,J],-,-,-sorted_ent:[10,J],movable_list[10,J],
-    [2,2]->[11,J],[12,J],[13,A],[-6,Y]sorted_ent:[-6,Y],sorted_ent:[11,J],sorted_ent:[12,J],sorted_ent:[13,A],movable_list[11,J],movable_list[12,J],movable_list[13,A],
-    [2,3]->[14,P],-,-,-sorted_ent:[14,P],movable_list[14,P],
-    [2,4]->[15,J],[16,P],-,-sorted_ent:[15,J],sorted_ent:[16,P],movable_list[15,J],movable_list[16,P],
-    [2,5]->[17,J],[18,J],[-4,*],-sorted_ent:[-4,*],sorted_ent:[17,J],sorted_ent:[18,J],movable_list[17,J],movable_list[18,J],
-    [3,1]->[19,P],[20,P],[21,J],-sorted_ent:[19,P],sorted_ent:[20,P],sorted_ent:[21,J],movable_list[19,P],movable_list[20,P],movable_list[21,J],
-    [3,2]->[22,A],[23,J],[24,J],-sorted_ent:[22,A],sorted_ent:[23,J],sorted_ent:[24,J],movable_list[22,A],movable_list[23,J],movable_list[24,J],
-    [3,3]->[-1,O],-,-,-sorted_ent:[-1,O],
-    [3,4]->[25,J],[26,A],[27,J],[-3,W]sorted_ent:[-3,W],sorted_ent:[25,J],sorted_ent:[26,A],sorted_ent:[27,J],movable_list[25,J],movable_list[26,A],movable_list[27,J],
-    [3,5]->[28,J],[-7,W],-,-sorted_ent:[-7,W],sorted_ent:[28,J],movable_list[28,J],
-    [4,1]->[29,P],-,-,-sorted_ent:[29,P],movable_list[29,P],
-    [4,2]->[30,A],-,-,-sorted_ent:[30,A],movable_list[30,A],
-    [4,3]->[31,P],-,-,-sorted_ent:[31,P],movable_list[31,P],
-    [4,4]->[32,P],[-10,W],-,-sorted_ent:[-10,W],sorted_ent:[32,P],movable_list[32,P],
-    [4,5]->[33,A],-,-,-sorted_ent:[33,A],movable_list[33,A],
-    [5,1]->[34,J],[35,J],-,-sorted_ent:[34,J],sorted_ent:[35,J],movable_list[34,J],movable_list[35,J],
-    [5,2]->[36,J],[-5,Y],-,-sorted_ent:[-5,Y],sorted_ent:[36,J],movable_list[36,J],
-    [5,3]->[37,A],[38,A],[-2,W],-sorted_ent:[-2,W],sorted_ent:[37,A],sorted_ent:[38,A],movable_list[37,A],movable_list[38,A],
-    [5,4]->[39,A],[-9,Y],-,-sorted_ent:[-9,Y],sorted_ent:[39,A],movable_list[39,A],
-    [5,5]->[40,A],[41,J],-,-sorted_ent:[40,A],sorted_ent:[41,J],movable_list[40,A],movable_list[41,J],
+    [1,1]->[0,E],[1,J],-,-
+    [1,2]->[2,P],[3,A],[4,P],[-8,Y]
+    [1,3]->[5,J],-,-,-
+    [1,4]->[6,J],[7,A],[8,P],-
+    [1,5]->[9,J],[-11,*],-,-
+    [2,1]->[10,J],-,-,-
+    [2,2]->[11,J],[12,J],[13,A],[-6,Y]
+    [2,3]->[14,P],-,-,-
+    [2,4]->[15,J],[16,P],-,-
+    [2,5]->[17,J],[18,J],[-4,*],-
+    [3,1]->[19,P],[20,P],[21,J],-
+    [3,2]->[22,A],[23,J],[24,J],-
+    [3,3]->[-1,O],-,-,-
+    [3,4]->[25,J],[26,A],[27,J],[-3,W]
+    [3,5]->[28,J],[-7,W],-,-
+    [4,1]->[29,P],-,-,-
+    [4,2]->[30,A],-,-,-
+    [4,3]->[31,P],-,-,-
+    [4,4]->[32,P],[-10,W],-,-
+    [4,5]->[33,A],-,-,-
+    [5,1]->[34,J],[35,J],-,-
+    [5,2]->[36,J],[-5,Y],-,-
+    [5,3]->[37,A],[38,A],[-2,W],-
+    [5,4]->[39,A],[-9,Y],-,-
+    [5,5]->[40,A],[41,J],-,-
   Descriptions:
     [-11,*]->Luminosity:5
     [-10,W]->
@@ -492,48 +41,48 @@ action_left_after_reproduced:[53,J]->:1
     [-3,W]->
     [-2,W]->
     [-1,O]->
-    [0,E]->fuel:3/3, life:3/3, landed?:Fold_pos:[1,1,1]cur_pos:[1,1,1]use_wormhole?False
-    [1,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[1,1,2]cur_pos:[1,1,2]
-    [2,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[1,2,1]cur_pos:[1,2,1]
-    [3,A]->turns_left:2old_pos:[1,2,2]cur_pos:[1,2,2]
-    [4,P]->attached?:F, support_life?:F, visited?:F, turns_left:2old_pos:[1,2,3]cur_pos:[1,2,3]
-    [5,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[1,3,1]cur_pos:[1,3,1]
-    [6,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[1,4,1]cur_pos:[1,4,1]
-    [7,A]->turns_left:0old_pos:[1,4,2]cur_pos:[1,4,2]
-    [8,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,4,3]cur_pos:[1,4,3]
-    [9,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[1,5,1]cur_pos:[1,5,1]
-    [10,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[2,1,1]cur_pos:[2,1,1]
-    [11,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[2,2,1]cur_pos:[2,2,1]
-    [12,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[2,2,2]cur_pos:[2,2,2]
-    [13,A]->turns_left:1old_pos:[2,2,3]cur_pos:[2,2,3]
-    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:2old_pos:[2,3,1]cur_pos:[2,3,1]
-    [15,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[2,4,1]cur_pos:[2,4,1]
-    [16,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[2,4,2]cur_pos:[2,4,2]
-    [17,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[2,5,1]cur_pos:[2,5,1]
-    [18,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[2,5,2]cur_pos:[2,5,2]
-    [19,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[3,1,1]cur_pos:[3,1,1]
-    [20,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[3,1,2]cur_pos:[3,1,2]
-    [21,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[3,1,3]cur_pos:[3,1,3]
-    [22,A]->turns_left:1old_pos:[3,2,1]cur_pos:[3,2,1]
-    [23,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[3,2,2]cur_pos:[3,2,2]
-    [24,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[3,2,3]cur_pos:[3,2,3]
-    [25,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[3,4,1]cur_pos:[3,4,1]
-    [26,A]->turns_left:1old_pos:[3,4,2]cur_pos:[3,4,2]
-    [27,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[3,4,3]cur_pos:[3,4,3]
-    [28,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[3,5,1]cur_pos:[3,5,1]
-    [29,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[4,1,1]cur_pos:[4,1,1]
-    [30,A]->turns_left:2old_pos:[4,2,1]cur_pos:[4,2,1]
-    [31,P]->attached?:F, support_life?:F, visited?:F, turns_left:2old_pos:[4,3,1]cur_pos:[4,3,1]
-    [32,P]->attached?:F, support_life?:F, visited?:F, turns_left:2old_pos:[4,4,1]cur_pos:[4,4,1]
-    [33,A]->turns_left:2old_pos:[4,5,1]cur_pos:[4,5,1]
-    [34,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[5,1,1]cur_pos:[5,1,1]
-    [35,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[5,1,2]cur_pos:[5,1,2]
-    [36,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:2old_pos:[5,2,1]cur_pos:[5,2,1]
-    [37,A]->turns_left:2old_pos:[5,3,1]cur_pos:[5,3,1]
-    [38,A]->turns_left:2old_pos:[5,3,2]cur_pos:[5,3,2]
-    [39,A]->turns_left:0old_pos:[5,4,1]cur_pos:[5,4,1]
-    [40,A]->turns_left:2old_pos:[5,5,1]cur_pos:[5,5,1]
-    [41,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[5,5,2]cur_pos:[5,5,2]
+    [0,E]->fuel:3/3, life:3/3, landed?:F
+    [1,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1
+    [2,P]->attached?:F, support_life?:F, visited?:F, turns_left:1
+    [3,A]->turns_left:2
+    [4,P]->attached?:F, support_life?:F, visited?:F, turns_left:2
+    [5,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [6,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1
+    [7,A]->turns_left:0
+    [8,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [9,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1
+    [10,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [11,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1
+    [12,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [13,A]->turns_left:1
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:2
+    [15,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [16,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [17,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [18,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1
+    [19,P]->attached?:F, support_life?:F, visited?:F, turns_left:1
+    [20,P]->attached?:F, support_life?:F, visited?:F, turns_left:1
+    [21,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [22,A]->turns_left:1
+    [23,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [24,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [25,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1
+    [26,A]->turns_left:1
+    [27,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1
+    [28,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [29,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [30,A]->turns_left:2
+    [31,P]->attached?:F, support_life?:F, visited?:F, turns_left:2
+    [32,P]->attached?:F, support_life?:F, visited?:F, turns_left:2
+    [33,A]->turns_left:2
+    [34,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1
+    [35,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1
+    [36,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:2
+    [37,A]->turns_left:2
+    [38,A]->turns_left:2
+    [39,A]->turns_left:0
+    [40,A]->turns_left:2
+    [41,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1
   Deaths This Turn:none
     (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
     EJ--   PAPY   J---   JAP-   J*--   
@@ -545,11 +94,7 @@ action_left_after_reproduced:[53,J]->:1
     P---   A---   P---   PW--   A---   
     (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
     JJ--   JY--   AAW-   AY--   AJ--   
-[0,E],1,1landed:False,fuel3
-[0,E][1,J][2,P][3,A][4,P][5,J][6,J][7,A][8,P][9,J][10,J][11,J][12,J][13,A][14,P][15,J][16,P][17,J][18,J][19,P][20,P][21,J][22,A][23,J][24,J][25,J][26,A][27,J][28,J][29,P][30,A][31,P][32,P][33,A][34,J][35,J][36,J][37,A][38,A][39,A][40,A][41,J]
-
 ->move(NW)
-  ------------------
   state:2.0, mode:test, ok
   Movement:
     [0,E]:[1,1,1]->[5,5,3]
@@ -568,31 +113,31 @@ action_left_after_reproduced:[53,J]->:1
     [29,P]:[4,1,1]->[3,2,2]
     [39,A]:[5,4,1]->[1,3,1]
   Sectors:
-    [1,1]->[10,J],[1,J],[12,J],-sorted_ent:[1,J],sorted_ent:[10,J],sorted_ent:[12,J],movable_list[1,J],movable_list[12,J],
-    [1,2]->[2,P],[3,A],[4,P],[-8,Y]sorted_ent:[-8,Y],sorted_ent:[2,P],sorted_ent:[3,A],sorted_ent:[4,P],movable_list[2,P],movable_list[3,A],movable_list[4,P],
-    [1,3]->[39,A],-,-,-sorted_ent:[39,A],
-    [1,4]->[6,J],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[6,J],movable_list[6,J],
-    [1,5]->[9,J],[-11,*],-,-sorted_ent:[-11,*],sorted_ent:[9,J],movable_list[9,J],
-    [2,1]->[17,J],-,-,-sorted_ent:[17,J],
-    [2,2]->[11,J],-,[13,A],[-6,Y]sorted_ent:[-10000000,-],sorted_ent:[-6,Y],sorted_ent:[11,J],sorted_ent:[13,A],movable_list[11,J],movable_list[13,A],
-    [2,3]->[14,P],-,-,-sorted_ent:[14,P],movable_list[14,P],
-    [2,4]->[28,J],[16,P],-,-sorted_ent:[16,P],sorted_ent:[28,J],movable_list[16,P],
-    [2,5]->-,[18,J],[-4,*],[15,J]sorted_ent:[-10000000,-],sorted_ent:[-4,*],sorted_ent:[15,J],sorted_ent:[18,J],movable_list[18,J],movable_list[15,J],
-    [3,1]->[19,P],[20,P],[23,J],-sorted_ent:[19,P],sorted_ent:[20,P],sorted_ent:[23,J],movable_list[19,P],movable_list[20,P],
-    [3,2]->[22,A],[29,P],-,-sorted_ent:[-10000000,-],sorted_ent:[22,A],sorted_ent:[29,P],movable_list[22,A],
-    [3,3]->[-1,O],-,-,-sorted_ent:[-1,O],
-    [3,4]->[25,J],[26,A],[27,J],[-3,W]sorted_ent:[-3,W],sorted_ent:[25,J],sorted_ent:[26,A],sorted_ent:[27,J],movable_list[25,J],movable_list[26,A],movable_list[27,J],
-    [3,5]->-,[-7,W],-,-sorted_ent:[-10000000,-],sorted_ent:[-7,W],
-    [4,1]->-,[21,J],-,-sorted_ent:[-10000000,-],sorted_ent:[21,J],movable_list[21,J],
-    [4,2]->[30,A],-,-,-sorted_ent:[30,A],movable_list[30,A],
-    [4,3]->[31,P],[24,J],-,-sorted_ent:[24,J],sorted_ent:[31,P],movable_list[31,P],movable_list[24,J],
-    [4,4]->[32,P],[-10,W],-,-sorted_ent:[-10,W],sorted_ent:[32,P],movable_list[32,P],
-    [4,5]->[33,A],-,-,-sorted_ent:[33,A],movable_list[33,A],
-    [5,1]->[34,J],[35,J],-,-sorted_ent:[34,J],sorted_ent:[35,J],movable_list[34,J],movable_list[35,J],
-    [5,2]->[36,J],[-5,Y],[5,J],-sorted_ent:[-5,Y],sorted_ent:[5,J],sorted_ent:[36,J],movable_list[36,J],movable_list[5,J],
-    [5,3]->[37,A],[38,A],[-2,W],[8,P]sorted_ent:[-2,W],sorted_ent:[8,P],sorted_ent:[37,A],sorted_ent:[38,A],movable_list[37,A],movable_list[38,A],movable_list[8,P],
-    [5,4]->-,[-9,Y],[7,A],-sorted_ent:[-10000000,-],sorted_ent:[-9,Y],sorted_ent:[7,A],movable_list[7,A],
-    [5,5]->[40,A],[41,J],[0,E],-sorted_ent:[0,E],sorted_ent:[40,A],sorted_ent:[41,J],movable_list[40,A],movable_list[41,J],movable_list[0,E],
+    [1,1]->[10,J],[1,J],[12,J],-
+    [1,2]->[2,P],[3,A],[4,P],[-8,Y]
+    [1,3]->[39,A],-,-,-
+    [1,4]->[6,J],-,-,-
+    [1,5]->[9,J],[-11,*],-,-
+    [2,1]->[17,J],-,-,-
+    [2,2]->[11,J],-,[13,A],[-6,Y]
+    [2,3]->[14,P],-,-,-
+    [2,4]->[28,J],[16,P],-,-
+    [2,5]->-,[18,J],[-4,*],[15,J]
+    [3,1]->[19,P],[20,P],[23,J],-
+    [3,2]->[22,A],[29,P],-,-
+    [3,3]->[-1,O],-,-,-
+    [3,4]->[25,J],[26,A],[27,J],[-3,W]
+    [3,5]->-,[-7,W],-,-
+    [4,1]->-,[21,J],-,-
+    [4,2]->[30,A],-,-,-
+    [4,3]->[31,P],[24,J],-,-
+    [4,4]->[32,P],[-10,W],-,-
+    [4,5]->[33,A],-,-,-
+    [5,1]->[34,J],[35,J],-,-
+    [5,2]->[36,J],[-5,Y],[5,J],-
+    [5,3]->[37,A],[38,A],[-2,W],[8,P]
+    [5,4]->-,[-9,Y],[7,A],-
+    [5,5]->[40,A],[41,J],[0,E],-
   Descriptions:
     [-11,*]->Luminosity:5
     [-10,W]->
@@ -605,48 +150,48 @@ action_left_after_reproduced:[53,J]->:1
     [-3,W]->
     [-2,W]->
     [-1,O]->
-    [0,E]->fuel:2/3, life:3/3, landed?:Fold_pos:[1,1,1]cur_pos:[5,5,3]use_wormhole?False
-    [1,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[1,1,2]cur_pos:[1,1,2]
-    [2,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,2,1]cur_pos:[1,2,1]
-    [3,A]->turns_left:1old_pos:[1,2,2]cur_pos:[1,2,2]
-    [4,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[1,2,3]cur_pos:[1,2,3]
-    [5,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:2old_pos:[1,3,1]cur_pos:[5,2,3]
-    [6,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[1,4,1]cur_pos:[1,4,1]
-    [7,A]->turns_left:2old_pos:[1,4,2]cur_pos:[5,4,3]
-    [8,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,4,3]cur_pos:[5,3,4]
-    [9,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[1,5,1]cur_pos:[1,5,1]
-    [10,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[2,1,1]cur_pos:[1,1,1]
-    [11,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[2,2,1]cur_pos:[2,2,1]
-    [12,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[2,2,2]cur_pos:[1,1,3]
-    [13,A]->turns_left:0old_pos:[2,2,3]cur_pos:[2,2,3]
-    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[2,3,1]cur_pos:[2,3,1]
-    [15,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[2,4,1]cur_pos:[2,5,4]
-    [16,P]->attached?:F, support_life?:F, visited?:F, turns_left:2old_pos:[2,4,2]cur_pos:[2,4,2]
-    [17,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:2old_pos:[2,5,1]cur_pos:[2,1,1]
-    [18,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[2,5,2]cur_pos:[2,5,2]
-    [19,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[3,1,1]cur_pos:[3,1,1]
-    [20,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[3,1,2]cur_pos:[3,1,2]
-    [21,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[3,1,3]cur_pos:[4,1,2]
-    [22,A]->turns_left:0old_pos:[3,2,1]cur_pos:[3,2,1]
-    [23,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:2old_pos:[3,2,2]cur_pos:[3,1,3]
-    [24,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[3,2,3]cur_pos:[4,3,2]
-    [25,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[3,4,1]cur_pos:[3,4,1]
-    [26,A]->turns_left:0old_pos:[3,4,2]cur_pos:[3,4,2]
-    [27,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[3,4,3]cur_pos:[3,4,3]
-    [28,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[3,5,1]cur_pos:[2,4,1]
-    [29,P]->attached?:F, support_life?:F, visited?:F, turns_left:2old_pos:[4,1,1]cur_pos:[3,2,2]
-    [30,A]->turns_left:1old_pos:[4,2,1]cur_pos:[4,2,1]
-    [31,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[4,3,1]cur_pos:[4,3,1]
-    [32,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[4,4,1]cur_pos:[4,4,1]
-    [33,A]->turns_left:1old_pos:[4,5,1]cur_pos:[4,5,1]
-    [34,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[5,1,1]cur_pos:[5,1,1]
-    [35,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[5,1,2]cur_pos:[5,1,2]
-    [36,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[5,2,1]cur_pos:[5,2,1]
-    [37,A]->turns_left:1old_pos:[5,3,1]cur_pos:[5,3,1]
-    [38,A]->turns_left:1old_pos:[5,3,2]cur_pos:[5,3,2]
-    [39,A]->turns_left:2old_pos:[5,4,1]cur_pos:[1,3,1]
-    [40,A]->turns_left:1old_pos:[5,5,1]cur_pos:[5,5,1]
-    [41,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[5,5,2]cur_pos:[5,5,2]
+    [0,E]->fuel:2/3, life:3/3, landed?:F
+    [1,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [2,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [3,A]->turns_left:1
+    [4,P]->attached?:F, support_life?:F, visited?:F, turns_left:1
+    [5,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:2
+    [6,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [7,A]->turns_left:2
+    [8,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [9,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [10,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [11,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [12,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [13,A]->turns_left:0
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:1
+    [15,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [16,P]->attached?:F, support_life?:F, visited?:F, turns_left:2
+    [17,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:2
+    [18,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [19,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [20,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [21,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [22,A]->turns_left:0
+    [23,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:2
+    [24,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [25,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [26,A]->turns_left:0
+    [27,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [28,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [29,P]->attached?:F, support_life?:F, visited?:F, turns_left:2
+    [30,A]->turns_left:1
+    [31,P]->attached?:F, support_life?:F, visited?:F, turns_left:1
+    [32,P]->attached?:F, support_life?:F, visited?:F, turns_left:1
+    [33,A]->turns_left:1
+    [34,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [35,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [36,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1
+    [37,A]->turns_left:1
+    [38,A]->turns_left:1
+    [39,A]->turns_left:2
+    [40,A]->turns_left:1
+    [41,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
   Deaths This Turn:none
     (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
     JJJ-   PAPY   A---   J---   J*--   
@@ -658,11 +203,7 @@ action_left_after_reproduced:[53,J]->:1
     -J--   A---   PJ--   PW--   A---   
     (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
     JJ--   JYJ-   AAWP   -YA-   AJE-   
-[0,E],5,5landed:False,fuel2
-[0,E][1,J][2,P][3,A][4,P][5,J][6,J][7,A][8,P][9,J][10,J][11,J][12,J][13,A][14,P][15,J][16,P][17,J][18,J][19,P][20,P][21,J][22,A][23,J][24,J][25,J][26,A][27,J][28,J][29,P][30,A][31,P][32,P][33,A][34,J][35,J][36,J][37,A][38,A][39,A][40,A][41,J]
-
 ->move(S)
-  ------------------
   state:3.0, mode:test, ok
   Movement:
     [0,E]:[5,5,3]->[1,5,3]
@@ -688,31 +229,31 @@ action_left_after_reproduced:[53,J]->:1
     [41,J]:[5,5,2]->[5,4,1]
       destroyed [7,A] at [5,4,3]
   Sectors:
-    [1,1]->[10,J],[34,J],[12,J],-sorted_ent:[10,J],sorted_ent:[12,J],sorted_ent:[34,J],movable_list[12,J],
-    [1,2]->[2,P],[3,A],[4,P],[-8,Y]sorted_ent:[-8,Y],sorted_ent:[2,P],sorted_ent:[3,A],sorted_ent:[4,P],movable_list[2,P],movable_list[3,A],movable_list[4,P],
-    [1,3]->[39,A],[8,P],-,-sorted_ent:[8,P],sorted_ent:[39,A],movable_list[8,P],
-    [1,4]->[9,J],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[9,J],
-    [1,5]->-,[-11,*],[0,E],-sorted_ent:[-10000000,-],sorted_ent:[-11,*],sorted_ent:[0,E],movable_list[0,E],
-    [2,1]->[17,J],[20,P],-,-sorted_ent:[17,J],sorted_ent:[20,P],movable_list[20,P],
-    [2,2]->-,[22,A],-,[-6,Y]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-6,Y],sorted_ent:[22,A],
-    [2,3]->[14,P],[27,J],-,-sorted_ent:[14,P],sorted_ent:[27,J],movable_list[14,P],movable_list[27,J],
-    [2,4]->-,[16,P],-,[26,A]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[16,P],sorted_ent:[26,A],movable_list[16,P],movable_list[26,A],
-    [2,5]->[6,J],-,[-4,*],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-4,*],sorted_ent:[6,J],
-    [3,1]->-,-,[23,J],[18,J]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[18,J],sorted_ent:[23,J],movable_list[18,J],
-    [3,2]->-,[29,P],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[29,P],
-    [3,3]->[-1,O],-,-,-sorted_ent:[-1,O],
-    [3,4]->-,-,-,[-3,W]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-3,W],
-    [3,5]->-,[-7,W],-,-sorted_ent:[-10000000,-],sorted_ent:[-7,W],
-    [4,1]->[35,J],[21,J],-,-sorted_ent:[21,J],sorted_ent:[35,J],movable_list[21,J],
-    [4,2]->[30,A],-,-,-sorted_ent:[30,A],movable_list[30,A],
-    [4,3]->[31,P],[24,J],-,-sorted_ent:[24,J],sorted_ent:[31,P],movable_list[31,P],movable_list[24,J],
-    [4,4]->[32,P],[-10,W],[25,J],-sorted_ent:[-10,W],sorted_ent:[25,J],sorted_ent:[32,P],movable_list[32,P],movable_list[25,J],
-    [4,5]->[33,A],[19,P],-,-sorted_ent:[19,P],sorted_ent:[33,A],movable_list[33,A],movable_list[19,P],
-    [5,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [5,2]->[36,J],[-5,Y],[5,J],[1,J]sorted_ent:[-5,Y],sorted_ent:[1,J],sorted_ent:[5,J],sorted_ent:[36,J],movable_list[36,J],movable_list[5,J],movable_list[1,J],
-    [5,3]->[37,A],[38,A],[-2,W],-sorted_ent:[-10000000,-],sorted_ent:[-2,W],sorted_ent:[37,A],sorted_ent:[38,A],movable_list[37,A],movable_list[38,A],
-    [5,4]->[41,J],[-9,Y],-,-sorted_ent:[-10000000,-],sorted_ent:[-9,Y],sorted_ent:[41,J],
-    [5,5]->[40,A],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[40,A],movable_list[40,A],
+    [1,1]->[10,J],[34,J],[12,J],-
+    [1,2]->[2,P],[3,A],[4,P],[-8,Y]
+    [1,3]->[39,A],[8,P],-,-
+    [1,4]->[9,J],-,-,-
+    [1,5]->-,[-11,*],[0,E],-
+    [2,1]->[17,J],[20,P],-,-
+    [2,2]->-,[22,A],-,[-6,Y]
+    [2,3]->[14,P],[27,J],-,-
+    [2,4]->-,[16,P],-,[26,A]
+    [2,5]->[6,J],-,[-4,*],-
+    [3,1]->-,-,[23,J],[18,J]
+    [3,2]->-,[29,P],-,-
+    [3,3]->[-1,O],-,-,-
+    [3,4]->-,-,-,[-3,W]
+    [3,5]->-,[-7,W],-,-
+    [4,1]->[35,J],[21,J],-,-
+    [4,2]->[30,A],-,-,-
+    [4,3]->[31,P],[24,J],-,-
+    [4,4]->[32,P],[-10,W],[25,J],-
+    [4,5]->[33,A],[19,P],-,-
+    [5,1]->-,-,-,-
+    [5,2]->[36,J],[-5,Y],[5,J],[1,J]
+    [5,3]->[37,A],[38,A],[-2,W],-
+    [5,4]->[41,J],[-9,Y],-,-
+    [5,5]->[40,A],-,-,-
   Descriptions:
     [-11,*]->Luminosity:5
     [-10,W]->
@@ -725,43 +266,43 @@ action_left_after_reproduced:[53,J]->:1
     [-3,W]->
     [-2,W]->
     [-1,O]->
-    [0,E]->fuel:3/3, life:3/3, landed?:Fold_pos:[5,5,3]cur_pos:[1,5,3]use_wormhole?False
-    [1,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[1,1,2]cur_pos:[5,2,4]
-    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,2,1]cur_pos:[1,2,1]
-    [3,A]->turns_left:0old_pos:[1,2,2]cur_pos:[1,2,2]
-    [4,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,2,3]cur_pos:[1,2,3]
-    [5,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[1,3,1]cur_pos:[5,2,3]
-    [6,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:2old_pos:[1,4,1]cur_pos:[2,5,1]
-    [8,P]->attached?:F, support_life?:F, visited?:F, turns_left:2old_pos:[5,3,4]cur_pos:[1,3,2]
-    [9,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[1,5,1]cur_pos:[1,4,1]
-    [10,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[2,1,1]cur_pos:[1,1,1]
-    [12,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[2,2,2]cur_pos:[1,1,3]
-    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[2,3,1]cur_pos:[2,3,1]
-    [16,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[2,4,2]cur_pos:[2,4,2]
-    [17,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[2,5,1]cur_pos:[2,1,1]
-    [18,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[2,5,2]cur_pos:[3,1,4]
-    [19,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[3,1,1]cur_pos:[4,5,2]
-    [20,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[3,1,2]cur_pos:[2,1,2]
-    [21,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[3,1,3]cur_pos:[4,1,2]
-    [22,A]->turns_left:0old_pos:[3,2,1]cur_pos:[2,2,2]
-    [23,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[3,2,2]cur_pos:[3,1,3]
-    [24,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[3,2,3]cur_pos:[4,3,2]
-    [25,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[3,4,1]cur_pos:[4,4,3]
-    [26,A]->turns_left:1old_pos:[3,4,2]cur_pos:[2,4,4]
-    [27,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:2old_pos:[3,4,3]cur_pos:[2,3,2]
-    [29,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[4,1,1]cur_pos:[3,2,2]
-    [30,A]->turns_left:0old_pos:[4,2,1]cur_pos:[4,2,1]
-    [31,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[4,3,1]cur_pos:[4,3,1]
-    [32,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[4,4,1]cur_pos:[4,4,1]
-    [33,A]->turns_left:0old_pos:[4,5,1]cur_pos:[4,5,1]
-    [34,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:2old_pos:[5,1,1]cur_pos:[1,1,2]
-    [35,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[5,1,2]cur_pos:[4,1,1]
-    [36,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[5,2,1]cur_pos:[5,2,1]
-    [37,A]->turns_left:0old_pos:[5,3,1]cur_pos:[5,3,1]
-    [38,A]->turns_left:0old_pos:[5,3,2]cur_pos:[5,3,2]
-    [39,A]->turns_left:1old_pos:[5,4,1]cur_pos:[1,3,1]
-    [40,A]->turns_left:0old_pos:[5,5,1]cur_pos:[5,5,1]
-    [41,J]->fuel:5/5, load:1/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[5,5,2]cur_pos:[5,4,1]
+    [0,E]->fuel:3/3, life:3/3, landed?:F
+    [1,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/A
+    [3,A]->turns_left:0
+    [4,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [5,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [6,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:2
+    [8,P]->attached?:F, support_life?:F, visited?:F, turns_left:2
+    [9,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [10,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [12,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [16,P]->attached?:F, support_life?:F, visited?:F, turns_left:1
+    [17,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [18,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [19,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [20,P]->attached?:F, support_life?:F, visited?:F, turns_left:1
+    [21,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [22,A]->turns_left:0
+    [23,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [24,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [25,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [26,A]->turns_left:1
+    [27,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:2
+    [29,P]->attached?:F, support_life?:F, visited?:F, turns_left:1
+    [30,A]->turns_left:0
+    [31,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [32,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [33,A]->turns_left:0
+    [34,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:2
+    [35,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [36,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [37,A]->turns_left:0
+    [38,A]->turns_left:0
+    [39,A]->turns_left:1
+    [40,A]->turns_left:0
+    [41,J]->fuel:5/5, load:1/2, actions_left_until_reproduction:1/2, turns_left:1
   Deaths This Turn:
     [13,A]->turns_left:N/A,
       Asteroid got imploded by janitaur (id: 11) at Sector:2:2
@@ -783,11 +324,7 @@ action_left_after_reproduced:[53,J]->:1
     JJ--   A---   PJ--   PWJ-   AP--   
     (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
     ----   JYJJ   AAW-   JY--   A---   
-[0,E],1,5landed:False,fuel3
-[0,E][1,J][2,P][3,A][4,P][5,J][6,J][8,P][9,J][10,J][12,J][14,P][16,P][17,J][18,J][19,P][20,P][21,J][22,A][23,J][24,J][25,J][26,A][27,J][29,P][30,A][31,P][32,P][33,A][34,J][35,J][36,J][37,A][38,A][39,A][40,A][41,J]
-
 ->move(S)
-  ------------------
   state:4.0, mode:test, ok
   Movement:
     [0,E]:[1,5,3]->[2,5,2]
@@ -813,31 +350,31 @@ action_left_after_reproduced:[53,J]->:1
     [37,A]:[5,3,1]->[5,2,1]
     [38,A]:[5,3,2]
   Sectors:
-    [1,1]->-,[34,J],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[34,J],
-    [1,2]->[2,P],[22,A],[4,P],[-8,Y]sorted_ent:[-8,Y],sorted_ent:[2,P],sorted_ent:[4,P],sorted_ent:[22,A],movable_list[2,P],movable_list[4,P],
-    [1,3]->[39,A],[8,P],[14,P],-sorted_ent:[8,P],sorted_ent:[14,P],sorted_ent:[39,A],movable_list[8,P],movable_list[14,P],
-    [1,4]->[9,J],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[9,J],
-    [1,5]->-,[-11,*],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-11,*],
-    [2,1]->[17,J],[20,P],-,-sorted_ent:[17,J],sorted_ent:[20,P],movable_list[20,P],
-    [2,2]->-,-,-,[-6,Y]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-6,Y],
-    [2,3]->-,[27,J],-,-sorted_ent:[-10000000,-],sorted_ent:[27,J],movable_list[27,J],
-    [2,4]->-,[16,P],-,[26,A]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[16,P],sorted_ent:[26,A],movable_list[16,P],movable_list[26,A],
-    [2,5]->[6,J],[0,E],[-4,*],-sorted_ent:[-10000000,-],sorted_ent:[-4,*],sorted_ent:[0,E],sorted_ent:[6,J],
-    [3,1]->[33,A],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[33,A],
-    [3,2]->-,[29,P],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[29,P],
-    [3,3]->[-1,O],-,-,-sorted_ent:[-1,O],
-    [3,4]->[19,P],[31,P],-,[-3,W]sorted_ent:[-10000000,-],sorted_ent:[-3,W],sorted_ent:[19,P],sorted_ent:[31,P],
-    [3,5]->-,[-7,W],-,-sorted_ent:[-10000000,-],sorted_ent:[-7,W],
-    [4,1]->-,-,[1,J],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[1,J],movable_list[1,J],
-    [4,2]->-,-,-,-sorted_ent:[-10000000,-],
-    [4,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [4,4]->-,[-10,W],[25,J],[24,J]sorted_ent:[-10000000,-],sorted_ent:[-10,W],sorted_ent:[24,J],sorted_ent:[25,J],movable_list[25,J],movable_list[24,J],
-    [4,5]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [5,1]->[10,J],[12,J],-,-sorted_ent:[10,J],sorted_ent:[12,J],
-    [5,2]->[37,A],[-5,Y],-,[30,A]sorted_ent:[-10000000,-],sorted_ent:[-5,Y],sorted_ent:[30,A],sorted_ent:[37,A],
-    [5,3]->-,[38,A],[-2,W],[3,A]sorted_ent:[-10000000,-],sorted_ent:[-2,W],sorted_ent:[3,A],sorted_ent:[38,A],movable_list[38,A],
-    [5,4]->[41,J],[-9,Y],[32,P],-sorted_ent:[-9,Y],sorted_ent:[32,P],sorted_ent:[41,J],
-    [5,5]->[35,J],[21,J],-,-sorted_ent:[-10000000,-],sorted_ent:[21,J],sorted_ent:[35,J],
+    [1,1]->-,[34,J],-,-
+    [1,2]->[2,P],[22,A],[4,P],[-8,Y]
+    [1,3]->[39,A],[8,P],[14,P],-
+    [1,4]->[9,J],-,-,-
+    [1,5]->-,[-11,*],-,-
+    [2,1]->[17,J],[20,P],-,-
+    [2,2]->-,-,-,[-6,Y]
+    [2,3]->-,[27,J],-,-
+    [2,4]->-,[16,P],-,[26,A]
+    [2,5]->[6,J],[0,E],[-4,*],-
+    [3,1]->[33,A],-,-,-
+    [3,2]->-,[29,P],-,-
+    [3,3]->[-1,O],-,-,-
+    [3,4]->[19,P],[31,P],-,[-3,W]
+    [3,5]->-,[-7,W],-,-
+    [4,1]->-,-,[1,J],-
+    [4,2]->-,-,-,-
+    [4,3]->-,-,-,-
+    [4,4]->-,[-10,W],[25,J],[24,J]
+    [4,5]->-,-,-,-
+    [5,1]->[10,J],[12,J],-,-
+    [5,2]->[37,A],[-5,Y],-,[30,A]
+    [5,3]->-,[38,A],[-2,W],[3,A]
+    [5,4]->[41,J],[-9,Y],[32,P],-
+    [5,5]->[35,J],[21,J],-,-
   Descriptions:
     [-11,*]->Luminosity:5
     [-10,W]->
@@ -850,38 +387,38 @@ action_left_after_reproduced:[53,J]->:1
     [-3,W]->
     [-2,W]->
     [-1,O]->
-    [0,E]->fuel:3/3, life:3/3, landed?:Fold_pos:[1,5,3]cur_pos:[2,5,2]use_wormhole?False
-    [1,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[5,2,4]cur_pos:[4,1,3]
-    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,2,1]cur_pos:[1,2,1]
-    [3,A]->turns_left:0old_pos:[1,2,2]cur_pos:[5,3,4]
-    [4,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[1,2,3]cur_pos:[1,2,3]
-    [6,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[1,4,1]cur_pos:[2,5,1]
-    [8,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[5,3,4]cur_pos:[1,3,2]
-    [9,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[1,5,1]cur_pos:[1,4,1]
-    [10,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[1,1,1]cur_pos:[5,1,1]
-    [12,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:1old_pos:[1,1,3]cur_pos:[5,1,2]
-    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[2,3,1]cur_pos:[1,3,3]
-    [16,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[2,4,2]cur_pos:[2,4,2]
-    [17,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[2,5,1]cur_pos:[2,1,1]
-    [19,P]->attached?:F, support_life?:F, visited?:F, turns_left:2old_pos:[4,5,2]cur_pos:[3,4,1]
-    [20,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[3,1,2]cur_pos:[2,1,2]
-    [21,J]->fuel:3/5, load:1/2, actions_left_until_reproduction:0/2, turns_left:1old_pos:[4,1,2]cur_pos:[5,5,2]
-    [22,A]->turns_left:1old_pos:[2,2,2]cur_pos:[1,2,2]
-    [24,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[4,3,2]cur_pos:[4,4,4]
-    [25,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[3,4,1]cur_pos:[4,4,3]
-    [26,A]->turns_left:0old_pos:[3,4,2]cur_pos:[2,4,4]
-    [27,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[3,4,3]cur_pos:[2,3,2]
-    [29,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[4,1,1]cur_pos:[3,2,2]
-    [30,A]->turns_left:0old_pos:[4,2,1]cur_pos:[5,2,4]
-    [31,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[4,3,1]cur_pos:[3,4,2]
-    [32,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[4,4,1]cur_pos:[5,4,3]
-    [33,A]->turns_left:0old_pos:[4,5,1]cur_pos:[3,1,1]
-    [34,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[5,1,1]cur_pos:[1,1,2]
-    [35,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[4,1,1]cur_pos:[5,5,1]
-    [37,A]->turns_left:2old_pos:[5,3,1]cur_pos:[5,2,1]
-    [38,A]->turns_left:1old_pos:[5,3,2]cur_pos:[5,3,2]
-    [39,A]->turns_left:0old_pos:[5,4,1]cur_pos:[1,3,1]
-    [41,J]->fuel:5/5, load:1/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[5,5,2]cur_pos:[5,4,1]
+    [0,E]->fuel:3/3, life:3/3, landed?:F
+    [1,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0
+    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/A
+    [3,A]->turns_left:0
+    [4,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/A
+    [6,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [8,P]->attached?:F, support_life?:F, visited?:F, turns_left:1
+    [9,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [10,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0
+    [12,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:1
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [16,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [17,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [19,P]->attached?:F, support_life?:F, visited?:F, turns_left:2
+    [20,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [21,J]->fuel:3/5, load:1/2, actions_left_until_reproduction:0/2, turns_left:1
+    [22,A]->turns_left:1
+    [24,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0
+    [25,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [26,A]->turns_left:0
+    [27,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [29,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [30,A]->turns_left:0
+    [31,P]->attached?:F, support_life?:F, visited?:F, turns_left:1
+    [32,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/A
+    [33,A]->turns_left:0
+    [34,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [35,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0
+    [37,A]->turns_left:2
+    [38,A]->turns_left:1
+    [39,A]->turns_left:0
+    [41,J]->fuel:5/5, load:1/2, actions_left_until_reproduction:1/2, turns_left:0
   Deaths This Turn:
     [40,A]->turns_left:N/A,
       Asteroid got imploded by janitaur (id: 21) at Sector:5:5
@@ -903,11 +440,7 @@ action_left_after_reproduced:[53,J]->:1
     --J-   ----   ----   -WJJ   ----   
     (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
     JJ--   AY-A   -AWA   JYP-   JJ--   
-[0,E],2,5landed:False,fuel3
-[0,E][1,J][2,P][3,A][4,P][6,J][8,P][9,J][10,J][12,J][14,P][16,P][17,J][19,P][20,P][21,J][22,A][24,J][25,J][26,A][27,J][29,P][30,A][31,P][32,P][33,A][34,J][35,J][37,A][38,A][39,A][41,J]
-
 ->move(S)
-  ------------------
   state:5.0, mode:test, ok
   Movement:
     [0,E]:[2,5,2]->[3,5,1]
@@ -933,31 +466,31 @@ action_left_after_reproduced:[53,J]->:1
     [39,A]:[1,3,1]->[5,4,4]
       destroyed [41,J] at [5,4,1]
   Sectors:
-    [1,1]->[17,J],[34,J],-,-sorted_ent:[-10000000,-],sorted_ent:[17,J],sorted_ent:[34,J],
-    [1,2]->[2,P],[22,A],[4,P],[-8,Y]sorted_ent:[-8,Y],sorted_ent:[2,P],sorted_ent:[4,P],sorted_ent:[22,A],movable_list[2,P],movable_list[4,P],
-    [1,3]->-,[8,P],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[8,P],movable_list[8,P],
-    [1,4]->[16,P],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[16,P],
-    [1,5]->-,[-11,*],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-11,*],
-    [2,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [2,2]->-,-,-,[-6,Y]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-6,Y],
-    [2,3]->[9,J],[27,J],[29,P],-sorted_ent:[9,J],sorted_ent:[27,J],sorted_ent:[29,P],movable_list[27,J],movable_list[29,P],
-    [2,4]->[14,P],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[14,P],
-    [2,5]->[6,J],-,[-4,*],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-4,*],sorted_ent:[6,J],
-    [3,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [3,2]->[20,P],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[20,P],
-    [3,3]->[-1,O],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-1,O],
-    [3,4]->[19,P],[31,P],[25,J],[-3,W]sorted_ent:[-3,W],sorted_ent:[19,P],sorted_ent:[25,J],sorted_ent:[31,P],
-    [3,5]->[0,E],[-7,W],-,-sorted_ent:[-7,W],sorted_ent:[0,E],
-    [4,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [4,2]->[3,A],[33,A],-,-sorted_ent:[3,A],sorted_ent:[33,A],movable_list[33,A],
-    [4,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [4,4]->-,[-10,W],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10,W],
-    [4,5]->[24,J],[43,J],[35,J],[44,J]sorted_ent:[24,J],sorted_ent:[35,J],sorted_ent:[43,J],sorted_ent:[44,J],movable_list[35,J],movable_list[44,J],
-    [5,1]->-,[12,J],-,-sorted_ent:[-10000000,-],sorted_ent:[12,J],
-    [5,2]->-,[-5,Y],[1,J],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-5,Y],sorted_ent:[1,J],
-    [5,3]->-,[38,A],[-2,W],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-2,W],sorted_ent:[38,A],movable_list[38,A],
-    [5,4]->-,[-9,Y],[32,P],[39,A]sorted_ent:[-10000000,-],sorted_ent:[-9,Y],sorted_ent:[32,P],sorted_ent:[39,A],movable_list[39,A],
-    [5,5]->-,[21,J],[10,J],[42,J]sorted_ent:[-10000000,-],sorted_ent:[10,J],sorted_ent:[21,J],sorted_ent:[42,J],movable_list[42,J],
+    [1,1]->[17,J],[34,J],-,-
+    [1,2]->[2,P],[22,A],[4,P],[-8,Y]
+    [1,3]->-,[8,P],-,-
+    [1,4]->[16,P],-,-,-
+    [1,5]->-,[-11,*],-,-
+    [2,1]->-,-,-,-
+    [2,2]->-,-,-,[-6,Y]
+    [2,3]->[9,J],[27,J],[29,P],-
+    [2,4]->[14,P],-,-,-
+    [2,5]->[6,J],-,[-4,*],-
+    [3,1]->-,-,-,-
+    [3,2]->[20,P],-,-,-
+    [3,3]->[-1,O],-,-,-
+    [3,4]->[19,P],[31,P],[25,J],[-3,W]
+    [3,5]->[0,E],[-7,W],-,-
+    [4,1]->-,-,-,-
+    [4,2]->[3,A],[33,A],-,-
+    [4,3]->-,-,-,-
+    [4,4]->-,[-10,W],-,-
+    [4,5]->[24,J],[43,J],[35,J],[44,J]
+    [5,1]->-,[12,J],-,-
+    [5,2]->-,[-5,Y],[1,J],-
+    [5,3]->-,[38,A],[-2,W],-
+    [5,4]->-,[-9,Y],[32,P],[39,A]
+    [5,5]->-,[21,J],[10,J],[42,J]
   Descriptions:
     [-11,*]->Luminosity:5
     [-10,W]->
@@ -970,37 +503,37 @@ action_left_after_reproduced:[53,J]->:1
     [-3,W]->
     [-2,W]->
     [-1,O]->
-    [0,E]->fuel:2/3, life:3/3, landed?:Fold_pos:[2,5,2]cur_pos:[3,5,1]use_wormhole?False
-    [1,J]->fuel:5/5, load:2/2, actions_left_until_reproduction:0/2, turns_left:2old_pos:[4,1,3]cur_pos:[5,2,3]
-    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,2,1]cur_pos:[1,2,1]
-    [3,A]->turns_left:0old_pos:[5,3,4]cur_pos:[4,2,1]
-    [4,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[1,2,3]cur_pos:[1,2,3]
-    [6,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[1,4,1]cur_pos:[2,5,1]
-    [8,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[5,3,4]cur_pos:[1,3,2]
-    [9,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:2old_pos:[1,4,1]cur_pos:[2,3,1]
-    [10,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[5,1,1]cur_pos:[5,5,3]
-    [12,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[1,1,3]cur_pos:[5,1,2]
-    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[1,3,3]cur_pos:[2,4,1]
-    [16,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[2,4,2]cur_pos:[1,4,1]
-    [17,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[2,1,1]cur_pos:[1,1,1]
-    [19,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[4,5,2]cur_pos:[3,4,1]
-    [20,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[2,1,2]cur_pos:[3,2,1]
-    [21,J]->fuel:3/5, load:1/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[4,1,2]cur_pos:[5,5,2]
-    [22,A]->turns_left:0old_pos:[2,2,2]cur_pos:[1,2,2]
-    [24,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:2old_pos:[4,4,4]cur_pos:[4,5,1]
-    [25,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:1old_pos:[4,4,3]cur_pos:[3,4,3]
-    [27,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[3,4,3]cur_pos:[2,3,2]
-    [29,P]->attached?:F, support_life?:F, visited?:F, turns_left:2old_pos:[3,2,2]cur_pos:[2,3,3]
-    [31,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[4,3,1]cur_pos:[3,4,2]
-    [32,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[4,4,1]cur_pos:[5,4,3]
-    [33,A]->turns_left:1old_pos:[3,1,1]cur_pos:[4,2,2]
-    [34,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[5,1,1]cur_pos:[1,1,2]
-    [35,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[5,5,1]cur_pos:[4,5,3]
-    [38,A]->turns_left:0old_pos:[5,3,2]cur_pos:[5,3,2]
-    [39,A]->turns_left:2old_pos:[1,3,1]cur_pos:[5,4,4]
-    [42,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[5,5,4]cur_pos:[5,5,4]
-    [43,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[4,5,2]cur_pos:[4,5,2]
-    [44,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[4,5,4]cur_pos:[4,5,4]
+    [0,E]->fuel:2/3, life:3/3, landed?:F
+    [1,J]->fuel:5/5, load:2/2, actions_left_until_reproduction:0/2, turns_left:2
+    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/A
+    [3,A]->turns_left:0
+    [4,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/A
+    [6,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [8,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [9,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:2
+    [10,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [12,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:1
+    [16,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [17,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0
+    [19,P]->attached?:F, support_life?:F, visited?:F, turns_left:1
+    [20,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [21,J]->fuel:3/5, load:1/2, actions_left_until_reproduction:0/2, turns_left:0
+    [22,A]->turns_left:0
+    [24,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:2
+    [25,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:1
+    [27,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [29,P]->attached?:F, support_life?:F, visited?:F, turns_left:2
+    [31,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [32,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/A
+    [33,A]->turns_left:1
+    [34,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [35,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [38,A]->turns_left:0
+    [39,A]->turns_left:2
+    [42,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1
+    [43,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [44,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
   Deaths This Turn:
     [30,A]->turns_left:N/A,
       Asteroid got imploded by janitaur (id: 1) at Sector:5:2
@@ -1020,11 +553,7 @@ action_left_after_reproduced:[53,J]->:1
     ----   AA--   ----   -W--   JJJJ   
     (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
     -J--   -YJ-   -AW-   -YPA   -JJJ   
-[0,E],3,5landed:False,fuel2
-[0,E][1,J][2,P][3,A][4,P][6,J][8,P][9,J][10,J][12,J][14,P][16,P][17,J][19,P][20,P][21,J][22,A][24,J][25,J][27,J][29,P][31,P][32,P][33,A][34,J][35,J][38,A][39,A][42,J][43,J][44,J]
-[keys:[10,J],result:[42,J][keys:[24,J],result:[43,J][keys:[35,J],result:[44,J]
 ->move(N)
-  ------------------
   state:6.0, mode:test, ok
   Movement:
     [0,E]:[3,5,1]->[2,5,2]
@@ -1051,31 +580,31 @@ action_left_after_reproduced:[53,J]->:1
       destroyed [39,A] at [5,4,4]
     [44,J]:[4,5,4]->[4,1,2]
   Sectors:
-    [1,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [1,2]->[2,P],-,[4,P],[-8,Y]sorted_ent:[-10000000,-],sorted_ent:[-8,Y],sorted_ent:[2,P],sorted_ent:[4,P],movable_list[2,P],movable_list[4,P],
-    [1,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [1,4]->[38,A],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[38,A],
-    [1,5]->[12,J],[-11,*],[45,J],[21,J]sorted_ent:[-11,*],sorted_ent:[12,J],sorted_ent:[21,J],sorted_ent:[45,J],movable_list[21,J],
-    [2,1]->-,[22,A],-,-sorted_ent:[-10000000,-],sorted_ent:[22,A],
-    [2,2]->[17,J],[46,J],-,[-6,Y]sorted_ent:[-10000000,-],sorted_ent:[-6,Y],sorted_ent:[17,J],sorted_ent:[46,J],
-    [2,3]->[9,J],-,[29,P],-sorted_ent:[-10000000,-],sorted_ent:[9,J],sorted_ent:[29,P],movable_list[29,P],
-    [2,4]->[14,P],[8,P],[16,P],-sorted_ent:[-10000000,-],sorted_ent:[8,P],sorted_ent:[14,P],sorted_ent:[16,P],
-    [2,5]->-,[0,E],[-4,*],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-4,*],sorted_ent:[0,E],
-    [3,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [3,2]->[27,J],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[27,J],
-    [3,3]->[-1,O],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-1,O],
-    [3,4]->[19,P],-,[25,J],[-3,W]sorted_ent:[-10000000,-],sorted_ent:[-3,W],sorted_ent:[19,P],sorted_ent:[25,J],
-    [3,5]->-,[-7,W],-,-sorted_ent:[-10000000,-],sorted_ent:[-7,W],
-    [4,1]->[10,J],[44,J],-,-sorted_ent:[-10000000,-],sorted_ent:[10,J],sorted_ent:[44,J],
-    [4,2]->-,[33,A],-,-sorted_ent:[-10000000,-],sorted_ent:[33,A],movable_list[33,A],
-    [4,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [4,4]->-,[-10,W],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10,W],
-    [4,5]->[24,J],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[24,J],
-    [5,1]->[35,J],-,-,-sorted_ent:[-10000000,-],sorted_ent:[35,J],
-    [5,2]->-,[-5,Y],[1,J],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-5,Y],sorted_ent:[1,J],
-    [5,3]->-,-,[-2,W],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-2,W],
-    [5,4]->[43,J],[-9,Y],[32,P],-sorted_ent:[-10000000,-],sorted_ent:[-9,Y],sorted_ent:[32,P],sorted_ent:[43,J],
-    [5,5]->[34,J],-,-,[42,J]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[34,J],sorted_ent:[42,J],movable_list[42,J],
+    [1,1]->-,-,-,-
+    [1,2]->[2,P],-,[4,P],[-8,Y]
+    [1,3]->-,-,-,-
+    [1,4]->[38,A],-,-,-
+    [1,5]->[12,J],[-11,*],[45,J],[21,J]
+    [2,1]->-,[22,A],-,-
+    [2,2]->[17,J],[46,J],-,[-6,Y]
+    [2,3]->[9,J],-,[29,P],-
+    [2,4]->[14,P],[8,P],[16,P],-
+    [2,5]->-,[0,E],[-4,*],-
+    [3,1]->-,-,-,-
+    [3,2]->[27,J],-,-,-
+    [3,3]->[-1,O],-,-,-
+    [3,4]->[19,P],-,[25,J],[-3,W]
+    [3,5]->-,[-7,W],-,-
+    [4,1]->[10,J],[44,J],-,-
+    [4,2]->-,[33,A],-,-
+    [4,3]->-,-,-,-
+    [4,4]->-,[-10,W],-,-
+    [4,5]->[24,J],-,-,-
+    [5,1]->[35,J],-,-,-
+    [5,2]->-,[-5,Y],[1,J],-
+    [5,3]->-,-,[-2,W],-
+    [5,4]->[43,J],[-9,Y],[32,P],-
+    [5,5]->[34,J],-,-,[42,J]
   Descriptions:
     [-11,*]->Luminosity:5
     [-10,W]->
@@ -1088,34 +617,34 @@ action_left_after_reproduced:[53,J]->:1
     [-3,W]->
     [-2,W]->
     [-1,O]->
-    [0,E]->fuel:3/3, life:3/3, landed?:Fold_pos:[3,5,1]cur_pos:[2,5,2]use_wormhole?False
-    [1,J]->fuel:5/5, load:2/2, actions_left_until_reproduction:0/2, turns_left:1old_pos:[4,1,3]cur_pos:[5,2,3]
-    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,2,1]cur_pos:[1,2,1]
-    [4,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[1,2,3]cur_pos:[1,2,3]
-    [8,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,3,2]cur_pos:[2,4,2]
-    [9,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:1old_pos:[1,4,1]cur_pos:[2,3,1]
-    [10,J]->fuel:1/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[5,5,3]cur_pos:[4,1,1]
-    [12,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:2old_pos:[5,1,2]cur_pos:[1,5,1]
-    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,3,3]cur_pos:[2,4,1]
-    [16,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[1,4,1]cur_pos:[2,4,3]
-    [17,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[1,1,1]cur_pos:[2,2,1]
-    [19,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[4,5,2]cur_pos:[3,4,1]
-    [21,J]->fuel:5/5, load:1/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[5,5,2]cur_pos:[1,5,4]
-    [22,A]->turns_left:0old_pos:[1,2,2]cur_pos:[2,1,2]
-    [24,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[4,4,4]cur_pos:[4,5,1]
-    [25,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[4,4,3]cur_pos:[3,4,3]
-    [27,J]->fuel:3/5, load:1/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[2,3,2]cur_pos:[3,2,1]
-    [29,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[3,2,2]cur_pos:[2,3,3]
-    [32,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[4,4,1]cur_pos:[5,4,3]
-    [33,A]->turns_left:0old_pos:[3,1,1]cur_pos:[4,2,2]
-    [34,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:1old_pos:[1,1,2]cur_pos:[5,5,1]
-    [35,J]->fuel:1/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[4,5,3]cur_pos:[5,1,1]
-    [38,A]->turns_left:1old_pos:[5,3,2]cur_pos:[1,4,1]
-    [42,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[5,5,4]cur_pos:[5,5,4]
-    [43,J]->fuel:5/5, load:1/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[4,5,2]cur_pos:[5,4,1]
-    [44,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[4,5,4]cur_pos:[4,1,2]
-    [45,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[1,5,3]cur_pos:[1,5,3]
-    [46,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[2,2,2]cur_pos:[2,2,2]
+    [0,E]->fuel:3/3, life:3/3, landed?:F
+    [1,J]->fuel:5/5, load:2/2, actions_left_until_reproduction:0/2, turns_left:1
+    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/A
+    [4,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/A
+    [8,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [9,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:1
+    [10,J]->fuel:1/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [12,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:2
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [16,P]->attached?:F, support_life?:F, visited?:F, turns_left:1
+    [17,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1
+    [19,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [21,J]->fuel:5/5, load:1/2, actions_left_until_reproduction:0/2, turns_left:0
+    [22,A]->turns_left:0
+    [24,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1
+    [25,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0
+    [27,J]->fuel:3/5, load:1/2, actions_left_until_reproduction:0/2, turns_left:0
+    [29,P]->attached?:F, support_life?:F, visited?:F, turns_left:1
+    [32,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/A
+    [33,A]->turns_left:0
+    [34,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:1
+    [35,J]->fuel:1/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [38,A]->turns_left:1
+    [42,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [43,J]->fuel:5/5, load:1/2, actions_left_until_reproduction:1/2, turns_left:1
+    [44,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [45,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [46,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1
   Deaths This Turn:
     [20,P]->attached?:F, support_life?:F, visited?:F, turns_left:N/A,
       Planet got devoured by blackhole (id: -1) at Sector:3:3
@@ -1137,11 +666,7 @@ action_left_after_reproduced:[53,J]->:1
     JJ--   -A--   ----   -W--   J---   
     (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
     J---   -YJ-   --W-   JYP-   J--J   
-[0,E],2,5landed:False,fuel3
-[0,E][1,J][2,P][4,P][8,P][9,J][10,J][12,J][14,P][16,P][17,J][19,P][21,J][22,A][24,J][25,J][27,J][29,P][32,P][33,A][34,J][35,J][38,A][42,J][43,J][44,J][45,J][46,J]
-[keys:[12,J],result:[45,J][keys:[17,J],result:[46,J]
 ->move(W)
-  ------------------
   state:7.0, mode:test, ok
   Movement:
     [0,E]:[2,5,2]->[2,4,4]
@@ -1159,31 +684,31 @@ action_left_after_reproduced:[53,J]->:1
     [42,J]:[5,5,4]->[4,1,3]
     [45,J]:[1,5,3]->[5,5,2]
   Sectors:
-    [1,1]->[21,J],[47,J],-,-sorted_ent:[-10000000,-],sorted_ent:[21,J],sorted_ent:[47,J],
-    [1,2]->[2,P],[22,A],[4,P],[-8,Y]sorted_ent:[-8,Y],sorted_ent:[2,P],sorted_ent:[4,P],sorted_ent:[22,A],movable_list[2,P],movable_list[4,P],
-    [1,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [1,4]->[38,A],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[38,A],
-    [1,5]->[12,J],[-11,*],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-11,*],sorted_ent:[12,J],
-    [2,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [2,2]->[17,J],[46,J],-,[-6,Y]sorted_ent:[-10000000,-],sorted_ent:[-6,Y],sorted_ent:[17,J],sorted_ent:[46,J],
-    [2,3]->[9,J],-,[29,P],-sorted_ent:[-10000000,-],sorted_ent:[9,J],sorted_ent:[29,P],movable_list[29,P],
-    [2,4]->[25,J],[48,J],[16,P],[0,E]sorted_ent:[0,E],sorted_ent:[16,P],sorted_ent:[25,J],sorted_ent:[48,J],
-    [2,5]->[8,P],-,[-4,*],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-4,*],sorted_ent:[8,P],
-    [3,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [3,2]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [3,3]->[-1,O],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-1,O],
-    [3,4]->-,[14,P],-,[-3,W]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-3,W],sorted_ent:[14,P],
-    [3,5]->-,[-7,W],-,-sorted_ent:[-10000000,-],sorted_ent:[-7,W],
-    [4,1]->[10,J],[44,J],[42,J],-sorted_ent:[10,J],sorted_ent:[42,J],sorted_ent:[44,J],
-    [4,2]->[27,J],-,[49,J],-sorted_ent:[-10000000,-],sorted_ent:[27,J],sorted_ent:[49,J],movable_list[49,J],
-    [4,3]->[19,P],-,-,-sorted_ent:[-10000000,-],sorted_ent:[19,P],
-    [4,4]->-,[-10,W],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10,W],
-    [4,5]->[24,J],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[24,J],
-    [5,1]->[35,J],-,-,-sorted_ent:[-10000000,-],sorted_ent:[35,J],
-    [5,2]->-,[-5,Y],[1,J],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-5,Y],sorted_ent:[1,J],
-    [5,3]->-,-,[-2,W],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-2,W],
-    [5,4]->[43,J],[-9,Y],[32,P],-sorted_ent:[-10000000,-],sorted_ent:[-9,Y],sorted_ent:[32,P],sorted_ent:[43,J],
-    [5,5]->[34,J],[45,J],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[34,J],sorted_ent:[45,J],
+    [1,1]->[21,J],[47,J],-,-
+    [1,2]->[2,P],[22,A],[4,P],[-8,Y]
+    [1,3]->-,-,-,-
+    [1,4]->[38,A],-,-,-
+    [1,5]->[12,J],[-11,*],-,-
+    [2,1]->-,-,-,-
+    [2,2]->[17,J],[46,J],-,[-6,Y]
+    [2,3]->[9,J],-,[29,P],-
+    [2,4]->[25,J],[48,J],[16,P],[0,E]
+    [2,5]->[8,P],-,[-4,*],-
+    [3,1]->-,-,-,-
+    [3,2]->-,-,-,-
+    [3,3]->[-1,O],-,-,-
+    [3,4]->-,[14,P],-,[-3,W]
+    [3,5]->-,[-7,W],-,-
+    [4,1]->[10,J],[44,J],[42,J],-
+    [4,2]->[27,J],-,[49,J],-
+    [4,3]->[19,P],-,-,-
+    [4,4]->-,[-10,W],-,-
+    [4,5]->[24,J],-,-,-
+    [5,1]->[35,J],-,-,-
+    [5,2]->-,[-5,Y],[1,J],-
+    [5,3]->-,-,[-2,W],-
+    [5,4]->[43,J],[-9,Y],[32,P],-
+    [5,5]->[34,J],[45,J],-,-
   Descriptions:
     [-11,*]->Luminosity:5
     [-10,W]->
@@ -1196,36 +721,36 @@ action_left_after_reproduced:[53,J]->:1
     [-3,W]->
     [-2,W]->
     [-1,O]->
-    [0,E]->fuel:2/3, life:3/3, landed?:Fold_pos:[2,5,2]cur_pos:[2,4,4]use_wormhole?False
-    [1,J]->fuel:5/5, load:2/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[4,1,3]cur_pos:[5,2,3]
-    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,2,1]cur_pos:[1,2,1]
-    [4,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[1,2,3]cur_pos:[1,2,3]
-    [8,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[2,4,2]cur_pos:[2,5,1]
-    [9,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[1,4,1]cur_pos:[2,3,1]
-    [10,J]->fuel:1/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[5,5,3]cur_pos:[4,1,1]
-    [12,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[5,1,2]cur_pos:[1,5,1]
-    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:2old_pos:[2,4,1]cur_pos:[3,4,2]
-    [16,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,4,1]cur_pos:[2,4,3]
-    [17,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[1,1,1]cur_pos:[2,2,1]
-    [19,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[3,4,1]cur_pos:[4,3,1]
-    [21,J]->fuel:4/5, load:1/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[1,5,4]cur_pos:[1,1,1]
-    [22,A]->turns_left:1old_pos:[2,1,2]cur_pos:[1,2,2]
-    [24,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[4,4,4]cur_pos:[4,5,1]
-    [25,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:2old_pos:[3,4,3]cur_pos:[2,4,1]
-    [27,J]->fuel:2/5, load:2/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[3,2,1]cur_pos:[4,2,1]
-    [29,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[3,2,2]cur_pos:[2,3,3]
-    [32,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[4,4,1]cur_pos:[5,4,3]
-    [34,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[1,1,2]cur_pos:[5,5,1]
-    [35,J]->fuel:1/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[4,5,3]cur_pos:[5,1,1]
-    [38,A]->turns_left:0old_pos:[5,3,2]cur_pos:[1,4,1]
-    [42,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[5,5,4]cur_pos:[4,1,3]
-    [43,J]->fuel:5/5, load:1/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[4,5,2]cur_pos:[5,4,1]
-    [44,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[4,5,4]cur_pos:[4,1,2]
-    [45,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:2old_pos:[1,5,3]cur_pos:[5,5,2]
-    [46,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[2,2,2]cur_pos:[2,2,2]
-    [47,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[1,1,2]cur_pos:[1,1,2]
-    [48,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[2,4,2]cur_pos:[2,4,2]
-    [49,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[4,2,3]cur_pos:[4,2,3]
+    [0,E]->fuel:2/3, life:3/3, landed?:F
+    [1,J]->fuel:5/5, load:2/2, actions_left_until_reproduction:0/2, turns_left:0
+    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/A
+    [4,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/A
+    [8,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/A
+    [9,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0
+    [10,J]->fuel:1/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [12,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:2
+    [16,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [17,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [19,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [21,J]->fuel:4/5, load:1/2, actions_left_until_reproduction:2/2, turns_left:0
+    [22,A]->turns_left:1
+    [24,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [25,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:2
+    [27,J]->fuel:2/5, load:2/2, actions_left_until_reproduction:2/2, turns_left:1
+    [29,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [32,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/A
+    [34,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0
+    [35,J]->fuel:1/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [38,A]->turns_left:0
+    [42,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [43,J]->fuel:5/5, load:1/2, actions_left_until_reproduction:1/2, turns_left:0
+    [44,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [45,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:2
+    [46,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [47,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1
+    [48,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1
+    [49,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
   Deaths This Turn:
     [33,A]->turns_left:N/A,
       Asteroid got imploded by janitaur (id: 27) at Sector:4:2
@@ -1239,11 +764,7 @@ action_left_after_reproduced:[53,J]->:1
     JJJ-   J-J-   P---   -W--   J---   
     (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
     J---   -YJ-   --W-   JYP-   JJ--   
-[0,E],2,4landed:False,fuel2
-[0,E][1,J][2,P][4,P][8,P][9,J][10,J][12,J][14,P][16,P][17,J][19,P][21,J][22,A][24,J][25,J][27,J][29,P][32,P][34,J][35,J][38,A][42,J][43,J][44,J][45,J][46,J][47,J][48,J][49,J]
-[keys:[21,J],result:[47,J][keys:[25,J],result:[48,J][keys:[27,J],result:[49,J]
 ->pass
-  ------------------
   state:8.0, mode:test, ok
   Movement:
     [1,J]:[5,2,3]->[1,3,1]
@@ -1266,31 +787,31 @@ action_left_after_reproduced:[53,J]->:1
     [46,J]:[2,2,2]->[3,3,2]
     [49,J]:[4,2,3]->[5,1,1]
   Sectors:
-    [1,1]->-,[47,J],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[47,J],
-    [1,2]->[2,P],[22,A],[4,P],[-8,Y]sorted_ent:[-8,Y],sorted_ent:[2,P],sorted_ent:[4,P],sorted_ent:[22,A],movable_list[2,P],movable_list[4,P],
-    [1,3]->[1,J],[50,J],-,-sorted_ent:[-10000000,-],sorted_ent:[1,J],sorted_ent:[50,J],
-    [1,4]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [1,5]->-,[-11,*],[16,P],[38,A]sorted_ent:[-10000000,-],sorted_ent:[-11,*],sorted_ent:[16,P],sorted_ent:[38,A],
-    [2,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [2,2]->[21,J],-,[9,J],[-6,Y]sorted_ent:[-10000000,-],sorted_ent:[-6,Y],sorted_ent:[9,J],sorted_ent:[21,J],
-    [2,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [2,4]->[25,J],[48,J],-,[0,E]sorted_ent:[-10000000,-],sorted_ent:[0,E],sorted_ent:[25,J],sorted_ent:[48,J],
-    [2,5]->[8,P],-,[-4,*],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-4,*],sorted_ent:[8,P],
-    [3,1]->[17,J],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[17,J],
-    [3,2]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [3,3]->[-1,O],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-1,O],
-    [3,4]->-,[14,P],-,[-3,W]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-3,W],sorted_ent:[14,P],
-    [3,5]->[24,J],[-7,W],-,-sorted_ent:[-7,W],sorted_ent:[24,J],
-    [4,1]->-,-,[42,J],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[42,J],
-    [4,2]->[27,J],[44,J],-,-sorted_ent:[-10000000,-],sorted_ent:[27,J],sorted_ent:[44,J],
-    [4,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [4,4]->-,[-10,W],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10,W],
-    [4,5]->[34,J],[51,J],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[34,J],sorted_ent:[51,J],
-    [5,1]->[49,J],-,-,-sorted_ent:[-10000000,-],sorted_ent:[49,J],
-    [5,2]->-,[-5,Y],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-5,Y],
-    [5,3]->[19,P],[43,J],[-2,W],-sorted_ent:[-10000000,-],sorted_ent:[-2,W],sorted_ent:[19,P],sorted_ent:[43,J],
-    [5,4]->-,[-9,Y],[32,P],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-9,Y],sorted_ent:[32,P],
-    [5,5]->-,[45,J],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[45,J],
+    [1,1]->-,[47,J],-,-
+    [1,2]->[2,P],[22,A],[4,P],[-8,Y]
+    [1,3]->[1,J],[50,J],-,-
+    [1,4]->-,-,-,-
+    [1,5]->-,[-11,*],[16,P],[38,A]
+    [2,1]->-,-,-,-
+    [2,2]->[21,J],-,[9,J],[-6,Y]
+    [2,3]->-,-,-,-
+    [2,4]->[25,J],[48,J],-,[0,E]
+    [2,5]->[8,P],-,[-4,*],-
+    [3,1]->[17,J],-,-,-
+    [3,2]->-,-,-,-
+    [3,3]->[-1,O],-,-,-
+    [3,4]->-,[14,P],-,[-3,W]
+    [3,5]->[24,J],[-7,W],-,-
+    [4,1]->-,-,[42,J],-
+    [4,2]->[27,J],[44,J],-,-
+    [4,3]->-,-,-,-
+    [4,4]->-,[-10,W],-,-
+    [4,5]->[34,J],[51,J],-,-
+    [5,1]->[49,J],-,-,-
+    [5,2]->-,[-5,Y],-,-
+    [5,3]->[19,P],[43,J],[-2,W],-
+    [5,4]->-,[-9,Y],[32,P],-
+    [5,5]->-,[45,J],-,-
   Descriptions:
     [-11,*]->Luminosity:5
     [-10,W]->
@@ -1303,33 +824,33 @@ action_left_after_reproduced:[53,J]->:1
     [-3,W]->
     [-2,W]->
     [-1,O]->
-    [0,E]->fuel:2/3, life:3/3, landed?:Fold_pos:[2,5,2]cur_pos:[2,4,4]use_wormhole?False
-    [1,J]->fuel:4/5, load:2/2, actions_left_until_reproduction:2/2, turns_left:2old_pos:[5,2,3]cur_pos:[1,3,1]
-    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,2,1]cur_pos:[1,2,1]
-    [4,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[1,2,3]cur_pos:[1,2,3]
-    [8,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[2,4,2]cur_pos:[2,5,1]
-    [9,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[2,3,1]cur_pos:[2,2,3]
-    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[2,4,1]cur_pos:[3,4,2]
-    [16,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[2,4,3]cur_pos:[1,5,3]
-    [17,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[2,2,1]cur_pos:[3,1,1]
-    [19,P]->attached?:F, support_life?:F, visited?:F, turns_left:2old_pos:[4,3,1]cur_pos:[5,3,1]
-    [21,J]->fuel:5/5, load:1/2, actions_left_until_reproduction:1/2, turns_left:2old_pos:[1,1,1]cur_pos:[2,2,1]
-    [22,A]->turns_left:0old_pos:[2,1,2]cur_pos:[1,2,2]
-    [24,J]->fuel:1/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[4,5,1]cur_pos:[3,5,1]
-    [25,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[3,4,3]cur_pos:[2,4,1]
-    [27,J]->fuel:2/5, load:2/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[3,2,1]cur_pos:[4,2,1]
-    [32,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[4,4,1]cur_pos:[5,4,3]
-    [34,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:2old_pos:[5,5,1]cur_pos:[4,5,1]
-    [38,A]->turns_left:0old_pos:[1,4,1]cur_pos:[1,5,4]
-    [42,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[5,5,4]cur_pos:[4,1,3]
-    [43,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:2old_pos:[5,4,1]cur_pos:[5,3,2]
-    [44,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[4,1,2]cur_pos:[4,2,2]
-    [45,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[1,5,3]cur_pos:[5,5,2]
-    [47,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[1,1,2]cur_pos:[1,1,2]
-    [48,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[2,4,2]cur_pos:[2,4,2]
-    [49,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[4,2,3]cur_pos:[5,1,1]
-    [50,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[1,3,2]cur_pos:[1,3,2]
-    [51,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[4,5,2]cur_pos:[4,5,2]
+    [0,E]->fuel:2/3, life:3/3, landed?:F
+    [1,J]->fuel:4/5, load:2/2, actions_left_until_reproduction:2/2, turns_left:2
+    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/A
+    [4,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/A
+    [8,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/A
+    [9,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:1
+    [16,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/A
+    [17,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [19,P]->attached?:F, support_life?:F, visited?:F, turns_left:2
+    [21,J]->fuel:5/5, load:1/2, actions_left_until_reproduction:1/2, turns_left:2
+    [22,A]->turns_left:0
+    [24,J]->fuel:1/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [25,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1
+    [27,J]->fuel:2/5, load:2/2, actions_left_until_reproduction:2/2, turns_left:0
+    [32,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/A
+    [34,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:2
+    [38,A]->turns_left:0
+    [42,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [43,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:2
+    [44,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0
+    [45,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [47,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [48,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [49,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [50,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [51,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
   Deaths This Turn:
     [10,J]->fuel:0/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:N/A,
       Janitaur got lost in space - out of fuel at Sector:5:1
@@ -1351,11 +872,7 @@ action_left_after_reproduced:[53,J]->:1
     --J-   JJ--   ----   -W--   JJ--   
     (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
     J---   -Y--   PJW-   -YP-   -J--   
-[0,E],2,4landed:False,fuel2
-[0,E][1,J][2,P][4,P][8,P][9,J][14,P][16,P][17,J][19,P][21,J][22,A][24,J][25,J][27,J][32,P][34,J][38,A][42,J][43,J][44,J][45,J][47,J][48,J][49,J][50,J][51,J]
-[keys:[1,J],result:[50,J][keys:[34,J],result:[51,J]
 ->pass
-  ------------------
   state:9.0, mode:test, ok
   Movement:
     [9,J]:[2,2,3]->[1,1,1]
@@ -1375,31 +892,31 @@ action_left_after_reproduced:[53,J]->:1
       destroyed [22,A] at [1,3,3]
     [51,J]:[4,5,2]->[3,5,1]
   Sectors:
-    [1,1]->[9,J],-,[52,J],-sorted_ent:[-10000000,-],sorted_ent:[9,J],sorted_ent:[52,J],
-    [1,2]->[2,P],-,[4,P],[-8,Y]sorted_ent:[-10000000,-],sorted_ent:[-8,Y],sorted_ent:[2,P],sorted_ent:[4,P],movable_list[2,P],movable_list[4,P],
-    [1,3]->[48,J],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[48,J],
-    [1,4]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [1,5]->[47,J],[-11,*],[16,P],-sorted_ent:[-10000000,-],sorted_ent:[-11,*],sorted_ent:[16,P],sorted_ent:[47,J],
-    [2,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [2,2]->[21,J],[17,J],-,[-6,Y]sorted_ent:[-10000000,-],sorted_ent:[-6,Y],sorted_ent:[17,J],sorted_ent:[21,J],
-    [2,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [2,4]->[25,J],-,-,[0,E]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[0,E],sorted_ent:[25,J],
-    [2,5]->[8,P],-,[-4,*],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-4,*],sorted_ent:[8,P],
-    [3,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [3,2]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [3,3]->[-1,O],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-1,O],
-    [3,4]->-,[14,P],-,[-3,W]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-3,W],sorted_ent:[14,P],
-    [3,5]->[51,J],[-7,W],-,-sorted_ent:[-7,W],sorted_ent:[51,J],
-    [4,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [4,2]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [4,3]->[27,J],[44,J],[53,J],-sorted_ent:[27,J],sorted_ent:[44,J],sorted_ent:[53,J],movable_list[53,J],
-    [4,4]->-,[-10,W],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10,W],
-    [4,5]->[34,J],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[34,J],
-    [5,1]->[49,J],-,-,-sorted_ent:[-10000000,-],sorted_ent:[49,J],
-    [5,2]->[42,J],[-5,Y],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-5,Y],sorted_ent:[42,J],
-    [5,3]->[19,P],[43,J],[-2,W],-sorted_ent:[-10000000,-],sorted_ent:[-2,W],sorted_ent:[19,P],sorted_ent:[43,J],
-    [5,4]->[38,A],[-9,Y],[32,P],-sorted_ent:[-10000000,-],sorted_ent:[-9,Y],sorted_ent:[32,P],sorted_ent:[38,A],
-    [5,5]->-,[45,J],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[45,J],
+    [1,1]->[9,J],-,[52,J],-
+    [1,2]->[2,P],-,[4,P],[-8,Y]
+    [1,3]->[48,J],-,-,-
+    [1,4]->-,-,-,-
+    [1,5]->[47,J],[-11,*],[16,P],-
+    [2,1]->-,-,-,-
+    [2,2]->[21,J],[17,J],-,[-6,Y]
+    [2,3]->-,-,-,-
+    [2,4]->[25,J],-,-,[0,E]
+    [2,5]->[8,P],-,[-4,*],-
+    [3,1]->-,-,-,-
+    [3,2]->-,-,-,-
+    [3,3]->[-1,O],-,-,-
+    [3,4]->-,[14,P],-,[-3,W]
+    [3,5]->[51,J],[-7,W],-,-
+    [4,1]->-,-,-,-
+    [4,2]->-,-,-,-
+    [4,3]->[27,J],[44,J],[53,J],-
+    [4,4]->-,[-10,W],-,-
+    [4,5]->[34,J],-,-,-
+    [5,1]->[49,J],-,-,-
+    [5,2]->[42,J],[-5,Y],-,-
+    [5,3]->[19,P],[43,J],[-2,W],-
+    [5,4]->[38,A],[-9,Y],[32,P],-
+    [5,5]->-,[45,J],-,-
   Descriptions:
     [-11,*]->Luminosity:5
     [-10,W]->
@@ -1412,31 +929,31 @@ action_left_after_reproduced:[53,J]->:1
     [-3,W]->
     [-2,W]->
     [-1,O]->
-    [0,E]->fuel:2/3, life:3/3, landed?:Fold_pos:[2,5,2]cur_pos:[2,4,4]use_wormhole?False
-    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,2,1]cur_pos:[1,2,1]
-    [4,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[1,2,3]cur_pos:[1,2,3]
-    [8,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[2,4,2]cur_pos:[2,5,1]
-    [9,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[2,2,3]cur_pos:[1,1,1]
-    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[2,4,1]cur_pos:[3,4,2]
-    [16,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[2,4,3]cur_pos:[1,5,3]
-    [17,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:2old_pos:[3,1,1]cur_pos:[2,2,2]
-    [19,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[4,3,1]cur_pos:[5,3,1]
-    [21,J]->fuel:5/5, load:1/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[1,1,1]cur_pos:[2,2,1]
-    [25,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[3,4,3]cur_pos:[2,4,1]
-    [27,J]->fuel:1/5, load:2/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[4,2,1]cur_pos:[4,3,1]
-    [32,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[4,4,1]cur_pos:[5,4,3]
-    [34,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[5,5,1]cur_pos:[4,5,1]
-    [38,A]->turns_left:2old_pos:[1,5,4]cur_pos:[5,4,1]
-    [42,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[4,1,3]cur_pos:[5,2,1]
-    [43,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:1old_pos:[5,4,1]cur_pos:[5,3,2]
-    [44,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[4,2,2]cur_pos:[4,3,2]
-    [45,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[1,5,3]cur_pos:[5,5,2]
-    [47,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[1,1,2]cur_pos:[1,5,1]
-    [48,J]->fuel:4/5, load:1/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[2,4,2]cur_pos:[1,3,1]
-    [49,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[4,2,3]cur_pos:[5,1,1]
-    [51,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:2old_pos:[4,5,2]cur_pos:[3,5,1]
-    [52,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[1,1,3]cur_pos:[1,1,3]
-    [53,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[4,3,3]cur_pos:[4,3,3]
+    [0,E]->fuel:2/3, life:3/3, landed?:F
+    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/A
+    [4,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/A
+    [8,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/A
+    [9,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [16,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/A
+    [17,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:2
+    [19,P]->attached?:F, support_life?:F, visited?:F, turns_left:1
+    [21,J]->fuel:5/5, load:1/2, actions_left_until_reproduction:1/2, turns_left:1
+    [25,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [27,J]->fuel:1/5, load:2/2, actions_left_until_reproduction:1/2, turns_left:1
+    [32,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/A
+    [34,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1
+    [38,A]->turns_left:2
+    [42,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0
+    [43,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:1
+    [44,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [45,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [47,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [48,J]->fuel:4/5, load:1/2, actions_left_until_reproduction:1/2, turns_left:0
+    [49,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [51,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:2
+    [52,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [53,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
   Deaths This Turn:
     [1,J]->fuel:4/5, load:2/2, actions_left_until_reproduction:2/2, turns_left:N/A,
       Janitaur got destroyed by asteroid (id: 22) at Sector:1:3
@@ -1456,11 +973,7 @@ action_left_after_reproduced:[53,J]->:1
     ----   ----   JJJ-   -W--   J---   
     (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
     J---   JY--   PJW-   AYP-   -J--   
-[0,E],2,4landed:False,fuel2
-[0,E][2,P][4,P][8,P][9,J][14,P][16,P][17,J][19,P][21,J][25,J][27,J][32,P][34,J][38,A][42,J][43,J][44,J][45,J][47,J][48,J][49,J][51,J][52,J][53,J]
-[keys:[9,J],result:[52,J][keys:[44,J],result:[53,J]
 ->move(SW)
-  ------------------
   state:10.0, mode:test, ok
   Explorer got devoured by blackhole (id: -1) at Sector:3:3
   The game has ended. You can start a new game.
@@ -1479,31 +992,31 @@ action_left_after_reproduced:[53,J]->:1
     [52,J]:[1,1,3]->[2,1,1]
     [53,J]:[4,3,3]->[4,2,2]
   Sectors:
-    [1,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [1,2]->[2,P],-,[4,P],[-8,Y]sorted_ent:[-10000000,-],sorted_ent:[-8,Y],sorted_ent:[2,P],sorted_ent:[4,P],movable_list[2,P],movable_list[4,P],
-    [1,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [1,4]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [1,5]->-,[-11,*],[16,P],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-11,*],sorted_ent:[16,P],
-    [2,1]->[52,J],-,-,-sorted_ent:[-10000000,-],sorted_ent:[52,J],
-    [2,2]->[21,J],[17,J],-,[-6,Y]sorted_ent:[-10000000,-],sorted_ent:[-6,Y],sorted_ent:[17,J],sorted_ent:[21,J],
-    [2,3]->[25,J],[48,J],-,-sorted_ent:[-10000000,-],sorted_ent:[25,J],sorted_ent:[48,J],
-    [2,4]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [2,5]->[8,P],[47,J],[-4,*],-sorted_ent:[-10000000,-],sorted_ent:[-4,*],sorted_ent:[8,P],sorted_ent:[47,J],
-    [3,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [3,2]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [3,3]->[-1,O],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-1,O],
-    [3,4]->-,-,-,[-3,W]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-3,W],
-    [3,5]->[51,J],[-7,W],-,-sorted_ent:[-7,W],sorted_ent:[51,J],
-    [4,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
-    [4,2]->[44,J],[53,J],-,-sorted_ent:[-10000000,-],sorted_ent:[44,J],sorted_ent:[53,J],
-    [4,3]->[27,J],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[27,J],
-    [4,4]->[14,P],[-10,W],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10,W],sorted_ent:[14,P],
-    [4,5]->[34,J],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[34,J],
-    [5,1]->-,[9,J],[42,J],[54,J]sorted_ent:[-10000000,-],sorted_ent:[9,J],sorted_ent:[42,J],sorted_ent:[54,J],movable_list[42,J],movable_list[54,J],
-    [5,2]->-,[-5,Y],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-5,Y],
-    [5,3]->[19,P],[43,J],[-2,W],-sorted_ent:[-10000000,-],sorted_ent:[-2,W],sorted_ent:[19,P],sorted_ent:[43,J],
-    [5,4]->[38,A],[-9,Y],[32,P],-sorted_ent:[-10000000,-],sorted_ent:[-9,Y],sorted_ent:[32,P],sorted_ent:[38,A],
-    [5,5]->[49,J],[45,J],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[45,J],sorted_ent:[49,J],
+    [1,1]->-,-,-,-
+    [1,2]->[2,P],-,[4,P],[-8,Y]
+    [1,3]->-,-,-,-
+    [1,4]->-,-,-,-
+    [1,5]->-,[-11,*],[16,P],-
+    [2,1]->[52,J],-,-,-
+    [2,2]->[21,J],[17,J],-,[-6,Y]
+    [2,3]->[25,J],[48,J],-,-
+    [2,4]->-,-,-,-
+    [2,5]->[8,P],[47,J],[-4,*],-
+    [3,1]->-,-,-,-
+    [3,2]->-,-,-,-
+    [3,3]->[-1,O],-,-,-
+    [3,4]->-,-,-,[-3,W]
+    [3,5]->[51,J],[-7,W],-,-
+    [4,1]->-,-,-,-
+    [4,2]->[44,J],[53,J],-,-
+    [4,3]->[27,J],-,-,-
+    [4,4]->[14,P],[-10,W],-,-
+    [4,5]->[34,J],-,-,-
+    [5,1]->-,[9,J],[42,J],[54,J]
+    [5,2]->-,[-5,Y],-,-
+    [5,3]->[19,P],[43,J],[-2,W],-
+    [5,4]->[38,A],[-9,Y],[32,P],-
+    [5,5]->[49,J],[45,J],-,-
   Descriptions:
     [-11,*]->Luminosity:5
     [-10,W]->
@@ -1516,31 +1029,31 @@ action_left_after_reproduced:[53,J]->:1
     [-3,W]->
     [-2,W]->
     [-1,O]->
-    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,2,1]cur_pos:[1,2,1]
-    [4,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[1,2,3]cur_pos:[1,2,3]
-    [8,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[2,4,2]cur_pos:[2,5,1]
-    [9,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[1,1,1]cur_pos:[5,1,2]
-    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:2old_pos:[3,4,2]cur_pos:[4,4,1]
-    [16,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[2,4,3]cur_pos:[1,5,3]
-    [17,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:1old_pos:[3,1,1]cur_pos:[2,2,2]
-    [19,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[4,3,1]cur_pos:[5,3,1]
-    [21,J]->fuel:5/5, load:1/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[1,1,1]cur_pos:[2,2,1]
-    [25,J]->fuel:1/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[2,4,1]cur_pos:[2,3,1]
-    [27,J]->fuel:1/5, load:2/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[4,2,1]cur_pos:[4,3,1]
-    [32,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[4,4,1]cur_pos:[5,4,3]
-    [34,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[5,5,1]cur_pos:[4,5,1]
-    [38,A]->turns_left:1old_pos:[1,5,4]cur_pos:[5,4,1]
-    [42,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[5,2,1]cur_pos:[5,1,3]
-    [43,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[5,4,1]cur_pos:[5,3,2]
-    [44,J]->fuel:1/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[4,3,2]cur_pos:[4,2,1]
-    [45,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:1old_pos:[5,5,2]cur_pos:[5,5,2]
-    [47,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[1,5,1]cur_pos:[2,5,2]
-    [48,J]->fuel:3/5, load:1/2, actions_left_until_reproduction:0/2, turns_left:1old_pos:[1,3,1]cur_pos:[2,3,2]
-    [49,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:2old_pos:[5,1,1]cur_pos:[5,5,1]
-    [51,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[4,5,2]cur_pos:[3,5,1]
-    [52,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[1,1,3]cur_pos:[2,1,1]
-    [53,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[4,3,3]cur_pos:[4,2,2]
-    [54,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:2old_pos:[5,1,4]cur_pos:[5,1,4]
+    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/A
+    [4,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/A
+    [8,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/A
+    [9,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:2
+    [16,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/A
+    [17,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:1
+    [19,P]->attached?:F, support_life?:F, visited?:F, turns_left:0
+    [21,J]->fuel:5/5, load:1/2, actions_left_until_reproduction:1/2, turns_left:0
+    [25,J]->fuel:1/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [27,J]->fuel:1/5, load:2/2, actions_left_until_reproduction:1/2, turns_left:0
+    [32,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/A
+    [34,J]->fuel:2/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [38,A]->turns_left:1
+    [42,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0
+    [43,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0
+    [44,J]->fuel:1/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [45,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:1
+    [47,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0
+    [48,J]->fuel:3/5, load:1/2, actions_left_until_reproduction:0/2, turns_left:1
+    [49,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:2
+    [51,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [52,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0
+    [53,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1
+    [54,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:2
   Deaths This Turn:
     [0,E]->fuel:1/3, life:0/3, landed?:F,
       Explorer got devoured by blackhole (id: -1) at Sector:3:3
@@ -1556,6 +1069,3 @@ action_left_after_reproduced:[53,J]->:1
     -JJJ   -Y--   PJW-   AYP-   JJ--   
   Explorer got devoured by blackhole (id: -1) at Sector:3:3
   The game has ended. You can start a new game.
-[0,E],3,3landed:False,fuel1
-[2,P][4,P][8,P][9,J][14,P][16,P][17,J][19,P][21,J][25,J][27,J][32,P][34,J][38,A][42,J][43,J][44,J][45,J][47,J][48,J][49,J][51,J][52,J][53,J][54,J]
-[keys:[42,J],result:[54,J]Explorer got devoured by blackhole (id: -1) at Sector:3:3

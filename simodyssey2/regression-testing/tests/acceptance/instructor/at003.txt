@@ -1,5 +1,4 @@
 --Tests losing condition in test mode (lose by out of life).
-toggle_RNG_out
 test(20,40,70,80,100)
 pass
 pass

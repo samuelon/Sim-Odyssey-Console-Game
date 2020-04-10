@@ -54,7 +54,7 @@ feature -- action
 							if not p.is_visited then
 								shared_info.og_exp.set_true_landed
 								p.set_visited_true
-								io.put_string (p.id_out+"visited")
+								--io.put_string (p.id_out+"visited")
 								found := true
 								if p.is_support_life then
 									---??????

@@ -27,8 +27,7 @@ feature {NONE} -- Initialization
 			end_game := false
 			reset_routine
 			create main_msg.make
-			io.put_string (all_msg.welcome)
-
+--			io.put_string ("  state:0.0, ok%N  Welcome! Try test(3,5,7,15,30)")
 		end
 
 feature -- model attributes
@@ -54,6 +53,8 @@ feature -- boolean
 	abort_on : BOOLEAN
 	command_specific : BOOLEAN
 	end_game : BOOLEAN
+	land_on : BOOLEAN
+	liftoff_on : BOOLEAN
 
 
 feature -- model operations
@@ -95,16 +96,14 @@ feature -- model operations
 					end_game := true
 			-- lost
 				elseif not shared_info.galaxy.game_status.is_win and then shared_info.galaxy.game_status.is_over then
-				-- store expoloer death info
---					io.put_string ("check get")
 					d_temp := main_msg.sixth
 					set_command_specific_on
 					str.append ("  ")
 				--				io.put_string (shared_info.exp_death_msg)
 					str.append (shared_info.exp_death_msg)
-					str.append ("%N"+ all_msg.game_is_over)
+					str.append ("%N"+ all_msg.game_is_over+"%N")
 					main_msg.set_second (str)
-					main_msg.set_eight
+					main_msg.set_eight("  "+shared_info.exp_death_msg+"%N"+ all_msg.game_is_over)
 				--				in_game := false
 					end_game := true
 
@@ -185,6 +184,7 @@ feature -- model operations
 				if	attached p as p1 then
 					-- no unvisited inside land
 					p1.g.turn (l)
+					land_on := true
 				end
 			end
 
@@ -208,6 +208,7 @@ feature -- model operations
 				end
 				main_msg.set_second (all_msg.lift_off)
 				command_specific := true
+				liftoff_on := true
 			end
 
 		end
@@ -288,7 +289,7 @@ feature -- model operations
 		in_game := true
 		reset_routine
 		main_msg.set_second ("")
-		main_msg.set_eight
+		main_msg.set_eight("")
 		end_game := false
 --		if end_game then
 --			shared_info.reset_ent_id
@@ -324,11 +325,10 @@ feature -- model operations
 				status_on := true
 				if not shared_info.og_exp.landed then
 					main_msg.set_second (all_msg.status_not_landed)
-					command_specific := true
 				else
 					main_msg.set_second (all_msg.status_landed)
-					command_specific := true
 				end
+				command_specific := true
 				--print/set status
 			end
 		end
@@ -341,6 +341,8 @@ feature -- helper
 			status_on := false
 			face_error := false
 			abort_on := false
+			land_on := false
+			liftoff_on := false
 		end
 
 	reset_routine
@@ -376,12 +378,18 @@ feature -- queries
 	out : STRING
 		do
 			create Result.make_from_string ("  ")
-			result.append ("------------------%N") --debug
+			--result.append ("------------------%N") --debug
+
 			if i > 0 or e > 0 then
 				Result.append (main_msg.first)
+			else
+				result.append (all_msg.welcome)
 			end
 			if face_error or command_specific then -- command-specific (include exp death msg)
-				Result.append (main_msg.second+"%N")
+				Result.append (main_msg.second)
+				if not end_game and (land_on or liftoff_on )then
+					Result.append ("%N")
+				end
 			end
 
 			if
@@ -395,15 +403,10 @@ feature -- queries
 				end
 				Result.append (main_msg.seventh)
 			end
-			if test_on and shared_info.og_exp.dead then
+			if in_game and test_on and shared_info.og_exp.dead then
 				result.append ("%N")
 				Result.append(main_msg.eight)
 			end
-			Result.append ("%N"+shared_info.og_exp.id_out + "," + shared_info.og_exp.get_sector.print_sector+ "landed:"+ shared_info.og_exp.landed.out + ",fuel"+ shared_info.og_exp.fuel.out+"%N")
-			result.append (shared_info.galaxy.movable_sorted_out+"%N")
-			result.append (shared_info.out_removed_this_turn)
-			result.append (shared_info.exp_death_msg)
---			result.append (shared_info.destory_this_turn.out_destory_book)
 		end
 
 end

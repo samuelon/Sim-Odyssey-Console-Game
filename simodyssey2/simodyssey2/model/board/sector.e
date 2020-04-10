@@ -143,7 +143,7 @@ feature --function
 		shared_info.movable_id_plus_one
 		turns_left := gen.rchoose (0, 2) -- for this planet
 		ent.set_turns_left (turns_left)
-		io.put_string (ent.id_out + ent.cur_location_out + "turns_left" + turns_left.out + ":[0,2])"+ "%N")
+		--io.put_string (ent.id_out + ent.cur_location_out + "turns_left" + turns_left.out + ":[0,2])"+ "%N")
 --		movable_list.extend (ent)
 		planet_holder := void -- only difference from sector now
 	end
@@ -215,14 +215,14 @@ feature --function
 				loop_counter > entity_quad.count or removed
 			loop
 				if attached entity_quad [loop_counter] as ent then
-						--					io.put_string ("fx")
+						--					--io.put_string ("fx")
 					if ent.id ~ new_component.id and ent.en ~ new_component.en then
 						--
 						create{ENTITY_ALPHABET}empty_en_alp.make ('-')
 						create{EMPTY}empty_en.make
 						entity_quad [loop_counter] := empty_en--void
 						contents [loop_counter] := void --void
---						io.put_string("removing this id, planet" +new_component.id.out+ "%N")
+--						--io.put_string("removing this id, planet" +new_component.id.out+ "%N")
 						removed := true
 						if attached{NON_STATIONARY}ent as mov then
 							movable_list.prune_all (mov)
