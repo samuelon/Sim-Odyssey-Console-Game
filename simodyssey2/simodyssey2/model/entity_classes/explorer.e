@@ -18,6 +18,7 @@ feature  -- Initialization
 		life : INTEGER
 		landed : BOOLEAN
 		face_error : BOOLEAN
+		d_malevolent : BOOLEAN
 		wins : BOOLEAN --land_on_planet_support_life
 
 	make(idv :INTEGER;a_row : INTEGER ; a_col : INTEGER) --how do we make the sector while referring to itself.
@@ -29,6 +30,7 @@ feature  -- Initialization
 			landed := FALSE
 			dead := false
 			wins := FALSE
+			d_malevolent := FALSE
 			create en.make ('E') --letter
 			row := a_row
 			col := a_col
@@ -50,6 +52,11 @@ feature -- modifiers
 	set_wins
 	do
 		wins := true
+	end
+
+	set_d_malevolent
+	do
+		d_malevolent := true
 	end
 
 	set_life( i : INTEGER)

@@ -80,10 +80,10 @@ feature -- Error Messages
 		do Result := ("  Negative on that request:no yellow dwarf at Sector:"+state_memory.og_exp.get_sector.print_sector_spec) end
 
 	error_land_no_planet: STRING
-		do Result:= ("  Negative on that request:no planet at Sector:"+state_memory.og_exp.get_sector.print_sector_spec) end
+		do Result:= ("  Negative on that request:no planets at Sector:"+state_memory.og_exp.get_sector.print_sector_spec) end
 
 	error_land_no_visited_planet:STRING
-		 do Result := ("  Negative on that request:no visited planet at Sector:"+state_memory.og_exp.get_sector.print_sector_spec) end
+		 do Result := ("  Negative on that request:no unvisited attached planet at Sector:"+state_memory.og_exp.get_sector.print_sector_spec) end
 
 
 	error_liftoff_not_on_a_planet : STRING

@@ -1,8 +1,4 @@
-test(3,5,7,15,30)
-pass
-pass
-pass
-pass
-pass
-pass
-pass
+test(25,30,35,40,70)
+move(NE)
+land
+move(SE)

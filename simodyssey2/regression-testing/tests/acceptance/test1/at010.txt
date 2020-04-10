@@ -1,0 +1,10 @@
+test(25,30,35,40,70)
+move(NE)
+land
+move(SE)
+move(N)
+wormhole
+move(NE)
+land
+liftoff
+land

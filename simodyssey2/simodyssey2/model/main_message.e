@@ -259,26 +259,28 @@ feature --quires
 						result.append (black_hole_common (temp[i]))
 					else
 						if attached{EBMJ_COMMON}temp[i] as ebmj then
-							if ebmj.fuel = 0 then
+							if ebmj.fuel = 0 then -- all
 								io.put_string (ebmj.id_out)
 								result.append ("      " + ebmj.dmsg_out_of_fuel (ebmj))
 								if ebmj.is_explorer then
 									shared_info.set_exp_death_msg (ebmj.dmsg_out_of_fuel (ebmj))
 
 								end
-							elseif attached{EXPLORER}ebmj as e then
-								if e.life = 0 then
+							elseif attached{EXPLORER}ebmj as e then -- exp
+								if e.d_malevolent then
 									result.append ("      " + e.dmsg_death_malevolent)
 									shared_info.set_exp_death_msg(e.dmsg_death_malevolent)
 								end
-							else
-								result.append ("      " + temp[i].dmsg_reason (temp[i]))
-								if ebmj.is_explorer then
-
+								if e.d_asteroid then
+									result.append ("      " + temp[i].dmsg_reason (temp[i]))
 									shared_info.set_exp_death_msg ( temp[i].dmsg_reason (temp[i]))
 								end
+
+							else -- other ebmj
+								result.append ("      " + temp[i].dmsg_reason (temp[i]))
+
 							end
-						else
+						else -- a & p
 							result.append ("      " + temp[i].dmsg_reason (temp[i]))
 						end
 					end

@@ -1,0 +1,1857 @@
+  state:0.0, ok
+  Welcome! Try test(3,5,7,15,30)[1,P][1,1,2]turns_left1:[0,2])
+[2,P][1,2,1]turns_left0:[0,2])
+[3,B][1,2,2]turns_left1:[0,2])
+[4,P][1,3,1]turns_left0:[0,2])
+[5,P][1,3,2]turns_left0:[0,2])
+[6,M][1,4,1]turns_left0:[0,2])
+[7,B][2,2,1]turns_left0:[0,2])
+[8,B][2,3,1]turns_left2:[0,2])
+[9,J][2,3,2]turns_left2:[0,2])
+[10,B][2,4,1]turns_left1:[0,2])
+[11,B][2,4,2]turns_left1:[0,2])
+[12,B][2,5,1]turns_left2:[0,2])
+[13,P][3,1,1]turns_left0:[0,2])
+[14,P][3,1,2]turns_left1:[0,2])
+[15,B][3,4,1]turns_left0:[0,2])
+[16,P][4,1,1]turns_left0:[0,2])
+[17,M][4,2,1]turns_left1:[0,2])
+[18,P][4,4,1]turns_left0:[0,2])
+[19,P][5,2,1]turns_left0:[0,2])
+[20,B][5,3,1]turns_left2:[0,2])
+[21,B][5,3,2]turns_left1:[0,2])
+[22,J][5,3,3]turns_left2:[0,2])
+[23,P][5,4,1]turns_left1:[0,2])
+[4,P]->8:[1,8])
+(P->[4,P]0:[0,2])
+[5,P]->6:[1,8])
+[6,M]->7:[1,8])
+(actions_left_before_reproduced[6,M]->:1
+action_left_after_reproduced:[6,M]->:0
+(M->[6,M]2:[0,2])
+[7,B]->8:[1,8])
+(actions_left_before_reproduced[7,B]->:1
+action_left_after_reproduced:[7,B]->:0
+(B->[7,B]2:[0,2])
+[13,P]->8:[1,8])
+(P->[13,P]0:[0,2])
+[15,B]->6:[1,8])
+(actions_left_before_reproduced[15,B]->:1
+action_left_after_reproduced:[15,B]->:0
+(B->[15,B]0:[0,2])
+[16,P]->5:[1,8])
+(P->2:[1,2])
+[18,P]->4:[1,8])
+(P->[18,P]2:[0,2])
+[19,P]->5:[1,8])
+[1,P]->2:[1,8])
+(P->[1,P]1:[0,2])
+[3,B]->8:[1,8])
+(actions_left_before_reproduced[3,B]->:1
+action_left_after_reproduced:[3,B]->:0
+(B->[3,B]2:[0,2])
+[4,P]->1:[1,8])
+[10,B]want to use wormhole(4,3)[10,B]use wormhole successully[2,4,1][4,3,2](actions_left_before_reproduced[10,B]->:1
+action_left_after_reproduced:[10,B]->:0
+(B->[10,B]0:[0,2])
+[11,B]want to use wormhole(3,5)[11,B]use wormhole successully[2,4,2][3,5,2](actions_left_before_reproduced[11,B]->:1
+action_left_after_reproduced:[11,B]->:0
+(B->[11,B]1:[0,2])
+[13,P]->8:[1,8])
+(P->[13,P]1:[0,2])
+[14,P]->7:[1,8])
+(P->[14,P]2:[0,2])
+[15,B]->4:[1,8])
+(actions_left_before_reproduced[15,B]->:0
+[24,B][5,4,3]turns_left1:[0,2])
+action_left_after_reproduced:[15,B]->:1
+(B->[15,B]2:[0,2])
+[17,M]->5:[1,8])
+(actions_left_before_reproduced[17,M]->:1
+action_left_after_reproduced:[17,M]->:0
+(M->[17,M]1:[0,2])
+[21,B]->7:[1,8])
+(actions_left_before_reproduced[21,B]->:1
+action_left_after_reproduced:[21,B]->:0
+(B->[21,B]2:[0,2])
+[23,P]->4:[1,8])
+(P->[23,P]1:[0,2])
+[8,B]->8:[1,8])
+(actions_left_before_reproduced[8,B]->:1
+action_left_after_reproduced:[8,B]->:0
+(B->[8,B]0:[0,2])
+[9,J]->2:[1,8])
+(actions_left_before_reproduced[9,J]->:2
+action_left_after_reproduced:[9,J]->:1
+(J->[9,J]2:[0,2])
+[10,B]->6:[1,8])
+(actions_left_before_reproduced[10,B]->:0
+[25,B][5,2,4]turns_left2:[0,2])
+action_left_after_reproduced:[10,B]->:1
+(B->[10,B]2:[0,2])
+[12,B]->8:[1,8])
+(actions_left_before_reproduced[12,B]->:1
+action_left_after_reproduced:[12,B]->:0
+(B->[12,B]2:[0,2])
+[20,B]->4:[1,8])
+(actions_left_before_reproduced[20,B]->:1
+action_left_after_reproduced:[20,B]->:0
+(B->[20,B]2:[0,2])
+[22,J]->5:[1,8])
+(actions_left_before_reproduced[22,J]->:2
+action_left_after_reproduced:[22,J]->:1
+(J->[22,J]2:[0,2])
+[1,P]->7:[1,8])
+(P->2:[1,2])
+[6,M]->1:[1,8])
+(actions_left_before_reproduced[6,M]->:0
+[26,M][5,3,2]turns_left2:[0,2])
+action_left_after_reproduced:[6,M]->:1
+(M->[6,M]2:[0,2])
+[7,B]->6:[1,8])
+(actions_left_before_reproduced[7,B]->:0
+[27,B][2,5,2]turns_left1:[0,2])
+action_left_after_reproduced:[7,B]->:1
+(B->[7,B]1:[0,2])
+[8,B]->6:[1,8])
+(actions_left_before_reproduced[8,B]->:0
+[28,B][2,1,2]turns_left0:[0,2])
+action_left_after_reproduced:[8,B]->:1
+(B->[8,B]2:[0,2])
+[11,B]want to use wormhole(1,1)[11,B]use wormhole successully[3,5,2][1,1,1](actions_left_before_reproduced[11,B]->:0
+[29,B][1,1,2]turns_left0:[0,2])
+action_left_after_reproduced:[11,B]->:1
+(B->[11,B]1:[0,2])
+[13,P]->1:[1,8])
+(P->[13,P]2:[0,2])
+[18,P]->6:[1,8])
+(P->[18,P]1:[0,2])
+[23,P]->7:[1,8])
+(P->[23,P]1:[0,2])
+[24,B]->4:[1,8])
+(actions_left_before_reproduced[24,B]->:1
+action_left_after_reproduced:[24,B]->:0
+(B->[24,B]0:[0,2])
+[3,B]->3:[1,8])
+(actions_left_before_reproduced[3,B]->:0
+action_left_after_reproduced:[3,B]->:0
+(B->[3,B]2:[0,2])
+[14,P]->1:[1,8])
+(P->[14,P]0:[0,2])
+[15,B]->3:[1,8])
+[21,B]->2:[1,8])
+(actions_left_before_reproduced[21,B]->:0
+[30,B][4,3,2]turns_left0:[0,2])
+action_left_after_reproduced:[21,B]->:1
+(B->[21,B]0:[0,2])
+[24,B]->1:[1,8])
+(actions_left_before_reproduced[24,B]->:0
+[31,B][5,5,3]turns_left0:[0,2])
+action_left_after_reproduced:[24,B]->:1
+(B->[24,B]1:[0,2])
+[28,B]->7:[1,8])
+(actions_left_before_reproduced[28,B]->:1
+action_left_after_reproduced:[28,B]->:0
+(B->[28,B]1:[0,2])
+[29,B]->1:[1,8])
+(actions_left_before_reproduced[29,B]->:1
+action_left_after_reproduced:[29,B]->:0
+(B->[29,B]1:[0,2])
+[15,B][7,B]->8:[1,8])
+(actions_left_before_reproduced[7,B]->:1
+action_left_after_reproduced:[7,B]->:0
+(B->[7,B]1:[0,2])
+[9,J]->2:[1,8])
+(actions_left_before_reproduced[9,J]->:1
+action_left_after_reproduced:[9,J]->:0
+(J->[9,J]2:[0,2])
+[10,B]->5:[1,8])
+(actions_left_before_reproduced[10,B]->:1
+action_left_after_reproduced:[10,B]->:0
+(B->[10,B]2:[0,2])
+[11,B]->7:[1,8])
+(actions_left_before_reproduced[11,B]->:1
+action_left_after_reproduced:[11,B]->:0
+(B->[11,B]1:[0,2])
+[12,B]->1:[1,8])
+(actions_left_before_reproduced[12,B]->:0
+[32,B][5,4,3]turns_left2:[0,2])
+action_left_after_reproduced:[12,B]->:1
+(B->[12,B]1:[0,2])
+[14,P]->5:[1,8])
+(P->[14,P]1:[0,2])
+[18,P]->2:[1,8])
+(P->[18,P]0:[0,2])
+[20,B]->6:[1,8])
+(actions_left_before_reproduced[20,B]->:0
+[33,B][2,3,2]turns_left0:[0,2])
+action_left_after_reproduced:[20,B]->:1
+(B->[20,B]1:[0,2])
+[21,B]->6:[1,8])
+[22,J]->6:[1,8])
+(actions_left_before_reproduced[22,J]->:1
+action_left_after_reproduced:[22,J]->:0
+(J->[22,J]1:[0,2])
+[23,P]->4:[1,8])
+(P->[23,P]2:[0,2])
+[25,B]->8:[1,8])
+(actions_left_before_reproduced[25,B]->:1
+action_left_after_reproduced:[25,B]->:0
+(B->[25,B]0:[0,2])
+[27,B]->6:[1,8])
+(actions_left_before_reproduced[27,B]->:1
+action_left_after_reproduced:[27,B]->:0
+(B->[27,B]2:[0,2])
+[30,B]->7:[1,8])
+(actions_left_before_reproduced[30,B]->:1
+action_left_after_reproduced:[30,B]->:0
+(B->[30,B]1:[0,2])
+[31,B]want to use wormhole(5,2)[31,B]use wormhole successully[5,5,3][5,2,2](actions_left_before_reproduced[31,B]->:1
+action_left_after_reproduced:[31,B]->:0
+(B->[31,B]1:[0,2])
+[21,B][6,M]->1:[1,8])
+(actions_left_before_reproduced[6,M]->:1
+action_left_after_reproduced:[6,M]->:0
+(M->[6,M]0:[0,2])
+[8,B]->1:[1,8])
+(actions_left_before_reproduced[8,B]->:1
+action_left_after_reproduced:[8,B]->:0
+(B->[8,B]0:[0,2])
+[13,P]->4:[1,8])
+(P->[13,P]0:[0,2])
+[18,P]->3:[1,8])
+(P->[18,P]0:[0,2])
+[24,B]want to use wormhole(3,2)[24,B]use wormhole successully[5,5,2][3,2,2](actions_left_before_reproduced[24,B]->:1
+action_left_after_reproduced:[24,B]->:0
+(B->[24,B]1:[0,2])
+[25,B]->6:[1,8])
+(actions_left_before_reproduced[25,B]->:0
+[34,B][5,5,3]turns_left2:[0,2])
+action_left_after_reproduced:[25,B]->:1
+(B->[25,B]2:[0,2])
+[26,M]->4:[1,8])
+(actions_left_before_reproduced[26,M]->:1
+action_left_after_reproduced:[26,M]->:0
+(M->[26,M]1:[0,2])
+[28,B]->1:[1,8])
+(actions_left_before_reproduced[28,B]->:0
+action_left_after_reproduced:[28,B]->:0
+(B->[28,B]0:[0,2])
+[29,B]->5:[1,8])
+(actions_left_before_reproduced[29,B]->:0
+[35,B][2,1,3]turns_left2:[0,2])
+action_left_after_reproduced:[29,B]->:1
+(B->[29,B]2:[0,2])
+[33,B]->1:[1,8])
+(actions_left_before_reproduced[33,B]->:1
+action_left_after_reproduced:[33,B]->:0
+(B->[33,B]1:[0,2])
+[3,B]->3:[1,8])
+(actions_left_before_reproduced[3,B]->:0
+[36,B][5,2,4]turns_left2:[0,2])
+action_left_after_reproduced:[3,B]->:1
+(B->[3,B]0:[0,2])
+[6,M]->4:[1,8])
+(actions_left_before_reproduced[6,M]->:0
+[37,M][5,4,4]turns_left0:[0,2])
+action_left_after_reproduced:[6,M]->:1
+(M->[6,M]1:[0,2])
+[7,B]->6:[1,8])
+[8,B]->7:[1,8])
+(actions_left_before_reproduced[8,B]->:0
+[38,B][1,1,2]turns_left2:[0,2])
+action_left_after_reproduced:[8,B]->:1
+(B->[8,B]2:[0,2])
+[11,B]->1:[1,8])
+(actions_left_before_reproduced[11,B]->:0
+action_left_after_reproduced:[11,B]->:0
+(B->[11,B]0:[0,2])
+[12,B]->6:[1,8])
+[13,P]->3:[1,8])
+(P->[13,P]2:[0,2])
+[14,P]->5:[1,8])
+(P->[14,P]0:[0,2])
+[18,P]->6:[1,8])
+(P->[18,P]0:[0,2])
+[20,B]->6:[1,8])
+(actions_left_before_reproduced[20,B]->:1
+action_left_after_reproduced:[20,B]->:0
+(B->[20,B]0:[0,2])
+[22,J]->7:[1,8])
+(actions_left_before_reproduced[22,J]->:0
+action_left_after_reproduced:[22,J]->:0
+(J->[22,J]2:[0,2])
+[28,B]->2:[1,8])
+(actions_left_before_reproduced[28,B]->:0
+action_left_after_reproduced:[28,B]->:0
+(B->[28,B]2:[0,2])
+[30,B]->7:[1,8])
+(actions_left_before_reproduced[30,B]->:0
+[39,B][4,1,2]turns_left2:[0,2])
+action_left_after_reproduced:[30,B]->:1
+(B->[30,B]1:[0,2])
+[31,B]->6:[1,8])
+(actions_left_before_reproduced[31,B]->:0
+action_left_after_reproduced:[31,B]->:0
+(B->[31,B]1:[0,2])
+[7,B][12,B][3,B]->3:[1,8])
+(actions_left_before_reproduced[3,B]->:1
+action_left_after_reproduced:[3,B]->:0
+(B->[3,B]1:[0,2])
+[9,J]->3:[1,8])
+(actions_left_before_reproduced[9,J]->:0
+action_left_after_reproduced:[9,J]->:0
+(J->[9,J]0:[0,2])
+[10,B]->3:[1,8])
+(actions_left_before_reproduced[10,B]->:0
+[40,B][1,3,3]turns_left1:[0,2])
+action_left_after_reproduced:[10,B]->:1
+(B->[10,B]0:[0,2])
+[11,B]->3:[1,8])
+(actions_left_before_reproduced[11,B]->:0
+[41,B][1,5,1]turns_left1:[0,2])
+action_left_after_reproduced:[11,B]->:1
+(B->[11,B]0:[0,2])
+[14,P]->2:[1,8])
+(P->[14,P]1:[0,2])
+[18,P]->1:[1,8])
+(P->[18,P]1:[0,2])
+[20,B]->6:[1,8])
+(actions_left_before_reproduced[20,B]->:0
+[42,B][4,1,4]turns_left2:[0,2])
+action_left_after_reproduced:[20,B]->:1
+(B->[20,B]0:[0,2])
+[23,P]->8:[1,8])
+(P->[23,P]0:[0,2])
+[24,B]->6:[1,8])
+(actions_left_before_reproduced[24,B]->:0
+[43,B][3,2,3]turns_left1:[0,2])
+action_left_after_reproduced:[24,B]->:1
+(B->[24,B]2:[0,2])
+[26,M]->4:[1,8])
+(actions_left_before_reproduced[26,M]->:0
+[44,M][2,5,2]turns_left0:[0,2])
+action_left_after_reproduced:[26,M]->:1
+(M->[26,M]2:[0,2])
+[27,B]->7:[1,8])
+[32,B]->4:[1,8])
+(actions_left_before_reproduced[32,B]->:1
+action_left_after_reproduced:[32,B]->:0
+(B->[32,B]2:[0,2])
+[33,B]->2:[1,8])
+(actions_left_before_reproduced[33,B]->:0
+[45,B][5,4,3]turns_left1:[0,2])
+action_left_after_reproduced:[33,B]->:1
+(B->[33,B]0:[0,2])
+[9,J]->5:[1,8])
+(actions_left_before_reproduced[9,J]->:0
+action_left_after_reproduced:[9,J]->:0
+(J->[9,J]2:[0,2])
+[10,B]->4:[1,8])
+(actions_left_before_reproduced[10,B]->:1
+action_left_after_reproduced:[10,B]->:0
+(B->[10,B]2:[0,2])
+[11,B]->1:[1,8])
+(actions_left_before_reproduced[11,B]->:1
+action_left_after_reproduced:[11,B]->:0
+(B->[11,B]0:[0,2])
+[20,B]->5:[1,8])
+(actions_left_before_reproduced[20,B]->:1
+action_left_after_reproduced:[20,B]->:0
+(B->[20,B]1:[0,2])
+[23,P]->3:[1,8])
+(P->[23,P]2:[0,2])
+[25,B]want to use wormhole(5,1)[25,B]want to use wormhole(3,4)[25,B]use wormhole successully[5,5,2][3,4,1](actions_left_before_reproduced[25,B]->:1
+action_left_after_reproduced:[25,B]->:0
+(B->[25,B]2:[0,2])
+[29,B]->3:[1,8])
+(actions_left_before_reproduced[29,B]->:1
+action_left_after_reproduced:[29,B]->:0
+(B->[29,B]0:[0,2])
+[30,B]->4:[1,8])
+(actions_left_before_reproduced[30,B]->:1
+action_left_after_reproduced:[30,B]->:0
+(B->[30,B]2:[0,2])
+[31,B]->2:[1,8])
+(actions_left_before_reproduced[31,B]->:0
+action_left_after_reproduced:[31,B]->:0
+(B->[31,B]1:[0,2])
+[33,B]->8:[1,8])
+[34,B]want to use wormhole(5,3)[34,B]use wormhole successully[5,5,3][5,3,2](actions_left_before_reproduced[34,B]->:1
+action_left_after_reproduced:[34,B]->:0
+(B->[34,B]2:[0,2])
+[35,B]->3:[1,8])
+(actions_left_before_reproduced[35,B]->:1
+action_left_after_reproduced:[35,B]->:0
+(B->[35,B]1:[0,2])
+[44,M]->6:[1,8])
+(actions_left_before_reproduced[44,M]->:1
+action_left_after_reproduced:[44,M]->:0
+(M->[44,M]0:[0,2])
+[33,B][3,B]->7:[1,8])
+(actions_left_before_reproduced[3,B]->:0
+[46,B][5,3,3]turns_left1:[0,2])
+action_left_after_reproduced:[3,B]->:1
+(B->[3,B]2:[0,2])
+[8,B]->4:[1,8])
+(actions_left_before_reproduced[8,B]->:1
+action_left_after_reproduced:[8,B]->:0
+(B->[8,B]0:[0,2])
+[11,B]->3:[1,8])
+(actions_left_before_reproduced[11,B]->:0
+action_left_after_reproduced:[11,B]->:0
+(B->[11,B]0:[0,2])
+[13,P]->5:[1,8])
+(P->[13,P]1:[0,2])
+[14,P]->8:[1,8])
+(P->[14,P]2:[0,2])
+[18,P]->1:[1,8])
+(P->[18,P]0:[0,2])
+[22,J]->6:[1,8])
+(actions_left_before_reproduced[22,J]->:0
+[47,J][3,5,3]turns_left1:[0,2])
+action_left_after_reproduced:[22,J]->:2
+(J->[22,J]1:[0,2])
+[28,B]->5:[1,8])
+(actions_left_before_reproduced[28,B]->:0
+action_left_after_reproduced:[28,B]->:0
+(B->[28,B]2:[0,2])
+[29,B]->7:[1,8])
+(actions_left_before_reproduced[29,B]->:0
+[48,B][2,1,3]turns_left1:[0,2])
+action_left_after_reproduced:[29,B]->:1
+(B->[29,B]0:[0,2])
+[36,B]->3:[1,8])
+(actions_left_before_reproduced[36,B]->:1
+action_left_after_reproduced:[36,B]->:0
+(B->[36,B]0:[0,2])
+[38,B]->7:[1,8])
+(actions_left_before_reproduced[38,B]->:1
+action_left_after_reproduced:[38,B]->:0
+(B->[38,B]1:[0,2])
+[39,B]->3:[1,8])
+(actions_left_before_reproduced[39,B]->:1
+action_left_after_reproduced:[39,B]->:0
+(B->[39,B]1:[0,2])
+[40,B]->5:[1,8])
+(actions_left_before_reproduced[40,B]->:1
+action_left_after_reproduced:[40,B]->:0
+(B->[40,B]0:[0,2])
+[41,B]->5:[1,8])
+(actions_left_before_reproduced[41,B]->:1
+action_left_after_reproduced:[41,B]->:0
+(B->[41,B]1:[0,2])
+[43,B]->7:[1,8])
+(actions_left_before_reproduced[43,B]->:1
+action_left_after_reproduced:[43,B]->:0
+(B->[43,B]2:[0,2])
+[44,M]->5:[1,8])
+(actions_left_before_reproduced[44,M]->:0
+[49,M][4,4,2]turns_left0:[0,2])
+action_left_after_reproduced:[44,M]->:1
+(M->[44,M]1:[0,2])
+[45,B]->3:[1,8])
+(actions_left_before_reproduced[45,B]->:1
+action_left_after_reproduced:[45,B]->:0
+(B->[45,B]1:[0,2])
+[8,B]->5:[1,8])
+[11,B]->6:[1,8])
+[18,P]->3:[1,8])
+(P->[18,P]2:[0,2])
+[20,B]->1:[1,8])
+(actions_left_before_reproduced[20,B]->:0
+[50,B][3,1,3]turns_left1:[0,2])
+action_left_after_reproduced:[20,B]->:1
+(B->[20,B]2:[0,2])
+[24,B]->2:[1,8])
+(actions_left_before_reproduced[24,B]->:1
+action_left_after_reproduced:[24,B]->:0
+(B->[24,B]0:[0,2])
+[29,B]->1:[1,8])
+(actions_left_before_reproduced[29,B]->:1
+action_left_after_reproduced:[29,B]->:0
+(B->[29,B]0:[0,2])
+[31,B]->1:[1,8])
+(actions_left_before_reproduced[31,B]->:0
+action_left_after_reproduced:[31,B]->:0
+(B->[31,B]1:[0,2])
+[32,B]->7:[1,8])
+(actions_left_before_reproduced[32,B]->:0
+[51,B][1,4,2]turns_left2:[0,2])
+action_left_after_reproduced:[32,B]->:1
+(B->[32,B]0:[0,2])
+[35,B]->5:[1,8])
+(actions_left_before_reproduced[35,B]->:0
+[52,B][3,2,3]turns_left0:[0,2])
+action_left_after_reproduced:[35,B]->:1
+(B->[35,B]0:[0,2])
+[36,B]->6:[1,8])
+(actions_left_before_reproduced[36,B]->:0
+[53,B][1,1,4]turns_left2:[0,2])
+action_left_after_reproduced:[36,B]->:1
+(B->[36,B]0:[0,2])
+[40,B]->8:[1,8])
+(actions_left_before_reproduced[40,B]->:0
+action_left_after_reproduced:[40,B]->:0
+(B->[40,B]1:[0,2])
+[42,B]->8:[1,8])
+(actions_left_before_reproduced[42,B]->:1
+action_left_after_reproduced:[42,B]->:0
+(B->[42,B]1:[0,2])
+[49,M]->3:[1,8])
+(actions_left_before_reproduced[49,M]->:1
+action_left_after_reproduced:[49,M]->:0
+(M->[49,M]1:[0,2])
+[8,B][11,B]is_planetcast planet[1,P]visited  ------------------
+
+[0,E],0,0landed:False,fuel3
+
+
+->test(5,10,15,40,60)
+  ------------------
+  state:1.0, mode:test, ok
+  Movement:none
+  Sectors:
+    [1,1]->[0,E],[1,P],-,-sorted_ent:[0,E],sorted_ent:[1,P],movable_list[0,E],movable_list[1,P],
+    [1,2]->[2,P],[3,B],[-3,*],-sorted_ent:[-3,*],sorted_ent:[2,P],sorted_ent:[3,B],movable_list[2,P],movable_list[3,B],
+    [1,3]->[4,P],[5,P],-,-sorted_ent:[4,P],sorted_ent:[5,P],movable_list[4,P],movable_list[5,P],
+    [1,4]->[6,M],-,-,-sorted_ent:[6,M],movable_list[6,M],
+    [1,5]->-,-,-,-
+    [2,1]->-,-,-,-
+    [2,2]->[7,B],[-9,*],-,-sorted_ent:[-9,*],sorted_ent:[7,B],movable_list[7,B],
+    [2,3]->[8,B],[9,J],-,-sorted_ent:[8,B],sorted_ent:[9,J],movable_list[8,B],movable_list[9,J],
+    [2,4]->[10,B],[11,B],[-10,W],-sorted_ent:[-10,W],sorted_ent:[10,B],sorted_ent:[11,B],movable_list[10,B],movable_list[11,B],
+    [2,5]->[12,B],-,-,-sorted_ent:[12,B],movable_list[12,B],
+    [3,1]->[13,P],[14,P],-,-sorted_ent:[13,P],sorted_ent:[14,P],movable_list[13,P],movable_list[14,P],
+    [3,2]->[-6,*],-,-,-sorted_ent:[-6,*],
+    [3,3]->[-1,O],-,-,-sorted_ent:[-1,O],
+    [3,4]->[15,B],-,-,-sorted_ent:[15,B],movable_list[15,B],
+    [3,5]->[-11,W],-,-,-sorted_ent:[-11,W],
+    [4,1]->[16,P],-,-,-sorted_ent:[16,P],movable_list[16,P],
+    [4,2]->[17,M],[-2,*],-,-sorted_ent:[-2,*],sorted_ent:[17,M],movable_list[17,M],
+    [4,3]->-,-,-,-
+    [4,4]->[18,P],-,-,-sorted_ent:[18,P],movable_list[18,P],
+    [4,5]->[-7,W],-,-,-sorted_ent:[-7,W],
+    [5,1]->[-5,Y],-,-,-sorted_ent:[-5,Y],
+    [5,2]->[19,P],-,-,-sorted_ent:[19,P],movable_list[19,P],
+    [5,3]->[20,B],[21,B],[22,J],[-8,Y]sorted_ent:[-8,Y],sorted_ent:[20,B],sorted_ent:[21,B],sorted_ent:[22,J],movable_list[20,B],movable_list[21,B],movable_list[22,J],
+    [5,4]->[23,P],-,-,-sorted_ent:[23,P],movable_list[23,P],
+    [5,5]->[-4,W],-,-,-sorted_ent:[-4,W],
+  Descriptions:
+    [-11,W]->
+    [-10,W]->
+    [-9,*]->Luminosity:5
+    [-8,Y]->Luminosity:2
+    [-7,W]->
+    [-6,*]->Luminosity:5
+    [-5,Y]->Luminosity:2
+    [-4,W]->
+    [-3,*]->Luminosity:5
+    [-2,*]->Luminosity:5
+    [-1,O]->
+    [0,E]->fuel:3/3, life:3/3, landed?:Fold_pos:[1,1,1]cur_pos:[1,1,1]use_wormhole?False
+    [1,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[1,1,2]cur_pos:[1,1,2]
+    [2,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,2,1]cur_pos:[1,2,1]
+    [3,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[1,2,2]cur_pos:[1,2,2]use_wormhole?False
+    [4,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,3,1]cur_pos:[1,3,1]
+    [5,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,3,2]cur_pos:[1,3,2]
+    [6,M]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[1,4,1]cur_pos:[1,4,1]use_wormhole?False
+    [7,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[2,2,1]cur_pos:[2,2,1]use_wormhole?False
+    [8,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[2,3,1]cur_pos:[2,3,1]use_wormhole?False
+    [9,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:2old_pos:[2,3,2]cur_pos:[2,3,2]
+    [10,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[2,4,1]cur_pos:[2,4,1]use_wormhole?False
+    [11,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[2,4,2]cur_pos:[2,4,2]use_wormhole?False
+    [12,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[2,5,1]cur_pos:[2,5,1]use_wormhole?False
+    [13,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[3,1,1]cur_pos:[3,1,1]
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[3,1,2]cur_pos:[3,1,2]
+    [15,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[3,4,1]cur_pos:[3,4,1]use_wormhole?False
+    [16,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[4,1,1]cur_pos:[4,1,1]
+    [17,M]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[4,2,1]cur_pos:[4,2,1]use_wormhole?False
+    [18,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[4,4,1]cur_pos:[4,4,1]
+    [19,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[5,2,1]cur_pos:[5,2,1]
+    [20,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[5,3,1]cur_pos:[5,3,1]use_wormhole?False
+    [21,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[5,3,2]cur_pos:[5,3,2]use_wormhole?False
+    [22,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:2old_pos:[5,3,3]cur_pos:[5,3,3]
+    [23,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[5,4,1]cur_pos:[5,4,1]
+  Deaths This Turn:none
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    EP--   PB*-   PP--   M---   ----   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    ----   B*--   BJ--   BBW-   B---   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    PP--   *---   O---   B---   W---   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    P---   M*--   ----   P---   W---   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    Y---   P---   BBJY   P---   W---   
+[0,E],1,1landed:False,fuel3
+[0,E][1,P][2,P][3,B][4,P][5,P][6,M][7,B][8,B][9,J][10,B][11,B][12,B][13,P][14,P][15,B][16,P][17,M][18,P][19,P][20,B][21,B][22,J][23,P]
+
+->pass
+  ------------------
+  state:2.0, mode:test, ok
+  Movement:
+    [4,P]:[1,3,1]->[5,2,2]
+    [5,P]:[1,3,2]->[2,2,3]
+    [6,M]:[1,4,1]->[1,3,1]
+    [7,B]:[2,2,1]->[1,1,3]
+    [13,P]:[3,1,1]->[2,5,2]
+    [15,B]:[3,4,1]->[4,3,1]
+    [16,P]:[4,1,1]->[5,1,2]
+    [18,P]:[4,4,1]->[5,5,2]
+    [19,P]:[5,2,1]->[1,2,4]
+  Sectors:
+    [1,1]->[0,E],[1,P],[7,B],-sorted_ent:[0,E],sorted_ent:[1,P],sorted_ent:[7,B],movable_list[0,E],movable_list[1,P],movable_list[7,B],
+    [1,2]->[2,P],[3,B],[-3,*],[19,P]sorted_ent:[-3,*],sorted_ent:[2,P],sorted_ent:[3,B],sorted_ent:[19,P],movable_list[2,P],movable_list[3,B],movable_list[19,P],
+    [1,3]->[6,M],-,-,-sorted_ent:[-10000000,-],sorted_ent:[6,M],
+    [1,4]->-,-,-,-sorted_ent:[-10000000,-],
+    [1,5]->-,-,-,-
+    [2,1]->-,-,-,-
+    [2,2]->-,[-9,*],[5,P],-sorted_ent:[-10000000,-],sorted_ent:[-9,*],sorted_ent:[5,P],movable_list[5,P],
+    [2,3]->[8,B],[9,J],-,-sorted_ent:[8,B],sorted_ent:[9,J],movable_list[8,B],movable_list[9,J],
+    [2,4]->[10,B],[11,B],[-10,W],-sorted_ent:[-10,W],sorted_ent:[10,B],sorted_ent:[11,B],movable_list[10,B],movable_list[11,B],
+    [2,5]->[12,B],[13,P],-,-sorted_ent:[12,B],sorted_ent:[13,P],movable_list[12,B],movable_list[13,P],
+    [3,1]->-,[14,P],-,-sorted_ent:[-10000000,-],sorted_ent:[14,P],movable_list[14,P],
+    [3,2]->[-6,*],-,-,-sorted_ent:[-6,*],
+    [3,3]->[-1,O],-,-,-sorted_ent:[-1,O],
+    [3,4]->-,-,-,-sorted_ent:[-10000000,-],
+    [3,5]->[-11,W],-,-,-sorted_ent:[-11,W],
+    [4,1]->-,-,-,-sorted_ent:[-10000000,-],
+    [4,2]->[17,M],[-2,*],-,-sorted_ent:[-2,*],sorted_ent:[17,M],movable_list[17,M],
+    [4,3]->[15,B],-,-,-sorted_ent:[15,B],movable_list[15,B],
+    [4,4]->-,-,-,-sorted_ent:[-10000000,-],
+    [4,5]->[-7,W],-,-,-sorted_ent:[-7,W],
+    [5,1]->[-5,Y],[16,P],-,-sorted_ent:[-5,Y],sorted_ent:[16,P],movable_list[16,P],
+    [5,2]->-,[4,P],-,-sorted_ent:[-10000000,-],sorted_ent:[4,P],movable_list[4,P],
+    [5,3]->[20,B],[21,B],[22,J],[-8,Y]sorted_ent:[-8,Y],sorted_ent:[20,B],sorted_ent:[21,B],sorted_ent:[22,J],movable_list[20,B],movable_list[21,B],movable_list[22,J],
+    [5,4]->[23,P],-,-,-sorted_ent:[23,P],movable_list[23,P],
+    [5,5]->[-4,W],[18,P],-,-sorted_ent:[-4,W],sorted_ent:[18,P],movable_list[18,P],
+  Descriptions:
+    [-11,W]->
+    [-10,W]->
+    [-9,*]->Luminosity:5
+    [-8,Y]->Luminosity:2
+    [-7,W]->
+    [-6,*]->Luminosity:5
+    [-5,Y]->Luminosity:2
+    [-4,W]->
+    [-3,*]->Luminosity:5
+    [-2,*]->Luminosity:5
+    [-1,O]->
+    [0,E]->fuel:3/3, life:3/3, landed?:Fold_pos:[1,1,1]cur_pos:[1,1,1]use_wormhole?False
+    [1,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,1,2]cur_pos:[1,1,2]
+    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,2,1]cur_pos:[1,2,1]
+    [3,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[1,2,2]cur_pos:[1,2,2]use_wormhole?False
+    [4,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,3,1]cur_pos:[5,2,2]
+    [5,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,3,2]cur_pos:[2,2,3]
+    [6,M]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:2old_pos:[1,4,1]cur_pos:[1,3,1]use_wormhole?False
+    [7,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:2old_pos:[2,2,1]cur_pos:[1,1,3]use_wormhole?False
+    [8,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[2,3,1]cur_pos:[2,3,1]use_wormhole?False
+    [9,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[2,3,2]cur_pos:[2,3,2]
+    [10,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[2,4,1]cur_pos:[2,4,1]use_wormhole?False
+    [11,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[2,4,2]cur_pos:[2,4,2]use_wormhole?False
+    [12,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[2,5,1]cur_pos:[2,5,1]use_wormhole?False
+    [13,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[3,1,1]cur_pos:[2,5,2]
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[3,1,2]cur_pos:[3,1,2]
+    [15,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[3,4,1]cur_pos:[4,3,1]use_wormhole?False
+    [16,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[4,1,1]cur_pos:[5,1,2]
+    [17,M]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[4,2,1]cur_pos:[4,2,1]use_wormhole?False
+    [18,P]->attached?:F, support_life?:F, visited?:F, turns_left:2old_pos:[4,4,1]cur_pos:[5,5,2]
+    [19,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,1]cur_pos:[1,2,4]
+    [20,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[5,3,1]cur_pos:[5,3,1]use_wormhole?False
+    [21,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[5,3,2]cur_pos:[5,3,2]use_wormhole?False
+    [22,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[5,3,3]cur_pos:[5,3,3]
+    [23,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[5,4,1]cur_pos:[5,4,1]
+  Deaths This Turn:none
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    EPB-   PB*P   M---   ----   ----   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    ----   -*P-   BJ--   BBW-   BP--   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    -P--   *---   O---   ----   W---   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    ----   M*--   B---   ----   W---   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    YP--   -P--   BBJY   P---   WP--   
+[0,E],1,1landed:False,fuel3
+[0,E][1,P][2,P][3,B][4,P][5,P][6,M][7,B][8,B][9,J][10,B][11,B][12,B][13,P][14,P][15,B][16,P][17,M][18,P][19,P][20,B][21,B][22,J][23,P]
+
+->move(SE)
+  ------------------
+  state:3.0, mode:test, ok
+  Movement:
+    [0,E]:[1,1,1]->[2,2,1]
+    [1,P]:[1,1,2]->[5,2,1]
+    [3,B]:[1,2,2]->[5,1,3]
+    [4,P]:[5,2,2]->[4,2,3]
+    [10,B]:[2,4,1]->[4,3,2]
+    [11,B]:[2,4,2]->[3,5,2]
+    [13,P]:[2,5,2]->[1,4,1]
+    [14,P]:[3,1,2]->[3,5,3]
+    [15,B]:[4,3,1]->[5,4,2]
+      reproduced [24,B] at [5,4,3]
+    [17,M]:[4,2,1]->[5,2,2]
+    [21,B]:[5,3,2]->[5,2,3]
+      destroyed [17,M] at [5,2,2]
+    [23,P]:[5,4,1]->[1,5,1]
+  Sectors:
+    [1,1]->-,-,[7,B],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[7,B],movable_list[7,B],
+    [1,2]->[2,P],-,[-3,*],[19,P]sorted_ent:[-10000000,-],sorted_ent:[-3,*],sorted_ent:[2,P],sorted_ent:[19,P],movable_list[2,P],movable_list[19,P],
+    [1,3]->[6,M],-,-,-sorted_ent:[-10000000,-],sorted_ent:[6,M],
+    [1,4]->[13,P],-,-,-sorted_ent:[13,P],
+    [1,5]->[23,P],-,-,-sorted_ent:[23,P],movable_list[23,P],
+    [2,1]->-,-,-,-
+    [2,2]->[0,E],[-9,*],[5,P],-sorted_ent:[-9,*],sorted_ent:[0,E],sorted_ent:[5,P],movable_list[5,P],
+    [2,3]->[8,B],[9,J],-,-sorted_ent:[8,B],sorted_ent:[9,J],movable_list[8,B],movable_list[9,J],
+    [2,4]->-,-,[-10,W],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10,W],
+    [2,5]->[12,B],-,-,-sorted_ent:[-10000000,-],sorted_ent:[12,B],movable_list[12,B],
+    [3,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [3,2]->[-6,*],-,-,-sorted_ent:[-6,*],
+    [3,3]->[-1,O],-,-,-sorted_ent:[-1,O],
+    [3,4]->-,-,-,-sorted_ent:[-10000000,-],
+    [3,5]->[-11,W],[11,B],[14,P],-sorted_ent:[-11,W],sorted_ent:[11,B],sorted_ent:[14,P],movable_list[11,B],movable_list[14,P],
+    [4,1]->-,-,-,-sorted_ent:[-10000000,-],
+    [4,2]->-,[-2,*],[4,P],-sorted_ent:[-10000000,-],sorted_ent:[-2,*],sorted_ent:[4,P],movable_list[4,P],
+    [4,3]->-,[10,B],-,-sorted_ent:[-10000000,-],sorted_ent:[10,B],movable_list[10,B],
+    [4,4]->-,-,-,-sorted_ent:[-10000000,-],
+    [4,5]->[-7,W],-,-,-sorted_ent:[-7,W],
+    [5,1]->[-5,Y],[16,P],[3,B],-sorted_ent:[-5,Y],sorted_ent:[3,B],sorted_ent:[16,P],movable_list[16,P],movable_list[3,B],
+    [5,2]->[1,P],-,[21,B],-sorted_ent:[-10000000,-],sorted_ent:[1,P],sorted_ent:[21,B],movable_list[21,B],
+    [5,3]->[20,B],-,[22,J],[-8,Y]sorted_ent:[-10000000,-],sorted_ent:[-8,Y],sorted_ent:[20,B],sorted_ent:[22,J],movable_list[20,B],movable_list[22,J],
+    [5,4]->-,[15,B],[24,B],-sorted_ent:[-10000000,-],sorted_ent:[15,B],sorted_ent:[24,B],movable_list[15,B],movable_list[24,B],
+    [5,5]->[-4,W],[18,P],-,-sorted_ent:[-4,W],sorted_ent:[18,P],movable_list[18,P],
+  Descriptions:
+    [-11,W]->
+    [-10,W]->
+    [-9,*]->Luminosity:5
+    [-8,Y]->Luminosity:2
+    [-7,W]->
+    [-6,*]->Luminosity:5
+    [-5,Y]->Luminosity:2
+    [-4,W]->
+    [-3,*]->Luminosity:5
+    [-2,*]->Luminosity:5
+    [-1,O]->
+    [0,E]->fuel:3/3, life:3/3, landed?:Fold_pos:[1,1,1]cur_pos:[2,2,1]use_wormhole?False
+    [1,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[1,1,2]cur_pos:[5,2,1]
+    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,2,1]cur_pos:[1,2,1]
+    [3,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:2old_pos:[1,2,2]cur_pos:[5,1,3]use_wormhole?False
+    [4,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,2]cur_pos:[4,2,3]
+    [5,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,3,2]cur_pos:[2,2,3]
+    [6,M]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[1,4,1]cur_pos:[1,3,1]use_wormhole?False
+    [7,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[2,2,1]cur_pos:[1,1,3]use_wormhole?False
+    [8,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[2,3,1]cur_pos:[2,3,1]use_wormhole?False
+    [9,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[2,3,2]cur_pos:[2,3,2]
+    [10,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[2,4,1]cur_pos:[4,3,2]use_wormhole?False
+    [11,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[2,4,2]cur_pos:[3,5,2]use_wormhole?False
+    [12,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[2,5,1]cur_pos:[2,5,1]use_wormhole?False
+    [13,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[2,5,2]cur_pos:[1,4,1]
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:2old_pos:[3,1,2]cur_pos:[3,5,3]
+    [15,B]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[4,3,1]cur_pos:[5,4,2]use_wormhole?False
+    [16,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[4,1,1]cur_pos:[5,1,2]
+    [18,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[4,4,1]cur_pos:[5,5,2]
+    [19,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,1]cur_pos:[1,2,4]
+    [20,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[5,3,1]cur_pos:[5,3,1]use_wormhole?False
+    [21,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:2old_pos:[5,3,2]cur_pos:[5,2,3]use_wormhole?False
+    [22,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[5,3,3]cur_pos:[5,3,3]
+    [23,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[5,4,1]cur_pos:[1,5,1]
+    [24,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[5,4,3]cur_pos:[5,4,3]use_wormhole?False
+  Deaths This Turn:
+    [17,M]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:N/A,
+      Malevolent got destroyed by benign (id: 21) at Sector:5:2
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    --B-   P-*P   M---   P---   P---   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    ----   E*P-   BJ--   --W-   B---   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    ----   *---   O---   ----   WBP-   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    ----   -*P-   -B--   ----   W---   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    YPB-   P-B-   B-JY   -BB-   WP--   
+[0,E],2,2landed:False,fuel3
+[0,E][1,P][2,P][3,B][4,P][5,P][6,M][7,B][8,B][9,J][10,B][11,B][12,B][13,P][14,P][15,B][16,P][18,P][19,P][20,B][21,B][22,J][23,P][24,B]
+[keys:[15,B],result:[24,B]
+->move(S)
+  ------------------
+  state:4.0, mode:test, ok
+  Movement:
+    [0,E]:[2,2,1]->[3,2,2]
+    [8,B]:[2,3,1]->[1,2,2]
+    [9,J]:[2,3,2]->[1,4,2]
+    [10,B]:[4,3,2]->[5,2,2]
+      reproduced [25,B] at [5,2,4]
+    [12,B]:[2,5,1]->[1,4,3]
+    [20,B]:[5,3,1]->[1,4,4]
+    [22,J]:[5,3,3]->[1,3,2]
+  Sectors:
+    [1,1]->-,-,[7,B],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[7,B],movable_list[7,B],
+    [1,2]->[2,P],[8,B],[-3,*],[19,P]sorted_ent:[-3,*],sorted_ent:[2,P],sorted_ent:[8,B],sorted_ent:[19,P],movable_list[2,P],movable_list[19,P],
+    [1,3]->[6,M],[22,J],-,-sorted_ent:[6,M],sorted_ent:[22,J],
+    [1,4]->[13,P],[9,J],[12,B],[20,B]sorted_ent:[9,J],sorted_ent:[12,B],sorted_ent:[13,P],sorted_ent:[20,B],movable_list[9,J],movable_list[12,B],movable_list[20,B],
+    [1,5]->[23,P],-,-,-sorted_ent:[23,P],movable_list[23,P],
+    [2,1]->-,-,-,-
+    [2,2]->-,[-9,*],[5,P],-sorted_ent:[-10000000,-],sorted_ent:[-9,*],sorted_ent:[5,P],movable_list[5,P],
+    [2,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [2,4]->-,-,[-10,W],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10,W],
+    [2,5]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [3,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [3,2]->[-6,*],[0,E],-,-sorted_ent:[-6,*],sorted_ent:[0,E],movable_list[0,E],
+    [3,3]->[-1,O],-,-,-sorted_ent:[-1,O],
+    [3,4]->-,-,-,-sorted_ent:[-10000000,-],
+    [3,5]->[-11,W],[11,B],[14,P],-sorted_ent:[-11,W],sorted_ent:[11,B],sorted_ent:[14,P],movable_list[11,B],movable_list[14,P],
+    [4,1]->-,-,-,-sorted_ent:[-10000000,-],
+    [4,2]->-,[-2,*],[4,P],-sorted_ent:[-10000000,-],sorted_ent:[-2,*],sorted_ent:[4,P],movable_list[4,P],
+    [4,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [4,4]->-,-,-,-sorted_ent:[-10000000,-],
+    [4,5]->[-7,W],-,-,-sorted_ent:[-7,W],
+    [5,1]->[-5,Y],[16,P],[3,B],-sorted_ent:[-5,Y],sorted_ent:[3,B],sorted_ent:[16,P],movable_list[16,P],movable_list[3,B],
+    [5,2]->[1,P],[10,B],[21,B],[25,B]sorted_ent:[1,P],sorted_ent:[10,B],sorted_ent:[21,B],sorted_ent:[25,B],movable_list[21,B],movable_list[25,B],
+    [5,3]->-,-,-,[-8,Y]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-8,Y],
+    [5,4]->-,[15,B],[24,B],-sorted_ent:[-10000000,-],sorted_ent:[15,B],sorted_ent:[24,B],movable_list[15,B],movable_list[24,B],
+    [5,5]->[-4,W],[18,P],-,-sorted_ent:[-4,W],sorted_ent:[18,P],movable_list[18,P],
+  Descriptions:
+    [-11,W]->
+    [-10,W]->
+    [-9,*]->Luminosity:5
+    [-8,Y]->Luminosity:2
+    [-7,W]->
+    [-6,*]->Luminosity:5
+    [-5,Y]->Luminosity:2
+    [-4,W]->
+    [-3,*]->Luminosity:5
+    [-2,*]->Luminosity:5
+    [-1,O]->
+    [0,E]->fuel:3/3, life:3/3, landed?:Fold_pos:[2,2,1]cur_pos:[3,2,2]use_wormhole?False
+    [1,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,1,2]cur_pos:[5,2,1]
+    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,2,1]cur_pos:[1,2,1]
+    [3,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[1,2,2]cur_pos:[5,1,3]use_wormhole?False
+    [4,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,2]cur_pos:[4,2,3]
+    [5,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,3,2]cur_pos:[2,2,3]
+    [6,M]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[1,4,1]cur_pos:[1,3,1]use_wormhole?False
+    [7,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[2,2,1]cur_pos:[1,1,3]use_wormhole?False
+    [8,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[2,3,1]cur_pos:[1,2,2]use_wormhole?False
+    [9,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:2old_pos:[2,3,2]cur_pos:[1,4,2]
+    [10,B]->fuel:2/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[4,3,2]cur_pos:[5,2,2]use_wormhole?False
+    [11,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[2,4,2]cur_pos:[3,5,2]use_wormhole?False
+    [12,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:2old_pos:[2,5,1]cur_pos:[1,4,3]use_wormhole?False
+    [13,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[2,5,2]cur_pos:[1,4,1]
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[3,1,2]cur_pos:[3,5,3]
+    [15,B]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[4,3,1]cur_pos:[5,4,2]use_wormhole?False
+    [16,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[4,1,1]cur_pos:[5,1,2]
+    [18,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[4,4,1]cur_pos:[5,5,2]
+    [19,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,1]cur_pos:[1,2,4]
+    [20,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:2old_pos:[5,3,1]cur_pos:[1,4,4]use_wormhole?False
+    [21,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[5,3,2]cur_pos:[5,2,3]use_wormhole?False
+    [22,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:2old_pos:[5,3,3]cur_pos:[1,3,2]
+    [23,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[5,4,1]cur_pos:[1,5,1]
+    [24,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[5,4,3]cur_pos:[5,4,3]use_wormhole?False
+    [25,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[5,2,4]cur_pos:[5,2,4]use_wormhole?False
+  Deaths This Turn:none
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    --B-   PB*P   MJ--   PJBB   P---   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    ----   -*P-   ----   --W-   ----   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    ----   *E--   O---   ----   WBP-   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    ----   -*P-   ----   ----   W---   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    YPB-   PBBB   ---Y   -BB-   WP--   
+[0,E],3,2landed:False,fuel3
+[0,E][1,P][2,P][3,B][4,P][5,P][6,M][7,B][8,B][9,J][10,B][11,B][12,B][13,P][14,P][15,B][16,P][18,P][19,P][20,B][21,B][22,J][23,P][24,B][25,B]
+[keys:[10,B],result:[25,B]
+->move(S)
+  ------------------
+  state:5.0, mode:test, ok
+  Movement:
+    [0,E]:[3,2,2]->[4,2,1]
+    [1,P]:[5,2,1]->[5,1,4]
+    [6,M]:[1,3,1]->[5,3,1]
+      reproduced [26,M] at [5,3,2]
+    [7,B]:[1,1,3]->[2,5,1]
+      reproduced [27,B] at [2,5,2]
+    [8,B]:[1,2,2]->[2,1,1]
+      reproduced [28,B] at [2,1,2]
+    [11,B]:[3,5,2]->[1,1,1]
+      reproduced [29,B] at [1,1,2]
+    [13,P]:[1,4,1]->[5,4,1]
+    [18,P]:[5,5,2]->[1,4,1]
+    [23,P]:[1,5,1]
+    [24,B]:[5,4,3]->[1,5,2]
+  Sectors:
+    [1,1]->[11,B],[29,B],-,-sorted_ent:[-10000000,-],sorted_ent:[11,B],sorted_ent:[29,B],
+    [1,2]->[2,P],-,[-3,*],[19,P]sorted_ent:[-10000000,-],sorted_ent:[-3,*],sorted_ent:[2,P],sorted_ent:[19,P],movable_list[2,P],movable_list[19,P],
+    [1,3]->-,[22,J],-,-sorted_ent:[-10000000,-],sorted_ent:[22,J],
+    [1,4]->[18,P],[9,J],[12,B],[20,B]sorted_ent:[9,J],sorted_ent:[12,B],sorted_ent:[18,P],sorted_ent:[20,B],movable_list[9,J],movable_list[12,B],movable_list[20,B],
+    [1,5]->[23,P],[24,B],-,-sorted_ent:[23,P],sorted_ent:[24,B],movable_list[23,P],movable_list[24,B],
+    [2,1]->[8,B],[28,B],-,-sorted_ent:[8,B],sorted_ent:[28,B],movable_list[8,B],movable_list[28,B],
+    [2,2]->-,[-9,*],[5,P],-sorted_ent:[-10000000,-],sorted_ent:[-9,*],sorted_ent:[5,P],movable_list[5,P],
+    [2,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [2,4]->-,-,[-10,W],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10,W],
+    [2,5]->[7,B],[27,B],-,-sorted_ent:[7,B],sorted_ent:[27,B],
+    [3,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [3,2]->[-6,*],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-6,*],
+    [3,3]->[-1,O],-,-,-sorted_ent:[-1,O],
+    [3,4]->-,-,-,-sorted_ent:[-10000000,-],
+    [3,5]->[-11,W],-,[14,P],-sorted_ent:[-10000000,-],sorted_ent:[-11,W],sorted_ent:[14,P],movable_list[14,P],
+    [4,1]->-,-,-,-sorted_ent:[-10000000,-],
+    [4,2]->[0,E],[-2,*],[4,P],-sorted_ent:[-2,*],sorted_ent:[0,E],sorted_ent:[4,P],movable_list[4,P],
+    [4,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [4,4]->-,-,-,-sorted_ent:[-10000000,-],
+    [4,5]->[-7,W],-,-,-sorted_ent:[-7,W],
+    [5,1]->[-5,Y],[16,P],[3,B],[1,P]sorted_ent:[-5,Y],sorted_ent:[1,P],sorted_ent:[3,B],sorted_ent:[16,P],movable_list[16,P],movable_list[3,B],movable_list[1,P],
+    [5,2]->-,[10,B],[21,B],[25,B]sorted_ent:[-10000000,-],sorted_ent:[10,B],sorted_ent:[21,B],sorted_ent:[25,B],movable_list[21,B],movable_list[25,B],
+    [5,3]->[6,M],[26,M],-,[-8,Y]sorted_ent:[-10000000,-],sorted_ent:[-8,Y],sorted_ent:[6,M],sorted_ent:[26,M],
+    [5,4]->[13,P],[15,B],-,-sorted_ent:[-10000000,-],sorted_ent:[13,P],sorted_ent:[15,B],movable_list[15,B],
+    [5,5]->[-4,W],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-4,W],
+  Descriptions:
+    [-11,W]->
+    [-10,W]->
+    [-9,*]->Luminosity:5
+    [-8,Y]->Luminosity:2
+    [-7,W]->
+    [-6,*]->Luminosity:5
+    [-5,Y]->Luminosity:2
+    [-4,W]->
+    [-3,*]->Luminosity:5
+    [-2,*]->Luminosity:5
+    [-1,O]->
+    [0,E]->fuel:3/3, life:3/3, landed?:Fold_pos:[3,2,2]cur_pos:[4,2,1]use_wormhole?False
+    [1,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[5,2,1]cur_pos:[5,1,4]
+    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,2,1]cur_pos:[1,2,1]
+    [3,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[1,2,2]cur_pos:[5,1,3]use_wormhole?False
+    [4,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,2]cur_pos:[4,2,3]
+    [5,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,3,2]cur_pos:[2,2,3]
+    [6,M]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[1,3,1]cur_pos:[5,3,1]use_wormhole?False
+    [7,B]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[1,1,3]cur_pos:[2,5,1]use_wormhole?False
+    [8,B]->fuel:2/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[1,2,2]cur_pos:[2,1,1]use_wormhole?False
+    [9,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[2,3,2]cur_pos:[1,4,2]
+    [10,B]->fuel:2/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[4,3,2]cur_pos:[5,2,2]use_wormhole?False
+    [11,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[3,5,2]cur_pos:[1,1,1]use_wormhole?False
+    [12,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[2,5,1]cur_pos:[1,4,3]use_wormhole?False
+    [13,P]->attached?:F, support_life?:F, visited?:F, turns_left:2old_pos:[1,4,1]cur_pos:[5,4,1]
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[3,1,2]cur_pos:[3,5,3]
+    [15,B]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[4,3,1]cur_pos:[5,4,2]use_wormhole?False
+    [16,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[4,1,1]cur_pos:[5,1,2]
+    [18,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[5,5,2]cur_pos:[1,4,1]
+    [19,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,1]cur_pos:[1,2,4]
+    [20,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[5,3,1]cur_pos:[1,4,4]use_wormhole?False
+    [21,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[5,3,2]cur_pos:[5,2,3]use_wormhole?False
+    [22,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:1old_pos:[5,3,3]cur_pos:[1,3,2]
+    [23,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[1,5,1]cur_pos:[1,5,1]
+    [24,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[5,4,3]cur_pos:[1,5,2]use_wormhole?False
+    [25,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[5,2,4]cur_pos:[5,2,4]use_wormhole?False
+    [26,M]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[5,3,2]cur_pos:[5,3,2]use_wormhole?False
+    [27,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[2,5,2]cur_pos:[2,5,2]use_wormhole?False
+    [28,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[2,1,2]cur_pos:[2,1,2]use_wormhole?False
+    [29,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[1,1,2]cur_pos:[1,1,2]use_wormhole?False
+  Deaths This Turn:none
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    BB--   P-*P   -J--   PJBB   PB--   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    BB--   -*P-   ----   --W-   BB--   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    ----   *---   O---   ----   W-P-   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    ----   E*P-   ----   ----   W---   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    YPBP   -BBB   MM-Y   PB--   W---   
+[0,E],4,2landed:False,fuel3
+[0,E][1,P][2,P][3,B][4,P][5,P][6,M][7,B][8,B][9,J][10,B][11,B][12,B][13,P][14,P][15,B][16,P][18,P][19,P][20,B][21,B][22,J][23,P][24,B][25,B][26,M][27,B][28,B][29,B]
+[keys:[6,M],result:[26,M][keys:[7,B],result:[27,B][keys:[8,B],result:[28,B][keys:[11,B],result:[29,B]
+->move(S)
+  ------------------
+  state:6.0, mode:test, ok
+  Movement:
+    [0,E]:[4,2,1]->[5,2,1]
+    [3,B]:[5,1,3]
+    [14,P]:[3,5,3]->[2,5,3]
+    [15,B]:[5,4,2]->[5,5,2]
+    [21,B]:[5,2,3]->[4,3,1]
+      reproduced [30,B] at [4,3,2]
+    [24,B]:[1,5,2]->[5,5,2]
+      reproduced [31,B] at [5,5,3]
+    [28,B]:[2,1,2]->[2,5,4]
+    [29,B]:[1,1,2]
+  Sectors:
+    [1,1]->[11,B],[29,B],-,-sorted_ent:[-10000000,-],sorted_ent:[11,B],sorted_ent:[29,B],
+    [1,2]->[2,P],-,[-3,*],[19,P]sorted_ent:[-10000000,-],sorted_ent:[-3,*],sorted_ent:[2,P],sorted_ent:[19,P],movable_list[2,P],movable_list[19,P],
+    [1,3]->-,[22,J],-,-sorted_ent:[-10000000,-],sorted_ent:[22,J],
+    [1,4]->[18,P],[9,J],[12,B],[20,B]sorted_ent:[9,J],sorted_ent:[12,B],sorted_ent:[18,P],sorted_ent:[20,B],movable_list[9,J],movable_list[12,B],movable_list[20,B],
+    [1,5]->[23,P],-,-,-sorted_ent:[-10000000,-],sorted_ent:[23,P],movable_list[23,P],
+    [2,1]->[8,B],-,-,-sorted_ent:[-10000000,-],sorted_ent:[8,B],movable_list[8,B],
+    [2,2]->-,[-9,*],[5,P],-sorted_ent:[-10000000,-],sorted_ent:[-9,*],sorted_ent:[5,P],movable_list[5,P],
+    [2,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [2,4]->-,-,[-10,W],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10,W],
+    [2,5]->[7,B],[27,B],[14,P],[28,B]sorted_ent:[7,B],sorted_ent:[14,P],sorted_ent:[27,B],sorted_ent:[28,B],movable_list[14,P],movable_list[28,B],
+    [3,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [3,2]->[-6,*],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-6,*],
+    [3,3]->[-1,O],-,-,-sorted_ent:[-1,O],
+    [3,4]->-,-,-,-sorted_ent:[-10000000,-],
+    [3,5]->[-11,W],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-11,W],
+    [4,1]->-,-,-,-sorted_ent:[-10000000,-],
+    [4,2]->-,[-2,*],[4,P],-sorted_ent:[-10000000,-],sorted_ent:[-2,*],sorted_ent:[4,P],movable_list[4,P],
+    [4,3]->[21,B],[30,B],-,-sorted_ent:[21,B],sorted_ent:[30,B],
+    [4,4]->-,-,-,-sorted_ent:[-10000000,-],
+    [4,5]->[-7,W],-,-,-sorted_ent:[-7,W],
+    [5,1]->[-5,Y],[16,P],[3,B],[1,P]sorted_ent:[-5,Y],sorted_ent:[1,P],sorted_ent:[3,B],sorted_ent:[16,P],movable_list[16,P],movable_list[3,B],movable_list[1,P],
+    [5,2]->[0,E],[10,B],-,[25,B]sorted_ent:[-10000000,-],sorted_ent:[0,E],sorted_ent:[10,B],sorted_ent:[25,B],movable_list[25,B],
+    [5,3]->[6,M],[26,M],-,[-8,Y]sorted_ent:[-10000000,-],sorted_ent:[-8,Y],sorted_ent:[6,M],sorted_ent:[26,M],
+    [5,4]->[13,P],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[13,P],
+    [5,5]->[-4,W],[24,B],[31,B],-sorted_ent:[-4,W],sorted_ent:[24,B],sorted_ent:[31,B],movable_list[31,B],
+  Descriptions:
+    [-11,W]->
+    [-10,W]->
+    [-9,*]->Luminosity:5
+    [-8,Y]->Luminosity:2
+    [-7,W]->
+    [-6,*]->Luminosity:5
+    [-5,Y]->Luminosity:2
+    [-4,W]->
+    [-3,*]->Luminosity:5
+    [-2,*]->Luminosity:5
+    [-1,O]->
+    [0,E]->fuel:2/3, life:3/3, landed?:Fold_pos:[4,2,1]cur_pos:[5,2,1]use_wormhole?False
+    [1,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[5,2,1]cur_pos:[5,1,4]
+    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,2,1]cur_pos:[1,2,1]
+    [3,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:2old_pos:[5,1,3]cur_pos:[5,1,3]use_wormhole?False
+    [4,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,2]cur_pos:[4,2,3]
+    [5,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,3,2]cur_pos:[2,2,3]
+    [6,M]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[1,3,1]cur_pos:[5,3,1]use_wormhole?False
+    [7,B]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[1,1,3]cur_pos:[2,5,1]use_wormhole?False
+    [8,B]->fuel:2/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[1,2,2]cur_pos:[2,1,1]use_wormhole?False
+    [9,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[2,3,2]cur_pos:[1,4,2]
+    [10,B]->fuel:2/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[4,3,2]cur_pos:[5,2,2]use_wormhole?False
+    [11,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[3,5,2]cur_pos:[1,1,1]use_wormhole?False
+    [12,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[2,5,1]cur_pos:[1,4,3]use_wormhole?False
+    [13,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[1,4,1]cur_pos:[5,4,1]
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[3,5,3]cur_pos:[2,5,3]
+    [16,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[4,1,1]cur_pos:[5,1,2]
+    [18,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[5,5,2]cur_pos:[1,4,1]
+    [19,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,1]cur_pos:[1,2,4]
+    [20,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[5,3,1]cur_pos:[1,4,4]use_wormhole?False
+    [21,B]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[5,2,3]cur_pos:[4,3,1]use_wormhole?False
+    [22,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:1/2, turns_left:0old_pos:[5,3,3]cur_pos:[1,3,2]
+    [23,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,5,1]cur_pos:[1,5,1]
+    [24,B]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[1,5,2]cur_pos:[5,5,2]use_wormhole?False
+    [25,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[5,2,4]cur_pos:[5,2,4]use_wormhole?False
+    [26,M]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[5,3,2]cur_pos:[5,3,2]use_wormhole?False
+    [27,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[2,5,2]cur_pos:[2,5,2]use_wormhole?False
+    [28,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[2,1,2]cur_pos:[2,5,4]use_wormhole?False
+    [29,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[1,1,2]cur_pos:[1,1,2]use_wormhole?False
+    [30,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[4,3,2]cur_pos:[4,3,2]use_wormhole?False
+    [31,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[5,5,3]cur_pos:[5,5,3]use_wormhole?False
+  Deaths This Turn:
+    [15,B]->fuel:0/3, actions_left_until_reproduction:1/1, turns_left:N/A,
+      Benign got lost in space - out of fuel at Sector:5:5
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    BB--   P-*P   -J--   PJBB   P---   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    B---   -*P-   ----   --W-   BBPB   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    ----   *---   O---   ----   W---   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    ----   -*P-   BB--   ----   W---   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    YPBP   EB-B   MM-Y   P---   WBB-   
+[0,E],5,2landed:False,fuel2
+[0,E][1,P][2,P][3,B][4,P][5,P][6,M][7,B][8,B][9,J][10,B][11,B][12,B][13,P][14,P][16,P][18,P][19,P][20,B][21,B][22,J][23,P][24,B][25,B][26,M][27,B][28,B][29,B][30,B][31,B]
+[keys:[21,B],result:[30,B][keys:[24,B],result:[31,B]
+->pass
+  ------------------
+  state:7.0, mode:test, ok
+  Movement:
+    [7,B]:[2,5,1]
+    [9,J]:[1,4,2]->[5,5,4]
+    [10,B]:[5,2,2]->[1,2,2]
+    [11,B]:[1,1,1]->[1,5,2]
+    [12,B]:[1,4,3]->[5,4,2]
+      reproduced [32,B] at [5,4,3]
+    [14,P]:[2,5,3]->[3,5,2]
+    [18,P]:[1,4,1]
+    [20,B]:[1,4,4]->[2,3,1]
+      reproduced [33,B] at [2,3,2]
+    [21,B]:[4,3,1]->[5,2,2]
+    [22,J]:[1,3,2]->[2,2,1]
+    [23,P]:[1,5,1]->[2,1,2]
+    [25,B]:[5,2,4]->[4,1,1]
+    [27,B]:[2,5,2]->[3,4,1]
+    [30,B]:[4,3,2]->[4,2,1]
+    [31,B]:[5,5,3]->[5,2,2]
+  Sectors:
+    [1,1]->-,[29,B],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[29,B],
+    [1,2]->[2,P],[10,B],[-3,*],[19,P]sorted_ent:[-3,*],sorted_ent:[2,P],sorted_ent:[10,B],sorted_ent:[19,P],movable_list[2,P],movable_list[19,P],
+    [1,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [1,4]->[18,P],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[18,P],
+    [1,5]->-,[11,B],-,-sorted_ent:[-10000000,-],sorted_ent:[11,B],
+    [2,1]->[8,B],[23,P],-,-sorted_ent:[8,B],sorted_ent:[23,P],movable_list[8,B],
+    [2,2]->[22,J],[-9,*],[5,P],-sorted_ent:[-9,*],sorted_ent:[5,P],sorted_ent:[22,J],movable_list[5,P],
+    [2,3]->[20,B],[33,B],-,-sorted_ent:[20,B],sorted_ent:[33,B],
+    [2,4]->-,-,[-10,W],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10,W],
+    [2,5]->[7,B],-,-,[28,B]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[7,B],sorted_ent:[28,B],movable_list[28,B],
+    [3,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [3,2]->[-6,*],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-6,*],
+    [3,3]->[-1,O],-,-,-sorted_ent:[-1,O],
+    [3,4]->[27,B],-,-,-sorted_ent:[27,B],
+    [3,5]->[-11,W],[14,P],-,-sorted_ent:[-10000000,-],sorted_ent:[-11,W],sorted_ent:[14,P],
+    [4,1]->[25,B],-,-,-sorted_ent:[25,B],
+    [4,2]->[30,B],[-2,*],[4,P],-sorted_ent:[-2,*],sorted_ent:[4,P],sorted_ent:[30,B],movable_list[4,P],
+    [4,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [4,4]->-,-,-,-sorted_ent:[-10000000,-],
+    [4,5]->[-7,W],-,-,-sorted_ent:[-7,W],
+    [5,1]->[-5,Y],[16,P],[3,B],[1,P]sorted_ent:[-5,Y],sorted_ent:[1,P],sorted_ent:[3,B],sorted_ent:[16,P],movable_list[16,P],movable_list[3,B],movable_list[1,P],
+    [5,2]->[0,E],[31,B],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[0,E],sorted_ent:[31,B],
+    [5,3]->[6,M],[26,M],-,[-8,Y]sorted_ent:[-10000000,-],sorted_ent:[-8,Y],sorted_ent:[6,M],sorted_ent:[26,M],
+    [5,4]->[13,P],[12,B],[32,B],-sorted_ent:[12,B],sorted_ent:[13,P],sorted_ent:[32,B],
+    [5,5]->[-4,W],[24,B],-,[9,J]sorted_ent:[-10000000,-],sorted_ent:[-4,W],sorted_ent:[9,J],sorted_ent:[24,B],movable_list[9,J],
+  Descriptions:
+    [-11,W]->
+    [-10,W]->
+    [-9,*]->Luminosity:5
+    [-8,Y]->Luminosity:2
+    [-7,W]->
+    [-6,*]->Luminosity:5
+    [-5,Y]->Luminosity:2
+    [-4,W]->
+    [-3,*]->Luminosity:5
+    [-2,*]->Luminosity:5
+    [-1,O]->
+    [0,E]->fuel:2/3, life:3/3, landed?:Fold_pos:[4,2,1]cur_pos:[5,2,1]use_wormhole?False
+    [1,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[5,2,1]cur_pos:[5,1,4]
+    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,2,1]cur_pos:[1,2,1]
+    [3,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[5,1,3]cur_pos:[5,1,3]use_wormhole?False
+    [4,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,2]cur_pos:[4,2,3]
+    [5,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,3,2]cur_pos:[2,2,3]
+    [6,M]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[1,3,1]cur_pos:[5,3,1]use_wormhole?False
+    [7,B]->fuel:1/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[2,5,1]cur_pos:[2,5,1]use_wormhole?False
+    [8,B]->fuel:2/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[1,2,2]cur_pos:[2,1,1]use_wormhole?False
+    [9,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:2old_pos:[1,4,2]cur_pos:[5,5,4]
+    [10,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:2old_pos:[5,2,2]cur_pos:[1,2,2]use_wormhole?False
+    [11,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[1,1,1]cur_pos:[1,5,2]use_wormhole?False
+    [12,B]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[1,4,3]cur_pos:[5,4,2]use_wormhole?False
+    [13,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,4,1]cur_pos:[5,4,1]
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[2,5,3]cur_pos:[3,5,2]
+    [16,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[4,1,1]cur_pos:[5,1,2]
+    [18,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,4,1]cur_pos:[1,4,1]
+    [19,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,1]cur_pos:[1,2,4]
+    [20,B]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[1,4,4]cur_pos:[2,3,1]use_wormhole?False
+    [22,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:1old_pos:[1,3,2]cur_pos:[2,2,1]
+    [23,P]->attached?:F, support_life?:F, visited?:F, turns_left:2old_pos:[1,5,1]cur_pos:[2,1,2]
+    [24,B]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[1,5,2]cur_pos:[5,5,2]use_wormhole?False
+    [25,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[5,2,4]cur_pos:[4,1,1]use_wormhole?False
+    [26,M]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[5,3,2]cur_pos:[5,3,2]use_wormhole?False
+    [27,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:2old_pos:[2,5,2]cur_pos:[3,4,1]use_wormhole?False
+    [28,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[2,1,2]cur_pos:[2,5,4]use_wormhole?False
+    [29,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[1,1,2]cur_pos:[1,1,2]use_wormhole?False
+    [30,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[4,3,2]cur_pos:[4,2,1]use_wormhole?False
+    [31,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[5,5,3]cur_pos:[5,2,2]use_wormhole?False
+    [32,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[5,4,3]cur_pos:[5,4,3]use_wormhole?False
+    [33,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[2,3,2]cur_pos:[2,3,2]use_wormhole?False
+  Deaths This Turn:
+    [21,B]->fuel:0/3, actions_left_until_reproduction:1/1, turns_left:N/A,
+      Benign got lost in space - out of fuel at Sector:5:2
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    -B--   PB*P   ----   P---   -B--   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    BP--   J*P-   BB--   --W-   B--B   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    ----   *---   O---   B---   WP--   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    B---   B*P-   ----   ----   W---   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    YPBP   EB--   MM-Y   PBB-   WB-J   
+[0,E],5,2landed:False,fuel2
+[0,E][1,P][2,P][3,B][4,P][5,P][6,M][7,B][8,B][9,J][10,B][11,B][12,B][13,P][14,P][16,P][18,P][19,P][20,B][22,J][23,P][24,B][25,B][26,M][27,B][28,B][29,B][30,B][31,B][32,B][33,B]
+[keys:[12,B],result:[32,B][keys:[20,B],result:[33,B]
+->pass
+  ------------------
+  state:8.0, mode:test, ok
+  Movement:
+    [6,M]:[5,3,1]->[4,3,1]
+    [8,B]:[2,1,1]->[1,1,1]
+    [13,P]:[5,4,1]->[1,5,1]
+    [18,P]:[1,4,1]->[1,5,3]
+    [24,B]:[5,5,2]->[3,2,2]
+    [25,B]:[4,1,1]->[5,5,2]
+      reproduced [34,B] at [5,5,3]
+    [26,M]:[5,3,2]->[1,4,1]
+    [28,B]:[2,5,4]->[1,5,4]
+    [29,B]:[1,1,2]->[2,1,1]
+      reproduced [35,B] at [2,1,3]
+    [33,B]:[2,3,2]->[1,3,1]
+  Sectors:
+    [1,1]->[8,B],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[8,B],
+    [1,2]->[2,P],[10,B],[-3,*],[19,P]sorted_ent:[-3,*],sorted_ent:[2,P],sorted_ent:[10,B],sorted_ent:[19,P],movable_list[2,P],movable_list[19,P],
+    [1,3]->[33,B],-,-,-sorted_ent:[-10000000,-],sorted_ent:[33,B],
+    [1,4]->[26,M],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[26,M],
+    [1,5]->[13,P],[11,B],[18,P],[28,B]sorted_ent:[11,B],sorted_ent:[13,P],sorted_ent:[18,P],sorted_ent:[28,B],movable_list[18,P],movable_list[28,B],
+    [2,1]->[29,B],[23,P],[35,B],-sorted_ent:[23,P],sorted_ent:[29,B],sorted_ent:[35,B],movable_list[35,B],
+    [2,2]->[22,J],[-9,*],[5,P],-sorted_ent:[-9,*],sorted_ent:[5,P],sorted_ent:[22,J],movable_list[5,P],
+    [2,3]->[20,B],-,-,-sorted_ent:[-10000000,-],sorted_ent:[20,B],
+    [2,4]->-,-,[-10,W],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10,W],
+    [2,5]->[7,B],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[7,B],
+    [3,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [3,2]->[-6,*],[24,B],-,-sorted_ent:[-6,*],sorted_ent:[24,B],
+    [3,3]->[-1,O],-,-,-sorted_ent:[-1,O],
+    [3,4]->[27,B],-,-,-sorted_ent:[27,B],
+    [3,5]->[-11,W],[14,P],-,-sorted_ent:[-10000000,-],sorted_ent:[-11,W],sorted_ent:[14,P],
+    [4,1]->-,-,-,-sorted_ent:[-10000000,-],
+    [4,2]->[30,B],[-2,*],[4,P],-sorted_ent:[-2,*],sorted_ent:[4,P],sorted_ent:[30,B],movable_list[4,P],
+    [4,3]->[6,M],-,-,-sorted_ent:[-10000000,-],sorted_ent:[6,M],
+    [4,4]->-,-,-,-sorted_ent:[-10000000,-],
+    [4,5]->[-7,W],-,-,-sorted_ent:[-7,W],
+    [5,1]->[-5,Y],[16,P],[3,B],[1,P]sorted_ent:[-5,Y],sorted_ent:[1,P],sorted_ent:[3,B],sorted_ent:[16,P],movable_list[16,P],movable_list[3,B],movable_list[1,P],
+    [5,2]->[0,E],[31,B],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[0,E],sorted_ent:[31,B],
+    [5,3]->-,-,-,[-8,Y]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-8,Y],
+    [5,4]->-,[12,B],[32,B],-sorted_ent:[-10000000,-],sorted_ent:[12,B],sorted_ent:[32,B],
+    [5,5]->[-4,W],[25,B],[34,B],[9,J]sorted_ent:[-4,W],sorted_ent:[9,J],sorted_ent:[25,B],sorted_ent:[34,B],movable_list[9,J],
+  Descriptions:
+    [-11,W]->
+    [-10,W]->
+    [-9,*]->Luminosity:5
+    [-8,Y]->Luminosity:2
+    [-7,W]->
+    [-6,*]->Luminosity:5
+    [-5,Y]->Luminosity:2
+    [-4,W]->
+    [-3,*]->Luminosity:5
+    [-2,*]->Luminosity:5
+    [-1,O]->
+    [0,E]->fuel:2/3, life:3/3, landed?:Fold_pos:[4,2,1]cur_pos:[5,2,1]use_wormhole?False
+    [1,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[5,2,1]cur_pos:[5,1,4]
+    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,2,1]cur_pos:[1,2,1]
+    [3,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[5,1,3]cur_pos:[5,1,3]use_wormhole?False
+    [4,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,2]cur_pos:[4,2,3]
+    [5,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,3,2]cur_pos:[2,2,3]
+    [6,M]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[5,3,1]cur_pos:[4,3,1]use_wormhole?False
+    [7,B]->fuel:1/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[2,5,1]cur_pos:[2,5,1]use_wormhole?False
+    [8,B]->fuel:1/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[2,1,1]cur_pos:[1,1,1]use_wormhole?False
+    [9,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:1old_pos:[1,4,2]cur_pos:[5,5,4]
+    [10,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[5,2,2]cur_pos:[1,2,2]use_wormhole?False
+    [11,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[1,1,1]cur_pos:[1,5,2]use_wormhole?False
+    [12,B]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[1,4,3]cur_pos:[5,4,2]use_wormhole?False
+    [13,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[5,4,1]cur_pos:[1,5,1]
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[2,5,3]cur_pos:[3,5,2]
+    [16,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[4,1,1]cur_pos:[5,1,2]
+    [18,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,4,1]cur_pos:[1,5,3]
+    [19,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,1]cur_pos:[1,2,4]
+    [20,B]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[1,4,4]cur_pos:[2,3,1]use_wormhole?False
+    [22,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[1,3,2]cur_pos:[2,2,1]
+    [23,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[1,5,1]cur_pos:[2,1,2]
+    [24,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[5,5,2]cur_pos:[3,2,2]use_wormhole?False
+    [25,B]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[4,1,1]cur_pos:[5,5,2]use_wormhole?False
+    [26,M]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[5,3,2]cur_pos:[1,4,1]use_wormhole?False
+    [27,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[2,5,2]cur_pos:[3,4,1]use_wormhole?False
+    [28,B]->fuel:1/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[2,5,4]cur_pos:[1,5,4]use_wormhole?False
+    [29,B]->fuel:2/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[1,1,2]cur_pos:[2,1,1]use_wormhole?False
+    [30,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[4,3,2]cur_pos:[4,2,1]use_wormhole?False
+    [31,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[5,5,3]cur_pos:[5,2,2]use_wormhole?False
+    [32,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[5,4,3]cur_pos:[5,4,3]use_wormhole?False
+    [33,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[2,3,2]cur_pos:[1,3,1]use_wormhole?False
+    [34,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[5,5,3]cur_pos:[5,5,3]use_wormhole?False
+    [35,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[2,1,3]cur_pos:[2,1,3]use_wormhole?False
+  Deaths This Turn:none
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    B---   PB*P   B---   M---   PBPB   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    BPB-   J*P-   B---   --W-   B---   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    ----   *B--   O---   B---   WP--   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    ----   B*P-   M---   ----   W---   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    YPBP   EB--   ---Y   -BB-   WBBJ   
+[0,E],5,2landed:False,fuel2
+[0,E][1,P][2,P][3,B][4,P][5,P][6,M][7,B][8,B][9,J][10,B][11,B][12,B][13,P][14,P][16,P][18,P][19,P][20,B][22,J][23,P][24,B][25,B][26,M][27,B][28,B][29,B][30,B][31,B][32,B][33,B][34,B][35,B]
+[keys:[25,B],result:[34,B][keys:[29,B],result:[35,B]
+->pass
+  ------------------
+  state:9.0, mode:test, ok
+  Movement:
+    [3,B]:[5,1,3]->[5,2,3]
+      reproduced [36,B] at [5,2,4]
+    [6,M]:[4,3,1]->[5,4,1]
+      reproduced [37,M] at [5,4,4]
+    [7,B]:[2,5,1]->[3,4,2]
+    [8,B]:[1,1,1]
+      reproduced [38,B] at [1,1,2]
+    [11,B]:[1,5,2]
+    [12,B]:[5,4,2]->[1,3,2]
+    [13,P]:[1,5,1]->[1,1,3]
+    [14,P]:[3,5,2]->[4,5,2]
+    [18,P]:[1,5,3]->[2,4,1]
+    [20,B]:[2,3,1]->[3,2,3]
+    [22,J]:[2,2,1]->[2,1,4]
+    [28,B]:[1,5,4]->[5,1,3]
+    [30,B]:[4,2,1]->[4,1,1]
+      reproduced [39,B] at [4,1,2]
+    [31,B]:[5,2,2]->[1,1,4]
+  Sectors:
+    [1,1]->[8,B],[38,B],[13,P],[31,B]sorted_ent:[8,B],sorted_ent:[13,P],sorted_ent:[31,B],sorted_ent:[38,B],movable_list[31,B],
+    [1,2]->[2,P],[10,B],[-3,*],[19,P]sorted_ent:[-3,*],sorted_ent:[2,P],sorted_ent:[10,B],sorted_ent:[19,P],movable_list[2,P],movable_list[19,P],
+    [1,3]->[33,B],-,-,-sorted_ent:[-10000000,-],sorted_ent:[33,B],
+    [1,4]->[26,M],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[26,M],
+    [1,5]->-,[11,B],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[11,B],
+    [2,1]->[29,B],[23,P],[35,B],[22,J]sorted_ent:[22,J],sorted_ent:[23,P],sorted_ent:[29,B],sorted_ent:[35,B],movable_list[35,B],movable_list[22,J],
+    [2,2]->-,[-9,*],[5,P],-sorted_ent:[-10000000,-],sorted_ent:[-9,*],sorted_ent:[5,P],movable_list[5,P],
+    [2,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [2,4]->[18,P],-,[-10,W],-sorted_ent:[-10000000,-],sorted_ent:[-10,W],sorted_ent:[18,P],
+    [2,5]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [3,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [3,2]->[-6,*],[24,B],[20,B],-sorted_ent:[-6,*],sorted_ent:[20,B],sorted_ent:[24,B],movable_list[20,B],
+    [3,3]->[-1,O],-,-,-sorted_ent:[-1,O],
+    [3,4]->[27,B],-,-,-sorted_ent:[-10000000,-],sorted_ent:[27,B],
+    [3,5]->[-11,W],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-11,W],
+    [4,1]->[30,B],[39,B],-,-sorted_ent:[30,B],sorted_ent:[39,B],movable_list[39,B],
+    [4,2]->-,[-2,*],[4,P],-sorted_ent:[-10000000,-],sorted_ent:[-2,*],sorted_ent:[4,P],movable_list[4,P],
+    [4,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [4,4]->-,-,-,-sorted_ent:[-10000000,-],
+    [4,5]->[-7,W],[14,P],-,-sorted_ent:[-7,W],sorted_ent:[14,P],movable_list[14,P],
+    [5,1]->[-5,Y],[16,P],[28,B],[1,P]sorted_ent:[-5,Y],sorted_ent:[1,P],sorted_ent:[16,P],sorted_ent:[28,B],movable_list[16,P],movable_list[1,P],
+    [5,2]->[0,E],-,[3,B],[36,B]sorted_ent:[-10000000,-],sorted_ent:[0,E],sorted_ent:[3,B],sorted_ent:[36,B],
+    [5,3]->-,-,-,[-8,Y]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-8,Y],
+    [5,4]->[6,M],-,[32,B],[37,M]sorted_ent:[-10000000,-],sorted_ent:[6,M],sorted_ent:[32,B],sorted_ent:[37,M],movable_list[37,M],
+    [5,5]->[-4,W],[25,B],[34,B],[9,J]sorted_ent:[-4,W],sorted_ent:[9,J],sorted_ent:[25,B],sorted_ent:[34,B],movable_list[9,J],
+  Descriptions:
+    [-11,W]->
+    [-10,W]->
+    [-9,*]->Luminosity:5
+    [-8,Y]->Luminosity:2
+    [-7,W]->
+    [-6,*]->Luminosity:5
+    [-5,Y]->Luminosity:2
+    [-4,W]->
+    [-3,*]->Luminosity:5
+    [-2,*]->Luminosity:5
+    [-1,O]->
+    [0,E]->fuel:2/3, life:3/3, landed?:Fold_pos:[4,2,1]cur_pos:[5,2,1]use_wormhole?False
+    [1,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[5,2,1]cur_pos:[5,1,4]
+    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,2,1]cur_pos:[1,2,1]
+    [3,B]->fuel:2/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[5,1,3]cur_pos:[5,2,3]use_wormhole?False
+    [4,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,2]cur_pos:[4,2,3]
+    [5,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,3,2]cur_pos:[2,2,3]
+    [6,M]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[4,3,1]cur_pos:[5,4,1]use_wormhole?False
+    [8,B]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[1,1,1]cur_pos:[1,1,1]use_wormhole?False
+    [9,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[1,4,2]cur_pos:[5,5,4]
+    [10,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[5,2,2]cur_pos:[1,2,2]use_wormhole?False
+    [11,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[1,5,2]cur_pos:[1,5,2]use_wormhole?False
+    [13,P]->attached?:F, support_life?:F, visited?:F, turns_left:2old_pos:[1,5,1]cur_pos:[1,1,3]
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[3,5,2]cur_pos:[4,5,2]
+    [16,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[4,1,1]cur_pos:[5,1,2]
+    [18,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,5,3]cur_pos:[2,4,1]
+    [19,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,1]cur_pos:[1,2,4]
+    [20,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[2,3,1]cur_pos:[3,2,3]use_wormhole?False
+    [22,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:2old_pos:[2,2,1]cur_pos:[2,1,4]
+    [23,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,5,1]cur_pos:[2,1,2]
+    [24,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[5,5,2]cur_pos:[3,2,2]use_wormhole?False
+    [25,B]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[4,1,1]cur_pos:[5,5,2]use_wormhole?False
+    [26,M]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[5,3,2]cur_pos:[1,4,1]use_wormhole?False
+    [27,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[2,5,2]cur_pos:[3,4,1]use_wormhole?False
+    [28,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:2old_pos:[1,5,4]cur_pos:[5,1,3]use_wormhole?False
+    [29,B]->fuel:2/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[1,1,2]cur_pos:[2,1,1]use_wormhole?False
+    [30,B]->fuel:2/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[4,2,1]cur_pos:[4,1,1]use_wormhole?False
+    [31,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[5,2,2]cur_pos:[1,1,4]use_wormhole?False
+    [32,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[5,4,3]cur_pos:[5,4,3]use_wormhole?False
+    [33,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[2,3,2]cur_pos:[1,3,1]use_wormhole?False
+    [34,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[5,5,3]cur_pos:[5,5,3]use_wormhole?False
+    [35,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[2,1,3]cur_pos:[2,1,3]use_wormhole?False
+    [36,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[5,2,4]cur_pos:[5,2,4]use_wormhole?False
+    [37,M]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[5,4,4]cur_pos:[5,4,4]use_wormhole?False
+    [38,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[1,1,2]cur_pos:[1,1,2]use_wormhole?False
+    [39,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[4,1,2]cur_pos:[4,1,2]use_wormhole?False
+  Deaths This Turn:
+    [7,B]->fuel:0/3, actions_left_until_reproduction:0/1, turns_left:N/A,
+      Benign got lost in space - out of fuel at Sector:3:4
+    [12,B]->fuel:0/3, actions_left_until_reproduction:1/1, turns_left:N/A,
+      Benign got lost in space - out of fuel at Sector:1:3
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    BBPB   PB*P   B---   M---   -B--   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    BPBJ   -*P-   ----   P-W-   ----   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    ----   *BB-   O---   B---   W---   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    BB--   -*P-   ----   ----   WP--   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    YPBP   E-BB   ---Y   M-BM   WBBJ   
+[0,E],5,2landed:False,fuel2
+[0,E][1,P][2,P][3,B][4,P][5,P][6,M][8,B][9,J][10,B][11,B][13,P][14,P][16,P][18,P][19,P][20,B][22,J][23,P][24,B][25,B][26,M][27,B][28,B][29,B][30,B][31,B][32,B][33,B][34,B][35,B][36,B][37,M][38,B][39,B]
+[keys:[3,B],result:[36,B][keys:[6,M],result:[37,M][keys:[8,B],result:[38,B][keys:[30,B],result:[39,B]
+->pass
+  ------------------
+  state:10.0, mode:test, ok
+  Movement:
+    [3,B]:[5,2,3]->[5,3,1]
+    [9,J]:[5,5,4]
+    [10,B]:[1,2,2]->[1,3,2]
+      reproduced [40,B] at [1,3,3]
+    [11,B]:[1,5,2]
+      reproduced [41,B] at [1,5,1]
+    [14,P]:[4,5,2]->[3,1,1]
+    [18,P]:[2,4,1]->[1,4,2]
+    [20,B]:[3,2,3]->[4,1,3]
+      reproduced [42,B] at [4,1,4]
+    [23,P]:[2,1,2]->[1,5,3]
+    [24,B]:[3,2,2]
+      reproduced [43,B] at [3,2,3]
+    [26,M]:[1,4,1]->[2,5,1]
+      reproduced [44,M] at [2,5,2]
+    [27,B]:[3,4,1]->[3,3,2]
+    [32,B]:[5,4,3]->[1,5,4]
+    [33,B]:[1,3,1]->[5,4,2]
+      reproduced [45,B] at [5,4,3]
+      destroyed [6,M] at [5,4,1]
+      destroyed [37,M] at [5,4,4]
+  Sectors:
+    [1,1]->[8,B],[38,B],[13,P],[31,B]sorted_ent:[8,B],sorted_ent:[13,P],sorted_ent:[31,B],sorted_ent:[38,B],movable_list[31,B],
+    [1,2]->[2,P],-,[-3,*],[19,P]sorted_ent:[-10000000,-],sorted_ent:[-3,*],sorted_ent:[2,P],sorted_ent:[19,P],movable_list[2,P],movable_list[19,P],
+    [1,3]->-,[10,B],[40,B],-sorted_ent:[-10000000,-],sorted_ent:[10,B],sorted_ent:[40,B],movable_list[40,B],
+    [1,4]->-,[18,P],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[18,P],
+    [1,5]->[41,B],[11,B],[23,P],[32,B]sorted_ent:[11,B],sorted_ent:[23,P],sorted_ent:[32,B],sorted_ent:[41,B],
+    [2,1]->[29,B],-,[35,B],[22,J]sorted_ent:[-10000000,-],sorted_ent:[22,J],sorted_ent:[29,B],sorted_ent:[35,B],movable_list[35,B],movable_list[22,J],
+    [2,2]->-,[-9,*],[5,P],-sorted_ent:[-10000000,-],sorted_ent:[-9,*],sorted_ent:[5,P],movable_list[5,P],
+    [2,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [2,4]->-,-,[-10,W],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10,W],
+    [2,5]->[26,M],[44,M],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[26,M],sorted_ent:[44,M],
+    [3,1]->[14,P],-,-,-sorted_ent:[-10000000,-],sorted_ent:[14,P],
+    [3,2]->[-6,*],[24,B],[43,B],-sorted_ent:[-6,*],sorted_ent:[24,B],sorted_ent:[43,B],
+    [3,3]->[-1,O],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-1,O],
+    [3,4]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [3,5]->[-11,W],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-11,W],
+    [4,1]->[30,B],[39,B],[20,B],[42,B]sorted_ent:[20,B],sorted_ent:[30,B],sorted_ent:[39,B],sorted_ent:[42,B],movable_list[39,B],movable_list[20,B],movable_list[42,B],
+    [4,2]->-,[-2,*],[4,P],-sorted_ent:[-10000000,-],sorted_ent:[-2,*],sorted_ent:[4,P],movable_list[4,P],
+    [4,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [4,4]->-,-,-,-sorted_ent:[-10000000,-],
+    [4,5]->[-7,W],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-7,W],
+    [5,1]->[-5,Y],[16,P],[28,B],[1,P]sorted_ent:[-5,Y],sorted_ent:[1,P],sorted_ent:[16,P],sorted_ent:[28,B],movable_list[16,P],movable_list[1,P],
+    [5,2]->[0,E],-,-,[36,B]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[0,E],sorted_ent:[36,B],
+    [5,3]->[3,B],-,-,[-8,Y]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-8,Y],sorted_ent:[3,B],
+    [5,4]->-,[33,B],[45,B],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[33,B],sorted_ent:[45,B],
+    [5,5]->[-4,W],[25,B],[34,B],[9,J]sorted_ent:[-4,W],sorted_ent:[9,J],sorted_ent:[25,B],sorted_ent:[34,B],movable_list[9,J],
+  Descriptions:
+    [-11,W]->
+    [-10,W]->
+    [-9,*]->Luminosity:5
+    [-8,Y]->Luminosity:2
+    [-7,W]->
+    [-6,*]->Luminosity:5
+    [-5,Y]->Luminosity:2
+    [-4,W]->
+    [-3,*]->Luminosity:5
+    [-2,*]->Luminosity:5
+    [-1,O]->
+    [0,E]->fuel:2/3, life:3/3, landed?:Fold_pos:[4,2,1]cur_pos:[5,2,1]use_wormhole?False
+    [1,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[5,2,1]cur_pos:[5,1,4]
+    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,2,1]cur_pos:[1,2,1]
+    [3,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[5,2,3]cur_pos:[5,3,1]use_wormhole?False
+    [4,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,2]cur_pos:[4,2,3]
+    [5,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,3,2]cur_pos:[2,2,3]
+    [8,B]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[1,1,1]cur_pos:[1,1,1]use_wormhole?False
+    [9,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[5,5,4]cur_pos:[5,5,4]
+    [10,B]->fuel:2/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[1,2,2]cur_pos:[1,3,2]use_wormhole?False
+    [11,B]->fuel:2/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[1,5,2]cur_pos:[1,5,2]use_wormhole?False
+    [13,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[1,5,1]cur_pos:[1,1,3]
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[4,5,2]cur_pos:[3,1,1]
+    [16,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[4,1,1]cur_pos:[5,1,2]
+    [18,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[2,4,1]cur_pos:[1,4,2]
+    [19,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,1]cur_pos:[1,2,4]
+    [20,B]->fuel:2/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[3,2,3]cur_pos:[4,1,3]use_wormhole?False
+    [22,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:1old_pos:[2,2,1]cur_pos:[2,1,4]
+    [23,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[2,1,2]cur_pos:[1,5,3]
+    [24,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[3,2,2]cur_pos:[3,2,2]use_wormhole?False
+    [25,B]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[4,1,1]cur_pos:[5,5,2]use_wormhole?False
+    [26,M]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[1,4,1]cur_pos:[2,5,1]use_wormhole?False
+    [28,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[1,5,4]cur_pos:[5,1,3]use_wormhole?False
+    [29,B]->fuel:2/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[1,1,2]cur_pos:[2,1,1]use_wormhole?False
+    [30,B]->fuel:2/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[4,2,1]cur_pos:[4,1,1]use_wormhole?False
+    [31,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[5,2,2]cur_pos:[1,1,4]use_wormhole?False
+    [32,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:2old_pos:[5,4,3]cur_pos:[1,5,4]use_wormhole?False
+    [33,B]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[1,3,1]cur_pos:[5,4,2]use_wormhole?False
+    [34,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[5,5,3]cur_pos:[5,5,3]use_wormhole?False
+    [35,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[2,1,3]cur_pos:[2,1,3]use_wormhole?False
+    [36,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[5,2,4]cur_pos:[5,2,4]use_wormhole?False
+    [38,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[1,1,2]cur_pos:[1,1,2]use_wormhole?False
+    [39,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[4,1,2]cur_pos:[4,1,2]use_wormhole?False
+    [40,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[1,3,3]cur_pos:[1,3,3]use_wormhole?False
+    [41,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[1,5,1]cur_pos:[1,5,1]use_wormhole?False
+    [42,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[4,1,4]cur_pos:[4,1,4]use_wormhole?False
+    [43,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[3,2,3]cur_pos:[3,2,3]use_wormhole?False
+    [44,M]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[2,5,2]cur_pos:[2,5,2]use_wormhole?False
+    [45,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[5,4,3]cur_pos:[5,4,3]use_wormhole?False
+  Deaths This Turn:
+    [27,B]->fuel:1/3, actions_left_until_reproduction:0/1, turns_left:N/A,
+      Benign got devoured by blackhole (id: -1) at Sector:3:3
+    [6,M]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:N/A,
+      Malevolent got destroyed by benign (id: 33) at Sector:5:4
+    [37,M]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:N/A,
+      Malevolent got destroyed by benign (id: 33) at Sector:5:4
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    BBPB   P-*P   -BB-   -P--   BBPB   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    B-BJ   -*P-   ----   --W-   MM--   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    P---   *BB-   O---   ----   W---   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    BBBB   -*P-   ----   ----   W---   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    YPBP   E--B   B--Y   -BB-   WBBJ   
+[0,E],5,2landed:False,fuel2
+[0,E][1,P][2,P][3,B][4,P][5,P][8,B][9,J][10,B][11,B][13,P][14,P][16,P][18,P][19,P][20,B][22,J][23,P][24,B][25,B][26,M][28,B][29,B][30,B][31,B][32,B][33,B][34,B][35,B][36,B][38,B][39,B][40,B][41,B][42,B][43,B][44,M][45,B]
+[keys:[10,B],result:[40,B][keys:[11,B],result:[41,B][keys:[20,B],result:[42,B][keys:[24,B],result:[43,B][keys:[26,M],result:[44,M][keys:[33,B],result:[45,B]
+->pass
+  ------------------
+  state:11.0, mode:test, ok
+  Movement:
+    [9,J]:[5,5,4]
+    [10,B]:[1,3,2]->[2,4,1]
+    [11,B]:[1,5,2]
+    [20,B]:[4,1,3]
+    [23,P]:[1,5,3]
+    [25,B]:[5,5,2]->[3,4,1]
+    [29,B]:[2,1,1]->[2,2,1]
+    [30,B]:[4,1,1]->[5,2,2]
+    [31,B]:[1,1,4]->[5,2,3]
+    [33,B]:[5,4,2]->[4,3,1]
+    [34,B]:[5,5,3]->[5,3,2]
+    [35,B]:[2,1,3]->[2,2,4]
+    [44,M]:[2,5,2]->[3,4,2]
+  Sectors:
+    [1,1]->[8,B],[38,B],[13,P],-sorted_ent:[-10000000,-],sorted_ent:[8,B],sorted_ent:[13,P],sorted_ent:[38,B],
+    [1,2]->[2,P],-,[-3,*],[19,P]sorted_ent:[-10000000,-],sorted_ent:[-3,*],sorted_ent:[2,P],sorted_ent:[19,P],movable_list[2,P],movable_list[19,P],
+    [1,3]->-,-,[40,B],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[40,B],movable_list[40,B],
+    [1,4]->-,[18,P],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[18,P],
+    [1,5]->[41,B],[11,B],[23,P],[32,B]sorted_ent:[11,B],sorted_ent:[23,P],sorted_ent:[32,B],sorted_ent:[41,B],
+    [2,1]->-,-,-,[22,J]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[22,J],movable_list[22,J],
+    [2,2]->[29,B],[-9,*],[5,P],[35,B]sorted_ent:[-9,*],sorted_ent:[5,P],sorted_ent:[29,B],sorted_ent:[35,B],movable_list[5,P],movable_list[35,B],
+    [2,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [2,4]->[10,B],-,[-10,W],-sorted_ent:[-10000000,-],sorted_ent:[-10,W],sorted_ent:[10,B],
+    [2,5]->[26,M],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[26,M],
+    [3,1]->[14,P],-,-,-sorted_ent:[-10000000,-],sorted_ent:[14,P],
+    [3,2]->[-6,*],[24,B],[43,B],-sorted_ent:[-6,*],sorted_ent:[24,B],sorted_ent:[43,B],
+    [3,3]->[-1,O],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-1,O],
+    [3,4]->[25,B],[44,M],-,-sorted_ent:[25,B],sorted_ent:[44,M],
+    [3,5]->[-11,W],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-11,W],
+    [4,1]->-,[39,B],[20,B],[42,B]sorted_ent:[-10000000,-],sorted_ent:[20,B],sorted_ent:[39,B],sorted_ent:[42,B],movable_list[39,B],movable_list[20,B],movable_list[42,B],
+    [4,2]->-,[-2,*],[4,P],-sorted_ent:[-10000000,-],sorted_ent:[-2,*],sorted_ent:[4,P],movable_list[4,P],
+    [4,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [4,4]->-,-,-,-sorted_ent:[-10000000,-],
+    [4,5]->[-7,W],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-7,W],
+    [5,1]->[-5,Y],[16,P],[28,B],[1,P]sorted_ent:[-5,Y],sorted_ent:[1,P],sorted_ent:[16,P],sorted_ent:[28,B],movable_list[16,P],movable_list[1,P],
+    [5,2]->[0,E],[30,B],[31,B],[36,B]sorted_ent:[0,E],sorted_ent:[30,B],sorted_ent:[31,B],sorted_ent:[36,B],
+    [5,3]->[3,B],[34,B],-,[-8,Y]sorted_ent:[-10000000,-],sorted_ent:[-8,Y],sorted_ent:[3,B],sorted_ent:[34,B],
+    [5,4]->-,-,[45,B],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[45,B],
+    [5,5]->[-4,W],-,-,[9,J]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-4,W],sorted_ent:[9,J],movable_list[9,J],
+  Descriptions:
+    [-11,W]->
+    [-10,W]->
+    [-9,*]->Luminosity:5
+    [-8,Y]->Luminosity:2
+    [-7,W]->
+    [-6,*]->Luminosity:5
+    [-5,Y]->Luminosity:2
+    [-4,W]->
+    [-3,*]->Luminosity:5
+    [-2,*]->Luminosity:5
+    [-1,O]->
+    [0,E]->fuel:2/3, life:3/3, landed?:Fold_pos:[4,2,1]cur_pos:[5,2,1]use_wormhole?False
+    [1,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[5,2,1]cur_pos:[5,1,4]
+    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,2,1]cur_pos:[1,2,1]
+    [3,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[5,2,3]cur_pos:[5,3,1]use_wormhole?False
+    [4,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,2]cur_pos:[4,2,3]
+    [5,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,3,2]cur_pos:[2,2,3]
+    [8,B]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[1,1,1]cur_pos:[1,1,1]use_wormhole?False
+    [9,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:2old_pos:[5,5,4]cur_pos:[5,5,4]
+    [10,B]->fuel:1/3, actions_left_until_reproduction:0/1, turns_left:2old_pos:[1,3,2]cur_pos:[2,4,1]use_wormhole?False
+    [11,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[1,5,2]cur_pos:[1,5,2]use_wormhole?False
+    [13,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,5,1]cur_pos:[1,1,3]
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[4,5,2]cur_pos:[3,1,1]
+    [16,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[4,1,1]cur_pos:[5,1,2]
+    [18,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[2,4,1]cur_pos:[1,4,2]
+    [19,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,1]cur_pos:[1,2,4]
+    [20,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[4,1,3]cur_pos:[4,1,3]use_wormhole?False
+    [22,J]->fuel:4/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[2,2,1]cur_pos:[2,1,4]
+    [23,P]->attached?:F, support_life?:F, visited?:F, turns_left:2old_pos:[1,5,3]cur_pos:[1,5,3]
+    [24,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[3,2,2]cur_pos:[3,2,2]use_wormhole?False
+    [25,B]->fuel:1/3, actions_left_until_reproduction:0/1, turns_left:2old_pos:[5,5,2]cur_pos:[3,4,1]use_wormhole?False
+    [26,M]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[1,4,1]cur_pos:[2,5,1]use_wormhole?False
+    [28,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[1,5,4]cur_pos:[5,1,3]use_wormhole?False
+    [29,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[2,1,1]cur_pos:[2,2,1]use_wormhole?False
+    [30,B]->fuel:1/3, actions_left_until_reproduction:0/1, turns_left:2old_pos:[4,1,1]cur_pos:[5,2,2]use_wormhole?False
+    [31,B]->fuel:1/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[1,1,4]cur_pos:[5,2,3]use_wormhole?False
+    [32,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[5,4,3]cur_pos:[1,5,4]use_wormhole?False
+    [34,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:2old_pos:[5,5,3]cur_pos:[5,3,2]use_wormhole?False
+    [35,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[2,1,3]cur_pos:[2,2,4]use_wormhole?False
+    [36,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[5,2,4]cur_pos:[5,2,4]use_wormhole?False
+    [38,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[1,1,2]cur_pos:[1,1,2]use_wormhole?False
+    [39,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[4,1,2]cur_pos:[4,1,2]use_wormhole?False
+    [40,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[1,3,3]cur_pos:[1,3,3]use_wormhole?False
+    [41,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[1,5,1]cur_pos:[1,5,1]use_wormhole?False
+    [42,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[4,1,4]cur_pos:[4,1,4]use_wormhole?False
+    [43,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[3,2,3]cur_pos:[3,2,3]use_wormhole?False
+    [44,M]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[2,5,2]cur_pos:[3,4,2]use_wormhole?False
+    [45,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[5,4,3]cur_pos:[5,4,3]use_wormhole?False
+  Deaths This Turn:
+    [33,B]->fuel:0/3, actions_left_until_reproduction:1/1, turns_left:N/A,
+      Benign got lost in space - out of fuel at Sector:4:3
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    BBP-   P-*P   --B-   -P--   BBPB   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    ---J   B*PB   ----   B-W-   M---   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    P---   *BB-   O---   BM--   W---   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    -BBB   -*P-   ----   ----   W---   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    YPBP   EBBB   BB-Y   --B-   W--J   
+[0,E],5,2landed:False,fuel2
+[0,E][1,P][2,P][3,B][4,P][5,P][8,B][9,J][10,B][11,B][13,P][14,P][16,P][18,P][19,P][20,B][22,J][23,P][24,B][25,B][26,M][28,B][29,B][30,B][31,B][32,B][34,B][35,B][36,B][38,B][39,B][40,B][41,B][42,B][43,B][44,M][45,B]
+
+->pass
+  ------------------
+  state:12.0, mode:test, ok
+  Movement:
+    [3,B]:[5,3,1]
+      reproduced [46,B] at [5,3,3]
+    [8,B]:[1,1,1]
+    [11,B]:[1,5,2]->[1,1,4]
+    [13,P]:[1,1,3]->[2,1,1]
+    [14,P]:[3,1,1]->[2,5,2]
+    [18,P]:[1,4,2]->[5,4,1]
+    [22,J]:[2,1,4]->[3,5,2]
+      reproduced [47,J] at [3,5,3]
+    [28,B]:[5,1,3]->[1,1,3]
+    [29,B]:[2,2,1]->[2,1,2]
+      reproduced [48,B] at [2,1,3]
+    [36,B]:[5,2,4]
+    [38,B]:[1,1,2]->[1,5,2]
+    [39,B]:[4,1,2]->[4,2,1]
+    [40,B]:[1,3,3]->[2,3,1]
+    [41,B]:[1,5,1]->[2,5,3]
+      destroyed [26,M] at [2,5,1]
+    [43,B]:[3,2,3]->[3,1,1]
+    [44,M]:[3,4,2]->[4,4,1]
+      reproduced [49,M] at [4,4,2]
+    [45,B]:[5,4,3]->[5,5,2]
+  Sectors:
+    [1,1]->[8,B],-,[28,B],[11,B]sorted_ent:[-10000000,-],sorted_ent:[8,B],sorted_ent:[11,B],sorted_ent:[28,B],
+    [1,2]->[2,P],-,[-3,*],[19,P]sorted_ent:[-10000000,-],sorted_ent:[-3,*],sorted_ent:[2,P],sorted_ent:[19,P],movable_list[2,P],movable_list[19,P],
+    [1,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [1,4]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [1,5]->-,[38,B],[23,P],[32,B]sorted_ent:[-10000000,-],sorted_ent:[23,P],sorted_ent:[32,B],sorted_ent:[38,B],
+    [2,1]->[13,P],[29,B],[48,B],-sorted_ent:[-10000000,-],sorted_ent:[13,P],sorted_ent:[29,B],sorted_ent:[48,B],
+    [2,2]->-,[-9,*],[5,P],[35,B]sorted_ent:[-10000000,-],sorted_ent:[-9,*],sorted_ent:[5,P],sorted_ent:[35,B],movable_list[5,P],movable_list[35,B],
+    [2,3]->[40,B],-,-,-sorted_ent:[-10000000,-],sorted_ent:[40,B],
+    [2,4]->[10,B],-,[-10,W],-sorted_ent:[-10000000,-],sorted_ent:[-10,W],sorted_ent:[10,B],
+    [2,5]->-,[14,P],[41,B],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[14,P],sorted_ent:[41,B],
+    [3,1]->[43,B],-,-,-sorted_ent:[-10000000,-],sorted_ent:[43,B],
+    [3,2]->[-6,*],[24,B],-,-sorted_ent:[-10000000,-],sorted_ent:[-6,*],sorted_ent:[24,B],
+    [3,3]->[-1,O],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-1,O],
+    [3,4]->[25,B],-,-,-sorted_ent:[-10000000,-],sorted_ent:[25,B],
+    [3,5]->[-11,W],[22,J],[47,J],-sorted_ent:[-11,W],sorted_ent:[22,J],sorted_ent:[47,J],
+    [4,1]->-,-,[20,B],[42,B]sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[20,B],sorted_ent:[42,B],movable_list[20,B],movable_list[42,B],
+    [4,2]->[39,B],[-2,*],[4,P],-sorted_ent:[-2,*],sorted_ent:[4,P],sorted_ent:[39,B],movable_list[4,P],
+    [4,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [4,4]->[44,M],[49,M],-,-sorted_ent:[44,M],sorted_ent:[49,M],movable_list[49,M],
+    [4,5]->[-7,W],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-7,W],
+    [5,1]->[-5,Y],[16,P],-,[1,P]sorted_ent:[-10000000,-],sorted_ent:[-5,Y],sorted_ent:[1,P],sorted_ent:[16,P],movable_list[16,P],movable_list[1,P],
+    [5,2]->[0,E],[30,B],[31,B],[36,B]sorted_ent:[0,E],sorted_ent:[30,B],sorted_ent:[31,B],sorted_ent:[36,B],
+    [5,3]->[3,B],[34,B],[46,B],[-8,Y]sorted_ent:[-8,Y],sorted_ent:[3,B],sorted_ent:[34,B],sorted_ent:[46,B],
+    [5,4]->[18,P],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[18,P],
+    [5,5]->[-4,W],[45,B],-,[9,J]sorted_ent:[-10000000,-],sorted_ent:[-4,W],sorted_ent:[9,J],sorted_ent:[45,B],movable_list[9,J],
+  Descriptions:
+    [-11,W]->
+    [-10,W]->
+    [-9,*]->Luminosity:5
+    [-8,Y]->Luminosity:2
+    [-7,W]->
+    [-6,*]->Luminosity:5
+    [-5,Y]->Luminosity:2
+    [-4,W]->
+    [-3,*]->Luminosity:5
+    [-2,*]->Luminosity:5
+    [-1,O]->
+    [0,E]->fuel:2/3, life:3/3, landed?:Fold_pos:[4,2,1]cur_pos:[5,2,1]use_wormhole?False
+    [1,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[5,2,1]cur_pos:[5,1,4]
+    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,2,1]cur_pos:[1,2,1]
+    [3,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[5,3,1]cur_pos:[5,3,1]use_wormhole?False
+    [4,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,2]cur_pos:[4,2,3]
+    [5,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,3,2]cur_pos:[2,2,3]
+    [8,B]->fuel:1/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[1,1,1]cur_pos:[1,1,1]use_wormhole?False
+    [9,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:1old_pos:[5,5,4]cur_pos:[5,5,4]
+    [10,B]->fuel:1/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[1,3,2]cur_pos:[2,4,1]use_wormhole?False
+    [11,B]->fuel:1/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[1,5,2]cur_pos:[1,1,4]use_wormhole?False
+    [13,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[1,1,3]cur_pos:[2,1,1]
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:2old_pos:[3,1,1]cur_pos:[2,5,2]
+    [16,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[4,1,1]cur_pos:[5,1,2]
+    [18,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,4,2]cur_pos:[5,4,1]
+    [19,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,1]cur_pos:[1,2,4]
+    [20,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[4,1,3]cur_pos:[4,1,3]use_wormhole?False
+    [22,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[2,1,4]cur_pos:[3,5,2]
+    [23,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[1,5,3]cur_pos:[1,5,3]
+    [24,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[3,2,2]cur_pos:[3,2,2]use_wormhole?False
+    [25,B]->fuel:1/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[5,5,2]cur_pos:[3,4,1]use_wormhole?False
+    [28,B]->fuel:1/3, actions_left_until_reproduction:0/1, turns_left:2old_pos:[5,1,3]cur_pos:[1,1,3]use_wormhole?False
+    [29,B]->fuel:2/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[2,2,1]cur_pos:[2,1,2]use_wormhole?False
+    [30,B]->fuel:1/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[4,1,1]cur_pos:[5,2,2]use_wormhole?False
+    [31,B]->fuel:1/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[1,1,4]cur_pos:[5,2,3]use_wormhole?False
+    [32,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[5,4,3]cur_pos:[1,5,4]use_wormhole?False
+    [34,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[5,5,3]cur_pos:[5,3,2]use_wormhole?False
+    [35,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[2,1,3]cur_pos:[2,2,4]use_wormhole?False
+    [36,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[5,2,4]cur_pos:[5,2,4]use_wormhole?False
+    [38,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[1,1,2]cur_pos:[1,5,2]use_wormhole?False
+    [39,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[4,1,2]cur_pos:[4,2,1]use_wormhole?False
+    [40,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[1,3,3]cur_pos:[2,3,1]use_wormhole?False
+    [41,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[1,5,1]cur_pos:[2,5,3]use_wormhole?False
+    [42,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[4,1,4]cur_pos:[4,1,4]use_wormhole?False
+    [43,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:2old_pos:[3,2,3]cur_pos:[3,1,1]use_wormhole?False
+    [44,M]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[3,4,2]cur_pos:[4,4,1]use_wormhole?False
+    [45,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[5,4,3]cur_pos:[5,5,2]use_wormhole?False
+    [46,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[5,3,3]cur_pos:[5,3,3]use_wormhole?False
+    [47,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:1old_pos:[3,5,3]cur_pos:[3,5,3]
+    [48,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[2,1,3]cur_pos:[2,1,3]use_wormhole?False
+    [49,M]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[4,4,2]cur_pos:[4,4,2]use_wormhole?False
+  Deaths This Turn:
+    [26,M]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:N/A,
+      Malevolent got destroyed by benign (id: 41) at Sector:2:5
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    B-BB   P-*P   ----   ----   -BPB   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    PBB-   -*PB   B---   B-W-   -PB-   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    B---   *B--   O---   B---   WJJ-   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    --BB   B*P-   ----   MM--   W---   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    YP-P   EBBB   BBBY   P---   WB-J   
+[0,E],5,2landed:False,fuel2
+[0,E][1,P][2,P][3,B][4,P][5,P][8,B][9,J][10,B][11,B][13,P][14,P][16,P][18,P][19,P][20,B][22,J][23,P][24,B][25,B][28,B][29,B][30,B][31,B][32,B][34,B][35,B][36,B][38,B][39,B][40,B][41,B][42,B][43,B][44,M][45,B][46,B][47,J][48,B][49,M]
+[keys:[3,B],result:[46,B][keys:[22,J],result:[47,J][keys:[29,B],result:[48,B][keys:[44,M],result:[49,M]
+->move(W)
+  ------------------
+  state:13.0, mode:test, ok
+  Movement:
+    [0,E]:[5,2,1]->[5,1,3]
+    [8,B]:[1,1,1]->[2,1,4]
+    [11,B]:[1,1,4]->[2,5,1]
+    [18,P]:[5,4,1]->[5,5,3]
+    [20,B]:[4,1,3]->[3,1,2]
+      reproduced [50,B] at [3,1,3]
+    [24,B]:[3,2,2]->[2,3,2]
+    [29,B]:[2,1,2]->[1,1,1]
+    [31,B]:[5,2,3]->[4,2,4]
+    [32,B]:[1,5,4]->[1,4,1]
+      reproduced [51,B] at [1,4,2]
+    [35,B]:[2,2,4]->[3,2,2]
+      reproduced [52,B] at [3,2,3]
+    [36,B]:[5,2,4]->[1,1,2]
+      reproduced [53,B] at [1,1,4]
+    [40,B]:[2,3,1]->[1,2,2]
+    [42,B]:[4,1,4]->[3,5,4]
+    [49,M]:[4,4,2]->[4,5,2]
+  Sectors:
+    [1,1]->[29,B],[36,B],[28,B],[53,B]sorted_ent:[28,B],sorted_ent:[29,B],sorted_ent:[36,B],sorted_ent:[53,B],
+    [1,2]->[2,P],[40,B],[-3,*],[19,P]sorted_ent:[-3,*],sorted_ent:[2,P],sorted_ent:[19,P],sorted_ent:[40,B],movable_list[2,P],movable_list[19,P],
+    [1,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [1,4]->[32,B],[51,B],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[32,B],sorted_ent:[51,B],
+    [1,5]->-,[38,B],[23,P],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[23,P],sorted_ent:[38,B],
+    [2,1]->[13,P],-,[48,B],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[13,P],sorted_ent:[48,B],
+    [2,2]->-,[-9,*],[5,P],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-9,*],sorted_ent:[5,P],movable_list[5,P],
+    [2,3]->-,[24,B],-,-sorted_ent:[-10000000,-],sorted_ent:[24,B],
+    [2,4]->[10,B],-,[-10,W],-sorted_ent:[-10000000,-],sorted_ent:[-10,W],sorted_ent:[10,B],
+    [2,5]->-,[14,P],[41,B],-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[14,P],sorted_ent:[41,B],
+    [3,1]->[43,B],[20,B],[50,B],-sorted_ent:[20,B],sorted_ent:[43,B],sorted_ent:[50,B],movable_list[50,B],
+    [3,2]->[-6,*],[35,B],[52,B],-sorted_ent:[-6,*],sorted_ent:[35,B],sorted_ent:[52,B],
+    [3,3]->[-1,O],-,-,-sorted_ent:[-10000000,-],sorted_ent:[-1,O],
+    [3,4]->[25,B],-,-,-sorted_ent:[-10000000,-],sorted_ent:[25,B],
+    [3,5]->[-11,W],[22,J],[47,J],[42,B]sorted_ent:[-11,W],sorted_ent:[22,J],sorted_ent:[42,B],sorted_ent:[47,J],movable_list[42,B],
+    [4,1]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [4,2]->[39,B],[-2,*],[4,P],[31,B]sorted_ent:[-2,*],sorted_ent:[4,P],sorted_ent:[31,B],sorted_ent:[39,B],movable_list[4,P],movable_list[31,B],
+    [4,3]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [4,4]->[44,M],-,-,-sorted_ent:[-10000000,-],sorted_ent:[44,M],
+    [4,5]->[-7,W],[49,M],-,-sorted_ent:[-7,W],sorted_ent:[49,M],
+    [5,1]->[-5,Y],[16,P],[0,E],[1,P]sorted_ent:[-5,Y],sorted_ent:[0,E],sorted_ent:[1,P],sorted_ent:[16,P],movable_list[16,P],movable_list[1,P],
+    [5,2]->-,[30,B],-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[30,B],
+    [5,3]->[3,B],[34,B],[46,B],[-8,Y]sorted_ent:[-8,Y],sorted_ent:[3,B],sorted_ent:[34,B],sorted_ent:[46,B],
+    [5,4]->-,-,-,-sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],sorted_ent:[-10000000,-],
+    [5,5]->[-4,W],[45,B],[18,P],[9,J]sorted_ent:[-4,W],sorted_ent:[9,J],sorted_ent:[18,P],sorted_ent:[45,B],movable_list[9,J],
+  Descriptions:
+    [-11,W]->
+    [-10,W]->
+    [-9,*]->Luminosity:5
+    [-8,Y]->Luminosity:2
+    [-7,W]->
+    [-6,*]->Luminosity:5
+    [-5,Y]->Luminosity:2
+    [-4,W]->
+    [-3,*]->Luminosity:5
+    [-2,*]->Luminosity:5
+    [-1,O]->
+    [0,E]->fuel:3/3, life:3/3, landed?:Fold_pos:[5,2,1]cur_pos:[5,1,3]use_wormhole?False
+    [1,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[5,2,1]cur_pos:[5,1,4]
+    [2,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,2,1]cur_pos:[1,2,1]
+    [3,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[5,3,1]cur_pos:[5,3,1]use_wormhole?False
+    [4,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,2]cur_pos:[4,2,3]
+    [5,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[1,3,2]cur_pos:[2,2,3]
+    [9,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:0/2, turns_left:0old_pos:[5,5,4]cur_pos:[5,5,4]
+    [10,B]->fuel:1/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[1,3,2]cur_pos:[2,4,1]use_wormhole?False
+    [13,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,1,3]cur_pos:[2,1,1]
+    [14,P]->attached?:F, support_life?:F, visited?:F, turns_left:1old_pos:[3,1,1]cur_pos:[2,5,2]
+    [16,P]->attached?:T, support_life?:T, visited?:F, turns_left:N/Aold_pos:[4,1,1]cur_pos:[5,1,2]
+    [18,P]->attached?:F, support_life?:F, visited?:F, turns_left:2old_pos:[5,4,1]cur_pos:[5,5,3]
+    [19,P]->attached?:T, support_life?:F, visited?:F, turns_left:N/Aold_pos:[5,2,1]cur_pos:[1,2,4]
+    [20,B]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[4,1,3]cur_pos:[3,1,2]use_wormhole?False
+    [22,J]->fuel:3/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[2,1,4]cur_pos:[3,5,2]
+    [23,P]->attached?:F, support_life?:F, visited?:F, turns_left:0old_pos:[1,5,3]cur_pos:[1,5,3]
+    [24,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[3,2,2]cur_pos:[2,3,2]use_wormhole?False
+    [25,B]->fuel:1/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[5,5,2]cur_pos:[3,4,1]use_wormhole?False
+    [28,B]->fuel:1/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[5,1,3]cur_pos:[1,1,3]use_wormhole?False
+    [29,B]->fuel:1/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[2,1,2]cur_pos:[1,1,1]use_wormhole?False
+    [30,B]->fuel:1/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[4,1,1]cur_pos:[5,2,2]use_wormhole?False
+    [31,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[5,2,3]cur_pos:[4,2,4]use_wormhole?False
+    [32,B]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[1,5,4]cur_pos:[1,4,1]use_wormhole?False
+    [34,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[5,5,3]cur_pos:[5,3,2]use_wormhole?False
+    [35,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[2,2,4]cur_pos:[3,2,2]use_wormhole?False
+    [36,B]->fuel:2/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[5,2,4]cur_pos:[1,1,2]use_wormhole?False
+    [38,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[1,1,2]cur_pos:[1,5,2]use_wormhole?False
+    [39,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[4,1,2]cur_pos:[4,2,1]use_wormhole?False
+    [40,B]->fuel:3/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[2,3,1]cur_pos:[1,2,2]use_wormhole?False
+    [41,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[1,5,1]cur_pos:[2,5,3]use_wormhole?False
+    [42,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[4,1,4]cur_pos:[3,5,4]use_wormhole?False
+    [43,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[3,2,3]cur_pos:[3,1,1]use_wormhole?False
+    [44,M]->fuel:1/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[3,4,2]cur_pos:[4,4,1]use_wormhole?False
+    [45,B]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:0old_pos:[5,4,3]cur_pos:[5,5,2]use_wormhole?False
+    [46,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[5,3,3]cur_pos:[5,3,3]use_wormhole?False
+    [47,J]->fuel:5/5, load:0/2, actions_left_until_reproduction:2/2, turns_left:0old_pos:[3,5,3]cur_pos:[3,5,3]
+    [48,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[2,1,3]cur_pos:[2,1,3]use_wormhole?False
+    [49,M]->fuel:2/3, actions_left_until_reproduction:0/1, turns_left:1old_pos:[4,4,2]cur_pos:[4,5,2]use_wormhole?False
+    [50,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:1old_pos:[3,1,3]cur_pos:[3,1,3]use_wormhole?False
+    [51,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[1,4,2]cur_pos:[1,4,2]use_wormhole?False
+    [52,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:0old_pos:[3,2,3]cur_pos:[3,2,3]use_wormhole?False
+    [53,B]->fuel:3/3, actions_left_until_reproduction:1/1, turns_left:2old_pos:[1,1,4]cur_pos:[1,1,4]use_wormhole?False
+  Deaths This Turn:
+    [8,B]->fuel:0/3, actions_left_until_reproduction:0/1, turns_left:N/A,
+      Benign got lost in space - out of fuel at Sector:2:1
+    [11,B]->fuel:0/3, actions_left_until_reproduction:0/1, turns_left:N/A,
+      Benign got lost in space - out of fuel at Sector:2:5
+    (1:1)  (1:2)  (1:3)  (1:4)  (1:5)  
+    BBBB   PB*P   ----   BB--   -BP-   
+    (2:1)  (2:2)  (2:3)  (2:4)  (2:5)  
+    P-B-   -*P-   -B--   B-W-   -PB-   
+    (3:1)  (3:2)  (3:3)  (3:4)  (3:5)  
+    BBB-   *BB-   O---   B---   WJJB   
+    (4:1)  (4:2)  (4:3)  (4:4)  (4:5)  
+    ----   B*PB   ----   M---   WM--   
+    (5:1)  (5:2)  (5:3)  (5:4)  (5:5)  
+    YPEP   -B--   BBBY   ----   WBPJ   
+[0,E],5,1landed:False,fuel3
+[0,E][1,P][2,P][3,B][4,P][5,P][9,J][10,B][13,P][14,P][16,P][18,P][19,P][20,B][22,J][23,P][24,B][25,B][28,B][29,B][30,B][31,B][32,B][34,B][35,B][36,B][38,B][39,B][40,B][41,B][42,B][43,B][44,M][45,B][46,B][47,J][48,B][49,M][50,B][51,B][52,B][53,B]
+[keys:[20,B],result:[50,B][keys:[32,B],result:[51,B][keys:[35,B],result:[52,B][keys:[36,B],result:[53,B]
+->land
+  ------------------
+  state:14.0, mode:test, ok
+  Tranquility base here - we've got a life!
+
+[0,E],5,1landed:True,fuel3
+[0,E][1,P][2,P][3,B][4,P][5,P][9,J][10,B][13,P][14,P][16,P][18,P][19,P][20,B][22,J][23,P][24,B][25,B][28,B][29,B][30,B][31,B][32,B][34,B][35,B][36,B][38,B][39,B][40,B][41,B][42,B][43,B][44,M][45,B][46,B][47,J][48,B][49,M][50,B][51,B][52,B][53,B]
+

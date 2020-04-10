@@ -10,7 +10,7 @@ root = "./tests/acceptance/"
 # NOTE: Tests can not be named test.expected.txt 
 # NOTE: To run all tests in root directory, uses [""] as the test.
 # WARNING: Does not support partial file names with wildcards ie at*.txt
-acceptance_tests = ["instructor"]
+acceptance_tests = ["instructor","test1"]
 
 # acceptance_tests = ["acceptance-tests/at00.txt"
 #                     ,"acceptance-tests/at01.txt"]

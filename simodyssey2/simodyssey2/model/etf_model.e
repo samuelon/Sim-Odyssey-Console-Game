@@ -158,10 +158,13 @@ feature -- model operations
 	land
 		local
 			l : LAND
+			not_attached : INTEGER
+			p_num : INTEGER
 		do
 			create l.make
-			--control error
 			reset_action_routine
+			--control error
+
 			if not in_game then
 				main_msg.set_second (all_msg.error_not_in_mission)
 				face_error := true
@@ -173,6 +176,10 @@ feature -- model operations
 				face_error := true
 			elseif not shared_info.og_exp.get_sector.has_planet then
 				main_msg.set_second (all_msg.error_land_no_planet)
+				face_error := true
+--			elseif shared_info.og_exp.get_sector then
+			elseif shared_info.og_exp.get_sector.all_p_not_attached then
+				main_msg.set_second (all_msg.error_land_no_visited_planet)
 				face_error := true
 			else
 				if	attached p as p1 then
@@ -265,7 +272,7 @@ feature -- model operations
 				main_msg.set_second (all_msg.error_mode_in_game)
 				face_error := true
 			elseif not (0 < a_threshold and a_threshold <= j_threshold and j_threshold <= m_threshold
-				and m_threshold <= b_threshold and b_threshold <= p_threshold and p_threshold <= 101 ) then
+				and m_threshold <= b_threshold and b_threshold <= p_threshold and p_threshold < 101 ) then
 				main_msg.set_second (all_msg.error_test)
 				face_error:=true
 			else

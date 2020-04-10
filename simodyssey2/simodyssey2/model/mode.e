@@ -42,14 +42,13 @@ feature -- constructor
 	make_test(a_threshold: INTEGER; j_threshold: INTEGER; m_threshold: INTEGER; b_threshold: INTEGER; p_threshold: INTEGER)
 	--???
 	require
-		valid : a_threshold < j_threshold and j_threshold < m_threshold and m_threshold < b_threshold and b_threshold < p_threshold
+		valid : a_threshold <= j_threshold and j_threshold <= m_threshold and m_threshold <= b_threshold and b_threshold <= p_threshold and a_threshold > 0 and p_threshold < 101
         do
         	shared_info.test (a_threshold, j_threshold, m_threshold, b_threshold, p_threshold)
         	shared_info.set_galaxy
         	g := shared_info.galaxy
 --
         end
-
 
 
 

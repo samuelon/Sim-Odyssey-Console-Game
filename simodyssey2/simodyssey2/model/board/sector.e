@@ -180,7 +180,7 @@ feature --function
 			until
 				loop_counter > contents.count or filled
 			loop
-		    	if not attached contents [loop_counter] or entity_quad[loop_counter].is_empty then -- not void if is it void
+		    	if not attached contents [loop_counter] or entity_quad[loop_counter].id = -10000000 then -- not void if is it void
 					contents [loop_counter] := new_component.en
 					filled := TRUE
 					entity_quad [loop_counter] := new_component
@@ -482,6 +482,36 @@ feature -- check
 				end -- if
 				loop_counter := loop_counter + 1
 			end
+		end
+
+	all_p_not_attached : BOOLEAN
+		local
+			not_attached : INTEGER
+			p_num : INTEGER
+			i : INTEGER
+		do
+			p_num := 0
+			not_attached := 0
+			from
+				i := 1
+			until
+				i > entity_quad.count
+			loop
+				if attached{PLANET}entity_quad[i] as p then
+					p_num := p_num + 1
+					if not p.is_attached then
+						not_attached := not_attached + 1
+					end
+				end
+				i := i + 1
+			end
+
+			if p_num = not_attached then
+				result := true
+			else
+				result := false
+			end
+
 		end
 feature --others
 	out_sorted_entity : STRING

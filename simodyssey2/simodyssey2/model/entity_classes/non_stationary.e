@@ -91,9 +91,11 @@ feature -- function
 	do
 		dead := true
 		current.set_turns_left (-1)
+		if attached{EXPLORER}current as exp then
+			exp.set_life (0)
+		end
 		shared_info.dead_this_turn.extend (current)
 		current.get_sector.remove(current)
---		shared_info.galaxy.movable_sorted.prune_all (current)
 -- store it
 		shared_info.galaxy.temp_dies.extend (current)
 
@@ -191,6 +193,8 @@ feature{GALAXY} -- GALAXY ONLY
 						if attached{EXPLORER}ebmj as exp then
 							if not exp.landed then
 								exp.dies
+								exp.set_d_asteroid
+								shared_info.destory_this_turn.put (exp,current)
 							end
 						end
 					else
@@ -262,7 +266,7 @@ feature{GALAXY} -- GALAXY ONLY
 				shared_info.og_exp.dec_life
 				if shared_info.og_exp.life = 0 then
 					shared_info.og_exp.dies
-
+					shared_info.og_exp.set_d_malevolent
 				end
 				shared_info.destory_this_turn.put (shared_info.og_exp, current) -- put it in check_alive???
 

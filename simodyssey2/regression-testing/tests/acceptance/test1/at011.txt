@@ -1,0 +1,6 @@
+test(1, 2, 30, 60, 61)
+move(S)
+move(E)
+move(E)
+move(SE)
+move(S)

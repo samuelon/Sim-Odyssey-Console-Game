@@ -14,6 +14,8 @@ feature -- command
 	land
     	do
 			-- perform some update on the model state
+			model.reset_action_routine
+			
 			model.land
 			model.default_update
 
@@ -22,7 +24,7 @@ feature -- command
 				model.end_game
 			then
 				model.set_in_game_false
-				
+
 			end
     	end
 
