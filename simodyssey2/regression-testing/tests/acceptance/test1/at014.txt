@@ -1,7 +1,0 @@
-test(5,10,15,40,60)    
-pass
-pass
-move(E)
-move(E)
-move(S)
-move(S)

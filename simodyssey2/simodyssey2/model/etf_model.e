@@ -102,7 +102,13 @@ feature -- model operations
 				--				io.put_string (shared_info.exp_death_msg)
 					str.append (shared_info.exp_death_msg)
 					str.append ("%N"+ all_msg.game_is_over+"%N")
-					main_msg.set_second (str)
+--					main_msg.set_second (str)
+					if liftoff_on then
+						main_msg.append_second ("%N"+str)
+					else
+						main_msg.set_second (str)
+					end
+
 					main_msg.set_eight("  "+shared_info.exp_death_msg+"%N"+ all_msg.game_is_over)
 				--				in_game := false
 					end_game := true

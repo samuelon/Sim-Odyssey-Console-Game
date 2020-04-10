@@ -93,6 +93,11 @@ feature --quires
 		second := str
 	end
 
+	append_second(str : STRING)
+	do
+		second.append (str)
+	end
+
 	third : STRING -- MOVEMENT
 		local
 			ent : NON_STATIONARY

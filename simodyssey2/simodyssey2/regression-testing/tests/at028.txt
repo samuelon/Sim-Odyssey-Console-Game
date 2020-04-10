@@ -1,0 +1,10 @@
+test(30,70,71,72,90)
+move(NW)
+move(S)
+move(S)
+move(S)
+move(N)
+move(W)
+pass
+pass
+move(SW)

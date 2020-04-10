@@ -1,0 +1,6 @@
+test(1,2,40,41,70)
+move(E)
+pass
+move(SW)
+pass
+pass

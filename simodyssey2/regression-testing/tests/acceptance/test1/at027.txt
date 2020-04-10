@@ -1,8 +1,0 @@
-test(10,50,51,52,80)
-move(E)
-move(S)
-move(S)
-move(S)
-move(S)
-pass
-land

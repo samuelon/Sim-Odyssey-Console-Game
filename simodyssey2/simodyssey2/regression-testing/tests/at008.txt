@@ -1,0 +1,8 @@
+test(30,31,32,33,60)
+move(N)
+move(E)
+pass
+move(E)
+land
+pass
+liftoff

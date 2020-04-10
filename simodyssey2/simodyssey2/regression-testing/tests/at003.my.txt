@@ -1,0 +1,6 @@
+test(30, 31, 90,91,100)                                            
+pass 
+pass
+move(SE)
+move(S)
+move(S)

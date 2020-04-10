@@ -1,0 +1,7 @@
+test(5,10,30,31,50)
+move(NW)
+wormhole
+move(E)  
+wormhole
+wormhole
+move(E) 

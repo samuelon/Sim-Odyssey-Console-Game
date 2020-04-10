@@ -1,0 +1,9 @@
+test(1,2,50,51,70)
+move(E)
+pass
+move(E)
+pass
+pass
+move(E)
+land
+move(NW)

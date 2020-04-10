@@ -1,0 +1,14 @@
+test(5,10,15,40,60)
+pass
+move(SE)
+move(S)
+move(S)
+move(S)
+pass
+pass
+pass
+pass
+pass
+pass
+move(W)
+land
