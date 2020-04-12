@@ -1,0 +1,100 @@
+move(NW)
+move(W)
+abort
+move(SW)
+abort
+move(W)
+liftoff
+wormhole
+move(W)
+move(E)
+move(S)
+move(E)
+wormhole
+move(SE)
+move(N)
+abort
+pass
+move(SW)
+move(NE)
+play
+pass
+pass
+move(N)
+move(NE)
+move(NE)
+move(E)
+move(SW)
+move(SE)
+move(NE)
+status
+status
+pass
+move(NE)
+play
+land
+move(W)
+move(W)
+play
+pass
+move(NE)
+pass
+pass
+move(E)
+move(E)
+move(S)
+liftoff
+play
+test(10, 28, 64, 84, 89)
+move(E)
+pass
+status
+play
+land
+move(E)
+move(SE)
+wormhole
+move(SW)
+status
+play
+liftoff
+wormhole
+play
+move(NW)
+pass
+play
+pass
+play
+play
+move(N)
+move(N)
+land
+status
+move(W)
+wormhole
+move(E)
+move(S)
+play
+move(SW)
+abort
+land
+land
+play
+wormhole
+test(51, 63, 69, 91, 98)
+move(SW)
+test(29, 42, 6, 8, 81)
+play
+move(NE)
+pass
+test(100, 32, 36, 63, 89)
+test(19, 56, 7, 84, 94)
+move(S)
+test(15, 49, 5, 75, 84)
+move(SE)
+land
+test(10, 18, 33, 57, 65)
+test(18, 2, 23, 33, 82)
+move(E)
+test(13, 17, 19, 68, 74)
+abort
