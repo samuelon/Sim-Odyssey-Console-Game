@@ -19,8 +19,11 @@ feature
 	turns_left : INTEGER
 	dead : BOOLEAN
 	devoured : BOOLEAN
+		-- is it devoured by black hole?
 	move_sucess : BOOLEAN
+		-- is it move successfully
 	use_wormhole : BOOLEAN
+		-- does it use wormhole
 	model_access: ETF_MODEL_ACCESS
 	model: ETF_MODEL
 		attribute
@@ -43,6 +46,7 @@ feature -- function
 		end
 
 	set_location(r:INTEGER;c:INTEGER;q:INTEGER)
+		-- set current location
 		do
 			create current_pos.make
 			current_pos.extend (r)
@@ -51,6 +55,7 @@ feature -- function
 		end
 
 	set_old_location(ro:INTEGER;co:INTEGER;qu:INTEGER)
+		-- set past location
 		do
 			create old_pos.make
 			old_pos.extend (ro)
@@ -69,6 +74,7 @@ feature -- function
 	end
 
 	dec_turns_left
+		-- turns_left -1
 		do
 			if turns_left > 0 then
 			turns_left := turns_left - 1
@@ -87,7 +93,8 @@ feature -- function
 		use_wormhole := false
 	end
 
-	dies -- check_death
+	dies
+		-- entity death routine work
 	do
 		dead := true
 		current.set_turns_left (-1)
@@ -113,6 +120,7 @@ feature -- quires
 		end
 
 	location_equals:BOOLEAN
+		-- if old position equal to current position
 	do
 		Result := across 1 |..| 3 is i all
 		current_pos[i] ~ old_pos[i]
@@ -120,12 +128,14 @@ feature -- quires
 	end
 
 	cur_location_out : STRING
+		-- print current location
 	do
 		create Result.make_empty
 		Result := "[" + current_pos[1].out + "," + current_pos[2].out+"," + current_pos[3].out+ "]"
 	end
 
 	old_location_out : STRING
+		-- print last position
 	do
 		create Result.make_empty
 		Result := "[" + old_pos[1].out + "," + old_pos[2].out+"," + old_pos[3].out+ "]"
@@ -133,16 +143,21 @@ feature -- quires
 
 feature -- msg common
 	dmsg_to_blackhole(ent : NON_STATIONARY):STRING
+		-- entities die due to black hole
 		do
 			--blackhole isnt allowed to be wrong
 			Result := ent.name +  " got devoured by blackhole (id: -1) at Sector:3:3"
 		end
 
 	current_status : STRING
+		-- current status of each entity
 		deferred end
 
 	dmsg_reason(d : NON_STATIONARY ):STRING
 	-- d destoryed r destructor
+	-- entity death message here due to different reason
+		require
+			entity_dead : d.dead
 		local
 			ide : INTEGER
 			r : ARRAY[NON_STATIONARY]
@@ -174,6 +189,7 @@ feature -- helper
 
 feature{GALAXY} -- GALAXY ONLY
 	behave
+		-- entity behaviour
 	local
 		num : INTEGER
 		num_turn_a : INTEGER

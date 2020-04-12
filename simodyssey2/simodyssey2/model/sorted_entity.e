@@ -13,6 +13,7 @@ create
 
 feature--constructor
 	make(arr : ITERABLE[ENTITY])
+		-- initialization
 	DO
 		-- DO BUBLLE SORT
 		-- PUBLIC ATTRIBUTE
@@ -26,6 +27,7 @@ feature--constructor
 feature
 
 	sorted_entities: LINKED_LIST[ENTITY]
+		-- return already sorted collection
 		do
 			result := sorted_entities_hidden
 		end

@@ -215,11 +215,13 @@ feature --helper
 	end
 
 	id_out : STRING
+		-- return the entity id
 	do
 		Result := "[" + id.out + "," + en.out + "]"
 	end
 
 	get_sector : SECTOR
+		-- return the entity sector
 	do
 		Result := shared_info.galaxy.get_sector ([row,col])
 	end

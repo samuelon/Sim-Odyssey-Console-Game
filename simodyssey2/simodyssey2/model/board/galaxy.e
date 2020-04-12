@@ -25,7 +25,9 @@ feature -- collection
 	movable_sorted: LINKED_LIST[NON_STATIONARY]
 	stationary_stars_sorted: LINKED_LIST [STATIONARY]
 	temp_reproduced : LINKED_LIST[EBMJ_COMMON]
+		-- reproduced entity this turn
 	temp_dies : LINKED_LIST[NON_STATIONARY]
+		-- dead entity this turn
 
 feature --attributes
 	all_msgs: ALL_MSG
@@ -128,6 +130,7 @@ feature --constructor
 
 feature --commands
 	sort_movable_list
+		-- sort movable entity list
 	local
 		sort : SORTED_ENTITY
 		temp : LINKED_LIST[ENTITY]
@@ -221,7 +224,7 @@ feature --commands
 
 feature --action
 	turn(action : ACTION)
-
+		-- the explorer performs action, if valid , then other movable entities act
 	require
 		vaild : not model.face_error
 	local
@@ -246,6 +249,8 @@ feature --action
 	end
 
 	turn_movable_entity_helper
+		-- move all movable planets; clear dead planets in the movable_sorted linkedlist
+		-- add new reproduced entity to the movable_sorted
 	local
 		idx : INTEGER
 	do
@@ -281,7 +286,8 @@ feature --action
 			end
 	end
 
-	movable_entity_move -- for turn
+	movable_entity_move
+		-- for turn, all movable entity moves
 		require
 			in_game : model.in_game
 		local
@@ -349,9 +355,9 @@ feature --action
 		end
 
 	check_alive (ent:NON_STATIONARY)
+		-- check if entity alive
 	local
 		sum_lum : INTEGER
-
 	do
 		--- pass
 		if
@@ -397,6 +403,7 @@ feature --action
 	end
 
 	reproduce(ent: NON_STATIONARY)
+		-- reproduce new entity when its actions_left_until_reproduction = 0
 	local
 		done : BOOLEAN
 	DO
@@ -425,7 +432,7 @@ feature --action
 	end-- do
 
 	act(action:ACTION)
-
+		-- act as user command
 	do
 		if attached{PASS}action as pass then
 
@@ -442,7 +449,7 @@ feature --action
 		end
 	end
 
-feature -- helper
+feature -- debug string helper
 	movable_sorted_out : STRING
 	DO
 		create Result.make_empty
@@ -454,11 +461,13 @@ feature -- helper
 
 	end
 	get_sector(d : TUPLE[row : INTEGER;col : INTEGER]) : SECTOR
+		-- get the sector of input row and col
 		DO
 			Result := grid[d.row , d.col]
 		end
 
 	place_ent(now:TUPLE[row:INTEGER;col:INTEGER]; suppose :TUPLE[row:INTEGER;col:INTEGER];ent : NON_STATIONARY )
+		-- set old_location and new_location to the entity
 	DO
 		ent.set_old_location (ent.row,ent.col, ent.current_pos.at (3))
 		get_sector (now).remove (ent)
@@ -481,6 +490,7 @@ feature -- helper
 
 
 	create_bmj(ent : EBMJ_COMMON)
+		-- reproduce the same type of entity
 	local
 		num_turns : INTEGER
 		b : BENIGN
@@ -527,7 +537,7 @@ feature -- query
 			-- report current game status
 		do
 			create Result.default_create
-			-- win if og land on the supported life planet
+			-- win if explorer land on the supported life planet
 			if shared_info.og_exp.wins then
 				Result.is_over := true
 				Result.is_win := true

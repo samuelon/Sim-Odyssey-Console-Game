@@ -84,6 +84,7 @@ feature
 		 -- max number of objects that can be stored in a location
 
 	stationary_id : INTEGER
+		-- the stationary id
 
 	movable_id : INTEGER
 
@@ -92,30 +93,32 @@ feature
 	black_hole : BLACKHOLE
 
 	exp_death_msg : STRING
+		-- the exploer specific death message
 
 feature -- helper
 
 	move_this_turn : LINKED_LIST[NON_STATIONARY]
+		-- all entities moved this turn
 
 	dead_this_turn : LINKED_LIST[NON_STATIONARY]
+		-- all entities dead this turn
 
 	reproduce_this_turn : HASH_TABLE[EBMJ_COMMON,EBMJ_COMMON]
+		-- all entities behaves reproduce and the new reproduced entity this turn
 
 	destory_this_turn : DESTORY_BOOK
-
-	--map
---	destory_this_ : map[ent,linked_list[non_stationary]]
---	reproduce : [ent, reproduced ent]
+		-- all destoried entities this turn
 
 	galaxy : GALAXY
 feature
 	stationary_id_sub_one
-
+		-- update stationary entity id
 		do
 			stationary_id := stationary_id - 1
 		end
 
 	movable_id_plus_one
+		-- update movable entity id
 		do
 			movable_id := movable_id + 1
 
@@ -131,6 +134,7 @@ end
 
 feature -- reset
 	reset_key_info
+		-- reset every collections each turn
 	do
 --		stationary_id := -2
 --		movable_id := 1
@@ -142,12 +146,13 @@ feature -- reset
 	end
 
 	reset_ent_id
+		-- reset stationary entities and movable entities when restart play or test
 	do
 		stationary_id := -2
 		movable_id := 1
 	end
 
-feature
+feature -- add items
 	add_move_this_turn(ent : NON_STATIONARY)
 		do
 			if
@@ -166,13 +171,14 @@ feature
 			end
 		end
 
-	reset_move_this_turn --clear
+feature -- reset every collections
+	reset_move_this_turn
 	do
 		create move_this_turn.make
 
 	end
 
-	reset_dead_this_turn --clear
+	reset_dead_this_turn
 	do
 		create dead_this_turn.make
 
@@ -237,7 +243,8 @@ feature --commands
 		end
 
 feature -- out helper
-	out_removed_this_turn : STRING -- ok
+	out_removed_this_turn : STRING
+		-- print out removed_this_turn
 		local
 			i : INTEGER
 		do
@@ -252,7 +259,8 @@ feature -- out helper
 			end
 		end
 
-	out_dead_this_turn : STRING -- ok
+	out_dead_this_turn : STRING
+		-- debug for dead_this_turn
 		local
 			i : INTEGER
 		do

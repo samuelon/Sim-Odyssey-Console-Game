@@ -133,6 +133,7 @@ feature -- commands
 feature --function
 
 	populate_routine(a_row: INTEGER ; a_col : INTEGER ; ent : NON_STATIONARY)
+		-- populate the entity at sector[a_row,a_col]
 	local
 		turns_left : INTEGER
 		planet_holder: ENTITY_ALPHABET
@@ -148,7 +149,8 @@ feature --function
 		planet_holder := void -- only difference from sector now
 	end
 
-	return_sorted_ent : LINKED_LIST[ENTITY] --ok
+	return_sorted_ent : LINKED_LIST[ENTITY]
+		-- return the sorted entities linked list according to its id
 	local
 		sort : SORTED_ENTITY
 	do
@@ -157,7 +159,7 @@ feature --function
 	end
 
 	put (new_component: ENTITY)
-			-- put `new_component' in contents array
+			-- put `new_component' in contents and entity_quad
 		local
 			loop_counter: INTEGER
 			found: BOOLEAN
@@ -200,7 +202,8 @@ feature --function
 		end
 
 	remove (new_component: ENTITY)
-			-- put `new_component' in contents array
+			-- remove entity from current sector, set the removed place to void in contents and
+			-- set the removed place to ENTITY empty
 		local
 			loop_counter: INTEGER
 			removed: BOOLEAN
@@ -239,7 +242,7 @@ feature --function
 feature -- Queries
 
 	print_sector: STRING
-			-- Printable version of location's coordinates with different formatting
+			-- Printable version of location's coordinates with row,col
 		do
 			Result := ""
 			Result.append (row.out)
@@ -248,7 +251,7 @@ feature -- Queries
 		end
 
 	print_sector_spec: STRING
-			-- Printable version of location's coordinates with different formatting
+			-- Printable version of location's coordinates with row : col
 		do
 			Result := ""
 			Result.append (row.out)
@@ -257,6 +260,7 @@ feature -- Queries
 		end
 
 	print_quadrant: STRING
+		-- Printable version of location's entities
 		local
 			quad_counter: INTEGER
 			column_counter: INTEGER
@@ -339,7 +343,7 @@ feature -- Queries
 
 feature -- check
 	has_benign: BOOLEAN
-			-- returns whether the location contains any stationary item
+			-- returns whether the location contains any benign item
 		local
 			loop_counter: INTEGER
 		do
@@ -357,7 +361,7 @@ feature -- check
 		end
 
 	has_explorer: BOOLEAN
-			-- returns whether the location contains any stationary item
+			-- returns whether the location contains any explorer item
 		local
 			loop_counter: INTEGER
 		do
@@ -394,7 +398,7 @@ feature -- check
 		end
 
 	has_yellow_dwarf: BOOLEAN
-			-- returns whether the location contains any stationary item
+			-- returns whether the location contains any yellow dwarf item
 		local
 			loop_counter: INTEGER
 		do
@@ -412,7 +416,7 @@ feature -- check
 		end
 
 	has_blackhole: BOOLEAN
-			-- returns whether the location contains any stationary item
+			-- returns whether the location contains any blackhole item
 		local
 			loop_counter: INTEGER
 		do
@@ -430,7 +434,7 @@ feature -- check
 		end
 
 	has_star: BOOLEAN
-			-- returns whether the location contains any stationary item
+			-- returns whether the location contains any star item
 		local
 			loop_counter: INTEGER
 		do
@@ -449,7 +453,7 @@ feature -- check
 
 
 	has_wormhole: BOOLEAN
-			-- returns whether the location contains any stationary item
+			-- returns whether the location contains any wormhole item
 		local
 			loop_counter: INTEGER
 		do
@@ -467,7 +471,7 @@ feature -- check
 		end
 
 	has_planet: BOOLEAN
-			-- returns whether the location contains any stationary item
+			-- returns whether the location contains any planet item
 		local
 			loop_counter: INTEGER
 		do
@@ -485,6 +489,7 @@ feature -- check
 		end
 
 	all_p_not_attached : BOOLEAN
+		-- returns whether none of the planets at current sector is attached
 		local
 			not_attached : INTEGER
 			p_num : INTEGER
@@ -515,6 +520,7 @@ feature -- check
 		end
 feature --others
 	out_sorted_entity : STRING
+		-- return sorted entity acording to its id from low to high at current sector
 	do
 		create result.make_empty
 		across
@@ -525,6 +531,7 @@ feature --others
 	end
 
 	out_movable_list : STRING
+		-- return movable entity at current sector
 		do
 			create result.make_empty
 			across
@@ -568,8 +575,8 @@ feature --others
 			end
 		end
 
---RETURN INDEX OF ENTITY  USE ENTITY_ALPH?	
 	return_quad(ent:ENTITY):INTEGER
+		-- returns the quad of entity
 	do
 		across
 			1 |..| entity_quad.count is i

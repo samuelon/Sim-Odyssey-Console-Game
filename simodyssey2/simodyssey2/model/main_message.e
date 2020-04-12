@@ -43,7 +43,7 @@ feature -- helper
 feature -- lines
 	second : STRING
 	eight : STRING
---	eighth :
+
 	abort : STRING
 
 feature -- reset
@@ -60,6 +60,7 @@ feature -- reset
 feature --quires
 
 	first : STRING
+		-- state
 	do
 		create result.make_empty
 		result.append ("state:" + model.i.out + "." + model.e.out + ", ")
@@ -89,6 +90,7 @@ feature --quires
 	end
 
 	set_second (str : STRING)
+		-- death message or command_specific message
 	do
 		second := str
 	end
@@ -159,7 +161,8 @@ feature --quires
 			end
 		end
 
-	fourth : STRING --SECTOR
+	fourth : STRING
+		--SECTOR
 		local
 			row : INTEGER
 			col: INTEGER
@@ -187,7 +190,8 @@ feature --quires
 			end
 		end
 
-	fifth : STRING -- DESCRIPTION
+	fifth : STRING
+		-- DESCRIPTION
 		local
 			i : INTEGER
 			B: ENTITY_ALPHABET
@@ -282,7 +286,6 @@ feature --quires
 
 							else -- other ebmj
 								result.append ("      " + temp[i].dmsg_reason (temp[i]))
-
 							end
 						else -- a & p
 							result.append ("      " + temp[i].dmsg_reason (temp[i]))
@@ -306,13 +309,15 @@ feature --quires
 		end
 	end
 
-	set_eight(str : STRING)  -- ONLY TEST MODE --ONLY WHEN EXP DIES
+	set_eight(str : STRING)
+		-- ONLY TEST MODE --ONLY WHEN EXP DIES
 	do
 		eight := str
 	end
 
 feature -- death msg helper
 	black_hole_common(ent : NON_STATIONARY) : STRING
+		-- death message due to black_hole
 		do
 			create result.make_empty
 			if ent.devoured then

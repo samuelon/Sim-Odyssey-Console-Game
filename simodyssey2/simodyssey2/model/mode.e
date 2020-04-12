@@ -1,5 +1,5 @@
 note
-	description: "Summary description for {MODE}."
+	description: "Summary description for {MODE}. Mode contains play and test"
 	author: ""
 	date: "$Date$"
 	revision: "$Revision$"
@@ -31,7 +31,7 @@ shared_info_access: SHARED_INFORMATION_ACCESS
 feature -- constructor
 
 	make
-
+		-- for play
         do
 			shared_info.test (3, 5, 7, 15, 30)
         	shared_info.set_galaxy
@@ -40,7 +40,7 @@ feature -- constructor
         end
 
 	make_test(a_threshold: INTEGER; j_threshold: INTEGER; m_threshold: INTEGER; b_threshold: INTEGER; p_threshold: INTEGER)
-	--???
+	-- for test
 	require
 		valid : a_threshold <= j_threshold and j_threshold <= m_threshold and m_threshold <= b_threshold and b_threshold <= p_threshold and a_threshold > 0 and p_threshold < 101
         do

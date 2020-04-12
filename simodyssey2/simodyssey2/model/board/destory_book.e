@@ -1,5 +1,5 @@
 note
-	description: "Summary description for {DESTORY_BOOK}."
+	description: "Summary description for {DESTORY_BOOK}. Collect all destoryed item and its destorctor this turn via iterator pattern"
 	author: ""
 	date: "$Date$"
 	revision: "$Revision$"
@@ -10,12 +10,6 @@ class
 inherit
 	ITERABLE[TUPLE[NON_STATIONARY,NON_STATIONARY]]
 
---	ANY
---		redefine
---			out
---		end
-
-
 
 create
 	make
@@ -24,7 +18,6 @@ feature {NONE} -- implementation
 
 	 destoryed: ARRAY[NON_STATIONARY]
 	 destructor: LINKED_LIST[NON_STATIONARY]
-			-- What should change?
 	make
 		do
 --			create imp.make (10)
@@ -77,7 +70,6 @@ feature -- Iterable
 
 
 feature
---????
 	check_destructor(g : NON_STATIONARY): ARRAY[NON_STATIONARY]
 	local
 		temp_fun : ARRAY[NON_STATIONARY]
@@ -94,28 +86,21 @@ feature
 
 	put (d: NON_STATIONARY; r: NON_STATIONARY)
 	-- d : destoryed r :destructor
-		require
-			not_has:
---				not destoryed.has (a_name)
-				across
-					current as it
-				all
-					it.item[1] /~ d
-				end
+		-- add pair to destory book
 		do
 			if not destoryed.has (d) then
 				destoryed.force (d, destoryed.count + 1)
 				destructor.extend (r)
---			else
---				across
---					1 |..| destoryed.count is i
---				loop
---					if
---						destoryed[i] ~ a_name
---					then
---						birthdays[i]:=d
---					end
---				end
+			else
+				across
+					1 |..| destoryed.count is i
+				loop
+					if
+						destoryed[i] ~ d
+					then
+						destructor[i]:=r
+					end
+				end
 			end
 		ensure
 			model_override:

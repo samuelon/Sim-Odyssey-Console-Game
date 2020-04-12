@@ -15,15 +15,22 @@ feature -- command
     	do
 			-- perform some update on the model state
 
-			model.wormhole
+			if model.end_game then
+				model.set_in_game_false
+				model.off_end_game
+				model.wormhole
+			else
+				model.reset_action_routine
+				model.wormhole
+			end
 			model.default_update
 			etf_cmd_container.on_change.notify ([Current])
-			if
-				model.end_game
-			then
-				model.set_in_game_false
-				model.reset
-			end
+--			if
+--				model.end_game
+--			then
+--				model.set_in_game_false
+--				model.reset
+--			end
     	end
 
 end

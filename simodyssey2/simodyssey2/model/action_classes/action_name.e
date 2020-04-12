@@ -1,5 +1,5 @@
 note
-	description: "Summary description for {ACTION_NAME}."
+	description: "Summary description for {ACTION_NAME}.ACTION_NAME is the name string of each action"
 	author: ""
 	date: "$Date$"
 	revision: "$Revision$"
@@ -29,7 +29,7 @@ feature -- Initialization
 
 feature
 	 out: STRING
-            -- Return string representation of alphabet.
+            -- Return string representation of action name
         do
             Result := item.out
         end
@@ -37,7 +37,7 @@ feature
      is_pass:BOOLEAN
      do
      	if
-     		current.item.is_equal ("pass") 
+     		current.item.is_equal ("pass")
      	then
      		result := true
      	end

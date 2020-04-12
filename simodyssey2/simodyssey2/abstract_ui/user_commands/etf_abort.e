@@ -14,11 +14,15 @@ feature -- command
 	abort
     	do
 			-- perform some update on the model state
-
-			model.abort
-
+			if model.end_game then
+				model.set_in_game_false
+				model.off_end_game
+				model.abort
+			else
+				model.reset_action_routine
+				model.abort
+			end
 			model.default_update
-
 			etf_cmd_container.on_change.notify ([Current])
 
     	end

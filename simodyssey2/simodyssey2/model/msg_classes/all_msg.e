@@ -29,7 +29,7 @@ feature --command_msgs
 		--tracks explorer
 		do
 			create Result.make_empty
-			Result.append ("  Explorer status report:Travelling at cruise speed at" + state_memory.og_exp.cur_location_out+"%N")
+			Result.append ("  Explorer status report:Travelling at cruise speed at " + state_memory.og_exp.cur_location_out+"%N")
 			Result.append ("  Life units left:"+ state_memory.og_exp.get_life_out + ", Fuel units left:" + state_memory.og_exp.get_fuel_out )
 		end
 	status_landed : STRING

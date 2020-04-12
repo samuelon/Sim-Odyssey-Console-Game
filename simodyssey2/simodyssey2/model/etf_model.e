@@ -46,15 +46,25 @@ feature -- model attributes
 
 feature -- boolean
 	in_game : BOOLEAN
+		-- show whether it is in the game
 	status_on : BOOLEAN
+		-- show whether user input status
 	test_on:BOOLEAN
+		-- show whether user input test
 	play_on:BOOLEAN
+		-- show whether user input play_on
 	face_error:BOOLEAN
+		-- show whether the user command causes error
 	abort_on : BOOLEAN
+	-- show whether user input abort
 	command_specific : BOOLEAN
+		-- show whether the current command leads to its specific message
 	end_game : BOOLEAN
+		-- show if the current game is end
 	land_on : BOOLEAN
+		-- show whether user input land
 	liftoff_on : BOOLEAN
+		-- show whether user input liftoff
 
 
 feature -- model operations
@@ -74,6 +84,7 @@ feature -- model operations
 		end
 
 	status_check
+		-- check if the current game status and set death message of explorer if it dead
 		local
 			ex : EXPLORER
 			str : STRING
@@ -82,14 +93,12 @@ feature -- model operations
 			ex := shared_info.og_exp
 			create str.make_empty
 			create d_temp.make_empty
---			if not in_game then
---			-- win
 			if not in_game then
 
 			else
 				-- win
 				if shared_info.galaxy.game_status.is_win and then shared_info.galaxy.game_status.is_over then
---					io.put_string ("ffffffffffffffff")
+
 					set_command_specific_on
 					main_msg.set_second (all_msg.land_life_found)
 --					in_game:= false
@@ -108,7 +117,6 @@ feature -- model operations
 					else
 						main_msg.set_second (str)
 					end
-
 					main_msg.set_eight("  "+shared_info.exp_death_msg+"%N"+ all_msg.game_is_over)
 				--				in_game := false
 					end_game := true
@@ -130,7 +138,8 @@ feature -- model operations
 			make
 		end
 
-	move(dir : INTEGER) --defensive programming
+	move(dir : INTEGER)
+		-- move explorer
 	local
 		m : MOVE
 		temp : TUPLE[row:INTEGER ; col : INTEGER]
@@ -161,6 +170,7 @@ feature -- model operations
 	end --do
 
 	land
+		-- land explorer
 		local
 			l : LAND
 			not_attached : INTEGER
@@ -197,6 +207,7 @@ feature -- model operations
 		end
 
 	liftoff
+		-- liftoff explorer
 		local
 			li : LIFTOFF
 		do
@@ -219,6 +230,7 @@ feature -- model operations
 
 		end
 	pass
+		-- pass the current turn and do nothing
 		local
 			pa : PASS
 		do
@@ -233,7 +245,9 @@ feature -- model operations
 					end
 			end
 		end
+
 	wormhole
+		-- exploer use wormhole
 		local
 			w : ACT_WORMHOLE
 		do
@@ -254,7 +268,9 @@ feature -- model operations
 					end
 			end
 		end
+
 	abort
+		-- abort the current game
 		do
 			reset_action_routine
 			if in_game = false then
@@ -272,6 +288,7 @@ feature -- model operations
 		end
 
 	test(a_threshold, j_threshold, m_threshold, b_threshold, p_threshold : INTEGER)
+		-- test mode set as the value user input
 		do
 --			create t.make
 	-- need test sth wrong with generator
@@ -291,6 +308,7 @@ feature -- model operations
 		end
 
 	mode_common
+		-- the common settings of play and test
 	do
 		in_game := true
 		reset_routine
@@ -304,6 +322,7 @@ feature -- model operations
 	end
 
 	play
+		-- play mode
 	DO
 		if in_game then
 			main_msg.set_second (all_msg.error_mode_in_game)
@@ -322,6 +341,7 @@ feature -- model operations
 	end
 
 	status
+		-- current explorer status
 		do
 			reset_action_routine
 			if not in_game then
@@ -342,6 +362,7 @@ feature -- model operations
 feature -- helper
 
 	reset_action_routine
+		-- reset all flags
 		do
 			command_specific := false
 			status_on := false
@@ -352,6 +373,7 @@ feature -- helper
 		end
 
 	reset_routine
+		-- reset the make
 		do
 			reset_action_routine
 --			shared_info.reset_key_info
@@ -367,6 +389,11 @@ feature -- helper
 	set_in_game_false
 	do
 		in_game := false
+	end
+
+	off_end_game
+	do
+		end_game := false
 	end
 
 	set_command_specific_on
